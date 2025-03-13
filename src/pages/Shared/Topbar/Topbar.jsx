@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Topbar = () => {
+const TopBar = () => {
     return (
         <div>
-            <h2>Topbar</h2>
+            <h2>TopBar</h2>
         </div>
     );
 };
 
-export default Topbar;
+export default TopBar;
