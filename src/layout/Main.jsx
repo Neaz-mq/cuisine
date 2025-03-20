@@ -8,9 +8,9 @@ const Main = () => {
     return (
         <div>
             <TopBar></TopBar>
-            <Navbar></Navbar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+            {/* <Navbar></Navbar> */}
+            {/* <Outlet></Outlet> */}
+            {/* <Footer></Footer> */}
         </div>
     );
 };
