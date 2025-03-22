@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
     return (
-        <div className="flex flex-col items-center h-screen w-20 p-4 relative z-20 -mt-32">
+        <div className="flex flex-col items-center h-screen w-20 p-4 relative z-20 -mt-[36rem]">
             {/* Cuisine Section (Full-Width Attached to Left Side) */}
             <div className="absolute left-0 top-0 w-32 bg-[#2C6252] flex flex-col items-center py-4">
                 <img
