@@ -9,7 +9,7 @@ const TopBar = () => {
                 alt="Group 22"
                 className="h-[16rem] w-auto -mt-[15rem] 3xl:ml-16 sm:ml-0 lg:h-[18rem] xl:h-[20rem] 3xl:h-[26.8rem]"
             />
-            <div className="flex items-center justify-start w-full ml-28 ">
+            <div className="flex items-center justify-start w-full ml-28 -mt-6">
                 <span className="text-[#E4E4E4] mr-3 text-[20px]">Online place order</span>
                 <button className="bg-[#FF4C15] text-white text-[20px] px-3 py-2 rounded-sm flex items-center font-semibold">
                     website/apps

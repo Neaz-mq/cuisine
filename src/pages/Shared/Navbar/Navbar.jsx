@@ -1,46 +1,57 @@
 import React from 'react';
-import { Table } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
     return (
-        <div className="flex flex-col items-center bg-gray-800 text-white h-screen w-64 p-6 relative z-20 -mt-28">
-            {/* Logo with Vertical Cuisine Text (Descending Order) */}
-            <div className="flex flex-col items-center mb-8 space-y-1">
+        <div className="flex flex-col items-center h-screen w-20 p-4 relative z-20 -mt-32">
+            {/* Cuisine Section (Full-Width Attached to Left Side) */}
+            <div className="absolute left-0 top-0 w-32 bg-[#2C6252] flex flex-col items-center py-4">
                 <img
                     src="/logo.svg"
                     alt="Cuisine Logo"
-                    className="h-10 w-auto"
+                    className="h-6 w-auto ml-20"
                 />
-                <span className="text-lg text-white flex flex-col" style={{ transform: 'rotate(270deg)', marginTop: '32px' }}>
+                <span className="text-lg font-bold text-white mt-4 ml-20" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     Cuisine
                 </span>
-
-
-
-
             </div>
 
-            {/* Navbar Links */}
-            <div className="flex flex-col space-y-4 w-full">
-                <a href="/" className="text-lg hover:text-orange-500">
-                    <span>Home</span>
+            {/* Vertical Navbar Links (No Background) */}
+            <div className="flex flex-col space-y-6 w-full items-center mt-44 ml-32">
+                <a href="/" className="text-md text-[#CCCCCC] hover:text-gray-600" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                    Home
                 </a>
-                <a href="/menu" className="text-lg hover:text-orange-500">
-                    <span>Menu</span>
+
+                {/* Menu with Dropdown Icon (Rotated Downward) */}
+                <a href="/menu" className="text-md text-[#CCCCCC] hover:text-gray-600 flex flex-row-reverse items-center space-x-1"
+                    style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                    <ChevronDown size={14} style={{ transform: 'rotate(90deg)' }} />
+                    Menu
                 </a>
-                <a href="/signature-food" className="text-lg hover:text-orange-500">
-                    <span>Signature Food</span>
+
+                {/* Signature Food with Dropdown Icon (Rotated Downward) */}
+                <a href="/signature-food" className="text-md text-[#CCCCCC] hover:text-gray-600 flex flex-row-reverse items-center space-x-1"
+                    style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                    <ChevronDown size={14} style={{ transform: 'rotate(90deg)' }} />
+                    Signature Food
                 </a>
-                <a href="/contact-us" className="text-lg hover:text-orange-500">
-                    <span>Contact Us</span>
+
+                <a href="/contact-us" className="text-md font-bold text-[#2C6252] hover:text-[#1E4B3A]" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                    Contact Us
                 </a>
-                <a href="/book-table" className="flex items-center text-lg space-x-3 hover:text-orange-500">
-                    <Table size={20} />
-                    <span>Book a Table</span>
-                </a>
-                <a href="/about" className="text-lg hover:text-orange-500">
-                    <span>About</span>
-                </a>
+
+                {/* Book Table Button (Orange Background) - Adjusted for your request */}
+                <div className="bg-[#FF4C15] flex flex-col items-center py-4 px-3">
+                    <span className="text-[20px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                        Book a Table
+                    </span>
+                    <img
+                        src="/table.svg"
+                        alt="Table Icon"
+                        className="h-5 w-auto mt-4"
+                        style={{ writingMode: 'vertical-rl'}}
+                    />
+                </div>
             </div>
         </div>
     );
