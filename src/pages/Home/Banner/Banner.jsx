@@ -4,6 +4,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div className="relative bg-white ml-[18rem]">
+           
             {/* Flex container for content and image */}
             <div className="flex items-center justify-between">
                 {/* Content (Left Side) */}
@@ -91,18 +92,34 @@ const Banner = () => {
                                 10$
                             </span>
                         </div>
+
+                        
+                    
                     </div>
+                   
                 </div>
 
                 {/* Background Image (Right Side) */}
-                <div className="relative w-1/2 -mt-72 overflow-hidden">
+                <div className=" w-1/2 -mt-72 overflow-hidden">
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1742632805/Rectangle_3_kyld2u.png"
                         alt="Banner"
                         className="w-full h-full object-cover ml-56"
                     />
                 </div>
+
+               
+              
+                
             </div>
+            
+          <div className='ml-[78rem] -mt-[21rem] overflow-hidden '>
+          <img className='ml-28'  src="https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png" alt="" />
+          </div>
+
+          <div className='ml-[73rem] -mt-[60rem] overflow-hidden '>
+          <img className='ml-60'  src="https://res.cloudinary.com/dxohwanal/image/upload/v1742636903/pngegg_6_ttou9i.png" alt="" />
+          </div>
         </div>
     );
 };
