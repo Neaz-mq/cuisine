@@ -41,7 +41,9 @@ const Navbar = () => {
                 </a>
 
                 {/* Book Table Button (Orange Background) - Adjusted for your request */}
-                <div className="bg-[#FF4C15] flex flex-col items-center py-4 px-3">
+
+                <div className="bg-[#FF4C15] flex flex-col items-center py-4 px-3  w-full" style={{ marginTop: '40px' }}
+                > 
                     <span className="text-[20px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                         Book a Table
                     </span>
@@ -49,9 +51,10 @@ const Navbar = () => {
                         src="/table.svg"
                         alt="Table Icon"
                         className="h-5 w-auto mt-4"
-                        style={{ writingMode: 'vertical-rl'}}
+                        style={{ writingMode: 'vertical-rl' }}
                     />
                 </div>
+
             </div>
         </div>
     );
