@@ -8,8 +8,8 @@ const Main = () => {
     return (
         <div>
             <TopBar></TopBar>
-            <Outlet></Outlet>
-            <Navbar></Navbar>
+            {/* <Outlet></Outlet> */}
+            {/* <Navbar></Navbar> */}
            
             {/* <Footer></Footer> */}
         </div>

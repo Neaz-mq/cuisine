@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div className="relative bg-white ml-[18rem]">
-           
+
             {/* Flex container for content and image */}
             <div className="flex items-center justify-between">
                 {/* Content (Left Side) */}
@@ -16,7 +16,7 @@ const Banner = () => {
                             <span className="flex items-center">
                                 <span className="flex items-center space-x-2 text-[20px]">
                                     <span className="text-red-500 ml-2">Live</span>
-                                    <span>kitchen</span>
+                                    <span className='text-[#2C6252]'>kitchen</span>
                                 </span>
 
                                 <div className="flex items-center justify-end bg-[#FF4C15] rounded-full p-2 ml-2 w-8 h-8">
@@ -30,12 +30,13 @@ const Banner = () => {
                     <div className="flex items-center space-x-4 ml-4 mt-8">
                         <span className="text-[#FF4C15] text-6xl font-bold mb-4 ">Every Bite!</span>
 
-                        <button className="bg-[#2C6252] text-white py-2 px-4 rounded-full flex items-center space-x-2 -mt-4">
+                        <button className="bg-[#2C6252] text-white py-2 px-4 rounded-full flex items-center space-x-2 -mt-4 border-2 border-orange-500">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">
                                 <img src="/public/arrow.svg" alt="Arrow" className="h-3 w-3" />
                             </div>
                         </button>
+
                     </div>
 
                     <div className='-mt-10'>
@@ -85,13 +86,13 @@ const Banner = () => {
                             <img
                                 src="/flowershape.svg"
                                 alt="Flower shape"
-                                className="absolute right-[-10px] top-[50px] transform -translate-y-1/2 w-16"
+                                className="absolute right-[-10px] top-[52px] transform -translate-y-1/2 w-16"
                             />
-                            <span className="absolute top-[48px] left-[176px] transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-sm">
+                            <span className="absolute top-[49px] left-[176px] transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-sm">
                                 10$
                             </span>
-                        </div>                                   
-                    </div>                 
+                        </div>
+                    </div>
                 </div>
                 {/* Background Image (Right Side) */}
                 <div className="w-1/2 -mt-72 overflow-hidden">
@@ -100,16 +101,16 @@ const Banner = () => {
                         alt="Banner"
                         className="w-full h-full object-cover ml-56"
                     />
-                </div>            
-                
-            </div>           
-          <div className='ml-[78rem] -mt-[21rem] overflow-hidden '>
-          <img className='ml-28'  src="https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png" alt="" />
-          </div>
+                </div>
 
-          <div className='ml-[73rem] -mt-[60rem] overflow-hidden '>
-          <img className='ml-60'  src="https://res.cloudinary.com/dxohwanal/image/upload/v1742636903/pngegg_6_ttou9i.png" alt="" />
-          </div>
+            </div>
+            <div className='ml-[78rem] -mt-[21rem] overflow-hidden '>
+                <img className='ml-28' src="https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png" alt="" />
+            </div>
+
+            <div className='ml-[73rem] -mt-[60rem] overflow-hidden '>
+                <img className='ml-60' src="https://res.cloudinary.com/dxohwanal/image/upload/v1742636903/pngegg_6_ttou9i.png" alt="" />
+            </div>
         </div>
     );
 };

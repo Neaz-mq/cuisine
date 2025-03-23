@@ -18,19 +18,19 @@ const Navbar = () => {
 
             {/* Vertical Navbar Links (No Background) */}
             <div className="flex flex-col space-y-6 w-full items-center mt-44 ml-32">
-                <a href="/" className="text-md text-[#CCCCCC] hover:text-gray-600" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                <a href="/" className="text-md text-[#CCCCCC] hover:text-[#2C6252]" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     Home
                 </a>
 
                 {/* Menu with Dropdown Icon (Rotated Downward) */}
-                <a href="/menu" className="text-md text-[#CCCCCC] hover:text-gray-600 flex flex-row-reverse items-center space-x-1"
+                <a href="/menu" className="text-md text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     <ChevronDown size={14} style={{ transform: 'rotate(90deg)' }} />
                     Menu
                 </a>
 
                 {/* Signature Food with Dropdown Icon (Rotated Downward) */}
-                <a href="/signature-food" className="text-md text-[#CCCCCC] hover:text-gray-600 flex flex-row-reverse items-center space-x-1"
+                <a href="/signature-food" className="text-md text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     <ChevronDown size={14} style={{ transform: 'rotate(90deg)' }} />
                     Signature Food
@@ -42,7 +42,7 @@ const Navbar = () => {
 
                 {/* Book Table Button (Orange Background) - Adjusted for your request */}
 
-                <div className="bg-[#FF4C15] flex flex-col items-center py-4 px-3  w-full" style={{ marginTop: '40px' }}
+                <button className="bg-[#FF4C15] flex flex-col items-center py-4 px-3  w-full" style={{ marginTop: '40px' }}
                 > 
                     <span className="text-[20px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                         Book a Table
@@ -53,7 +53,7 @@ const Navbar = () => {
                         className="h-5 w-auto mt-4"
                         style={{ writingMode: 'vertical-rl' }}
                     />
-                </div>
+                </button>
 
             </div>
         </div>

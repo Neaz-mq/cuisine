@@ -3,38 +3,46 @@ import { ChevronRight } from 'lucide-react';
 
 const TopBar = () => {
     return (
-        <div className="flex items-center bg-white py-2 px-6 text-gray-700 text-sm relative z-0">
+        <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0 overflow-hidden">
+            {/* Background Image (Responsive) */}
             <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1742451276/Group_22_fwl6sw.png"
                 alt="Group 22"
-                className="h-[16rem] w-auto -mt-[15rem] 3xl:ml-16 sm:ml-0 lg:h-[18rem] xl:h-[20rem] 3xl:h-[26.8rem]"
+                className="w-full sm:w-auto h-auto sm:h-[12rem] md:h-[14rem] lg:h-[22rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[26.8rem] -mt-48 sm:-mt-[6rem] md:-mt-[8.2rem] lg:-mt-[13rem] sm:ml-0 3xl:ml-16 lg:-ml-12 md:-ml-4"
             />
-            <div className="flex items-center justify-start w-full ml-28 -mt-10">
-                <span className="text-[#E4E4E4] mr-3 text-[20px]">Online place order</span>
-                <button className="bg-[#FF4C15] text-white text-[20px] px-3 py-2 rounded-sm flex items-center font-semibold">
+
+            {/* Content Section (Responsive) */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-6 lg:-ml-10  -mt-2 sm:-mt-10 ml-52 ">
+                {/* Order Label */}
+                <span className="text-[#E4E4E4] mr-0 sm:mr-2 md:mr-3 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0">Online place order</span>
+                
+                {/* Order Button */}
+                <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0">
                     website/apps
-                    <ChevronRight className="ml-1 text-white" size={20} />
+                    <ChevronRight className="ml-1 text-white" size={16} md:size={20} />
                 </button>
-                <div className="flex items-center mx-2">
-                    <div className="h-4 w-[2px] bg-gray-400 mx-2"></div>
+
+                {/* Divider */}
+               <div className='hidden 3xl:block 2xl:block xl:block lg:block md:block sm:block'>
+               <div className="flex items-center mx-0 sm:mx-1 md:mx-2 mb-2 sm:mb-0">
+                    <div className="h-3  w-[1px] 3xl:w-[2px] 3xl:h-4 2xl:w-[1px] 2xl:h-3 xl:w-[1px] xl:h-3 bg-gray-400 mx-1 md:mx-2"></div>
                 </div>
-                <div className="flex items-center space-x-4 mr-4">
-                    <img
-                        src="/kitchen.svg"
-                        alt="Kitchen available"
-                        className="h-5 w-5"
-                    />
-                    <span className="text-[#2C6252] text-[20px]">Kitchen available</span>
+               </div>
+                
+                {/* Kitchen Availability */}
+                <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
+                    <img src="/kitchen.svg" alt="Kitchen available" className="h-4 w-4 3xl:h-5 3xl:w-5 2xl:h-3 2xl:w-3 xl:h-3 xl:w-3" />
+                    <span className="text-[#2C6252] text-sm md:text-base 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] lg:text-[12px] md:text-[12px]">Kitchen available</span>
                 </div>
-                <div className="flex items-center space-x-4 mr-4">
-                    <img
-                        src="/time.svg"
-                        alt="Time"
-                        className="h-5 w-5"
-                    />
-                    <span className="text-[20px] text-[#2C6252]">3:07:00 PM</span>
+                
+                {/* Current Time */}
+                <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
+                    <img src="/time.svg" alt="Time" className="h-4 w-4 3xl:h-5 3xl:w-5 2xl:h-3 2xl:w-3 xl:h-3 xl:w-3" />
+                    <span className="text-sm md:text-base 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] text-[#2C6252] lg:text-[12px] md:text-[12px]">3:07:00 PM</span>
                 </div>
-                <div className="w-72 h-[1.5px] bg-[#FF4C15] ml-2"></div>
+                
+                {/* Bottom Line */}
+                <div className="w-full sm:w-32 md:w-48 lg:w-64 xl:w-72 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2"></div>
             </div>
         </div>
     );
