@@ -1,4 +1,3 @@
-import { Youtube, ChevronUp } from 'lucide-react';
 import React from 'react';
 
 const Banner = () => {
@@ -86,33 +85,24 @@ const Banner = () => {
                             <img
                                 src="/flowershape.svg"
                                 alt="Flower shape"
-                                className="absolute right-[-10px] top-[62px] transform -translate-y-1/2 w-16"
+                                className="absolute right-[-10px] top-[50px] transform -translate-y-1/2 w-16"
                             />
-                            <span className="absolute top-[59px] left-[176px] transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-sm">
+                            <span className="absolute top-[48px] left-[176px] transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-sm">
                                 10$
                             </span>
-                        </div>
-
-                        
-                    
-                    </div>
-                   
+                        </div>                                   
+                    </div>                 
                 </div>
-
                 {/* Background Image (Right Side) */}
-                <div className=" w-1/2 -mt-72 overflow-hidden">
+                <div className="w-1/2 -mt-72 overflow-hidden">
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1742632805/Rectangle_3_kyld2u.png"
                         alt="Banner"
                         className="w-full h-full object-cover ml-56"
                     />
-                </div>
-
-               
-              
+                </div>            
                 
-            </div>
-            
+            </div>           
           <div className='ml-[78rem] -mt-[21rem] overflow-hidden '>
           <img className='ml-28'  src="https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png" alt="" />
           </div>
