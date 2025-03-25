@@ -4,13 +4,13 @@ const Awards = () => {
     return (
         <div className="relative bg-white h-[1000px] overflow-hidden mt-[45rem] mx-52">
             {/* Background Image (lower background) */}
-            <div className="absolute top-[50%] left-[5%]"> 
-  <img
-    src="https://res.cloudinary.com/dxohwanal/image/upload/v1742701566/bgchef_wc6qsv.png"
-    alt="Background"
-    className="object-cover"
-  />
-</div>
+            <div className="absolute top-[50%] left-[5%]">
+                <img
+                    src="https://res.cloudinary.com/dxohwanal/image/upload/v1742701566/bgchef_wc6qsv.png"
+                    alt="Background"
+                    className="object-cover"
+                />
+            </div>
 
             {/* Main Image (upper layer) */}
             <div className="absolute inset-0">

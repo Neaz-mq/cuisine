@@ -9,7 +9,7 @@ const Main = () => {
         <div>
             <TopBar></TopBar>
             {/* <Outlet></Outlet> */}
-            {/* <Navbar></Navbar> */}
+            <Navbar></Navbar>
            
             {/* <Footer></Footer> */}
         </div>

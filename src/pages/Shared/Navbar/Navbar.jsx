@@ -54,7 +54,6 @@ const Navbar = () => {
                         style={{ writingMode: 'vertical-rl' }}
                     />
                 </button>
-
             </div>
         </div>
     );
