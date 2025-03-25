@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="relative bg-white z-0">
+        <div className="relative bg-white z-0 ml-36">
             {/* Content and Image Container */}
             <div className="flex items-start justify-between">
                 {/* Left Side Content */}

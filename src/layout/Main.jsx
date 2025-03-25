@@ -18,8 +18,8 @@ const Main = () => {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 ml-20 overflow-hidden">
-                    {/* <Outlet /> */}
+                <div className="flex-1 ml-20">
+                    <Outlet />
                 </div>
             </div>
         </div>
