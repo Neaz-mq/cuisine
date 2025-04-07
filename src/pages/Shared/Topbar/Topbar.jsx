@@ -103,10 +103,20 @@ const AnalogClock = () => {
 
 const TopBar = () => {
     const [time, setTime] = useState(new Date());
+    const [isKitchenOpen, setIsKitchenOpen] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setTime(new Date());
+            const currentTime = new Date();
+            setTime(currentTime);
+
+            // Restaurant open from 10 AM to 8 PM (local time)
+            const currentHour = currentTime.getHours();
+            if (currentHour >= 10 && currentHour < 20) {
+                setIsKitchenOpen(true);
+            } else {
+                setIsKitchenOpen(false);
+            }
         }, 1000);
         return () => clearInterval(interval);
     }, []);
@@ -149,14 +159,24 @@ const TopBar = () => {
 
                 {/* Kitchen Availability */}
                 <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
-                    <img src="/kitchen.svg" alt="Kitchen available" className="h-4 w-4 md:h-5 md:w-5" />
-                    <span className="text-[#2C6252] text-sm md:text-base">Kitchen available</span>
+                    <img
+                        src={isKitchenOpen ? "/kitchen.svg" : "/public/kitchen-unavailable.svg"}
+                        alt="Kitchen status"
+                        className="h-4 w-4 md:h-5 md:w-5"
+                    />
+                    <span
+                        className={`text-sm md:text-base font-semibold ${
+                            isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
+                        }`}
+                    >
+                        {isKitchenOpen ? 'Kitchen available' : 'Kitchen unavailable'}
+                    </span>
                 </div>
 
                 {/* Dynamic Clock */}
                 <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
                     <AnalogClock />
-                    <span className="text-sm md:text-base text-[#2C6252] font-mono">{formattedTime}</span>
+                    <span className="text-sm md:text-lg text-[#2C6252] font-mono">{formattedTime}</span>
                 </div>
 
                 {/* Bottom Line */}
