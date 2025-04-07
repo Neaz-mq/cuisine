@@ -31,7 +31,7 @@ const Banner = () => {
                         <button className="bg-[#2C6252] text-white py-2 px-4 rounded-full flex items-center space-x-2 border-2 border-orange-500">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">
-                                <img src="/public/arrow.svg" alt="Arrow" className="h-3 w-3" />
+                                <img src="/arrow.svg" alt="Arrow" className="h-3 w-3" />
                             </div>
                         </button>
                     </div>
