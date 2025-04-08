@@ -176,7 +176,7 @@ const TopBar = () => {
                 {/* Dynamic Clock */}
                 <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
                     <AnalogClock />
-                    <span className="text-sm md:text-lg text-[#2C6252] font-mono">{formattedTime}</span>
+                    <span className="text-sm md:text-lg text-[#2C6252] font-mono font-semibold">{formattedTime}</span>
                 </div>
 
                 {/* Bottom Line */}
