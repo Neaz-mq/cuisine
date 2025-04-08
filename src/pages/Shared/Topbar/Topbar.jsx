@@ -146,7 +146,7 @@ const TopBar = () => {
 
                 {/* Order Button */}
                 <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0">
-                    website/apps
+                   Order Now
                     <ChevronRight className="ml-1 text-white" size={16} md:size={20} />
                 </button>
 
@@ -180,7 +180,7 @@ const TopBar = () => {
                 </div>
 
                 {/* Bottom Line */}
-                <div className="w-full sm:w-32 md:w-48 xl:w-72 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2"></div>
+                <div className="w-full sm:w-32 md:w-48 xl:w-64 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2"></div>
             </div>
         </div>
     );

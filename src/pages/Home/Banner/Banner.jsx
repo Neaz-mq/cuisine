@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';  // Import AOS
+import 'aos/dist/aos.css';  // Import AOS CSS
 
 const Banner = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Initialize AOS on component mount
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="relative bg-white z-0 ml-36">
             {/* Content and Image Container */}
@@ -8,13 +25,16 @@ const Banner = () => {
                 {/* Left Side Content */}
                 <div className="relative w-1/2 p-8">
                     <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
-                    
+
                     <div className="ml-4">
                         <h1 className="text-6xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
                             Savor the
-                            <button className="bg-white text-black py-1 px-3 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black">
+                            <button
+                                className="bg-white text-black py-1 px-3 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
+                                onClick={handleOpenModal}
+                            >
                                 <span className="flex items-center text-[20px]">
-                                    <span className="text-red-500 ml-2">Live</span>
+                                    <span className="text-red-500 ml-2 mr-1">Live</span>
                                     <span className='text-[#2C6252]'>kitchen</span>
                                 </span>
                                 <div className="bg-[#FF4C15] rounded-full p-2 ml-2 w-8 h-8 flex items-center justify-center">
@@ -22,20 +42,20 @@ const Banner = () => {
                                 </div>
                             </button>
                         </h1>
-                        
+
                         <h1 className="text-6xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
                     </div>
-                    
+
                     <div className="flex items-center space-x-4 ml-4 mt-5">
                         <span className="text-[#FF4C15] text-6xl font-bold">Every Bite!</span>
-                        <button className="bg-[#2C6252] text-white py-2 px-4 rounded-full flex items-center space-x-2 border-2 border-orange-500">
+                        <button className="bg-[#2C6252] text-white py-2 px-4 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">
                                 <img src="/arrow.svg" alt="Arrow" className="h-3 w-3" />
                             </div>
                         </button>
                     </div>
-                    
+
                     <div className='-mt-6'>
                         <p className="mb-8 text-[20px] ml-2 p-4 bg-cover bg-center w-[650px] h-[250px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
                             <span className="inline-flex">
@@ -45,12 +65,10 @@ const Banner = () => {
                             <span className="text-[#AAAAAA] block mt-2">moment of delight, crafted to satisfy your cravings!</span>
                         </p>
                     </div>
-                    
-                    <div className="flex items-center space-x-20 -mt-10">
-                        {[
-                            { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742626992/pngegg_17_u4hkq7.png", price: "20$", top: "60px" },
-                            { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742627043/pngegg_18_fyzuz7.png", price: "10$", top: "32px", extraClass: "-mt-16"}
-                        ].map((item, index) => (
+
+                    <div className="flex items-center space-x-20 -mt-20">
+                        {[{ src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742626992/pngegg_17_u4hkq7.png", price: "20$", top: "60px" },
+                        { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742627043/pngegg_18_fyzuz7.png", price: "10$", top: "32px", extraClass: "-mt-16" }].map((item, index) => (
                             <div key={index} className="relative">
                                 <img src={item.src} alt="Food Item" className={`w-auto ${item.extraClass || ''}`} />
                                 <div className="absolute right-[-20px]" style={{ top: item.top }}>
@@ -61,22 +79,50 @@ const Banner = () => {
                         ))}
                     </div>
                 </div>
-                
+
                 {/* Right Side Background Image */}
-                <div className="w-1/2 -mt-72 overflow-hidden">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1742632805/Rectangle_3_kyld2u.png" alt="Banner" className="w-full h-full object-cover ml-56" />
+                <div className="-mt-80 overflow-hidden ml-24">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full h-[68rem] object-cover ml-56" />
                 </div>
             </div>
-            
+
             {/* Decorative Images */}
-            {[
-                { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png", className: "ml-[78rem] -mt-[21rem] overflow-hidden" },
-                { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742636903/pngegg_6_ttou9i.png", className: "ml-[73rem] -mt-[60rem] overflow-hidden" }
-            ].map((item, index) => (
+            {[{ src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png", className: "ml-[72rem] -mt-[24rem] overflow-hidden" },
+            { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742636903/pngegg_6_ttou9i.png", className: "ml-[75rem] -mt-[62rem] overflow-hidden" }].map((item, index) => (
                 <div key={index} className={item.className}>
-                    <img className="ml-28" src={item.src} alt="" />
+                    <img className="ml-72 -mt-16" src={item.src} alt="" />
                 </div>
             ))}
+
+            {/* Modal for YouTube Video */}
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+                    <div
+                        className="bg-white p-4 rounded-lg relative"
+                        data-aos="fade-down" // Apply AOS animation here
+                        data-aos-duration="700" // Duration for fade-up animation
+                    >
+                        <button
+                            className="absolute top-2 right-0 text-white rounded-full p-2 bg-[#FF4C15] transition duration-300"
+                            onClick={handleCloseModal}
+                        >
+                            X
+                        </button>
+
+
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/LVI8veUnSLQ"
+                            title="YouTube video"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
