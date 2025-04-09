@@ -27,23 +27,23 @@ const Banner = () => {
                     <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
 
                     <div className="ml-4">
-                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
+                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-lg font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
                             Savor the
                             <button
-                                className="bg-white text-black py-1 px-3 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
+                                className="bg-white text-black py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
                                 onClick={handleOpenModal}
                             >
-                                <span className="flex items-center text-[20px]">
+                                <span className="flex items-center 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[14px]">
                                     <span className="text-red-500 ml-2 mr-1">Live</span>
                                     <span className='text-[#2C6252]'>kitchen</span>
                                 </span>
-                                <div className="bg-[#FF4C15] rounded-full p-2 ml-2 w-8 h-8 flex items-center justify-center">
+                                <div className="bg-[#FF4C15] rounded-full p-2 ml-2 3xl:w-8 2xl:w-8 xl:w-8 lg:w-6  3xl:h-8 2xl:h-8 xl:h-8 lg:h-6 flex items-center justify-center">
                                     <img src="/Polygon 2.svg" alt="" className='h-2 w-5' />
                                 </div>
                             </button>
                         </h1>
 
-                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
+                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-lg font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
                     </div>
 
                     <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-5 xl:mt-2">
@@ -82,7 +82,7 @@ const Banner = () => {
 
                 {/* Right Side Background Image */}
                 <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 overflow-hidden 3xl:ml-24 2xl:ml-2">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem]  object-cover 3xl:ml-56 2xl:ml-10" />
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem]  object-cover 3xl:ml-56 2xl:ml-10" />
                 </div>
             </div>
 
