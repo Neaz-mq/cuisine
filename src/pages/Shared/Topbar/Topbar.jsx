@@ -129,12 +129,13 @@ const TopBar = () => {
     });
 
     return (
-        <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0 overflow-hidden">
+        <div className='overflow-hidden'>
+            <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0">
             {/* Background Image */}
             <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1742451276/Group_22_fwl6sw.png"
                 alt="Group 22"
-                className="w-full sm:w-auto h-auto sm:h-[12rem] md:h-[14rem] lg:h-[22rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] -mt-48 sm:-mt-[6rem] md:-mt-[8.2rem] lg:-mt-[13rem] sm:ml-0 3xl:ml-16 lg:-ml-12 md:-ml-4"
+                className="w-full sm:w-auto h-auto sm:h-[12rem] md:h-[18rem] lg:h-[22rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] -mt-48 sm:-mt-[6rem] md:-mt-[8.2rem] lg:-mt-[13rem] sm:ml-0 3xl:ml-16 lg:-ml-12 md:-ml-4"
             />
 
             {/* Content */}
@@ -180,8 +181,9 @@ const TopBar = () => {
                 </div>
 
                 {/* Bottom Line */}
-                <div className="w-full sm:w-32 md:w-48 xl:w-64 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2"></div>
+                <div className="w-full sm:w-32 md:w-48 xl:w-64 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2 overflow-hidden"></div>
             </div>
+        </div>
         </div>
     );
 };

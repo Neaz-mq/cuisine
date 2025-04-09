@@ -27,7 +27,7 @@ const Banner = () => {
                     <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
 
                     <div className="ml-4">
-                        <h1 className="text-6xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
+                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
                             Savor the
                             <button
                                 className="bg-white text-black py-1 px-3 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
@@ -43,11 +43,11 @@ const Banner = () => {
                             </button>
                         </h1>
 
-                        <h1 className="text-6xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
+                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
                     </div>
 
-                    <div className="flex items-center space-x-4 ml-4 mt-5">
-                        <span className="text-[#FF4C15] text-6xl font-bold">Every Bite!</span>
+                    <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-5 xl:mt-2">
+                        <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold">Every Bite!</span>
                         <button className="bg-[#2C6252] text-white py-2 px-4 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">
@@ -57,7 +57,7 @@ const Banner = () => {
                     </div>
 
                     <div className='-mt-6'>
-                        <p className="mb-8 text-[20px] ml-2 p-4 bg-cover bg-center w-[650px] h-[250px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
+                        <p className="mb-8 3xl:text-[20px] 2xl:text-[16px] ml-2 p-4 bg-cover bg-center w-[650px] h-[250px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
                             <span className="inline-flex">
                                 <span className="text-[#FF4C15] whitespace-nowrap">Experience the perfect blend of taste and joy—</span>
                                 <span className="text-[#AAAAAA] ml-2 whitespace-nowrap">every bite is a</span>
@@ -81,18 +81,11 @@ const Banner = () => {
                 </div>
 
                 {/* Right Side Background Image */}
-                <div className="-mt-80 overflow-hidden ml-24">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full h-[68rem] object-cover ml-56" />
+                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 overflow-hidden 3xl:ml-24 2xl:ml-2">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem]  object-cover 3xl:ml-56 2xl:ml-10" />
                 </div>
             </div>
 
-            {/* Decorative Images */}
-            {[{ src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742634046/Group_21_ycil0t.png", className: "ml-[72rem] -mt-[24rem] overflow-hidden" },
-            { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742636903/pngegg_6_ttou9i.png", className: "ml-[75rem] -mt-[62rem] overflow-hidden" }].map((item, index) => (
-                <div key={index} className={item.className}>
-                    <img className="ml-72 -mt-16" src={item.src} alt="" />
-                </div>
-            ))}
 
             {/* Modal for YouTube Video */}
             {isModalOpen && (
