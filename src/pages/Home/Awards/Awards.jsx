@@ -2,13 +2,13 @@ import React from 'react';
 
 const Awards = () => {
     return (
-        <div className="relative bg-white min-h-screen  overflow-hidden mx-52 mt-14">
+        <div className="relative bg-white min-h-screen mb-56  overflow-hidden mx-52 mt-14 z-10">
             {/* Background Image (lower background) */}
             <div className="absolute top-[35%]">
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1744793095/Ellipse_2_m5jepq.png"
                     alt="Background"
-                    className="object-cover "
+                    className="object-cover"
                 />
             </div>
 
@@ -35,6 +35,10 @@ const Awards = () => {
                 <div className="absolute top-[123%]  left-[8%]  text-gray-800 px-3 py-1 rounded-full text-xs">
                     <span className='text-[#CCCCCC] text-lg'>Healthy</span> <span className='text-[#a9a2a2] text-lg'>Food</span>
                 </div>
+
+                
+
+
 
                 <img className='absolute top-[140%] left-[10%] opacity-20 blur-sm' src="/Ellipse 9.svg" alt="" />
             </div>
@@ -67,17 +71,20 @@ const Awards = () => {
 
 
             {/* Experiences Tag */}
-            <div className="absolute top-[6%] left-[26%]  text-gray-800 px-3 py-1">
-                <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744871420/Group_255_xzzkmu.png" className='w-40' alt="" />
-            </div>
+           
+
+            <div className="inline-flex items-center absolute top-[9%] left-[27%] rounded-full border border-gray-600 px-4 py-2 gap-2">
+                    <img src="/year.png" alt="" />
+                    <span class="text-sm font-medium text-[#FF4C15]">experiences</span>
+                </div>
 
             {/* 24/7 Open (top right) */}
-            {/* <div className="absolute top-[15%] right-[20%] bg-white text-gray-800 px-3 py-1 rounded-full text-xs">
-                24/7 open
-            </div> */}
+            <div className="absolute top-[12%] right-[26%] bg-white text-gray-800 px-3 py-1  text-lg ">
+                <span className='text-[#FF4C15] font-bold '>24/7</span> <span className='text-[#2C6252]'>open</span>
+            </div>
 
             {/* 5 Star Rating */}
-            <div class="absolute top-[20%] right-[30%] bg-white rounded-full border border-gray-400 shadow-md py-1 px-3 text-yellow-400 text-base">
+            <div class="absolute top-[20%] right-[35%] bg-white rounded-full border border-gray-400 shadow-md py-1 px-3 text-yellow-400 text-base">
                 ★★★★★
             </div>
 
@@ -89,17 +96,10 @@ const Awards = () => {
             </div>
 
 
-
-
-            {/* 24/7 Open (bottom left) */}
-            {/* <div className="absolute top-[40%] left-[25%] bg-red-500 text-white px-3 py-1 rounded-full text-xs">
-                24/7 Open
-            </div> */}
-
             {/* Organic Food */}
-            {/* <div className="absolute top-[40%] right-[20%] bg-white text-gray-800 px-3 py-1 rounded-full text-xs">
-                Organic Food
-            </div> */}
+            <div className="absolute top-[30%] right-[23%] px-3 py-1 text-lg">
+                <span className='font-bold text-[#a9a2a2]'> Organic</span> <span className='text-[#CCCCCC] ' >Food</span>
+            </div>
 
             {/* Eco Friendly Icon */}
             {/* <div className="absolute top-[40%] right-[5%] bg-green-500 text-white px-3 py-1 rounded-full text-xs">
