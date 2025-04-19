@@ -54,7 +54,7 @@ const Services = () => {
                     ></div>
 
                     {/* Foreground Content */}
-                    <div className="relative z-10 text-center mt-[48rem]">
+                    <div className="relative z-10 text-center mt-[50rem]">
                         <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
                             <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto">
                                 <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
@@ -68,7 +68,7 @@ const Services = () => {
                             </span>
                         </h2>
 
-                        <h1 className="text-5xl font-semibold text-[#2C6252] mt-10 mb-6">
+                        <h1 className="text-5xl font-semibold text-[#2C6252] mt-14 mb-6">
                             What Makes Us Stand Out
                         </h1>
                     </div>
