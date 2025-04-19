@@ -36,7 +36,7 @@ const Services = () => {
 
     return (
         <div className='min-h-screen'>
-            <div className="bg-white w-[90rem] h-[70rem] left-[17rem] -mt-[29rem] rounded-[120px] mb-80 z-50 absolute">
+            <div className="bg-white w-[90rem] h-[70rem] left-[17rem] -mt-[20rem] rounded-[120px] mb-80 z-50 absolute">
                 <div className='mt-14 flex justify-center items-center text-center px-4'>
                     <h1 className='text-[#888888] text-base font-normal leading-relaxed max-w-2xl'>
                         At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
@@ -44,7 +44,7 @@ const Services = () => {
                     </h1>
                 </div>
 
-                <div className="relative w-full flex flex-col items-center justify-center -mt-[32rem] mb-8">
+                <div className="relative w-full flex flex-col items-center justify-center -mt-[36rem] mb-8">
                     {/* Background Image */}
                     <div
                         className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none"
@@ -54,7 +54,7 @@ const Services = () => {
                     ></div>
 
                     {/* Foreground Content */}
-                    <div className="relative z-10 text-center mt-[50rem]">
+                    <div className="relative z-10 text-center mt-[51rem]">
                         <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
                             <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto">
                                 <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
@@ -68,13 +68,13 @@ const Services = () => {
                             </span>
                         </h2>
 
-                        <h1 className="text-5xl font-semibold text-[#2C6252] mt-14 mb-6">
+                        <h1 className="text-5xl font-semibold text-[#2C6252] mt-10 mb-6">
                             What Makes Us Stand Out
                         </h1>
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14 mt-12 px-20">
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14 mt-14 px-20">
                         {services.map((service, index) => (
                             <div
                                 key={index}
