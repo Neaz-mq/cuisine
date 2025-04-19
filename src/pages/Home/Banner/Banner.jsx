@@ -57,7 +57,7 @@ const Banner = () => {
                     </div>
 
                     <div className='-mt-6'>
-                        <p className="mb-8 3xl:text-[20px] 2xl:text-[16px] ml-2 p-4 bg-cover bg-center w-[650px] h-[250px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
+                        <p className="mb-8 3xl:text-[20px] 2xl:text-[16px] xl:text-[14px] lg:text-[11px] 3xl:ml-2 2xl:ml-2 xl:ml-2 lg:ml-2 p-4 bg-cover bg-center 3xl:w-[650px] 2xl:w-[650px] xl:w-[500px] lg:w-[480px] 3xl:h-[250px] 2xl:h-[250px] xl:h-[250px] lg:h-[200px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
                             <span className="inline-flex">
                                 <span className="text-[#FF4C15] whitespace-nowrap">Experience the perfect blend of taste and joy—</span>
                                 <span className="text-[#AAAAAA] ml-2 whitespace-nowrap">every bite is a</span>
@@ -81,8 +81,8 @@ const Banner = () => {
                 </div>
 
                 {/* Right Side Background Image */}
-                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 overflow-hidden 3xl:ml-24 2xl:ml-2">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem]  object-cover 3xl:ml-56 2xl:ml-10" />
+                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 lg:-mt-16 overflow-hidden 3xl:ml-24 2xl:ml-2">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem] lg:h-[30rem]  object-cover 3xl:ml-56 2xl:ml-10 lg:ml-6" />
                 </div>
             </div>
 
