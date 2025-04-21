@@ -35,8 +35,8 @@ const Services = () => {
     ];
 
     return (
-        <div className='relative -mt-[41rem] flex justify-center'>
-            <div className="bg-white relative w-[83.5rem] h-[70rem] rounded-[120px] mb-80 z-50 -mt-[20rem] ">
+        <div className='relative 3xl:-mt-[41rem] 2xl:-mt-[37rem] flex justify-center'>
+            <div className="bg-white relative 3xl:w-[83.5rem] 3xl:h-[70rem] 2xl:w-[71rem] 2xl:h-[70rem] rounded-[120px] mb-80 z-50 -mt-[20rem] ">
                 <div className='mt-14 flex justify-center items-center text-center px-4'>
                     <h1 className='text-[#888888] text-base font-normal leading-relaxed max-w-2xl'>
                         At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
