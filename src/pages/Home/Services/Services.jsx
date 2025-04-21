@@ -74,7 +74,7 @@ const Services = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-10">
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-12">
                         {services.map((service, index) => (
                             <div
                                 key={index}

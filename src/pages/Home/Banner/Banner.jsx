@@ -46,7 +46,7 @@ const Banner = () => {
                         <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-lg font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
                     </div>
 
-                    <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-5 xl:mt-2">
+                    <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-3 xl:mt-2">
                         <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold">Every Bite!</span>
                         <button className="bg-[#2C6252] text-white py-2 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[14px]">
                             <span>Up to 50% Off</span>
