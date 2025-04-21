@@ -35,8 +35,8 @@ const Services = () => {
     ];
 
     return (
-        <div className='min-h-screen'>
-            <div className="bg-white w-[90rem] h-[70rem] left-[17rem] -mt-[20rem] rounded-[120px] mb-80 z-50 absolute">
+        <div className='relative -mt-[41rem] flex justify-center'>
+            <div className="bg-white relative w-[83.5rem] h-[70rem] rounded-[120px] mb-80 z-50 -mt-[20rem] ">
                 <div className='mt-14 flex justify-center items-center text-center px-4'>
                     <h1 className='text-[#888888] text-base font-normal leading-relaxed max-w-2xl'>
                         At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
@@ -74,7 +74,7 @@ const Services = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14 mt-14 px-20">
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14 mt-14 px-28">
                         {services.map((service, index) => (
                             <div
                                 key={index}

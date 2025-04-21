@@ -73,17 +73,10 @@ const Awards = () => {
         <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744868965/Mask_Group_3_zd2ur0.png" className='mt-2 w-40' alt="" />
       </div>
 
-
-
       {/* Organic Food */}
       <div className="absolute top-96 left-1/2 translate-x-[210px] px-3 py-1 text-lg">
         <span className='font-bold text-[#a9a2a2]'> Organic</span> <span className='text-[#CCCCCC] ' >Food</span>
       </div>
-
-
-
-
-
 
     </div>
   );
