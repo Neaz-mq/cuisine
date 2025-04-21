@@ -15,7 +15,7 @@ const Services = () => {
         {
             icon: '/customer.svg',
             title: 'Outstanding Customer Service',
-            desc: 'Our staff is dedicated to providing warm and attentive service, making sure that',
+            desc: 'Our staff is dedicated to providing warm and attentive services',
         },
         {
             icon: '/cazy.svg',
@@ -25,7 +25,7 @@ const Services = () => {
         {
             icon: '/safety.svg',
             title: 'Commitment to Cleanliness and Safety',
-            desc: 'We adhere to the highest standards of hygiene and food safety, ensuring that',
+            desc: 'We adhere to the highest standards of hygiene and food safety',
         },
         {
             icon: '/value.svg',
@@ -44,7 +44,7 @@ const Services = () => {
                     </h1>
                 </div>
 
-                <div className="relative w-full flex flex-col items-center justify-center -mt-[36rem] mb-8">
+                <div className="relative w-full flex flex-col items-center justify-center 3xl:-mt-[36rem] 2xl:-mt-[38rem]  mb-8">
                     {/* Background Image */}
                     <div
                         className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none"
@@ -56,7 +56,7 @@ const Services = () => {
                     {/* Foreground Content */}
                     <div className="relative z-10 text-center mt-[51rem]">
                         <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
-                            <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto">
+                            <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto 3xl:mt-0 2xl:mt-16">
                                 <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
                                     <img src="/svg.png" className="w-3 h-3" alt="Services Icon" />
                                 </div>
@@ -68,13 +68,13 @@ const Services = () => {
                             </span>
                         </h2>
 
-                        <h1 className="text-5xl font-semibold text-[#2C6252] mt-10 mb-6">
+                        <h1 className="text-5xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-16  mb-6">
                             What Makes Us Stand Out
                         </h1>
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14 mt-14 px-28">
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-10">
                         {services.map((service, index) => (
                             <div
                                 key={index}
@@ -94,7 +94,7 @@ const Services = () => {
                                     <h3 className="text-lg font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
                                         {service.title}
                                     </h3>
-                                    <p className="text-[#CCCCCC] text-[12px] py-2">
+                                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[10px] py-2">
                                         {service.desc}
                                     </p>
                                     <button className="text-[11px] text-[#2C6252] font-medium hover:underline">
