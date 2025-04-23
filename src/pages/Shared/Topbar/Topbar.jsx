@@ -139,14 +139,14 @@ const TopBar = () => {
             />
 
             {/* Content */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-6 lg:-ml-2 -mt-2 sm:-mt-10 ml-5">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-12 lg:-ml-2 -mt-2 sm:-mt-10 ml-5">
                 {/* Order Label */}
-                <span className="text-[#E4E4E4] mr-0 sm:mr-2 md:mr-3 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0">
+                <span className="text-[#E4E4E4] mr-0  3xl:ml-0 2xl:ml-0 xl:-ml-[4.4rem] lg:-ml-[4rem] text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0 lg:whitespace-nowrap">
                     Online place order
                 </span>
 
                 {/* Order Button */}
-                <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[12px] xl:text-[9px] lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0">
+                <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:ml-12 lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap ">
                    Order Now
                     <ChevronRight className="ml-1 text-white" size={16} md:size={20} />
                 </button>
@@ -159,14 +159,14 @@ const TopBar = () => {
                 </div>
 
                 {/* Kitchen Availability */}
-                <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
+                <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0 lg:whitespace-nowrap">
                     <img
                         src={isKitchenOpen ? "/kitchen.svg" : "/public/kitchen-unavailable.svg"}
                         alt="Kitchen status"
                         className="h-4 w-4 md:h-5 md:w-5"
                     />
                     <span
-                        className={`text-sm md:text-base font-semibold ${
+                        className={`text-sm 3xl:text-base 2xl:text-base xl:text-base lg:text-[12px] font-semibold ${
                             isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
                         }`}
                     >
@@ -175,9 +175,9 @@ const TopBar = () => {
                 </div>
 
                 {/* Dynamic Clock */}
-                <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0">
+                <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0 lg:whitespace-nowrap">
                     <AnalogClock />
-                    <span className="text-sm md:text-lg text-[#2C6252] font-mono font-semibold">{formattedTime}</span>
+                    <span className="text-sm 3xl:text-base 2xl:text-base xl:text-base lg:text-[12px]  text-[#2C6252]  font-semibold">{formattedTime}</span>
                 </div>
 
                 {/* Bottom Line */}
