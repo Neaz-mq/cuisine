@@ -141,12 +141,12 @@ const TopBar = () => {
             {/* Content */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-12 lg:-ml-2 -mt-2 sm:-mt-10 ml-5">
                 {/* Order Label */}
-                <span className="text-[#E4E4E4] mr-0  3xl:ml-0 2xl:ml-0 xl:-ml-[4.4rem] lg:-ml-[4rem] text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0 lg:whitespace-nowrap">
+                <span className="text-[#E4E4E4] mr-0  3xl:ml-0 2xl:ml-0 xl:-ml-[3rem] lg:-ml-[3rem] text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0 lg:whitespace-nowrap">
                     Online place order
                 </span>
 
                 {/* Order Button */}
-                <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:ml-12 lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap ">
+                <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px]  lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap 3xl:ml-4 3xl:mr-1 2xl:ml-4 2xl:mr-1 xl:ml-4 xl:mr-1 lg:ml-4 lg:mr-1 ">
                    Order Now
                     <ChevronRight className="ml-1 text-white" size={16} md:size={20} />
                 </button>
