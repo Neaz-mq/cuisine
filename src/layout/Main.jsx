@@ -13,7 +13,7 @@ const Main = () => {
             
             <div className="flex flex-1">
                 {/* Sidebar Navigation */}
-                <div className="fixed w-20 bg-white z-40">
+                <div className="fixed w-20  z-40">
                     <Navbar />
                 </div>
 
