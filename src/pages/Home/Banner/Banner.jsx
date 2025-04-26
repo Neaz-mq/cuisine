@@ -81,8 +81,8 @@ const Banner = () => {
                 </div>
 
                 {/* Right Side Background Image */}
-                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 lg:-mt-24 overflow-hidden 3xl:ml-24 2xl:ml-2">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem] lg:h-[32rem]  object-cover 3xl:ml-56 2xl:ml-10 lg:ml-6" />
+                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 lg:-mt-36 overflow-hidden 3xl:ml-24 2xl:ml-2">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem] lg:h-[40rem]  object-cover 3xl:ml-56 2xl:ml-10 lg:ml-6" />
                 </div>
             </div>
 
