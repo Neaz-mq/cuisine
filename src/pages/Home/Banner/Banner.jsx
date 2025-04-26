@@ -48,7 +48,7 @@ const Banner = () => {
 
                     <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-3 xl:mt-2">
                         <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold">Every Bite!</span>
-                        <button className="bg-[#2C6252] text-white py-2 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[14px]">
+                        <button className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[12px]">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">
                                 <img src="/arrow.svg" alt="Arrow" className="h-3 w-3" />
@@ -81,8 +81,8 @@ const Banner = () => {
                 </div>
 
                 {/* Right Side Background Image */}
-                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 lg:-mt-16 overflow-hidden 3xl:ml-24 2xl:ml-2">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem] lg:h-[30rem]  object-cover 3xl:ml-56 2xl:ml-10 lg:ml-6" />
+                <div className="3xl:-mt-80 2xl:-mt-40 xl:-mt-40 lg:-mt-24 overflow-hidden 3xl:ml-24 2xl:ml-2">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[68rem] 2xl:h-[50rem] xl:h-[46rem] lg:h-[32rem]  object-cover 3xl:ml-56 2xl:ml-10 lg:ml-6" />
                 </div>
             </div>
 
