@@ -1,10 +1,9 @@
-import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
 const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Menu', path: '/menu', hasDropdown: true },
-    { name: 'Signature Food', path: '/signature-food', hasDropdown: true },
+    { name: 'Menu', path: '/menu'},
+    { name: 'Signature Food', path: '/signature-food'},
     { name: 'Contact Us', path: '/contact-us' }
 ];
 
@@ -30,7 +29,6 @@ const Navbar = () => {
                         className="text-md text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
                         style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
                     >
-                        {item.hasDropdown && <ChevronDown size={14} style={{ transform: 'rotate(90deg)' }} />}
                         {item.name}
                     </a>
                 ))}
