@@ -139,7 +139,7 @@ const TopBar = () => {
             />
 
             {/* Content */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-12 lg:ml-6 -mt-2 sm:-mt-10 ml-5">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-12 lg:ml-16 -mt-2 sm:-mt-10 ml-5 ">
                 {/* Order Label */}
                 <span className="text-[#E4E4E4] mr-0  3xl:ml-0 2xl:ml-0 xl:-ml-[3rem] lg:-ml-[3rem] text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0 lg:whitespace-nowrap">
                     Online place order
@@ -181,7 +181,7 @@ const TopBar = () => {
                 </div>
 
                 {/* Bottom Line */}
-                <div className="w-56 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2 overflow-hidden"></div>
+                <div className="w-44 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2 overflow-hidden"></div>
             </div>
         </div>
         </div>

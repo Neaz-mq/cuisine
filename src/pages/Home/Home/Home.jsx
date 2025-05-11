@@ -1,8 +1,8 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
-import Awards from '../Awards/Awards';
+// import Awards from '../Awards/Awards';
 import Services from '../Services/Services';
-import Signature from '../Signature/Signature';
+//import Signature from '../Signature/Signature';
 //import Testimonials from '../Testimonials/Testimonials';
 //import Deliver from './Deliver/Deliver';
 //import Team from '../Team/Team';
@@ -11,9 +11,9 @@ const Home = () => {
     return (
         <div>
            <Banner></Banner>
-           <Awards></Awards>
+           {/* <Awards></Awards> */}
            <Services></Services>
-           <Signature></Signature>
+           {/* <Signature></Signature> */}
            {/* <Testimonials></Testimonials> */}
            {/* <Team></Team> */}
            {/* <Deliver></Deliver> */}

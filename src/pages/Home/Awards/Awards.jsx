@@ -2,7 +2,7 @@ import React from 'react';
 
 const Awards = () => {
   return (
-    <div className="relative w-full overflow-hidden min-h-[1800px] 3xl:-mt-0 2xl:-mt-40 xl:-mt-28 lg:-mt-44">
+    <div className="relative w-full overflow-hidden min-h-[1800px] 3xl:-mt-0 2xl:-mt-40 xl:-mt-28 lg:-mt-44 ">
       {/* Background Image (ultra large green semi-circle) */}
       <div className="absolute left-1/2 lg:bottom-[28.5rem] xl:bottom-80 2xl:bottom-20 3xl:bottom-0 z-0 w-[80%]  translate-x-[-50%] lg:h-[900px] xl:h-[1000px] 2xl:h-[1120px] 3xl:h-[1330px] flex items-center justify-center">
         <img
