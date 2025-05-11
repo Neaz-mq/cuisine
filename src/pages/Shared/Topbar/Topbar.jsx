@@ -181,7 +181,7 @@ const TopBar = () => {
                 </div>
 
                 {/* Bottom Line */}
-                <div className="w-64 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2 overflow-hidden"></div>
+                <div className="w-56 h-[1px] md:h-[1.5px] bg-[#FF4C15] ml-0 sm:ml-1 md:ml-2 overflow-hidden"></div>
             </div>
         </div>
         </div>
