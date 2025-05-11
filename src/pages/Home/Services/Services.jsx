@@ -36,14 +36,7 @@ const Services = () => {
             <div className="relative w-full flex flex-col items-center justify-center">
 
                 {/* Red Arc Curve Background */}
-                <div
-                    className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none"
-                    style={{
-                        backgroundImage:
-                            'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
-                    }}
-                />
-
+               
                 {/* Hero Headings */}
                 <div className="relative z-10 text-center mt-[5rem]">
                     <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
