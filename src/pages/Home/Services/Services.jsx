@@ -2,41 +2,51 @@ const Services = () => {
     const services = [
         {
             icon: '/Path 67.svg',
-            title: 'Fresh and High-Quality Ingredients',
+            title: 'Fresh and High-',
+            titleLine2: 'Quality',
+            titleLine3: 'Ingredients',
             desc: 'We source only the freshest and highest-quality ingredients to ensure',
         },
         {
             icon: '/unique.svg',
-            title: 'Unique and Delicious Menu',
+            title: 'Unique and',
+            titleLine2: 'Delicious',
+            titleLine3: 'Menu',
             desc: 'Our menu is carefully crafted by expert chefs who bring creativity and passion',
         },
         {
             icon: '/customer.svg',
-            title: 'Outstanding Customer Service',
+            title: 'Outstanding',
+            titleLine2: 'Customer',
+            titleLine3: 'Service',
             desc: 'Our staff is dedicated to providing warm and attentive services',
         },
         {
             icon: '/cazy.svg',
-            title: 'Cozy and Inviting Atmosphere',
+            title: 'Cozy and',
+            titleLine2: 'Inviting',
+            titleLine3: 'Atmosphere',
             desc: 'We have designed our restaurant to offer a comfortable and stylish',
         },
         {
             icon: '/safety.svg',
-            title: 'Commitment to Cleanliness and Safety',
+            title: 'Commitment to',
+            titleLine2: 'Cleanliness and',
+            titleLine3: 'Safety',
             desc: 'We adhere to the highest standards of hygiene and food safety',
         },
-        
+
     ];
 
     // Arc layout Y-offsets
-    
+
 
     return (
         <div className="relative bg-[#F8F8F8] flex justify-center -mt-44 3xl:-ml-44">
             <div className="relative w-full flex flex-col items-center justify-center">
 
                 {/* Red Arc Curve Background */}
-               
+
                 {/* Hero Headings */}
                 <div className="relative z-10 text-center mt-[5rem]">
                     <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
@@ -53,7 +63,7 @@ const Services = () => {
                                 </span>
                             </div>
                         </span>
-                    </h2>     
+                    </h2>
 
                     <h1 className="3xl:text-[42px] 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 mb-6">
                         What Makes Us Stand Out
@@ -66,43 +76,29 @@ const Services = () => {
                 </div>
 
                 {/* Services in Arc Layout */}
-               {/* Arc Layout for Service Items */}
-            <div className="relative z-10 flex justify-center items-center gap-x-10 flex-wrap max-w-7xl mx-auto mt-16">
-                {services.map((service, index) => {
-                    const arcTopOffsets = ['translate-y-[160px]', 'translate-y-[40px]', '', 'translate-y-[50px]', 'translate-y-[160px]'];
-                    return (
-                        <div
-                            key={index}
-                            className={`flex flex-col items-center text-center w-[200px] ${arcTopOffsets[index]}`}
-                        >
-                            <div className="w-20 h-20 rounded-full border-4 border-[#FF4C15] bg-[#2C6252] flex items-center justify-center mb-4">
-                                <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain" />
+                {/* Arc Layout for Service Items */}
+                <div className="relative z-10 flex justify-center items-center gap-x-10 flex-wrap max-w-7xl mx-auto mt-16">
+                    {services.map((service, index) => {
+                        const arcTopOffsets = ['translate-y-[140px]', 'translate-y-[40px]', '', 'translate-y-[40px]', 'translate-y-[140px]'];
+                        return (
+                            <div
+                                key={index}
+                                className={`flex flex-col items-center text-center w-[200px] ${arcTopOffsets[index]}`}
+                            >
+                                <div className="w-20 h-20 rounded-full border-4 border-[#FF4C15] bg-[#2C6252] flex items-center justify-center mb-4">
+                                    <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain" />
+                                </div>
+                                <h3 className="text-sm font-semibold text-[#2C6252]">
+                                    {service.title} <br /> {service.titleLine2} <br /> {service.titleLine3}
+                                </h3>
+                                <p className="text-xs text-gray-400 mt-2">{service.desc}</p>
                             </div>
-                            <h3 className="text-sm font-semibold text-[#2C6252]">
-                                {service.title.split(' ').map((word, i) => (
-                                    <span
-                                        key={i}
-                                        className={`${
-                                            i % 2 === 1 ? 'text-[#FF4C15]' : ''
-                                        }`}
-                                    >
-                                        {word}{' '}
-                                    </span>
-                                ))}
-                            </h3>
-                            <p className="text-xs text-gray-400 mt-2">{service.desc}</p>
-
-                          
-                        </div>
-                        
-                    );
-                    
-                })}
-            </div>
-              <div className="-mt-36">
-                <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1746959012/Group_1028_xr3pdo.png" alt="" className="w-[95rem]" />
-
-              </div>
+                        );
+                    })}
+                </div>
+                <div className="-mt-44">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1746959012/Group_1028_xr3pdo.png" alt="" className="w-[120rem]" />
+                </div>
                 <div className="py-28" />
             </div>
         </div>
