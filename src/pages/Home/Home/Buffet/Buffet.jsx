@@ -2,15 +2,16 @@ import React from 'react';
 
 const Buffet = () => {
     return (
-        <div className="mt-3 mb-36"> {/* Adjust padding as needed */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div className="mb-36 z-50"> {/* Adjust padding as needed */}
+            <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Top Section */}
-                <div className="text-center mb-10 relative">
-                    <div
-                        className="absolute inset-0 bg-cover bg-center z-[-1] h-[20rem] -mt-36"
-                        style={{ backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747026768/Buffet_lhk7ax.png')` }}
-                    ></div>
-                    <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative">
+                <div
+                    className="text-center mb-10 relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1747026768/Buffet_lhk7ax.png')] bg-no-repeat bg-contain bg-center w-full h-[20rem] -mt-52"
+                >
+                     </div>
+                  <div>
+                      <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative -mt-[15rem]">
                         <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
                             <img src="/svg.png" className="w-3 h-3" alt="Services Icon" />
                         </div>
@@ -20,19 +21,21 @@ const Buffet = () => {
                             </span>
                         </div>
                     </span>
-                    <h2 className="text-3xl font-semibold text-[#2C6252] relative">
+                    <h2 className="text-5xl font-semibold text-[#2C6252] relative mt-5 text-center">
                         Buffet for signature food
                     </h2>
-                </div>
+                  </div>
+               
+
 
                 {/* Food Cards Section */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12 mt-36">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 mb-12 mt-36 3xl:px-32 2xl:px-12 xl:px-6 lg:px-7">
                     {/* Food Card 1 */}
                     <div className="bg-[#FFFAF8] overflow-hidden relative"> {/* Added relative for absolute positioning */}
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747027495/Mask_Group_7_ezrscz.png" // Placeholder image
                             alt="Grilled Lamb Chops"
-                            className="w-full h-36 object-cover mb-3"
+                            className="w-full h-52 object-cover mb-3"
                         />
                         <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
                             <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
@@ -74,7 +77,7 @@ const Buffet = () => {
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747027615/Mask_Group_8_o6fhcq.png" // Placeholder image
                             alt="Grilled Steak"
-                            className="w-full h-36  object-cover mb-3"
+                            className="w-full h-52  object-cover mb-3"
                         />
                         <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
                             <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
@@ -108,7 +111,7 @@ const Buffet = () => {
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747027686/Mask_Group_9_b1ncuh.png" // Placeholder image
                             alt="Pan-Seared Salmon Fillet"
-                            className="w-full h-36 object-cover mb-3"
+                            className="w-full h-52 object-cover mb-3"
                         />
                         <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
                             <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
@@ -145,7 +148,7 @@ const Buffet = () => {
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747027737/Mask_Group_10_mzcepf.png" // Placeholder image
                             alt="Vegetarian Pasta"
-                            className="w-full h-36 object-cover mb-3"
+                            className="w-full h-52 object-cover mb-3"
                         />
                         <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
                             <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
@@ -177,46 +180,42 @@ const Buffet = () => {
                 </div>
 
                 {/* Bottom Image Section */}
-                <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden">
+                <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden 3xl:px-32 2xl:px-12 xl:px-6 lg:px-7 ">
                     {/* Left Text */}
-                    <div className="flex flex-col justify-center bg-white px-6 py-10 w-full md:w-1/3">
-                        <h2 className="text-[#2C6252] text-3xl md:text-4xl font-semibold leading-snug">
+                    <div className="flex flex-col justify-center bg-white px-6 py-10 w-full md:w-1/3 z-50">
+                        <h2 className="text-[#2C6252] text-3xl md:text-4xl font-semibold leading-snug -ml-4">
                             Deep <br /> Blue <br />
                             <span className="text-[#FF4C15] font-bold">Delights</span>
                         </h2>
                     </div>
 
                     {/* Right Image with overlay text */}
-                    <div className="relative w-full md:w-2/3 h-80 md:h-96">
-    {/* Background Image */}
-    <img
-        src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
-        alt="Deep Blue Delights Buffet"
-        className="w-full h-full object-cover"
-    />
+                    <div className="relative w-full  h-72 ">
+                        {/* Background Image */}
+                        <img
+                            src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
+                            alt="Deep Blue Delights Buffet"
+                            className="w-full h-full object-cover"
+                        />
 
-    <div className="flex justify-between items-end h-full">
-        {/* Overlay Description (Left Side) */}
-        <div className="absolute bottom-36 left-6 text-white p-4 text-sm max-w-[300px] rounded-md z-20">
-            Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.
-        </div>
-        
+                        <div className="flex justify-between items-end h-full">
+                            {/* Overlay Description (Left Side) */}
+                            <div className="absolute bottom-24 left-4 text-white p-4 text-sm max-w-[300px] rounded-md z-20">
+                                Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.
+                            </div>
 
-        <img className="absolute bottom-6 left-44 w-full h-[30rem]  p-4  z-20" src="https://res.cloudinary.com/dxohwanal/image/upload/v1747034204/Buffet_qtw3le.png" alt="" />
-    </div>
 
-    {/* Decorative Image Overlaid on top */}
-    <img
-        src="https://res.cloudinary.com/dxohwanal/image/upload/v1747026768/Buffet_lhk7ax.png"
-        alt=""
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-30 md:opacity-50 z-10"
-    />
-</div>
+                            <img className="absolute -bottom-16 left-72 w-full h-[32rem] z-20" src="https://res.cloudinary.com/dxohwanal/image/upload/v1747034204/Buffet_qtw3le.png" alt="" />
+                        </div>
+
+
+                    </div>
 
                 </div>
 
             </div>
         </div>
+
     );
 };
 

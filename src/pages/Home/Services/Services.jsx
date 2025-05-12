@@ -1,97 +1,115 @@
+import React from 'react';
+
 const Services = () => {
     const services = [
         {
             icon: '/Path 67.svg',
-            title: 'Fresh and High-',
-            titleLine2: 'Quality',
-            titleLine3: 'Ingredients',
+            title: 'Fresh and High-Quality Ingredients',
             desc: 'We source only the freshest and highest-quality ingredients to ensure',
         },
         {
             icon: '/unique.svg',
-            title: 'Unique and',
-            titleLine2: 'Delicious',
-            titleLine3: 'Menu',
+            title: 'Unique and Delicious Menu',
             desc: 'Our menu is carefully crafted by expert chefs who bring creativity and passion',
         },
         {
             icon: '/customer.svg',
-            title: 'Outstanding',
-            titleLine2: 'Customer',
-            titleLine3: 'Service',
+            title: 'Outstanding Customer Service',
             desc: 'Our staff is dedicated to providing warm and attentive services',
         },
         {
             icon: '/cazy.svg',
-            title: 'Cozy and',
-            titleLine2: 'Inviting',
-            titleLine3: 'Atmosphere',
+            title: 'Cozy and Inviting Atmosphere',
             desc: 'We have designed our restaurant to offer a comfortable and stylish',
         },
         {
             icon: '/safety.svg',
-            title: 'Commitment to',
-            titleLine2: 'Cleanliness and',
-            titleLine3: 'Safety',
+            title: 'Commitment to Cleanliness and Safety',
             desc: 'We adhere to the highest standards of hygiene and food safety',
         },
+        {
+            icon: '/value.svg',
+            title: 'Affordable Prices with Great Value',
+            desc: 'We believe that exceptional food should be accessible to everyone',
+        },
     ];
+
     return (
-        <div className="relative flex justify-center -mt-44 3xl:-ml-44">
-            <div className="relative w-full flex flex-col items-center justify-center">
-                {/* Hero Headings */}
-                <div className="relative z-10 text-center mt-[5rem]">
-                    <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
-                        <div className="-mt-32">
-                            <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png" alt="" />
-                        </div>
-                        <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto -mt-56">
-                            <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
-                                <img src="/svg.png" className="w-3 h-3" alt="Services Icon" />
-                            </div>
-                            <div className="text-center">
-                                <span className="text-xs">
-                                    Your Services <span className="font-thin">(And Benefits)</span>
-                                </span>
-                            </div>
-                        </span>
-                    </h2>
+        <div className='3xl:-mt-[14rem] 2xl:-mt-[14rem] xl:-mt-[15rem] lg:-mt-[15rem] flex justify-center'>
+            <div className=" ">
+                <div className='3xl:mt-14 2xl:mt-14 xl:mt-10 lg:mt-10 flex justify-center items-center text-center px-4'>
+                   
+                </div>
 
-                    <h1 className="3xl:text-[42px] 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 mb-6">
-                        What Makes Us Stand Out
-                    </h1>
+                <div className="relative w-full flex flex-col items-center justify-center 3xl:-mt-[36rem] 2xl:-mt-[38rem] xl:-mt-[42rem] lg:-mt-[45rem]  mb-8">
+                    {/* Background Image */}
+                    <div
+                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none"
+                        style={{
+                            backgroundImage: 'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
+                        }}
+                    ></div>
 
-                    <h1 className="text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
-                        <span className="font-medium text-[#FF4C15]">At Restaurant Name </span> we don’t just serve food—
+                    {/* Foreground Content */}
+                    <div className="relative z-10 text-center mt-[51rem]">
+                        <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
+                            <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto">
+                                <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
+                                    <img src="/svg.png" className="w-3 h-3" alt="Services Icon" />
+                                </div>
+                                <div className="text-center">
+                                    <span className="text-xs">
+                                        Your Services <span className="font-thin">(And Benefits)</span>
+                                    </span>
+                                </div>
+                            </span>
+                        </h2>
+
+                        <h1 className="3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 mb-6">
+                            What Makes Us Stand Out
+                        </h1>
+
+
+                         <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl: lg:text-sm font-normal leading-relaxed max-w-2xl'>
+                        At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
                         we create unforgettable dining experiences. From the moment you step through our doors.
                     </h1>
-                </div>
+                    </div>
 
-                {/* Arc Layout for Service Items */}
-                <div className="relative z-10 flex justify-center items-center gap-x-10 flex-wrap max-w-[120rem] mx-auto mt-16">
-                    {services.map((service, index) => {
-                        const translateYValues = ['translate-y-[140px]', 'translate-y-[40px]', 'translate-y-[0px]', 'translate-y-[40px]', 'translate-y-[140px]'];
-                        return (
+                    {/* Services Grid */}
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-12 xl:px-6 lg:px-7">
+                        {services.map((service, index) => (
                             <div
                                 key={index}
-                                className={`flex flex-col items-center text-center w-[200px] ${translateYValues[index]}`}
+                                className="flex items-start gap-4 max-w-md"
                             >
-                                <div className="w-20 h-20 rounded-full border-4 border-[#FF4C15] bg-[#2C6252] flex items-center justify-center mb-4">
-                                    <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain" />
+                                {/* Icon Container */}
+                                <div className="flex-shrink-0 w-20 h-20 bg-[#2C6252]  flex items-center justify-center">
+                                    <img
+                                        src={service.icon}
+                                        alt={service.title}
+                                        className="w-10 h-10 object-contain"
+                                    />
                                 </div>
-                                <h3 className="text-sm font-semibold text-[#2C6252]">
-                                    {service.title} <br /> {service.titleLine2} <br /> {service.titleLine3}
-                                </h3>
-                                <p className="text-xs text-[#CCCCCC] mt-2">{service.desc}</p>
-                            </div>
-                        );
-                    })}
-                    <div className="3xl:-mt-44">
-                        <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1746959012/Group_1028_xr3pdo.png" alt="" className="" />
-                    </div>
-                </div>
 
-                <div className="py-28" />
+                                {/* Text Content */}
+                                <div className="flex-1">
+                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[21px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[10px] xl:text-[8px] lg:text-[7px] py-2">
+                                        {service.desc}
+                                    </p>
+                                    <button className="text-[11px] text-[#2C6252] font-medium hover:underline">
+                                        Discover More
+                                    </button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="py-24"></div>
+                </div>
             </div>
         </div>
     );
