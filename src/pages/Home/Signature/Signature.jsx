@@ -8,6 +8,7 @@ const foodItems = [
     cuisine: 'Chinese',
     tags: ['Chicken Burger', 'French Fries', 'Soft Drinks'],
     image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1745657165/Mask_Group_13_nqpfnt.png',
+    description: 'Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.',
     available: true,
   },
   {
@@ -16,6 +17,7 @@ const foodItems = [
     cuisine: 'Chinese',
     tags: ['Crispy Chicken Sandwich', 'French Fries', 'Soft Drinks'],
     image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1745657198/Mask_Group_14_c1b8ng.png',
+    description: 'Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.',
     available: true,
   },
   {
@@ -24,6 +26,7 @@ const foodItems = [
     cuisine: 'Chinese',
     tags: ['Multiple dishes', 'Large portions', 'Soft Drinks'],
     image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1745657220/Mask_Group_15_fh4x2l.png',
+    description: 'Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.',
     available: true,
   },
   {
@@ -32,10 +35,20 @@ const foodItems = [
     cuisine: 'Chinese',
     tags: ['Party Platter', 'Extra Large', 'Drinks Included'],
     image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1745667692/mega_tgvowv.jpg',
+    description: 'Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.',
     available: true,
   },
 
-  
+  {
+    title: 'Spicy Noodles',
+    price: '$9.50',
+    cuisine: 'Chinese',
+    tags: ['Stir-fried Noodles', 'Chili', 'Vegetables'],
+    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747131934/noodles_vkbfpv.jpg',
+    description: 'Fiery stir-fried noodles with a mix of fresh vegetables and a hint of chili spice.',
+    available: true,
+  }
+
 ];
 
 const Signature = () => {
@@ -46,7 +59,7 @@ const Signature = () => {
     if (carousel) {
       const card = carousel.querySelector('div');
       if (card) {
-        const cardWidth = card.offsetWidth + 48; // card width + gap (48px = 3rem)
+        const cardWidth = card.offsetWidth + 48; // card width + gap
         const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
@@ -54,38 +67,69 @@ const Signature = () => {
   };
 
   return (
-    <div className="bg-[#2C6252] text-white py-24 relative overflow-hidden mb-72 w-[100rem] 3xl:-ml-40 3xl:-mt-40">
-      <div className="max-w-[1200px] mx-auto px-14 relative">
-        <h2 className="text-5xl font-semibold rotate-[-90deg] absolute left-96 top-[24rem] origin-left">
-          Signature Foods
+    <div className="bg-[#2C6252] text-white py-24 relative overflow-visible mb-72 w-[109.5rem] 3xl:-ml-40 3xl:mt-40">
+      <div className="max-w-[1200px] mx-auto px-14 relative right-20">
+        {/* Vertical Title */}
+
+        <div className="absolute rotate-[-80deg] top-[15rem] ">
+          <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md -ml-4">
+            <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
+              <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="" />
+            </div>
+            Foreign customer for (food menu)
+          </div>
+        </div>
+
+
+        <h2 className="text-[40px] font-semibold rotate-[-90deg] absolute  top-[14.5rem] left-2 ">
+          Chinese Food Set Meals
         </h2>
 
-        <div className="ml-[30rem] relative">
+        {/* Cards Section */}
+        <div className="ml-[19rem]  relative z-10 overflow-visible">
           <div
             ref={carouselRef}
-            className="flex gap-12 overflow-x-hidden scroll-smooth w-[calc(18rem*3+3rem*2)] mx-auto"
+            className="flex gap-12 overflow-x-hidden scroll-smooth w-[calc(26rem*3+3rem*2)] mx-auto"
           >
             {foodItems.map((item, index) => (
-              <div key={index} className="bg-white text-black w-72 flex-shrink-0 shadow-md">
+              <div key={index} className="bg-white text-black w-[20rem] flex-shrink-0  ">
                 <div className="relative">
-                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                  <img src={item.image} alt={item.title} className="w-full h-48 object-cover " />
                   {item.available && (
-                    <span className="absolute top-2 right-2 bg-yellow-400 text-xs font-bold px-2 py-1  text-black">
+                    <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
+                      <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
+                        <img src="/svg.svg" className="w-3 h-3" alt="Food Icon" /> {/* Replace with your food icon path */}
+                      </div>
                       Food Available
                     </span>
                   )}
                 </div>
                 <div className="p-4">
-                  <h3 className="text-gray-500 text-sm">{item.cuisine}</h3>
-                  <h2 className="font-bold text-lg">{item.title} - {item.price}</h2>
-                  <ul className="text-green-600 mt-2 list-none text-sm p-0">
+                  <h3 className="text-[#2C6252] text-lg font-medium mt-2 ml-2">{item.cuisine}</h3>
+                  <h2 className="font-semibold text-lg text-[#2C6252] ml-2">{item.title} - {item.price}</h2>
+                  <ul className="text-[#AAAAAA] mt-6 list-none text-sm p-0">
                     {item.tags.map((tag, idx) => (
-                      <li key={idx}>✔️ {tag}</li>
+                      <li key={idx} className="flex items-center gap-2 mb-1 ml-2">
+                        <div className="w-5 h-5 bg-green-500 rounded-sm flex items-center justify-center">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="w-3.5 h-3.5 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={3}
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-400 text-sm">{tag}</span>
+                      </li>
                     ))}
+
                   </ul>
-                  <button
-                    className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4  cursor-pointer border-none"
-                  >
+
+                  <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
+                  <button className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2">
                     Order Now
                   </button>
                 </div>
@@ -93,24 +137,23 @@ const Signature = () => {
             ))}
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="absolute -bottom-14 left-0 w-full flex justify-start">
+          {/* Scroll Buttons */}
+          <div className="absolute -bottom-14 left-0 w-full flex justify-start z-20">
             <div className="flex gap-2">
               <button
                 onClick={() => scroll('left')}
-                className="bg-white text-teal-900 p-2  shadow-md cursor-pointer"
+                className="bg-white text-teal-900 p-2 shadow-md cursor-pointer"
               >
                 <FaChevronLeft />
               </button>
               <button
                 onClick={() => scroll('right')}
-                className="bg-white text-teal-900 p-2  shadow-md cursor-pointer"
+                className="bg-white text-teal-900 p-2 shadow-md cursor-pointer"
               >
                 <FaChevronRight />
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </div>
