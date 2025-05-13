@@ -130,7 +130,7 @@ const TopBar = () => {
 
     return (
         <div className='overflow-hidden'>
-            <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:ml-0 2xl:ml-20 xl:ml-16 lg:ml-20">
+            <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:ml-0 2xl:ml-20 xl:ml-8 lg:ml-0">
             {/* Background Image */}
             <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1742451276/Group_22_fwl6sw.png"
