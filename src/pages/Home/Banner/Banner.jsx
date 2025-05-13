@@ -19,7 +19,7 @@ const Banner = () => {
     };
 
     return (
-        <div className="relative bg-white  ml-36">
+        <div className="relative bg-white  3xl:ml-36 2xl:ml-16 xl:ml-4">
             {/* Content and Image Container */}
             <div className="flex items-start justify-between">
                 {/* Left Side Content */}
@@ -81,8 +81,8 @@ const Banner = () => {
                 </div>
 
                 {/* Right Side Background Image */}
-                <div className="relative overflow-hidden 3xl:-mt-[20rem] 3xl:ml-[6rem] 2xl:-mt-[12rem] xl:-mt-36 lg:-mt-24  2xl:ml-2 z-40 ">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[72rem] 2xl:h-[52rem] xl:h-[42rem] lg:h-[33rem]  object-cover 3xl:ml-36  2xl:ml-20 xl:ml-24 lg:ml-16" />
+                <div className="relative overflow-hidden 3xl:-mt-[20rem] 3xl:ml-[6rem] 2xl:-mt-[12rem] xl:-mt-44 lg:-mt-32  2xl:ml-2 z-40 ">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[72rem] 2xl:h-[52rem] xl:h-[50rem] lg:h-[38rem]  object-cover 3xl:ml-36  2xl:ml-20 xl:ml-24 lg:ml-16" />
                 </div>
             </div>
 

@@ -14,7 +14,7 @@ const Navbar = () => {
             <a href="/">
                 <div className="absolute left-0 top-0 3xl:w-32 2xl:w-28 xl:w-24 lg:w-20 bg-[#2C6252] flex flex-col items-center py-4">
                     <img src="/logo.svg" alt="Cuisine Logo" className="h-6 w-auto 3xl:ml-20 2xl:ml-14 xl:ml-10 lg:ml-10" />
-                    <span className="text-lg font-bold text-white mt-4 3xl:ml-20 2xl:ml-14 xl:ml-10 lg:ml-10" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                    <span className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-base font-bold text-white mt-4 3xl:ml-20 2xl:ml-14 xl:ml-10 lg:ml-10" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                         Cuisine
                     </span>
                 </div>
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <a
                         key={index}
                         href={item.path}
-                        className="text-md text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
+                        className="3xl:text-md 2xl:text-md xl:text-sm lg:text-sm l text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
                         style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
                     >
                         {item.name}
@@ -36,7 +36,7 @@ const Navbar = () => {
 
             {/* Book Table Button */}
             <button className="bg-[#FF4C15] flex flex-col items-center py-4 px-3 w-full 3xl:ml-32 2xl:ml-24 xl:ml-16 lg:ml-12" style={{ marginTop: '40px' }}>
-                <span className="text-[20px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                <span className="3xl:text-[18px] 2xl:text-[17px] xl:text-[16px] lg:text-[14px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     Book a Table
                 </span>
                 <img src="/table.svg" alt="Table Icon" className="h-5 w-auto mt-4" style={{ writingMode: 'vertical-rl' }} />

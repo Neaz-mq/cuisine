@@ -42,7 +42,7 @@ const AnalogClock = () => {
     };
 
     return (
-        <svg viewBox="0 0 40 40" className="h-4 w-4 md:h-5 md:w-5 drop-shadow-sm">
+        <svg viewBox="0 0 40 40" className="h-4 w-4 md:h-5 md:w-5 drop-shadow-sm  3xl:ml-0 2xl:ml-0 xl:ml-2 lg:ml-2">
             {/* Outer circle */}
             <circle
                 cx={center}
@@ -130,7 +130,7 @@ const TopBar = () => {
 
     return (
         <div className='overflow-hidden'>
-            <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:ml-0 2xl:ml-20 xl:ml-8 lg:ml-0">
+            <div className="flex flex-col sm:flex-row items-center bg-white py-2 px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:ml-0 2xl:ml-10 xl:ml-8 lg:ml-0">
             {/* Background Image */}
             <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1742451276/Group_22_fwl6sw.png"
@@ -139,7 +139,7 @@ const TopBar = () => {
             />
 
             {/* Content */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-12 lg:ml-16 -mt-2 sm:-mt-10 ml-5 ">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 md:-ml-12 lg:ml-10 -mt-2 sm:-mt-10 ml-5 ">
                 {/* Order Label */}
                 <span className="text-[#E4E4E4] mr-0  3xl:ml-0 2xl:ml-0 xl:-ml-[3rem] lg:-ml-[3rem] text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[12px] md:text-[12px] mb-2 sm:mb-0 lg:whitespace-nowrap">
                     Online place order
