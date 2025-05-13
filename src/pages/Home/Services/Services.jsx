@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Services = () => {
     const services = [
         {
@@ -35,7 +33,7 @@ const Services = () => {
     ];
 
     return (
-        <div className='3xl:-mt-[14rem] 2xl:-mt-[14rem] xl:-mt-[15rem] lg:-mt-[15rem] flex justify-center'>
+        <div className='3xl:-mt-[14rem] 2xl:-mt-[10rem] xl:-mt-[3rem] lg:-mt-[2rem] flex justify-center'>
             <div className=" ">
                 <div className='3xl:mt-14 2xl:mt-14 xl:mt-10 lg:mt-10 flex justify-center items-center text-center px-4'>
                    
