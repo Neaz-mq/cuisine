@@ -68,31 +68,31 @@ const Services = () => {
                         </h1>
 
 
-                         <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl: lg:text-sm font-normal leading-relaxed max-w-2xl'>
+                         <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl'>
                         At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
                         we create unforgettable dining experiences. From the moment you step through our doors.
                     </h1>
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-12 xl:px-6 lg:px-7">
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-12 xl:px-6 lg:px-12">
                         {services.map((service, index) => (
                             <div
                                 key={index}
                                 className="flex items-start gap-4 max-w-md"
                             >
                                 {/* Icon Container */}
-                                <div className="flex-shrink-0 w-20 h-20 bg-[#2C6252]  flex items-center justify-center">
+                                <div className="flex-shrink-0 3xl:w-20 3xl:h-20 2xl:w-20 2xl:h-20 xl:w-20 xl:h-20 lg:w-14 lg:h-14 bg-[#2C6252]  flex items-center justify-center">
                                     <img
                                         src={service.icon}
                                         alt={service.title}
-                                        className="w-10 h-10 object-contain"
+                                        className="3xl:w-10 3xl:h-10 2xl:w-10 2xl:h-10 xl:w-10 xl:h-10 lg:w-6 lg:h-6 object-contain"
                                     />
                                 </div>
 
                                 {/* Text Content */}
                                 <div className="flex-1">
-                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[21px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[20px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
                                         {service.title}
                                     </h3>
                                     <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[10px] xl:text-[8px] lg:text-[7px] py-2">
