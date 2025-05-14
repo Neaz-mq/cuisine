@@ -31,22 +31,22 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative bg-white px-8 md:px-16 mx-24 -top-56">
+    <div className="relative bg-white px-8 md:px-16 mx-24 3xl:-top-56 2xl:-top-56 xl:-top-36 lg:-top-32">
       {/* Top section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
         <div>
-          <h2 className="text-6xl font-regular text-[#2C6252] leading-snug mt-52">
+          <h2 className="3xl:text-6xl 2xl:text-6xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-24">
             Customer <br /> Testimonial <br />
             <span className="text-[#FF4C15]">Examples</span>
           </h2>
           <div className="flex">
             <div>
-              <p className="text-[#CCCCCC] mt-14 max-w-md">
+              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px]">
                 When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
               </p>
             </div>
-            <div className="-mt-14 ml-6">
+            <div className="3xl:-mt-14 2xl:-mt-14 xl:-mt-12 lg:-mt-8 ml-6">
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png"
                 alt=""
@@ -98,7 +98,7 @@ const Testimonials = () => {
       </div>
 
       {/* Bottom Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-20">
+      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 gap-8 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10">
         {/* Card 1 */}
         <div className="bg-[#2C6252] text-white p-12 ">
           <h4 className="text-lg font-semibold mb-3">— Emily R.</h4>
@@ -151,3 +151,5 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+
