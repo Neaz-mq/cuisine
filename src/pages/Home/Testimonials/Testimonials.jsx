@@ -1,82 +1,148 @@
+import { useState } from "react";
+import { AnimatePresence, motion as Motion } from "framer-motion";
+
 const Testimonials = () => {
+  const images = [
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1747213386/Mask_Group_17_a3ud8m.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1747213928/pexels-fauxels-3184184_isaftp.jpg",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1747214093/pexels-fauxels-3184187_psgar7.jpg"
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const swipeConfidenceThreshold = 10000;
+
+  const swipePower = (offset, velocity) => {
+    return Math.abs(offset) * velocity;
+  };
+
+  const paginate = (newDirection) => {
+    const newIndex = currentIndex - newDirection;
+    if (newIndex >= 0 && newIndex < images.length) {
+      setDirection(newDirection);
+      setCurrentIndex(newIndex);
+    }
+  };
+
+  const goToSlide = (index) => {
+    setDirection(index > currentIndex ? -1 : 1);
+    setCurrentIndex(index);
+  };
+
   return (
-    <div className="relative bg-white py-16 px-8 md:px-16 lg:px-16">
+    <div className="relative bg-white px-8 md:px-16 mx-24 -top-56">
       {/* Top section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
         <div>
-          <h2 className="text-4xl font-bold text-green-900 leading-tight">
-            Customer Testimonial <br />
-            <span className="text-orange-500">Examples</span>
+          <h2 className="text-6xl font-regular text-[#2C6252] leading-snug mt-52">
+            Customer <br /> Testimonial <br />
+            <span className="text-[#FF4C15]">Examples</span>
           </h2>
-          <p className="text-gray-500 mt-6 max-w-md">
-            When I research companies online, I don't just want to hear the
-            company's pitch; I want to hear from its customers. That's where
-            customer testimonials come into play. But what makes some
-            testimonials so much better than others?
-          </p>
+          <div className="flex">
+            <div>
+              <p className="text-[#CCCCCC] mt-14 max-w-md">
+                When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
+              </p>
+            </div>
+            <div className="-mt-14 ml-6">
+              <img
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Right image */}
-        <div className="relative">
-          <img
-            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"
-            alt="People eating"
-            className="rounded-lg shadow-md w-full h-auto object-cover"
-          />
-          {/* Carousel dots */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            <span className="w-2 h-2 bg-white rounded-full"></span>
-            <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-            <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+        {/* Right image with swipe carousel */}
+        <div className="relative w-full h-[400px] overflow-hidden">
+          <AnimatePresence initial={false} custom={direction}>
+            <Motion.img
+              key={currentIndex}
+              src={images[currentIndex]}
+              custom={direction}
+              className="absolute w-full h-full object-cover"
+              initial={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset, velocity }) => {
+                const swipe = swipePower(offset.x, velocity.x);
+                if (swipe < -swipeConfidenceThreshold) {
+                  paginate(-1);
+                } else if (swipe > swipeConfidenceThreshold) {
+                  paginate(1);
+                }
+              }}
+            />
+          </AnimatePresence>
+          {/* Dots below the image */}
+          <div className="absolute bottom-8 left-12 transform -translate-x-1/2 flex space-x-2">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 
+        ${index === currentIndex
+                    ? "bg-white border-2 border-[#FF4C15]"
+                    : "bg-gray-300 border border-transparent"}
+      `}
+              />
+            ))}
           </div>
         </div>
       </div>
 
       {/* Bottom Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 -mt-20">
         {/* Card 1 */}
-        <div className="bg-green-900 text-white p-8 rounded-md shadow-md">
-          <h4 className="text-lg font-semibold mb-4">— Emily R.</h4>
-          <p className="text-sm">
-            "The food was absolutely delicious, and the service was top-notch!
-            The ambiance made our dinner even more special. Highly recommend!"
+        <div className="bg-[#2C6252] text-white p-12 ">
+          <h4 className="text-lg font-semibold mb-3">— Emily R.</h4>
+          <p className="text-sm text-white/90 leading-relaxed">
+            "The food was absolutely delicious, and the service was top-notch! The ambiance
+            made our dinner even more special. Highly recommend!"
           </p>
-          {/* Icons or badges */}
-          <div className="flex space-x-2 mt-4">
-            <span className="w-6 h-6 bg-white rounded-full"></span>
-            <span className="w-6 h-6 bg-white rounded-full"></span>
-            <span className="w-6 h-6 bg-white rounded-full"></span>
+          <div className="flex items-center mt-4 space-x-[10px]">
+            {/* Left half white, right half green circle */}        
+             <span className="w-6 h-6 bg-white border rounded-full"></span>
+            {/* Avatar with orange background and border */}
+            <img
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1747218057/Mask_Group_18_t1nw5z.png"
+              alt="avatar"
+              className="w-6 h-6 rounded-full border-2 border-[#FF4C15] bg-[#FF4C15] object-cover"
+            />
           </div>
+
         </div>
 
         {/* Card 2 */}
-        <div className="border border-orange-200 p-8 rounded-md shadow-md">
+        <div className="border border-orange-200 p-12 ">
           <h4 className="text-lg font-semibold text-green-900 mb-4">— James T.</h4>
           <p className="text-sm text-gray-700">
             "I've been coming here for years, and the quality has never changed.
             Fresh ingredients, amazing flavors, and a welcoming staff. A must-visit!"
           </p>
-          {/* Icons */}
           <div className="flex space-x-2 mt-4">
-            <span className="w-6 h-6 bg-green-500 rounded-full"></span>
-            <span className="w-6 h-6 bg-orange-400 rounded-full"></span>
-            <span className="w-6 h-6 bg-white border rounded-full"></span>
+             <span className="w-6 h-6 bg-[#2C6252] rounded-full"></span>
+           <span className="w-6 h-6 bg-[#FF4C15] rounded-full"></span>
+       
           </div>
         </div>
-
         {/* Card 3 */}
-        <div className="border border-orange-200 p-8 rounded-md shadow-md">
+        <div className="border border-orange-200 p-12 ">
           <h4 className="text-lg font-semibold text-green-900 mb-4">— Sophia M.</h4>
           <p className="text-sm text-gray-700">
             "From the moment we walked in, we were treated like family. The dishes
             were flavorful and beautifully presented. 10/10!"
           </p>
-          {/* Icons */}
           <div className="flex space-x-2 mt-4">
-            <span className="w-6 h-6 bg-orange-500 rounded-full"></span>
-            <span className="w-6 h-6 bg-green-500 rounded-full"></span>
-            <span className="w-6 h-6 bg-white border rounded-full"></span>
+            <span className="w-6 h-6 bg-[#FF4C15] rounded-full"></span>
+             <span className="w-6 h-6 bg-[#2C6252] rounded-full"></span>       
+            
           </div>
         </div>
       </div>
