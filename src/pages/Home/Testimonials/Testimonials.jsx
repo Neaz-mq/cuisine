@@ -1,8 +1,6 @@
-import React from "react";
-
 const Testimonials = () => {
   return (
-    <div className="relative bg-white py-16 px-8 md:px-16 lg:px-32">
+    <div className="relative bg-white py-16 px-8 md:px-16 lg:px-16">
       {/* Top section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}

@@ -4,7 +4,7 @@ import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
 import Buffet from './Buffet/Buffet';
 import Signature from '../Signature/Signature';
-//import Testimonials from '../Testimonials/Testimonials';
+import Testimonials from '../Testimonials/Testimonials';
 //import Deliver from './Deliver/Deliver';
 //import Team from '../Team/Team';
 
@@ -17,7 +17,7 @@ const Home = () => {
            <Buffet></Buffet>
            <Signature></Signature>
           
-           {/* <Testimonials></Testimonials> */}
+           <Testimonials></Testimonials>
            {/* <Team></Team> */}
            {/* <Deliver></Deliver> */}
         </div>
