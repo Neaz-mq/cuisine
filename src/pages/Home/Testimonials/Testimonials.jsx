@@ -100,15 +100,15 @@ const Testimonials = () => {
       {/* Bottom Cards */}
       <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 gap-8 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10">
         {/* Card 1 */}
-        <div className="bg-[#2C6252] text-white p-12 ">
-          <h4 className="text-lg font-semibold mb-3">— Emily R.</h4>
-          <p className="text-sm text-white/90 leading-relaxed">
+        <div className="border border-orange-200 p-12 ">
+          <h4 className="text-lg font-semibold text-green-900 mb-4">— Emily R.</h4>
+          <p className="text-sm text-gray-700">
             "The food was absolutely delicious, and the service was top-notch! The ambiance
             made our dinner even more special. Highly recommend!"
           </p>
           <div className="flex items-center mt-4 space-x-[10px]">
             {/* Left half white, right half green circle */}        
-             <span className="w-6 h-6 bg-white border rounded-full"></span>
+             <span className="w-6 h-6 bg-[#2C6252] rounded-full"></span> 
             {/* Avatar with orange background and border */}
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1747218057/Mask_Group_18_t1nw5z.png"
