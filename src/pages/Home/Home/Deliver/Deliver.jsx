@@ -35,23 +35,23 @@ const Deliver = () => {
         </div>
 
         {/* Right Image with Background */}
-       <div
-  className="flex justify-end relative left-32 w-full"
-  style={{
-    backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
-  }}
->
- <div className="-ml-44 -mt-44">
-   <img
-    src="https://res.cloudinary.com/dxohwanal/image/upload/v1747282614/young-smiling-courier-guy-red-uniform-sitting-scooter-holding-paper-bag-saying-hello-white-wall_haw6vn.png"
-    alt="Delivery Guy"
-    className="object-contain h-auto w-full -ml-44" 
-  />
- </div>
-</div>
+        <div
+          className="flex justify-end relative left-32 w-full"
+          style={{
+            backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="-ml-44 -mt-44">
+            <img
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1747282614/young-smiling-courier-guy-red-uniform-sitting-scooter-holding-paper-bag-saying-hello-white-wall_haw6vn.png"
+              alt="Delivery Guy"
+              className="object-contain h-auto w-full -ml-44"
+            />
+          </div>
+        </div>
 
       </div>
     </div>
