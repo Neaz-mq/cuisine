@@ -36,7 +36,7 @@ const Testimonials = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
         <div>
-          <h2 className="3xl:text-6xl 2xl:text-6xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-24">
+          <h2 className="3xl:text-6xl 2xl:text-6xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24">
             Customer <br /> Testimonial <br />
             <span className="text-[#FF4C15]">Examples</span>
           </h2>

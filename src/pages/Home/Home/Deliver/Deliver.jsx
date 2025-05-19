@@ -2,19 +2,15 @@ import React from "react";
 
 const Deliver = () => {
   return (
-    <div className="relative bg-white px-8 md:px-16 lg:px-32 mt-20 mb-24">
+    <div className="relative bg-white px-8 xl:px-32 mt-20 mb-24">
       {/* Main Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center">
         {/* Left Text Content */}
         <div className="space-y-6 ml-8">
-          <h2 className="text-4xl md:text-6xl text-[#33856D] space-y-4 flex flex-col">
-
+          <h2 className="text-4xl xl:text-6xl text-[#33856D] space-y-4 flex flex-col">
             <span>We Deliver</span>
-
             <span>Food Within</span>
-
             <span className="text-[#FF4C15]">30 Min ⏰</span>
-
           </h2>
 
           <p className="text-[#CCCCCC] max-w-md text-sm mt-2">
@@ -27,7 +23,7 @@ const Deliver = () => {
               <img src="/order.svg" alt="" className="w-4 h-4 mr-2" />
               Order Now
             </button>
-            <button className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 px-6 py-3 flex items-center ">
+            <button className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 px-6 py-3 flex items-center">
               <img src="/download.svg" alt="" className="w-4 h-4 mr-2" />
               Download Apps
             </button>
@@ -36,27 +32,25 @@ const Deliver = () => {
 
         {/* Right Image with Background */}
         <div
-          className="flex justify-end relative left-32 w-full"
+          className="flex justify-end relative left-32 "
           style={{
             backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
           }}
         >
-          <div className="-ml-44 -mt-44">
+          <div className="3xl:-ml-44 -mt-44 ">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1747282614/young-smiling-courier-guy-red-uniform-sitting-scooter-holding-paper-bag-saying-hello-white-wall_haw6vn.png"
               alt="Delivery Guy"
-              className="object-contain h-auto w-full -ml-44"
+              className="object-contain h-auto w-full 3xl:-ml-32"
             />
           </div>
         </div>
-
       </div>
     </div>
   );
 };
 
 export default Deliver;
-
