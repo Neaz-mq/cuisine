@@ -4,7 +4,7 @@ import { FaPhone, FaLocationDot } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C6252] text-white mt-36">
+    <footer className="bg-[#2C6252] text-white mt-32">
       {/* Top Image */}
       <div className="w-full flex justify-center mt-14">
   <img

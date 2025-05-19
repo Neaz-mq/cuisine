@@ -31,7 +31,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative bg-white px-8 md:px-16 mx-24 3xl:-top-56 2xl:-top-56 xl:-top-36 lg:-top-32">
+    <div className="relative bg-white px-8 md:px-16 mx-24 3xl:-top-60 2xl:-top-56 xl:-top-36 lg:-top-32">
       {/* Top section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
