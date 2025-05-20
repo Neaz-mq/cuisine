@@ -10,7 +10,7 @@ const Footer = () => {
         <img
           src="https://res.cloudinary.com/dxohwanal/image/upload/v1747630031/Mask_Group_23_pyld0k.png"
           alt="Footer Background"
-          className="3xl:w-[72rem] lg:w-[58rem] 3xl:h-[15rem]  object-cover  3xl:ml-[27.9rem] "
+          className="3xl:w-[72rem]   2xl:h-[15rem] lg:w-[58rem] 3xl:h-[15rem]  object-cover  3xl:ml-[27.9rem] "
         />
       </div>
 
@@ -19,8 +19,8 @@ const Footer = () => {
       <div className="max-w-screen-3xl mx-auto px-6 py-10 grid grid-cols-1 3xl:grid-cols-4 gap-12 ">
         {/* Logo */}
         <div className="flex flex-col items-center 3xl:mt-14 3xl:ml-[20rem]">
-          <div className="bg-[#3A7563] px-12 py-5  flex items-center space-x-2">
-            <img src="/logo.svg" alt="Cuisine Logo" className="w-6 h-6 3xl:-ml-6" />
+          <div className="bg-[#3A7563] 3xl:px-12 3xl:py-5 2xl:px-8 2xl:py-4 xl:px-8 xl:py-4 lg:px-8 lg:py-4  flex items-center space-x-2">
+            <img src="/logo.svg" alt="Cuisine Logo" className="w-6 h-6 3xl:-ml-6 2xl:-ml-2" />
             <span className="font-bold text-lg">Cuisine</span>
           </div>
         </div>
