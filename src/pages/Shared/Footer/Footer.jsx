@@ -4,30 +4,30 @@ import { FaPhone, FaLocationDot } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C6252] text-white mt-32">
+    <footer className="bg-[#2C6252] text-white 3xl:mt-32 2xl:mt-32">
       {/* Top Image */}
-      <div className="w-full flex justify-center mt-14">
+      <div className="w-full flex justify-center 3xl:mt-14 2xl:mt-14">
   <img
     src="https://res.cloudinary.com/dxohwanal/image/upload/v1747630031/Mask_Group_23_pyld0k.png"
     alt="Footer Background"
-    className="3xl:w-[72rem] 3xl:h-[15rem] object-cover rounded 3xl:ml-[27.9rem]"
+    className="3xl:w-[72rem] 3xl:h-[15rem] 2xl:w-[48rem] 2xl:h-[15rem] object-cover  3xl:ml-[27.9rem] 2xl:ml-[22rem]"
   />
 </div>
 
 
       {/* Middle section */}
-      <div className="max-w-screen-3xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-12 ">
+      <div className="max-w-screen-3xl mx-auto px-6 py-10 grid grid-cols-1 3xl:grid-cols-4 2xl:grid-cols-4 gap-12 ">
         {/* Logo */}
-        <div className="flex flex-col items-center 3xl:mt-14 3xl:ml-[20rem]  ">
-          <div className="bg-[#3A7563] px-12 py-5 flex items-center space-x-2 ">
+        <div className="flex flex-col items-center 3xl:mt-14 3xl:ml-[20rem] 2xl:mt-14 2xl:ml-[22rem]  ">
+          <div className="bg-[#3A7563] 3xl:px-12 3xl:py-5 2xl:px-10 2xl:py-4 flex items-center space-x-2 ">
             <img src="/logo.svg" alt="Cuisine Logo" className="w-6 h-6 3xl:-ml-6" />
             <span className="font-bold text-lg">Cuisine</span>
           </div>
         </div>
 
         {/* Customer Services */}
-        <div className='3xl:ml-[6.5rem]'>
-          <h2 className="font-semibold mb-6 text-xl">Customer Services</h2>
+        <div className='3xl:ml-[6.5rem] 2xl:ml-[8rem]'>
+          <h2 className="font-semibold mb-6 3xl:text-xl 2xl:text-lg">Customer Services</h2>
           <ul className="space-y-2 text-sm font-thin">
             <li>My Account</li>
             <li>Track Your Order</li>
@@ -37,8 +37,8 @@ const Footer = () => {
         </div>
 
         {/* Our Information */}
-        <div className='3xl:ml-[3.5rem]'>
-          <h4 className="font-semibold mb-6 text-xl">Our Information</h4>
+        <div className='3xl:ml-[3.5rem] 2xl:ml-[2rem]'>
+          <h4 className="font-semibold mb-6 3xl:text-xl 2xl:text-lg">Our Information</h4>
           <ul className="space-y-2 text-sm font-thin">
             <li>Privacy</li>
             <li>User Terms & Condition</li>
@@ -47,8 +47,8 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div>
-          <h4 className="font-semibold mb-6 text-xl">Contact Info</h4>
+        <div className=''>
+          <h4 className="font-semibold mb-6 3xl:text-xl 2xl:text-lg">Contact Info</h4>
           <ul className="space-y-2 text-sm font-thin">
             <li className="flex items-center gap-2"><FaPhone /> +0123-456-789</li>
             <li className="flex items-center gap-2"><MdEmail /> example@gmail.com</li>
@@ -60,18 +60,18 @@ const Footer = () => {
       </div>
 
       {/* Underline separator */}
-     <div className='3xl:ml-44'>
-       <div className="3xl:w-[89.5rem] border-t border-[#ACBCB8] mx-auto mb-10 " />
+     <div className='3xl:ml-44 2xl:ml-44'>
+       <div className="3xl:w-[89.5rem] 2xl:w-[8.5rem] border-t border-[#ACBCB8] mx-auto mb-10 " />
      </div>
 
       {/* Bottom bar */}
       <div className="bg-[#FF4C15] w-full">
         <div className="max-w-screen-3xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm px-6 py-6 gap-4">
-          <div className="flex items-center gap-2 3xl:ml-[18.8rem]">
+          <div className="flex items-center gap-2 3xl:ml-[18.8rem] 2xl:ml-[18.8rem]">
             <FaRegCopyright />
             <span>2025 Grocery Website Design. All Rights Reserved.</span>
           </div>
-          <div className="flex items-center gap-4 3xl:mr-28">
+          <div className="flex items-center gap-4 3xl:mr-28 2xl:mr-28">
             <span>English</span>
             <span>|</span>
             <span>USD</span>
