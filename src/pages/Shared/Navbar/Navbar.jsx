@@ -1,5 +1,3 @@
-import { ChevronDown } from 'lucide-react';
-
 const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Menu', path: '/menu'},
@@ -26,7 +24,7 @@ const Navbar = () => {
                     <a
                         key={index}
                         href={item.path}
-                        className="3xl:text-md 2xl:text-md xl:text-sm lg:text-sm l text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
+                        className="3xl:text-[15px] 2xl:text-md xl:text-sm lg:text-sm l text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
                         style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
                     >
                         {item.name}

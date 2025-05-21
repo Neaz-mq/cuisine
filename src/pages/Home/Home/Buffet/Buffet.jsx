@@ -3,7 +3,7 @@ import React from 'react';
 const Buffet = () => {
     return (
 
-        <div className="mb-36 z-50 3xl:mt-20 2xl:mt-16 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
+        <div className="mb-36 z-50 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
             <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Top Section */}
                 <div
@@ -64,7 +64,7 @@ const Buffet = () => {
                             <h3 className="text-lg font-semibold text-[#2C6252] mb-4">
                                 Grilled Lamb Chops -
                             </h3>
-                            <p className="text-[#AAAAAA] text-sm mb-3">
+                            <p className="text-[#AAAAAA] text-sm mb-4">
                                 Succulent, spice-rubbed lamb chops grilled to perfection with fresh greens.
                             </p>
                             <button className="bg-[#FF4C15] text-white py-2 px-4  text-sm font-semibold hover:bg-[#E64310] mb-4">
@@ -95,7 +95,7 @@ const Buffet = () => {
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
                                 <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[10px]  font-semibold">(5.0 Rating)</span>
                             </div>
-                            <h3 className="text-lg font-semibold text-[#2C6252] mb-3">
+                            <h3 className="text-lg font-semibold text-[#2C6252] mb-4">
                                 Grilled Super Steak -
                             </h3>
                             <p className="text-[#AAAAAA] text-sm mb-3">
@@ -135,7 +135,7 @@ const Buffet = () => {
                             <h3 className="text-lg font-semibold text-[#2C6252] mb-3">
                                 Pan-Seared Steak -
                             </h3>
-                            <p className="text-[#AAAAAA] text-sm mb-3">
+                            <p className="text-[#AAAAAA] text-sm mb-4">
                                 Flaky salmon fillet pan-seared to perfection, served with lemon sauce.
                             </p>
                             <button className="bg-[#FF4C15] text-white py-2 px-4  text-sm font-semibold hover:bg-[#E64310] mb-4">
