@@ -1,9 +1,11 @@
-import React from 'react';
+import Explore from '../Explore/Explore';
+import Items from '../Items/Items';
 
 const Menu = () => {
     return (
         <div>
-            <h1>menu</h1>
+           <Explore></Explore>
+           <Items></Items>
         </div>
     );
 };
