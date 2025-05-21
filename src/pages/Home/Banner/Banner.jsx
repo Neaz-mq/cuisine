@@ -27,7 +27,7 @@ const Banner = () => {
                     <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
 
                     <div className="ml-4">
-                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-2xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
+                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
                             Savor the
                             <button
                                 className="bg-white text-black py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
@@ -43,11 +43,11 @@ const Banner = () => {
                             </button>
                         </h1>
 
-                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-2xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
+                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
                     </div>
 
-                    <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-3 xl:mt-2">
-                        <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-2xl font-bold">Every Bite!</span>
+                    <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-3 xl:mt-2 lg:mt-2">
+                        <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-bold">Every Bite!</span>
                         <button className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[12px]">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">

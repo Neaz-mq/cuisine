@@ -2,7 +2,7 @@ import React from "react";
 
 const Deliver = () => {
   return (
-    <div className="relative bg-white px-8 3xl:px-32 2xl:px-28 xl:px-20 lg:px-10 mt-20 mb-24">
+    <div className="relative bg-white px-8 3xl:px-32 2xl:px-28 xl:px-20 lg:px-10 3xl:mt-20 2xl:mt-20 xl:mt-32 lg:mt-20 mb-24">
       {/* Main Grid */}
       <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
         {/* Left Text Content */}
