@@ -1,3 +1,6 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom'; // Import useLocation
+
 const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Menu', path: '/menu'},
@@ -6,6 +9,8 @@ const navItems = [
 ];
 
 const Navbar = () => {
+    const location = useLocation(); // Get the current location object
+
     return (
         <div className="sticky flex flex-col items-center w-20 p-4 z-20 3xl:-mt-[8rem] 2xl:-mt-[7.5rem] xl:-mt-[7rem] lg:-mt-[7rem] md:-mt-[4rem] sm:-mt-[4rem]">
             {/* Cuisine Section */}
@@ -24,7 +29,10 @@ const Navbar = () => {
                     <a
                         key={index}
                         href={item.path}
-                        className="3xl:text-[15px] 2xl:text-md xl:text-sm lg:text-sm l text-[#CCCCCC] hover:text-[#2C6252] flex flex-row-reverse items-center space-x-1"
+                        // Conditionally apply text color based on current path
+                        className={`3xl:text-[15px] 2xl:text-md xl:text-sm lg:text-sm flex flex-row-reverse items-center space-x-1 ${
+                            location.pathname === item.path ? 'text-[#2C6252]' : 'text-[#CCCCCC] hover:text-[#2C6252]'
+                        }`}
                         style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
                     >
                         {item.name}
