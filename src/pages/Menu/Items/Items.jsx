@@ -8,33 +8,33 @@ const categoryItems = [
       items: [
         {
           title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
+          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with flavor.',
           price: '$300',
           originalPrice: '$562',
           itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
+          title: 'Juicy Beef<br /><span class="text-[#FF4C15]">Classic</span>',
+          description: 'Our signature beef patty, cooked to perfection and served on a toasted bun with fresh veggies.',
+          price: '$320',
+          originalPrice: '$580',
           itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: true,
         },
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
+          title: 'Spicy BBQ<br /><span class="text-[#FF4C15]">Burger</span>',
+          description: 'A smoky and spicy delight with a zesty BBQ sauce, crispy onions, and melted cheese.',
+          price: '$310',
+          originalPrice: '$570',
           itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
+          title: 'Mushroom Swiss<br /><span class="text-[#FF4C15]">Burger</span>',
+          description: 'Earthy mushrooms and melted Swiss cheese complement our succulent beef patty perfectly.',
+          price: '$305',
+          originalPrice: '$565',
           itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
@@ -97,35 +97,35 @@ const categoryItems = [
     mainContent: {
       items: [
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898862/pizza_item_1.png', // Pizza image 1
+          title: 'Classic Pepperoni<br /><span class="text-[#FF4C15]">Pizza</span>',
+          description: 'A timeless favorite with rich tomato sauce, mozzarella, and savory pepperoni slices.',
+          price: '$450',
+          originalPrice: '$700',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898862/pizza_item_1.png',
           hasOrderButton: false,
         },
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898889/pizza_item_2.png', // Pizza image 2
-          hasOrderButton: false, // No order button on pizza items as per image
-        },
-        {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898912/pizza_item_3.png', // Pizza image 3
+          title: 'Margherita<br /><span class="text-[#FF4C15]">Delight</span>',
+          description: 'Simple yet perfect, with fresh basil, mozzarella, and a hint of olive oil on a crispy crust.',
+          price: '$400',
+          originalPrice: '$650',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898889/pizza_item_2.png',
           hasOrderButton: false,
         },
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
-          description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with',
-          price: '$300',
-          originalPrice: '$562',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898935/pizza_item_4.png', // Pizza image 4
+          title: 'Veggie Supreme<br /><span class="text-[#FF4C15]">Pizza</span>',
+          description: 'Loaded with a colorful array of fresh vegetables, olives, and bell peppers.',
+          price: '$420',
+          originalPrice: '$680',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898912/pizza_item_3.png',
+          hasOrderButton: false,
+        },
+        {
+          title: 'Chicken BBQ<br /><span class="text-[#FF4C15]">Pizza</span>',
+          description: 'Tangy BBQ sauce, grilled chicken, red onions, and cilantro create a unique flavor.',
+          price: '$480',
+          originalPrice: '$750',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747898935/pizza_item_4.png',
           hasOrderButton: false,
         },
       ],
@@ -305,7 +305,11 @@ const Items = () => {
               {/* Always render the label directly, visibility controlled by text color */}
               {item.label}
             </span>
-            
+            { 
+              selected === item.label && (
+                <div className="absolute bottom-0 w-full h-1  -mb-4"></div>
+              )
+            }
           </div>
         ))}
       </div>
