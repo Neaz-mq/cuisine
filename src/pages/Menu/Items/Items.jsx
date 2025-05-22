@@ -42,7 +42,7 @@ const categoryItems = [
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">burger</span>',
         mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895216/pngegg_12_ndjfjp.png',
-        smallImage: null, // No small image for burgers
+        smallImage: null, 
       },
     },
   },
@@ -56,7 +56,7 @@ const categoryItems = [
           description: 'Our chicken is fried to golden perfection, crispy on the outside, juicy on the inside, a true delight.',
           price: '$250',
           originalPrice: '$450',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899500/chicken_item_1.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899500/chicken_item_1.png', 
           hasOrderButton: false,
         },
         {
@@ -64,7 +64,7 @@ const categoryItems = [
           description: 'Experience the fiery kick of our spicy chicken wings, perfect for those who love a bit of heat.',
           price: '$280',
           originalPrice: '$490',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899530/chicken_item_2.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899530/chicken_item_2.png', 
           hasOrderButton: true,
         },
         {
@@ -72,7 +72,7 @@ const categoryItems = [
           description: 'Healthy and delicious, our grilled chicken salad is packed with fresh greens and tender chicken.',
           price: '$220',
           originalPrice: '$400',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899560/chicken_item_3.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899560/chicken_item_3.png', 
           hasOrderButton: false,
         },
         {
@@ -80,13 +80,13 @@ const categoryItems = [
           description: 'A perfect meal for the little ones, tender chicken nuggets with a side of crispy fries.',
           price: '$180',
           originalPrice: '$350',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899590/chicken_item_4.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899590/chicken_item_4.png', 
           hasOrderButton: false,
         },
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Chicken</span>',
-        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899620/big_chicken.png', // Placeholder
+        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899620/big_chicken.png', 
         smallImage: null,
       },
     },
@@ -146,7 +146,7 @@ const categoryItems = [
           description: 'Crisp, fresh greens with a mix of vibrant vegetables and a light vinaigrette dressing.',
           price: '$150',
           originalPrice: '$280',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899700/salad_item_1.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899700/salad_item_1.png', 
           hasOrderButton: false,
         },
         {
@@ -154,7 +154,7 @@ const categoryItems = [
           description: 'Classic Caesar salad with grilled chicken, croutons, and Parmesan cheese.',
           price: '$200',
           originalPrice: '$350',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899730/salad_item_2.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899730/salad_item_2.png', 
           hasOrderButton: true,
         },
         {
@@ -162,7 +162,7 @@ const categoryItems = [
           description: 'A hearty and healthy salad with quinoa, olives, feta, and sun-dried tomatoes.',
           price: '$230',
           originalPrice: '$420',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899760/salad_item_3.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899760/salad_item_3.png', 
           hasOrderButton: false,
         },
         {
@@ -170,13 +170,13 @@ const categoryItems = [
           description: 'A rich Cobb salad with chicken, bacon, avocado, egg, and blue cheese.',
           price: '$280',
           originalPrice: '$500',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899790/salad_item_4.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899790/salad_item_4.png', 
           hasOrderButton: false,
         },
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Salad</span>',
-        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899820/big_salad.png', // Placeholder
+        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899820/big_salad.png', 
         smallImage: null,
       },
     },
@@ -191,7 +191,7 @@ const categoryItems = [
           description: 'Golden, crispy, and perfectly salted french fries, a classic appetizer.',
           price: '$80',
           originalPrice: '$150',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899900/appetizer_item_1.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899900/appetizer_item_1.png', 
           hasOrderButton: false,
         },
         {
@@ -199,7 +199,7 @@ const categoryItems = [
           description: 'Sweet and savory onion rings, deep-fried to perfection, served with a special dipping sauce.',
           price: '$100',
           originalPrice: '$180',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899930/appetizer_item_2.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899930/appetizer_item_2.png', 
           hasOrderButton: true,
         },
         {
@@ -207,7 +207,7 @@ const categoryItems = [
           description: 'Warm, gooey mozzarella sticks coated in crispy breading, served with marinara.',
           price: '$120',
           originalPrice: '$200',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899960/appetizer_item_3.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899960/appetizer_item_3.png', 
           hasOrderButton: false,
         },
         {
@@ -215,13 +215,13 @@ const categoryItems = [
           description: 'Toasted garlic bread topped with melted cheese, a perfect companion to any meal.',
           price: '$90',
           originalPrice: '$160',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899990/appetizer_item_4.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899990/appetizer_item_4.png',
           hasOrderButton: false,
         },
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Appetizer</span>',
-        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900020/big_appetizer.png', // Placeholder
+        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900020/big_appetizer.png', 
         smallImage: null,
       },
     },
@@ -236,7 +236,7 @@ const categoryItems = [
           description: 'The refreshing taste of Coca-Cola, perfectly chilled to quench your thirst.',
           price: '$50',
           originalPrice: '$80',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900100/drink_item_1.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900100/drink_item_1.png', 
           hasOrderButton: false,
         },
         {
@@ -244,7 +244,7 @@ const categoryItems = [
           description: 'Natural and invigorating, our freshly squeezed orange juice is a burst of citrus flavor.',
           price: '$70',
           originalPrice: '$120',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900130/drink_item_2.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900130/drink_item_2.png', 
           hasOrderButton: true,
         },
         {
@@ -252,7 +252,7 @@ const categoryItems = [
           description: 'Indulge in our rich and creamy vanilla milkshake, a sweet treat for any time.',
           price: '$90',
           originalPrice: '$160',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900160/drink_item_3.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900160/drink_item_3.png', 
           hasOrderButton: false,
         },
         {
@@ -260,13 +260,13 @@ const categoryItems = [
           description: 'Cool down with our refreshing iced lemon tea, perfectly balanced between sweet and tart.',
           price: '$60',
           originalPrice: '$100',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900190/drink_item_4.png', // Placeholder
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900190/drink_item_4.png', 
           hasOrderButton: false,
         },
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Drinks</span>',
-        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900220/big_drink.png', // Placeholder
+        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900220/big_drink.png', 
         smallImage: null,
       },
     },
