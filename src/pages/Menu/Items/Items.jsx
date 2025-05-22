@@ -288,24 +288,24 @@ const Items = () => {
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
   return (
-    <div className='mt-64'>
+    <div className='mt-52 3xl:-ml-8 '>
       {/* Category Navigation */}
-       <div className="bg-[#2C6252] py-4 flex justify-center space-x-20 px-8">
+      <div className="bg-[#2C6252] py-8 flex justify-center space-x-36 px-8">
         {categoryItems.map((item) => (
           <div
             key={item.label}
             onClick={() => setSelected(item.label)}
             className="flex flex-col items-center cursor-pointer relative"
           >
-            <img src={item.image} alt={item.label} className="w-10 h-10" />
+            <img src={item.image} alt={item.label} className="w-14 h-14" />
             <span
-              className={`mt-1 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]' // Changed to match background color for invisibility
+              className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]' // Changed to match background color for invisibility
                 }`}
             >
               {/* Always render the label directly, visibility controlled by text color */}
               {item.label}
             </span>
-            { 
+            {
               selected === item.label && (
                 <div className="absolute bottom-0 w-full h-1  -mb-4"></div>
               )
@@ -317,35 +317,45 @@ const Items = () => {
       <div className="bg-white py-12 px-4 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
 
         {/* Left Section - Menu Items */}
-        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {items.map((item, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-4 flex flex-col items-start h-60">
-              {/* Using dangerouslySetInnerHTML for titles to render <br /> and spans */}
-              <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-              <p className="text-gray-500 text-sm mt-1 mb-4">
+       <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-12"> {/* Reduced gap-y */}
+    {items.map((item, index) => (
+        <div key={index} className="bg-[#F8F8F8] p-16 flex flex-col items-start h-96">
+            {/* Using dangerouslySetInnerHTML for titles to render <br /> and spans */}
+            <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
+            <p className="text-gray-500 text-sm mt-1 mb-4">
                 {item.description}
-              </p>
-              <div className="flex items-center justify-between w-full mt-auto">
+            </p>
+            <div className="flex items-center justify-between w-full mt-auto">
                 <img
-                  src={item.itemImage}
-                  alt="Food"
-                  className="w-40 h-auto object-contain -ml-4"
+                    src={item.itemImage}
+                    alt="Food"
+                    className="w-40 h-auto object-contain -ml-4"
                 />
                 <div className="flex flex-col items-end">
-                  <div className="text-xl font-bold text-[#FF4C15]">{item.price} <span className="text-sm line-through text-gray-400 ml-2">{item.originalPrice}</span></div>
-                  {item.hasOrderButton && (
-                    <button className="bg-[#FF4C15] text-white text-sm font-bold px-3 py-1 rounded mt-2">Order Now</button>
-                  )}
+                    <div className="flex items-end gap-x-1">
+                        <div className="text-2xl font-bold text-[#2C6252] leading-none">
+                            {item.price}
+                        </div>
+                        <span className="text-base line-through text-[#FF4C15] relative top-4 font-bold">
+                            {item.originalPrice}
+                        </span>
+                    </div>
+                    {item.hasOrderButton && (
+                        <button className="bg-[#FF4C15] text-white text-sm font-bold px-3 py-2 relative top-8 left-4">
+                            Order Now
+                        </button>
+                    )}
                 </div>
-              </div>
+
             </div>
-          ))}
         </div>
+    ))}
+</div>
 
         {/* Right Section - Today Special */}
         <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center">
           {/* Using dangerouslySetInnerHTML for todaySpecial text */}
-          <div className="text-5xl font-bold leading-tight mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
+          <div className="text-7xl font-bold leading-tight mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
           {todaySpecial.smallImage && (
             <img src={todaySpecial.smallImage} alt="Small decoration" className="absolute top-6 right-6 w-16 h-auto" />
           )}

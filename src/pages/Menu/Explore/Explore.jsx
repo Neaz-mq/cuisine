@@ -31,7 +31,7 @@ const Explore = () => {
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1747817792/pngegg_-_2025-05-10T174947.812_r4zzrj.png"
                         alt="Banner"
-                        className="w-full h-auto max-w-[700px] object-contain 3xl:-mt-14 2xl:-mt-16 xl:-mt-12 lg:-mt-6 "
+                        className="w-full max-w-[800px] object-contain 3xl:-mt-14 2xl:-mt-16 xl:-mt-12 lg:-mt-6 "
                     />
                 </div>
 
