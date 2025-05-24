@@ -109,7 +109,7 @@ const categoryItems = [
           price: '$400',
           originalPrice: '$650',
           itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060854/pngegg_-_2025-05-10T161749.855_aurtx9.png',
-          hasOrderButton: false,
+          hasOrderButton: true,
         },
         {
           title: 'Veggie Supreme<br /><span class="text-[#FF4C15]">Pizza</span>',
@@ -238,7 +238,7 @@ const categoryItems = [
         {
           title: 'Freshly Squeezed<br /><span class="text-[#FF4C15]">Orange Juice</span>',
           description: 'Natural and invigorating, our freshly squeezed orange juice is a burst of citrus flavor.',
-          price: '$70',
+          price: '$100',
           originalPrice: '$120',
           itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: true,
@@ -282,7 +282,7 @@ const Items = () => {
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
   return (
-    <div className='mt-52 3xl:-ml-8 '>
+    <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:-ml-8 2xl:-ml-12 xl:-ml-16 lg:-ml-[4.5rem] '>
       {/* Category Navigation */}
       <div className="bg-[#2C6252] py-8 flex justify-center space-x-36 px-8">
         {categoryItems.map((item) => (
@@ -313,7 +313,7 @@ const Items = () => {
         {/* Left Section - Menu Items */}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12"> {/* Reduced gap-y */}
           {items.map((item, index) => (
-            <div key={index} className="bg-[#F8F8F8] p-16 flex flex-col items-start h-96">
+            <div key={index} className="bg-[#F8F8F8] 3xl:p-16 2xl:p-16 xl:p-16 lg:p-6 flex flex-col items-start h-96">
               {/* Using dangerouslySetInnerHTML for titles to render <br /> and spans */}
               <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
               <p className="text-gray-500 text-sm mt-1 mb-4">
@@ -335,7 +335,7 @@ const Items = () => {
                     </span>
                   </div>
                   {item.hasOrderButton && (
-                    <button className="bg-[#FF4C15] text-white text-sm font-bold px-3 py-2 relative top-8 left-4">
+                    <button className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0">
                       Order Now
                     </button>
                   )}
@@ -345,7 +345,7 @@ const Items = () => {
           ))}
         </div>
         {/* Right Section - Today Special */}
-        <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center">
+        <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-24 2xl:top-16 3xl:top-0">
           {/* Using dangerouslySetInnerHTML for todaySpecial text */}
           <div className="text-7xl font-bold leading-tight mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
           <img src={todaySpecial.mainImage} alt="Main Special" className="mt-8 w-full h-auto object-contain" />
