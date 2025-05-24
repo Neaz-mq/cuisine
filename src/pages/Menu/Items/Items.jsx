@@ -188,7 +188,7 @@ const categoryItems = [
           description: 'Golden, crispy, and perfectly salted french fries, a classic appetizer.',
           price: '$80',
           originalPrice: '$150',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899900/appetizer_item_1.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
         {
@@ -196,7 +196,7 @@ const categoryItems = [
           description: 'Sweet and savory onion rings, deep-fried to perfection, served with a special dipping sauce.',
           price: '$100',
           originalPrice: '$180',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899930/appetizer_item_2.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: true,
         },
         {
@@ -204,7 +204,7 @@ const categoryItems = [
           description: 'Warm, gooey mozzarella sticks coated in crispy breading, served with marinara.',
           price: '$120',
           originalPrice: '$200',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899960/appetizer_item_3.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
         {
@@ -212,13 +212,13 @@ const categoryItems = [
           description: 'Toasted garlic bread topped with melted cheese, a perfect companion to any meal.',
           price: '$90',
           originalPrice: '$160',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747899990/appetizer_item_4.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Appetizer</span>',
-        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900020/big_appetizer.png'
+        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748061492/pngegg_16_hkoq5b.png'
       },
     },
   },
@@ -232,7 +232,7 @@ const categoryItems = [
           description: 'The refreshing taste of Coca-Cola, perfectly chilled to quench your thirst.',
           price: '$50',
           originalPrice: '$80',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900100/drink_item_1.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
         {
@@ -240,7 +240,7 @@ const categoryItems = [
           description: 'Natural and invigorating, our freshly squeezed orange juice is a burst of citrus flavor.',
           price: '$70',
           originalPrice: '$120',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900130/drink_item_2.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: true,
         },
         {
@@ -248,7 +248,7 @@ const categoryItems = [
           description: 'Indulge in our rich and creamy vanilla milkshake, a sweet treat for any time.',
           price: '$90',
           originalPrice: '$160',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900160/drink_item_3.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
         {
@@ -256,13 +256,13 @@ const categoryItems = [
           description: 'Cool down with our refreshing iced lemon tea, perfectly balanced between sweet and tart.',
           price: '$60',
           originalPrice: '$100',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900190/drink_item_4.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Drinks</span>',
-        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747900220/big_drink.png'
+        mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748061492/pngegg_16_hkoq5b.png'
       },
     },
   },
