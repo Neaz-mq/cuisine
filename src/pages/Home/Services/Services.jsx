@@ -33,23 +33,19 @@ const Services = () => {
     ];
 
     return (
-        <div className='3xl:-mt-[14rem] 2xl:-mt-[10rem] xl:-mt-[3rem] lg:-mt-[2rem] flex justify-center'>
-            <div className=" ">
-                <div className='3xl:mt-14 2xl:mt-14 xl:mt-10 lg:mt-10 flex justify-center items-center text-center px-4'>
-                   
-                </div>
+        <div className='3xl:-mt-[8rem] 2xl:-mt-[6rem] xl:-mt-[3rem] lg:-mt-[6rem] flex justify-center'>
 
-                <div className="relative w-full flex flex-col items-center justify-center 3xl:-mt-[36rem] 2xl:-mt-[38rem] xl:-mt-[42rem] lg:-mt-[45rem]  mb-8">
+                <div className="relative w-full flex flex-col items-center justify-center  mb-8 ">
                     {/* Background Image */}
                     <div
-                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none"
+                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none -top-[40rem] "
                         style={{
                             backgroundImage: 'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
                         }}
                     ></div>
 
                     {/* Foreground Content */}
-                    <div className="relative z-10 text-center mt-[51rem]">
+                    <div className="relative z-10 text-center mt-[15rem]">
                         <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
                             <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto">
                                 <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
@@ -68,14 +64,14 @@ const Services = () => {
                         </h1>
 
 
-                         <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl'>
+                         <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl '>
                         At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
                         we create unforgettable dining experiences. From the moment you step through our doors.
                     </h1>
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-14 3xl:px-28 2xl:px-12 xl:px-6 lg:px-12">
+                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-20 3xl:px-28 2xl:px-12 xl:px-6 lg:px-12">
                         {services.map((service, index) => (
                             <div
                                 key={index}
@@ -109,7 +105,7 @@ const Services = () => {
                     <div className="py-24"></div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 

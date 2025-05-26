@@ -45,14 +45,14 @@ const Delights = () => {
             </div>
 
             {/* Bottom Left - Discount Offer (Modified to match the new screenshot) */}
-            <div className="relative  overflow-hidden w-full h-[350px] lg:h-[700px] left-7 -top-8"> {/* Increased height for better background visibility */}
+            <div className="relative  overflow-hidden w-full h-[350px] lg:h-[700px] 3xl:left-7 2xl:left-7 xl:left-8   -top-8"> {/* Increased height for better background visibility */}
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146155/Mask_Group_55_ndcfj6.png"
                     alt="Chef Cooking"
-                    className="absolute inset-0 w-[35rem] h-auto object-cover object-center" // Image as full background
+                    className="absolute inset-0 3xl:w-[35rem] 2xl:w-[35rem] xl:w-[30rem] h-auto object-cover object-center" // Image as full background
                 />
                 {/* Orange overlay with content */}
-                <div className="absolute top-0 right-12 w-[20rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"> {/* Adjusted width, full height, opacity, padding, and flex for content alignment */}
+                <div className="absolute top-0 3xl:right-12 2xl:right-12 xl:right-8 3xl:w-[20rem] 2xl:w-[20rem] xl:w-[16rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"> {/* Adjusted width, full height, opacity, padding, and flex for content alignment */}
                     <h2 className="text-7xl font-bold leading-none mt-4">50%</h2> {/* Larger 50% */}
                     <p className="text-2xl font-semibold leading-tight mt-2">Discount Offer</p> {/* Larger "Discount Offer" */}
                     <p className="mt-4 text-sm leading-relaxed max-w-xs"> {/* Added descriptive text and max-width */}
