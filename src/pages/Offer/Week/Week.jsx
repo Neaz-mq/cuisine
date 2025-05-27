@@ -2,7 +2,7 @@ import React from 'react';
 
 const Week = () => {
   return (
-    <div className="min-h-screen flex flex-col 3xl:mt-20 container  mx-auto">
+    <div className="min-h-screen flex flex-col 3xl:mt-20 container mx-auto">
       {/* Header */}
       <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center  3xl:ml-12">
         <h1 className="text-2xl font-bold ml-8">Don't Miss This Week's Delights</h1>
