@@ -282,7 +282,8 @@ const Items = () => {
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
   return (
-    <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:-ml-8 2xl:-ml-12 xl:-ml-16 lg:-ml-[4.5rem] overflow-hidden '>
+   <div className='container mx-auto'>
+     <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:-ml-8 2xl:-ml-12 xl:-ml-16 lg:-ml-[4.5rem] overflow-hidden '>
       {/* Category Navigation */}
       <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-36 2xl:space-x-36 xl:space-x-36 lg:space-x-20 px-8">
         {categoryItems.map((item) => (
@@ -352,6 +353,7 @@ const Items = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

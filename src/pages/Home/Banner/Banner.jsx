@@ -20,21 +20,22 @@ const Banner = () => {
     };
 
     return (
-        <div className="relative bg-white  3xl:ml-36 2xl:ml-16 xl:ml-4">
+     <div className='container mx-auto'>
+           <div className="relative bg-white  3xl:ml-36 2xl:ml-16 xl:ml-4 lg:ml-4">
             {/* Content and Image Container */}
             <div className="flex items-start justify-between">
                 {/* Left Side Content */}
-                <div className="relative w-1/2 p-8">
+                <div className="relative  3xl:p-8 2xl:p-8 xl:p-8 lg:p-0">
                     <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
 
                     <div className="ml-4">
-                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
+                        <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
                             Savor the
                             <button
                                 className="bg-white text-black py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
                                 onClick={handleOpenModal}
                             >
-                                <span className="flex items-center 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[14px]">
+                                <span className="flex items-center 3xl:text-[20px] 2xl:text-[17px] xl:text-[15px] lg:text-[12px]">
                                     <span className="text-red-500 ml-2 mr-1">Live</span>
                                     <span className='text-[#2C6252]'>kitchen</span>
                                 </span>
@@ -44,13 +45,13 @@ const Banner = () => {
                             </button>
                         </h1>
 
-                        <h1 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-bold text-[#2C6252] leading-tight mt-2">Flavor, Relish</h1>
+                        <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-xl font-bold text-[#2C6252] leading-tight 3xl:mt-3 2xl:mt-2 xl:mt-2 lg:mt-1">Flavor, Relish</h1>
                     </div>
 
-                    <div className="flex items-center space-x-4 ml-4 3xl:mt-5 2xl:mt-3 xl:mt-2 lg:mt-2">
-                        <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-bold">Every Bite!</span>
+                    <div className="flex items-center space-x-4 ml-4 3xl:mt-3 2xl:mt-2 xl:mt-2 lg:mt-1">
+                        <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-4xl xl:text-2xl lg:text-xl font-bold">Every Bite!</span>
                         <Link to ="/offer">
-                        <button className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[20px] xl:text-[20px] lg:text-[12px]">
+                        <button className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px]">
                             <span>Up to 50% Off</span>
                             <div className="bg-white p-2 rounded-full flex items-center justify-center">
                                 <img src="/arrow.svg" alt="Arrow" className="h-3 w-3" />
@@ -59,7 +60,7 @@ const Banner = () => {
                     </div>
 
                     <div className='-mt-6'>
-                        <p className="mb-8 3xl:text-[20px] 2xl:text-[16px] xl:text-[14px] lg:text-[12px] 3xl:ml-2 2xl:ml-2 xl:ml-2 lg:ml-2 p-4 bg-cover bg-center 3xl:w-[650px] 2xl:w-[650px] xl:w-[500px] lg:w-[480px] 3xl:h-[250px] 2xl:h-[250px] xl:h-[250px] lg:h-[200px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
+                        <p className="mb-8 3xl:text-[20px] 2xl:text-[16px] xl:text-[12px] lg:text-[9px] 3xl:ml-2 2xl:ml-2 xl:ml-2 lg:ml-2 p-4 bg-cover bg-center 3xl:w-[650px] 2xl:w-[500px] xl:w-[480px] lg:w-[480px] 3xl:h-[250px] 2xl:h-[220px] xl:h-[180px] lg:h-[150px] flex flex-col justify-center" style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')" }}>
                             <span className="inline-flex">
                                 <span className="text-[#FF4C15] whitespace-nowrap">Experience the perfect blend of taste and joy—</span>
                                 <span className="text-[#AAAAAA] ml-2 whitespace-nowrap">every bite is a</span>
@@ -68,11 +69,11 @@ const Banner = () => {
                         </p>
                     </div>
 
-                    <div className="flex items-center space-x-20 -mt-20">
+                    <div className="flex items-center 3xl:space-x-20 2xl:space-x-20 xl:space-x-20 lg:space-x-10 -mt-20">
                         {[{ src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742626992/pngegg_17_u4hkq7.png", price: "20$", top: "60px" },
                         { src: "https://res.cloudinary.com/dxohwanal/image/upload/v1742627043/pngegg_18_fyzuz7.png", price: "10$", top: "32px", extraClass: "-mt-16" }].map((item, index) => (
                             <div key={index} className="relative">
-                                <img src={item.src} alt="Food Item" className={`w-auto ${item.extraClass || ''}`} />
+                                <img src={item.src} alt="Food Item" className={`3xl:w-auto 2xl:w-auto xl:w-auto lg:w-40 ${item.extraClass || ''}`} />
                                 <div className="absolute right-[-20px]" style={{ top: item.top }}>
                                     <img src="/flowershape.svg" alt="Flower shape" className="w-16" />
                                     <span className="absolute top-[29px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-sm">{item.price}</span>
@@ -82,10 +83,14 @@ const Banner = () => {
                     </div>
                 </div>
 
+               <div className='relative 3xl:-mt-56 3xl:-ml-14 2xl:-ml-16  w-full 2xl:-mt-36 xl:-mt-28 xl:-ml-16 lg:-mt-[7.2rem] lg:-ml-32 object-cover'>
+                 <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="" className='3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[30rem] 3xl:-ml-24 object-cover 2xl:-ml-10 xl:-ml-16 lg:-ml-0 3xl:h-[58rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem]' />
+               </div>
+
                 {/* Right Side Background Image */}
-                <div className="relative overflow-hidden 3xl:-mt-[20rem] 3xl:ml-[6rem] 2xl:-mt-[12rem] xl:-mt-44 lg:-mt-32  2xl:ml-2 z-40 ">
-                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full 3xl:h-[72rem] 2xl:h-[52rem] xl:h-[50rem] lg:h-[38rem]  object-cover 3xl:ml-36  2xl:ml-20 xl:ml-24 lg:ml-16" />
-                </div>
+                {/* <div className="relative overflow-hidden 3xl:-mt-[20rem] 3xl:-ml-52  2xl:-mt-[12rem] xl:-mt-44 lg:-mt-32  2xl:ml-2 z-40 ">
+                    <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="Banner" className="w-full  2xl:h-[52rem] xl:h-[50rem] lg:h-[38rem]  object-cover   2xl:ml-20 xl:ml-24 lg:ml-16 3xl:-ml-24" />
+                </div> */}
             </div>
 
 
@@ -119,6 +124,7 @@ const Banner = () => {
                 </div>
             )}
         </div>
+     </div>
     );
 };
 

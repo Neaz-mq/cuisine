@@ -3,7 +3,8 @@ import React from 'react';
 const Buffet = () => {
     return (
 
-        <div className="mb-36 z-50 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
+       <div className='container mx-auto'>
+         <div className="mb-36 z-50 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
             <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Top Section */}
                 <div
@@ -215,6 +216,7 @@ const Buffet = () => {
 
             </div>
         </div>
+       </div>
 
     );
 };

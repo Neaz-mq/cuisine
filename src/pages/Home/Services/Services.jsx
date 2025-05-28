@@ -33,7 +33,8 @@ const Services = () => {
     ];
 
     return (
-        <div className='3xl:-mt-[8rem] 2xl:-mt-[6rem] xl:-mt-[3rem] lg:-mt-[6rem] flex justify-center'>
+       <div className="container mx-auto">
+         <div className='3xl:-mt-[8rem] 2xl:-mt-[6rem] xl:mt-[1rem] lg:-mt-[6rem] flex justify-center'>
 
                 <div className="relative w-full flex flex-col items-center justify-center  mb-8 ">
                     {/* Background Image */}
@@ -105,6 +106,7 @@ const Services = () => {
                     <div className="py-24"></div>
                 </div>
             </div>
+       </div>
         
     );
 };

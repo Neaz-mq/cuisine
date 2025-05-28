@@ -1,6 +1,7 @@
 const Limited = () => {
   return (
-    <div className="bg-white px-36 mt-4">
+    <div className="container mx-auto">
+      <div className="bg-white px-36 mt-4">
       {/* Top Text Section */}
       <div className="text-base text-[#AAAAAA] mb-2 mt-3 leading-tight">
         we dish out <br />
@@ -145,6 +146,7 @@ const Limited = () => {
       </div>
 
   
+    </div>
     </div>
   );
 };

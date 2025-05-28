@@ -1,6 +1,8 @@
 const Delights = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20">
+
+       <div className="container mx-auto">
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
@@ -99,6 +101,7 @@ const Delights = () => {
                 />
             </div>
         </div>
+       </div>
     );
 };
 

@@ -1,6 +1,7 @@
 const Explore = () => {
     return (
-        <div className="relative bg-white  3xl:ml-36 2xl:ml-16 xl:ml-4">
+      <div className="container mx-auto">
+          <div className="relative bg-white  3xl:ml-36 2xl:ml-16 xl:ml-4">
             {/* Content and Image Container */}
             <div className="flex items-start justify-between">
                 {/* Left Side Content */}
@@ -37,6 +38,7 @@ const Explore = () => {
 
             </div>
         </div>
+      </div>
     );
 };
 
