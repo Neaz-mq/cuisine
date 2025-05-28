@@ -8,7 +8,7 @@ const Services = () => {
         {
             icon: '/unique.svg',
             title: 'Unique and Delicious Menu',
-            desc: 'Our menu is carefully crafted by expert chefs who bring creativity and passion',
+            desc: 'Our menu is carefully crafted by expert chefs who bring creativity',
         },
         {
             icon: '/customer.svg',
@@ -34,12 +34,12 @@ const Services = () => {
 
     return (
        <div className="container mx-auto">
-         <div className='3xl:-mt-[8rem] 2xl:-mt-[6rem] xl:mt-[1rem] lg:-mt-[6rem] flex justify-center'>
+         <div className='3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] flex justify-center'>
 
                 <div className="relative w-full flex flex-col items-center justify-center  mb-8 ">
                     {/* Background Image */}
                     <div
-                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none -top-[40rem] "
+                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem] "
                         style={{
                             backgroundImage: 'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
                         }}
@@ -72,7 +72,7 @@ const Services = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-14  mt-20 3xl:px-28 2xl:px-12 xl:px-6 lg:px-12">
+                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2   3xl:gap-12 2xl:gap-24 xl:gap-24 lg:gap-24   mt-20 ">
                         {services.map((service, index) => (
                             <div
                                 key={index}
@@ -89,7 +89,7 @@ const Services = () => {
 
                                 {/* Text Content */}
                                 <div className="flex-1">
-                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[20px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[18px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
                                         {service.title}
                                     </h3>
                                     <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[10px] xl:text-[8px] lg:text-[7px] py-2">

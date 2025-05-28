@@ -83,8 +83,8 @@ const Banner = () => {
                     </div>
                 </div>
 
-               <div className='relative 3xl:-mt-56 3xl:-ml-14 2xl:-ml-16  w-full 2xl:-mt-36 xl:-mt-28 xl:-ml-16 lg:-mt-[7.2rem] lg:-ml-32 object-cover'>
-                 <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="" className='3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[30rem] 3xl:-ml-24 object-cover 2xl:-ml-10 xl:-ml-16 lg:-ml-0 3xl:h-[58rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem]' />
+               <div className='relative 3xl:-mt-48 3xl:-ml-10 2xl:-ml-16  w-full 2xl:-mt-36 xl:-mt-28 xl:-ml-16 lg:-mt-[7.2rem] lg:-ml-32 object-cover'>
+                 <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png" alt="" className='3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[30rem] 3xl:-ml-24 object-cover 2xl:-ml-10 xl:-ml-16 lg:-ml-0 3xl:h-[56rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem]' />
                </div>
 
                 {/* Right Side Background Image */}
