@@ -3,9 +3,9 @@ import { AnimatePresence, motion as Motion } from "framer-motion";
 
 const Testimonials = () => {
   const images = [
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1747213386/Mask_Group_17_a3ud8m.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1747213928/pexels-fauxels-3184184_isaftp.jpg",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1747214093/pexels-fauxels-3184187_psgar7.jpg"
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748515898/Mask_Group_17_ke16wb.jpg",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748516128/pexels-nicole-michalou-5778894_hz19iu.jpg",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748516355/pexels-askar-abayev-5638751_vinx63.jpg"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -112,7 +112,7 @@ const Testimonials = () => {
              <span className="w-6 h-6 bg-[#2C6252] rounded-full"></span> 
             {/* Avatar with orange background and border */}
             <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1747218057/Mask_Group_18_t1nw5z.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1748515898/Mask_Group_17_ke16wb.jpg"
               alt="avatar"
               className="w-6 h-6 rounded-full border-2 border-[#FF4C15] bg-[#FF4C15] object-cover"
             />
