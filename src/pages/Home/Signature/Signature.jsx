@@ -39,15 +39,7 @@ const foodItems = [
     available: true,
   },
 
-  {
-    title: 'Spicy Noodles',
-    price: '$9.50',
-    cuisine: 'Chinese',
-    tags: ['Stir-fried Noodles', 'Chili', 'Vegetables'],
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747131934/noodles_vkbfpv.jpg',
-    description: 'Fiery stir-fried noodles with a mix of fresh vegetables and a hint of chili spice.',
-    available: true,
-  }
+  
 
 ];
 
@@ -68,12 +60,12 @@ const Signature = () => {
 
   return (
    <div className='container mx-auto'>
-     <div className="bg-[#2C6252] text-white py-24 relative overflow-visible  mb-72 3xl:w-[109.5rem] 2xl:w-[86.5rem] xl:w-[75rem] lg:w-[60rem] 3xl:-ml-40 2xl:-ml-40 xl:-ml-40 lg:-ml-40 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+     <div className="bg-[#2C6252] text-white py-24 relative overflow-visible  mb-72 3xl:w-[90rem] 2xl:w-[50rem] xl:w-[75rem] lg:w-[60rem] 3xl:ml-44 2xl:ml-[15.7rem] xl:-ml-40 lg:-ml-40 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
       <div className="max-w-[1200px] mx-auto px-14 relative right-20">
         {/* Vertical Title */}
 
-        <div className="absolute rotate-[-80deg] 3xl:top-[15rem] 2xl:top-[18rem] xl:top-[21rem] lg:top-[21rem] ">
-          <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-6 2xl:ml-24 xl:ml-52 lg:ml-52">
+        <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[12rem] xl:top-[21rem] lg:top-[21rem] ">
+          <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-72 2xl:-ml-20 xl:ml-52 lg:ml-52">
             <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
               <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="" />
             </div>
@@ -82,20 +74,20 @@ const Signature = () => {
         </div>
 
 
-       <div className='2xl:ml-8 xl:ml-[6.3rem] lg:ml-[8.3rem]  3xl:ml-0'>
-         <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute  3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:left-2  ">
+       <div className='2xl:ml-8 xl:ml-[6.3rem] lg:ml-[8.3rem]'>
+         <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute  3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-28 2xl:-left-0  ">
           Chinese Food Set Meals
         </h2>
        </div>
 
         {/* Cards Section */}
-        <div className="3xl:ml-[19rem] 2xl:ml-[19rem] xl:ml-[22.5rem] lg:ml-[22.5rem]  relative z-10 overflow-visible ">
+        <div className="3xl:ml-[11rem] 2xl:ml-[19rem] xl:ml-[22.5rem] lg:ml-[22.5rem]  relative z-10 overflow-visible ">
           <div
             ref={carouselRef}
-            className="flex gap-12 overflow-hidden scroll-smooth 3xl:w-[calc(26rem*3+3rem*2)] 2xl:w-[calc(20rem*3+3rem*2)] xl:w-[calc(17.5rem*3+3rem*2)] lg:w-[calc(12rem*3+3rem*2)] mx-auto"
+            className="flex 3xl:gap-14 2xl:gap-14  overflow-hidden scroll-smooth 3xl:w-[calc(25rem*3+3rem*2)] 2xl:w-[calc(12.2rem*3+3rem*2)] xl:w-[calc(17.5rem*3+3rem*2)] lg:w-[calc(12rem*3+3rem*2)] mx-auto"
           >
             {foodItems.map((item, index) => (
-              <div key={index} className="bg-white text-black w-[20rem] flex-shrink-0  ">
+              <div key={index} className="bg-white text-black w-[20.2rem] flex-shrink-0  ">
                 <div className="relative">
                   <img src={item.image} alt={item.title} className="w-full h-48 object-cover " />
                   {item.available && (
