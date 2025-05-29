@@ -84,10 +84,10 @@ const Signature = () => {
         <div className="3xl:ml-[11rem] 2xl:ml-[13rem] xl:ml-[22.5rem] lg:ml-[22.5rem]  relative z-10 overflow-visible ">
           <div
             ref={carouselRef}
-            className="flex 3xl:gap-14 2xl:gap-10  overflow-hidden scroll-smooth 3xl:w-[calc(25rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(17.5rem*3+3rem*2)] lg:w-[calc(12rem*3+3rem*2)] mx-auto"
+            className="flex 3xl:gap-14 2xl:gap-6  overflow-hidden scroll-smooth 3xl:w-[calc(25rem*3+3rem*2)] 2xl:w-[calc(14rem*3+3rem*2)] xl:w-[calc(17.5rem*3+3rem*2)] lg:w-[calc(12rem*3+3rem*2)] mx-auto"
           >
             {foodItems.map((item, index) => (
-              <div key={index} className="bg-white text-black w-[20.2rem] flex-shrink-0  ">
+              <div key={index} className="bg-white text-black 3xl:w-[20.2rem]  2xl:w-[18rem] flex-shrink-0  ">
                 <div className="relative">
                   <img src={item.image} alt={item.title} className="w-full h-48 object-cover " />
                   {item.available && (
