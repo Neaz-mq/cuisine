@@ -4,7 +4,7 @@ const Buffet = () => {
     return (
 
        <div className='container mx-auto'>
-         <div className="mb-36 z-50 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
+         <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
             <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Top Section */}
                 <div
@@ -30,7 +30,7 @@ const Buffet = () => {
 
 
                 {/* Food Cards Section */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:gap-12 2xl:gap-6 xl:gap-4 lg:gap-2 mb-12 3xl:mt-20 2xl:mt-16 xl:mt-14 lg:mt-12 3xl:px-32 2xl:px-8 xl:px-1 lg:px-0">
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 3xl:grid-cols-4 3xl:gap-12 2xl:gap-20 xl:gap-14 lg:gap-10 mb-12 3xl:mt-20 2xl:mt-16 xl:mt-14 lg:mt-12 3xl:px-32 2xl:px-52 xl:px-36 lg:px-20">
                     {/* Food Card 1 */}
                     <div className="bg-[#FFFAF8] overflow-hidden relative"> {/* Added relative for absolute positioning */}
                         <img
@@ -184,19 +184,19 @@ const Buffet = () => {
                 <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden 3xl:px-32 2xl:px-7 xl:px-1 lg:px-2 ">
                     {/* Left Text */}
                     <div className="flex flex-col justify-center bg-white px-6 py-10 w-full md:w-1/3 z-50">
-                        <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl  -ml-4">
+                        <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl  3xl:-ml-4 2xl:ml-40 xl:ml-[7.6rem] lg:ml-12  ">
                             Deep <br /> Blue <br />
                             Delights
                         </h2>
                     </div>
 
                     {/* Right Image with overlay text */}
-                    <div className="relative w-full  h-72 ">
+                    <div className="relative 3xl:w-full 2xl:w-[80rem] xl:w-[65rem] lg:w-[65rem]  h-72 ">
                         {/* Background Image */}
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
                             alt="Deep Blue Delights Buffet"
-                            className="w-full h-full object-cover"
+                            className="3xl:w-full 2xl:w-[49.7rem] xl:w-[45.4rem] lg:w-[40rem] h-full object-cover"
                         />
 
                         <div className="flex justify-between items-end h-full">
