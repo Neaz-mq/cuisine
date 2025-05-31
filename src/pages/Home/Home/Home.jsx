@@ -9,9 +9,9 @@ import Deliver from './Deliver/Deliver';
 const Home = () => {
     return (
         <div>
-           <Banner></Banner>          
+           {/* <Banner></Banner>           */}
            <Services></Services>
-           {/* <Buffet></Buffet>     */}
+           <Buffet></Buffet>    
            {/* <Signature></Signature>           */}
            {/* <Testimonials></Testimonials>    */}
            {/* <Deliver></Deliver> */}

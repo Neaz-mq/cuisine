@@ -189,7 +189,7 @@ const Buffet = () => {
                     </div>
 
                     {/* Right Image with overlay text */}
-                    {/* <div className="relative 3xl:w-full 2xl:w-[80rem] xl:w-[65rem] lg:w-[65rem]  h-96 ">
+                    <div className="relative 3xl:w-full 2xl:w-[80rem] xl:w-[65rem] lg:w-[65rem]  h-96 ">
                       
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
@@ -208,7 +208,7 @@ const Buffet = () => {
                         </div>
 
 
-                    </div> */}
+                    </div>
 
                 </div>
 
