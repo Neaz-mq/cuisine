@@ -1,87 +1,100 @@
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaRegCopyright } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { FaPhone, FaLocationDot } from 'react-icons/fa6';
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaInstagram,
+  FaRegCopyright,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaPhone, FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C6252] text-white 3xl:mt-32 2xl:mt-20 xl:mt-16 lg:mt-14 ">
-      {/* Top Image */}
-      <div className="w-full flex justify-center 3xl:mt-14 2xl:mt-14 xl:mt-14 lg:mt-14  ">
+    <footer className="bg-[#2C6252] text-white">
+     <div className="container mx-auto">
+ {/* Top Image */}
+      <div className="flex justify-center items-center pt-10 3xl:ml-60 2xl:ml-60 xl:ml-60 lg:ml-44">
         <img
           src="https://res.cloudinary.com/dxohwanal/image/upload/v1747630031/Mask_Group_23_pyld0k.png"
           alt="Footer Background"
-          className="3xl:w-[72rem]   2xl:h-[15rem] lg:w-[58rem] 3xl:h-[15rem]  object-cover  3xl:ml-[27.9rem] "
+          className="w-full 3xl:max-w-[800px] 2xl:max-w-[800px] xl:max-w-[800px] lg:max-w-[790px] h-auto object-cover "
         />
       </div>
 
-
-      {/* Middle section */}
-      <div className="max-w-screen-3xl mx-auto px-6 py-10 grid grid-cols-1 3xl:grid-cols-4 gap-12 ">
+      {/* Middle Section */}
+      <div className="max-w-[1152px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-left">
         {/* Logo */}
-        <div className="flex flex-col items-center 3xl:mt-14 3xl:ml-[20rem]">
+        <div className="flex items-start">
           <a href="/">
-            <div className="bg-[#3A7563] 3xl:px-12 3xl:py-5 2xl:px-8 2xl:py-4 xl:px-8 xl:py-4 lg:px-8 lg:py-4  flex items-center space-x-2">
-            <img src="/logo.svg" alt="Cuisine Logo" className="w-6 h-6 3xl:-ml-6 2xl:-ml-2" />
-            <span className="font-bold text-lg">Cuisine</span>
-          </div>
+            <div className="bg-[#3A7563] px-6 py-4 flex items-center space-x-2 w-fit mt-2">
+              <img src="/logo.svg" alt="Cuisine Logo" className="w-6 h-6" />
+              <span className="font-bold text-lg">Cuisine</span>
+            </div>
           </a>
         </div>
 
         {/* Customer Services */}
-        <div className='3xl:ml-[6.5rem] 2xl:text-center xl:text-center lg:text-center 3xl:text-start'>
-          <h2 className="font-semibold mb-6 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-lg">Customer Services</h2>
+        
+        <div className="lg:-ml-8 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
+          <h2 className="font-semibold mb-4 text-lg">Customer Services</h2>
           <ul className="space-y-2 text-sm font-thin">
             <li>My Account</li>
             <li>Track Your Order</li>
             <li>Return</li>
-            <li>FAQ</li>
+            <li>
+              <a href="#" className="underline">
+                FAQ
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Our Information */}
-        <div className='3xl:ml-[3.5rem] 2xl:text-center xl:text-center lg:text-center 3xl:text-start'>
-          <h4 className="font-semibold mb-6 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-lg">Our Information</h4>
+        <div className="lg:-ml-8 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
+          <h2 className="font-semibold mb-4 text-lg">Our Information</h2>
           <ul className="space-y-2 text-sm font-thin">
             <li>Privacy</li>
             <li>User Terms & Condition</li>
-            <li><a href="#" className="underline">Return Policy</a></li>
+            <li>
+              <a href="#" className="underline">
+                Return Policy
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Contact Info */}
-        <div className="2xl:text-center xl:text-center lg:text-center 3xl:text-start 2xl:flex 2xl:flex-col 2xl:items-center xl:flex xl:flex-col xl:items-center 3xl:items-start mb-10 lg:flex lg:flex-col lg:items-center">
-          <h4 className="font-semibold mb-6 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-lg">Contact Info</h4>
+        <div className="lg:-ml-8 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
+          <h2 className="font-semibold mb-4 text-lg">Contact Info</h2>
           <ul className="space-y-2 text-sm font-thin">
-            <li className="flex items-center gap-2 2xl:justify-center xl:justify-center 3xl:justify-start lg:justify-center">
-              <FaPhone /> +0123-456-789
+            <li className="flex items-center gap-2">
+              <FaPhone />
+              <span className="underline">+0123-456-789</span>
             </li>
-            <li className="flex items-center gap-2 2xl:justify-center 3xl:justify-start xl:justify-center lg:justify-center">
-              <MdEmail /> example@gmail.com
+            <li className="flex items-center gap-2">
+              <MdEmail />
+              <span className="underline">example@gmail.com</span>
             </li>
-            <li className="flex items-start gap-2 2xl:justify-center 3xl:justify-start xl:justify-center lg:justify-center">
+            <li className="flex items-start gap-2">
               <FaLocationDot />
-              <span className="text-left 2xl:text-center 3xl:text-start lg:justify-center">
+              <span className="underline">
                 8502 Preston Rd. Inglewood, Maine 98380
               </span>
             </li>
           </ul>
         </div>
-
       </div>
+ </div>
+      {/* Divider Line */}
+      <div className="border-t border-[#ACBCB8] max-w-[1100px] mx-auto mb-12 mt-6" />
 
-      {/* Underline separator */}
-      <div className='3xl:ml-44'>
-        <div className="3xl:w-[89.5rem]  border-t border-[#ACBCB8] mx-auto mb-10 " />
-      </div>
-
-      {/* Bottom bar */}
+      {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full">
-        <div className="max-w-screen-3xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm px-6 py-6 gap-4">
-          <div className="flex items-center gap-2 3xl:ml-[18.8rem] ">
+        <div className="max-w-[1152px] mx-auto flex flex-col md:flex-row justify-between items-center px-6 py-4 text-sm text-white gap-4">
+          <div className="flex items-center gap-2">
             <FaRegCopyright />
-            <span>2025 Grocery Website Design. All Rights Reserved.</span>
+            <span>2024 Grocery Website Design. All Rights Reserved.</span>
           </div>
-          <div className="flex items-center gap-4 3xl:mr-28 2xl:mr-28">
+          <div className="flex items-center gap-4">
             <span>English</span>
             <span>|</span>
             <span>USD</span>
@@ -90,10 +103,10 @@ const Footer = () => {
             <FaInstagram />
           </div>
         </div>
-      </div>
+     
+     </div>
     </footer>
   );
 };
 
 export default Footer;
-

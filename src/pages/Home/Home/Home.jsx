@@ -9,12 +9,12 @@ import Deliver from './Deliver/Deliver';
 const Home = () => {
     return (
         <div>
-           <Banner></Banner>          
-           <Services></Services>
-           <Buffet></Buffet>    
+           {/* <Banner></Banner>           */}
+           {/* <Services></Services> */}
+           {/* <Buffet></Buffet>     */}
            {/* <Signature></Signature>           */}
-           <Testimonials></Testimonials>   
-           <Deliver></Deliver>
+           {/* <Testimonials></Testimonials>    */}
+           {/* <Deliver></Deliver> */}
         </div>
     );
 };
