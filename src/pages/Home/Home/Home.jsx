@@ -1,7 +1,7 @@
 import Banner from '../Banner/Banner';
 import Services from '../Services/Services';
 import Buffet from './Buffet/Buffet';
-//import Signature from '../Signature/Signature';
+import Signature from '../Signature/Signature';
 import Testimonials from '../Testimonials/Testimonials';
 import Deliver from './Deliver/Deliver';
 
@@ -12,7 +12,7 @@ const Home = () => {
            <Banner></Banner>          
            <Services></Services>
            <Buffet></Buffet>    
-           {/* <Signature></Signature>           */}
+           <Signature></Signature>          
            {/* <Testimonials></Testimonials>    */}
            {/* <Deliver></Deliver> */}
         </div>
