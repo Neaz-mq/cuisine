@@ -37,13 +37,13 @@ const Testimonials = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
         <div>
-          <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-3">
+          <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-3 2xl:ml-12 xl:ml-8 lg:-ml-20">
             Customer <br /> Testimonial <br />
             <span className="text-[#FF4C15]">Examples</span>
           </h2>
           <div className="flex">
             <div>
-              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-4">
+              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-4 2xl:ml-12  xl:ml-9 lg:-ml-20">
                 When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
               </p>
             </div>
@@ -57,7 +57,7 @@ const Testimonials = () => {
         </div>
 
         {/* Right image with swipe carousel */}
-        <div className="relative w-full h-[400px] overflow-hidden">
+        <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-6 xl:right-2 lg:ml-20" >
           <AnimatePresence initial={false} custom={direction}>
             <Motion.img
               key={currentIndex}
@@ -99,7 +99,7 @@ const Testimonials = () => {
       </div>
 
       {/* Bottom Cards */}
-      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 gap-8 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-5">
+      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-5 2xl:ml-12 2xl:mr-6 xl:ml-10 xl:mr-2  ">
         {/* Card 1 */}
         <div className="border border-orange-200 p-12 ">
           <h4 className="text-lg font-semibold text-green-900 mb-4">— Emily R.</h4>
@@ -134,7 +134,7 @@ const Testimonials = () => {
           </div>
         </div>
         {/* Card 3 */}
-        <div className="border border-orange-200 p-12 ">
+        <div className="border border-orange-200 p-12 3xl:block 2xl:block xl:block lg:hidden ">
           <h4 className="text-lg font-semibold text-green-900 mb-4">— Sophia M.</h4>
           <p className="text-sm text-gray-700">
             "From the moment we walked in, we were treated like family. The dishes

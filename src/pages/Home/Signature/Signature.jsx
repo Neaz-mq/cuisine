@@ -60,7 +60,7 @@ const Signature = () => {
 
   return (
    <div className='container mx-auto'>
-     <div className="bg-[#2C6252] text-white py-24  relative overflow-visible  mb-72 3xl:w-[89rem] 2xl:w-[52rem] xl:w-[45rem] lg:w-[42rem] 3xl:ml-44 2xl:ml-[15.7rem] xl:ml-48 lg:ml-20 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+     <div className="bg-[#2C6252] text-white py-24  relative overflow-visible  mb-72 3xl:w-[89rem] 2xl:w-[52rem] xl:w-[45rem] lg:w-[42rem] 3xl:ml-44 2xl:ml-[13.5rem] xl:ml-48 lg:ml-20 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
       <div className="max-w-[1200px] mx-auto px-14 relative right-20 ">
         {/* Vertical Title */}
 
