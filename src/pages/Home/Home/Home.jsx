@@ -9,7 +9,7 @@ import Deliver from './Deliver/Deliver';
 const Home = () => {
     return (
         <div>
-           {/* <Banner></Banner>           */}
+           <Banner></Banner>          
            <Services></Services>
            <Buffet></Buffet>    
            {/* <Signature></Signature>           */}
