@@ -13,7 +13,7 @@ const Services = () => {
         {
             icon: '/customer.svg',
             title: 'Outstanding Customer Service',
-            desc: 'Our staff is dedicated to providing warm and attentive services',
+            desc: 'Our staff is dedicated to providing warm and attentive services ',
         },
         {
             icon: '/cazy.svg',
@@ -23,7 +23,7 @@ const Services = () => {
         {
             icon: '/safety.svg',
             title: 'Commitment to Cleanliness and Safety',
-            desc: 'We adhere to the highest standards of hygiene and food safety',
+            desc: 'We adhere to the highest standards of hygiene and food safety ',
         },
         {
             icon: '/value.svg',
@@ -33,13 +33,12 @@ const Services = () => {
     ];
 
     return (
-       <div className="container mx-auto">
-         <div className='3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] flex justify-center'>
-
-                <div className="relative w-full flex flex-col items-center justify-center  mb-8 ">
+        <div className="container mx-auto">
+            <div className='3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] flex justify-center'>
+                <div className="relative w-full flex flex-col items-center justify-center mb-8">
                     {/* Background Image */}
                     <div
-                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem] "
+                        className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem]"
                         style={{
                             backgroundImage: 'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
                         }}
@@ -64,35 +63,34 @@ const Services = () => {
                             What Makes Us Stand Out
                         </h1>
 
-
-                         <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl '>
-                        At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
-                        we create unforgettable dining experiences. From the moment you step through our doors.
-                    </h1>
+                        <h1 className='text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl '>
+                            At <span className='font-medium'>[Restaurant Name]</span>, we don’t just serve food—
+                            we create unforgettable dining experiences. From the moment you step through our doors.
+                        </h1>
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2   3xl:gap-12 2xl:gap-24 xl:gap-24 lg:gap-24   mt-20 ">
+                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-20 xl:gap-y-20 3xl:gap-12 2xl:gap-6 xl:gap-3 lg:gap-8 mt-20">
                         {services.map((service, index) => (
                             <div
                                 key={index}
                                 className="flex items-start gap-4 max-w-md"
                             >
                                 {/* Icon Container */}
-                                <div className="flex-shrink-0 3xl:w-20 3xl:h-20 2xl:w-20 2xl:h-20 xl:w-20 xl:h-20 lg:w-14 lg:h-14 bg-[#2C6252]  flex items-center justify-center">
+                                <div className="flex-shrink-0 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-20 xl:h-20 lg:w-14 lg:h-14 bg-[#2C6252] flex items-center justify-center">
                                     <img
                                         src={service.icon}
                                         alt={service.title}
-                                        className="3xl:w-10 3xl:h-10 2xl:w-10 2xl:h-10 xl:w-10 xl:h-10 lg:w-6 lg:h-6 object-contain"
+                                        className="3xl:w-10 3xl:h-10 2xl:w-10 2xl:h-10 xl:w-6 xl:h-6 lg:w-4 lg:h-4 object-contain"
                                     />
                                 </div>
 
                                 {/* Text Content */}
                                 <div className="flex-1">
-                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[18px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[16px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
                                         {service.title}
                                     </h3>
-                                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[10px] xl:text-[8px] lg:text-[7px] py-2">
+                                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[9px] xl:text-[8px] lg:text-[8px] py-2">
                                         {service.desc}
                                     </p>
                                     <button className="text-[11px] text-[#2C6252] font-medium hover:underline">
@@ -106,8 +104,7 @@ const Services = () => {
                     <div className="py-24"></div>
                 </div>
             </div>
-       </div>
-        
+        </div>
     );
 };
 
