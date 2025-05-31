@@ -2,7 +2,7 @@ const Buffet = () => {
     return (
 
        <div className='container mx-auto'>
-         <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14"> {/* Adjust padding as needed */}
+         <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14 2xl:-ml-32 3xl:-ml-0"> {/* Adjust padding as needed */}
             <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Top Section */}
                 <div
@@ -189,16 +189,16 @@ const Buffet = () => {
                     </div>
 
                     {/* Right Image with overlay text */}
-                    <div className="relative 3xl:w-full 2xl:w-[80rem] xl:w-[65rem] lg:w-[65rem]  h-72 ">
-                        {/* Background Image */}
+                    {/* <div className="relative 3xl:w-full 2xl:w-[80rem] xl:w-[65rem] lg:w-[65rem]  h-96 ">
+                      
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
                             alt="Deep Blue Delights Buffet"
-                            className="3xl:w-full 2xl:w-[49.7rem] xl:w-[45.4rem] lg:w-[40rem] h-full object-cover"
+                            className="3xl:w-full 2xl:w-[54rem] xl:w-[45.4rem] lg:w-[40rem] h-full object-cover"
                         />
 
                         <div className="flex justify-between items-end h-full">
-                            {/* Overlay Description (Left Side) */}
+                            
                             <div className="absolute bottom-24 left-4 text-white p-4 text-sm max-w-[300px] rounded-md z-20">
                                 Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.
                             </div>
@@ -208,7 +208,7 @@ const Buffet = () => {
                         </div>
 
 
-                    </div>
+                    </div> */}
 
                 </div>
 
