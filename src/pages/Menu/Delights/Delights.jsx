@@ -2,7 +2,7 @@ const Delights = () => {
     return (
 
        <div className="container mx-auto">
-         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20">
+         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20 3xl:ml-48 2xl:ml-4 3xl:mb-32">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
@@ -54,7 +54,7 @@ const Delights = () => {
                     className="absolute inset-0 3xl:w-[35rem] 2xl:w-[35rem] xl:w-[30rem] lg:w-[22rem]  h-auto object-cover object-center" // Image as full background
                 />
                 {/* Orange overlay with content */}
-                <div className="absolute top-0 3xl:right-12 2xl:right-12 xl:right-12 3xl:w-[20rem] 2xl:w-[20rem] xl:w-[16rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"> {/* Adjusted width, full height, opacity, padding, and flex for content alignment */}
+                <div className="absolute top-0 3xl:right-12 2xl:right-12  3xl:w-[20rem] 2xl:w-[20rem] xl:w-[20rem] lg:w-[22rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"> {/* Adjusted width, full height, opacity, padding, and flex for content alignment */}
                     <h2 className="text-7xl font-bold leading-none mt-4">50%</h2> {/* Larger 50% */}
                     <p className="text-2xl font-semibold leading-tight mt-2">Discount Offer</p> {/* Larger "Discount Offer" */}
                     <p className="mt-4 text-sm leading-relaxed max-w-xs"> {/* Added descriptive text and max-width */}
