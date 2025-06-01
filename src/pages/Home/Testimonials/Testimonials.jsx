@@ -99,7 +99,7 @@ const Testimonials = () => {
       </div>
 
       {/* Bottom Cards */}
-      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-5 2xl:ml-12 2xl:mr-6 xl:ml-10 xl:mr-2  ">
+      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-5 3xl:mr-2 2xl:ml-12 2xl:mr-6 xl:ml-10 xl:mr-2  ">
         {/* Card 1 */}
         <div className="border border-orange-200 p-12 ">
           <h4 className="text-lg font-semibold text-green-900 mb-4">— Emily R.</h4>
