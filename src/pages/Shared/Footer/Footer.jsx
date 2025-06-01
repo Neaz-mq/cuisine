@@ -12,12 +12,7 @@ const Footer = () => {
     <footer className="bg-[#2C6252] text-white">
       <div className="container mx-auto">
         {/* Top Image */}
-        {/*
-          Removed specific ml classes for the image.
-          'justify-center' will center it within its flex container.
-          'max-w-full' ensures it scales down on smaller screens.
-          Adjust image sizing using width and height based on design intent.
-        */}
+       
         <div className="flex justify-center items-center pt-10">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747630031/Mask_Group_23_pyld0k.png"
@@ -27,14 +22,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Section */}
-        {/*
-          'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4' remains good for responsiveness.
-          'justify-items-center' for desktop will center the content of each grid column.
-          'text-center' for smaller screens ensures content is centered before grid kicks in.
-          Removed all specific 'ml' classes from direct children and their parents.
-          'gap-8' or 'gap-x-16' can be adjusted for spacing between columns.
-          Added 'w-full' to the logo container to allow 'mx-auto' to work.
-        */}
+       
         <div className="max-w-[1152px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-16 lg:gap-x-28 text-center lg:text-left">
           {/* Logo */}
           <div className="flex justify-center lg:justify-start items-start w-full">
@@ -47,10 +35,7 @@ const Footer = () => {
           </div>
 
           {/* Customer Services */}
-          {/*
-            No 'ml' classes needed. 'justify-items-center' or 'text-center' on parent grid
-            container, combined with 'lg:text-left' handles alignment.
-          */}
+         
           <div>
             <h2 className="font-semibold mb-4 text-lg whitespace-nowrap">Customer Services</h2>
             <ul className="space-y-2 text-sm font-thin">
@@ -108,11 +93,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full">
-        {/*
-          'justify-center' for md and smaller, 'justify-between' for larger screens.
-          'items-center' for vertical alignment.
-          'text-center' for small screens, 'text-left' for larger if needed.
-        */}
+       
         <div className="max-w-[1150px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4">
           <div className="flex items-center gap-2">
             <FaRegCopyright />
