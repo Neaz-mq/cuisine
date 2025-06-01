@@ -108,7 +108,7 @@ const categoryItems = [
           description: 'Simple yet perfect, with fresh basil, mozzarella, and a hint of olive oil on a crispy crust.',
           price: '$400',
           originalPrice: '$650',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060854/pngegg_-_2025-05-10T161749.855_aurtx9.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png',
           hasOrderButton: true,
         },
         {
@@ -116,9 +116,10 @@ const categoryItems = [
           description: 'Loaded with a colorful array of fresh vegetables, olives, and bell peppers.',
           price: '$420',
           originalPrice: '$680',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060906/pngegg_100_r1c5t3.png',
           hasOrderButton: false,
         },
+        
         {
           title: 'Chicken BBQ<br /><span class="text-[#FF4C15]">Pizza</span>',
           description: 'Tangy BBQ sauce, grilled chicken, red onions, and cilantro create a unique flavor.',
@@ -152,7 +153,7 @@ const categoryItems = [
           description: 'Classic Caesar salad with grilled chicken, croutons, and Parmesan cheese.',
           price: '$200',
           originalPrice: '$350',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png',
           hasOrderButton: true,
         },
         {
@@ -160,7 +161,7 @@ const categoryItems = [
           description: 'A hearty and healthy salad with quinoa, olives, feta, and sun-dried tomatoes.',
           price: '$230',
           originalPrice: '$420',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062150/pngegg_-_2025-05-10T162754.313_wrspm7.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
           hasOrderButton: false,
         },
         {
@@ -168,9 +169,10 @@ const categoryItems = [
           description: 'A rich Cobb salad with chicken, bacon, avocado, egg, and blue cheese.',
           price: '$280',
           originalPrice: '$500',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png',
+          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
           hasOrderButton: false,
         },
+       
       ],
       todaySpecial: {
         text: 'Today<br />special<br /><span class="text-[#FF4C15]">Salad</span>',
@@ -283,9 +285,9 @@ const Items = () => {
 
   return (
    <div className='container mx-auto'>
-     <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:-ml-8 2xl:-ml-12 xl:-ml-16 lg:-ml-[4.5rem] overflow-hidden '>
+     <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:ml-40 2xl:ml-14 xl:ml-16 lg:ml-10 overflow-hidden '>
       {/* Category Navigation */}
-      <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-36 2xl:space-x-36 xl:space-x-36 lg:space-x-20 px-8">
+      <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-36 2xl:space-x-36 xl:space-x-28 lg:space-x-20 px-8">
         {categoryItems.map((item) => (
           <div
             key={item.label}
@@ -312,9 +314,9 @@ const Items = () => {
       <div className="bg-white py-12 px-4 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
 
         {/* Left Section - Menu Items */}
-        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-12 3xl::-ml-0 2xl::-ml-0 xl::-ml-0"> {/* Reduced gap-y */}
+        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 2xl::-ml-0 xl::-ml-0"> {/* Reduced gap-y */}
           {items.map((item, index) => (
-            <div key={index} className="bg-[#F8F8F8] 3xl:p-16 2xl:p-16 xl:p-16 lg:p-10 flex flex-col items-start h-96">
+            <div key={index} className="bg-[#F8F8F8] 3xl:p-16 2xl:p-12 xl:p-10 lg:p-6 flex flex-col items-start h-96">
               {/* Using dangerouslySetInnerHTML for titles to render <br /> and spans */}
               <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
               <p className="text-gray-500 text-sm mt-1 mb-4">
@@ -328,15 +330,15 @@ const Items = () => {
                 />
                 <div className="flex flex-col items-end">
                   <div className="flex items-end gap-x-1">
-                    <div className="text-2xl font-bold text-[#2C6252] leading-none">
+                    <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg font-bold text-[#2C6252] leading-none">
                       {item.price}
                     </div>
-                    <span className="text-base line-through text-[#FF4C15] relative top-4 font-bold">
+                    <span className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm line-through text-[#FF4C15] relative top-4 font-bold">
                       {item.originalPrice}
                     </span>
                   </div>
                   {item.hasOrderButton && (
-                    <button className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0">
+                    <button className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap">
                       Order Now
                     </button>
                   )}
@@ -346,9 +348,9 @@ const Items = () => {
           ))}
         </div>
         {/* Right Section - Today Special */}
-        <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-24 2xl:top-16 3xl:top-0">
+        <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-28 2xl:top-20 3xl:top-10">
           {/* Using dangerouslySetInnerHTML for todaySpecial text */}
-          <div className="3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-6xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
+          <div className="3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-5xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
           <img src={todaySpecial.mainImage} alt="Main Special" className="mt-8 w-full h-auto object-contain" />
         </div>
       </div>
