@@ -28,7 +28,7 @@ const Buffet = () => {
 
 
                 {/* Food Cards Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-4 3xl:gap-12 2xl:gap-4 xl:gap-6 lg:gap-4 mb-12 3xl:mt-20 2xl:mt-16 xl:mt-14 lg:mt-12 3xl:px-32 2xl:px-3 xl:px-36 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-4 3xl:gap-12 2xl:gap-4 xl:gap-3 lg:gap-3 mb-12 3xl:mt-20 2xl:mt-16 xl:mt-14 lg:mt-12 3xl:px-32 2xl:px-3 xl:px-2 lg:px-0">
                     {/* Food Card 1 */}
                     <div className="bg-[#FFFAF8] overflow-hidden relative"> {/* Added relative for absolute positioning */}
                         <img
@@ -58,7 +58,7 @@ const Buffet = () => {
                                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" clipPath="url(#half-star)" />
 
                                 </svg>
-                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[10px] font-semibold">(4.5 Rating)</span>
+                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[9px] font-semibold">(4.5 Rating)</span>
                             </div>
                             <h3 className="text-lg font-semibold text-[#2C6252] mb-4">
                                 Grilled Lamb Chops -
@@ -92,7 +92,7 @@ const Buffet = () => {
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
-                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[10px]  font-semibold">(5.0 Rating)</span>
+                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[9px]  font-semibold">(5.0 Rating)</span>
                             </div>
                             <h3 className="text-lg font-semibold text-[#2C6252] mb-4">
                                 Grilled Super Steak -
@@ -129,7 +129,7 @@ const Buffet = () => {
                                     clipRule="evenodd" /></svg>
 
 
-                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[10px]  font-semibold">(4.0 Rating)</span>
+                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[9px]  font-semibold">(4.0 Rating)</span>
                             </div>
                             <h3 className="text-lg font-semibold text-[#2C6252] mb-3">
                                 Pan-Seared Steak -
@@ -163,7 +163,7 @@ const Buffet = () => {
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
                                 <svg className="w-4 h-4 text-yellow-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 3.635 1.123 6.545z" /></svg>
-                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[10px] font-semibold">(5.0 Rating)</span>
+                                <span className="text-[#CCCCCC] 3xl:text-base 2xl:text-base xl:text-base lg:text-[9px] font-semibold">(5.0 Rating)</span>
                             </div>
                             <h3 className="text-lg font-semibold text-[#2C6252] mb-3">
                                 Special Sandwitch -
@@ -179,27 +179,27 @@ const Buffet = () => {
                 </div>
 
                 {/* Bottom Image Section */}
-                <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden 3xl:px-32 2xl:px-7 xl:px-6 lg:px-2  ">
+                <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden 3xl:px-32 2xl:px-7 xl:px-2 lg:px-2  ">
                     {/* Left Text */}
                     <div className="flex flex-col justify-center  px-6 py-10 w-full 2xl:w-1/2 3xl:w-1/3 xl:w-1/2 lg:w-1/2  z-50">
-                        <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl  3xl:-ml-4 2xl:-ml-8 xl:ml-[6.5rem] lg:ml-1  ">
+                        <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl  3xl:-ml-4 2xl:-ml-8 xl:-ml-4 lg:-ml-6  ">
                             Deep <br /> Blue <br />
                             Delights
                         </h2>
                     </div>
 
                     {/* Right Image with overlay text */}
-                    <div className="relative 3xl:w-full 2xl:w-full xl:w-1/2  lg:w-1/2  3xl:h-96 2xl:h-64 xl:h-60 lg:h-60  ">
+                    <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60  ">
                       
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
                             alt="Deep Blue Delights Buffet"
-                            className="w-full  h-full object-cover 3xl:-ml-0 2xl:ml-4 xl:-ml-[7.2rem] lg:-ml-[1.2rem]"
+                            className="w-full  h-full object-cover 3xl:-ml-0 2xl:ml-4 xl:ml-0 lg:ml-1 "
                         />
 
                         <div className="flex justify-between items-end h-full">
                             
-                            <div className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 3xl:left-4 2xl:left-6 xl:-left-20 lg:-left-16 text-white p-4 text-sm max-w-[300px] rounded-md z-20">
+                            <div className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 text-white p-4 text-sm max-w-[300px] rounded-md z-20">
                                 Succulent, spice-rubbed lamb chops grilled to perfection and served with fresh greens.
                             </div>
 

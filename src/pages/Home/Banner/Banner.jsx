@@ -26,16 +26,16 @@ const Banner = () => {
                 <div className="flex items-start justify-between">
                     {/* Left Side Content */}
                     <div className="relative  3xl:p-8 2xl:p-8 xl:p-8 lg:p-0">
-                        <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
+                        <img className='absolute 3xl:left-[-20px] 3xl:right-10 3xl:-top-10 2xl:left-[-20px] 2xl:right-10 2xl:-top-10 xl:left-[-20px] lx:right-10 xl:-top-10 lg:left-[-36px] lg:right-16 lg:-top-16 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
 
                         <div className="ml-4">
-                            <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
+                            <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252] leading-tight flex items-center -mt-3">
                                 Savor the
                                 <button
                                     className="bg-white text-black py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black cursor-pointer transition-all duration-300 hover:scale-105"
                                     onClick={handleOpenModal}
                                 >
-                                    <span className="flex items-center 3xl:text-[20px] 2xl:text-[17px] xl:text-[15px] lg:text-[12px]">
+                                    <span className="flex items-center 3xl:text-[20px] 2xl:text-[17px] xl:text-[15px] lg:text-[14px]">
                                         <span className="text-red-500 ml-2 mr-1">Live</span>
                                         <span className='text-[#2C6252]'>kitchen</span>
                                     </span>
@@ -45,11 +45,11 @@ const Banner = () => {
                                 </button>
                             </h1>
 
-                            <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-xl font-bold text-[#2C6252] leading-tight 3xl:mt-3 2xl:mt-2 xl:mt-2 lg:mt-1">Flavor, Relish</h1>
+                            <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252] leading-tight 3xl:mt-3 2xl:mt-2 xl:mt-2 lg:mt-1">Flavor, Relish</h1>
                         </div>
 
                         <div className="flex items-center space-x-4 ml-4 3xl:mt-3 2xl:mt-2 xl:mt-2 lg:mt-1">
-                            <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-4xl xl:text-2xl lg:text-xl font-bold">Every Bite!</span>
+                            <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-4xl xl:text-2xl lg:text-2xl font-bold">Every Bite!</span>
                             <Link to="/offer">
                                 <button className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px]">
                                     <span>Up to 50% Off</span>

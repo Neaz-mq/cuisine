@@ -17,19 +17,19 @@ const Footer = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747630031/Mask_Group_23_pyld0k.png"
             alt="Footer Background"
-            className="w-full max-w-[1100px] h-[15rem] object-cover sm:h-[10rem] md:h-[12rem] lg:h-[15rem]"
+            className="w-full 3xl:max-w-[1100px] 2xl:max-w-[900px] xl:max-w-[750px] lg:max-w-[550px] 2xl:h-[12rem] h-[15rem] object-cover sm:h-[10rem] 3xl:h-[12rem] lg:h-[10rem]"
           />
         </div>
 
         {/* Middle Section */}
        
-        <div className="max-w-[1152px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-x-16 lg:gap-x-28 text-center lg:text-left">
+        <div className="3xl:max-w-[1152px] 2xl:max-w-[952px]  xl:max-w-[795px]  lg:max-w-[595px] mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 3xl:gap-x-16 2xl:gap-x-10 xl:gap-x-12  lg:gap-x-12 text-center lg:text-left">
           {/* Logo */}
           <div className="flex justify-center lg:justify-start items-start w-full">
             <a href="/">
-              <div className="bg-[#3A7563] px-6 py-4 flex items-center space-x-2 w-fit mt-2 mx-auto lg:mx-0">
-                <img src="/logo.svg" alt="Cuisine Logo" className="w-6 h-6" />
-                <span className="font-bold text-lg">Cuisine</span>
+              <div className="bg-[#3A7563] 3xl:px-6 3xl:py-4 2xl:px-6 2xl:py-4 xl:px-6 xl:py-4 lg:px-4 lg:py-2 flex items-center space-x-2 w-fit 3xl:mt-2 2xl:mt-2 xl:mt-2 lg:mt-1 mx-auto lg:mx-0">
+                <img src="/logo.svg" alt="Cuisine Logo" className="3xl:w-6 3xl:h-6 2xl:w-6 2xl:h-6 xl:w-4 xl:h-4 lg:w-4 lg:h-4" />
+                <span className="font-bold 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px]">Cuisine</span>
               </div>
             </a>
           </div>
@@ -37,8 +37,8 @@ const Footer = () => {
           {/* Customer Services */}
          
           <div>
-            <h2 className="font-semibold mb-4 text-lg whitespace-nowrap">Customer Services</h2>
-            <ul className="space-y-2 text-sm font-thin">
+            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px] whitespace-nowrap">Customer Services</h2>
+            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] font-thin">
               <li>My Account</li>
               <li>Track Your Order</li>
               <li>Return</li>
@@ -53,8 +53,8 @@ const Footer = () => {
           {/* Our Information */}
           {/* Similar adjustments for centering */}
           <div>
-            <h2 className="font-semibold mb-4 text-lg whitespace-nowrap">Our Information</h2>
-            <ul className="space-y-2 text-sm font-thin">
+            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px]  whitespace-nowrap">Our Information</h2>
+            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] font-thin">
               <li>Privacy</li>
               <li>User Terms & Condition</li>
               <li>
@@ -68,8 +68,8 @@ const Footer = () => {
           {/* Contact Info */}
           {/* Similar adjustments for centering */}
           <div>
-            <h2 className="font-semibold mb-4 text-lg">Contact Info</h2>
-            <ul className="space-y-2 text-sm font-thin inline-block lg:block">
+            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px] ">Contact Info</h2>
+            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] font-thin inline-block lg:block">
               <li className="flex items-center gap-2 justify-center lg:justify-start">
                 <FaPhone />
                 <span className="underline">+0123-456-789</span>
@@ -89,12 +89,12 @@ const Footer = () => {
         </div>
       </div>
       {/* Divider Line */}
-      <div className="border-t border-[#ACBCB8] max-w-[1100px] mx-auto mb-12 mt-6" />
+      <div className="border-t border-[#ACBCB8] 3xl:max-w-[1100px] 2xl:max-w-[900px] xl:max-w-[700px] lg:max-w-[700px] mx-auto mb-12 mt-6" />
 
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full">
        
-        <div className="max-w-[1150px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4">
+        <div className="3xl:max-w-[1150px] 2xl:max-w-[950px] xl:max-w-[750px] lg:max-w-[750px] mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4">
           <div className="flex items-center gap-2">
             <FaRegCopyright />
             <span className="whitespace-nowrap">2025 Grocery Website Design. All Rights Reserved.</span>

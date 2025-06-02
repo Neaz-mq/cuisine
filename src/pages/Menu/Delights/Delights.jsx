@@ -2,7 +2,7 @@ const Delights = () => {
     return (
 
        <div className="container mx-auto">
-         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20 3xl:ml-48 2xl:ml-4 3xl:mb-32">
+         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20 3xl:ml-48 2xl:ml-6 xl:ml-3 3xl:mb-32 lg:-ml-2">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
@@ -81,13 +81,13 @@ const Delights = () => {
 
                 {/* Right content area: Headline and Savor text - Left-aligned */}
                 <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left -ml-24 ">
-                    <h2 className="lg:text-4xl 3xl:text-6xl 2xl:text-6xl  xl:text-6xl font-bold space-y-4 3xl:-mt-[25rem] 2xl:-mt-[25rem] xl:-mt-[20rem] lg:-mt-[16rem]">
+                    <h2 className="lg:text-2xl 3xl:text-6xl 2xl:text-6xl  xl:text-6xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-4 lg:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[25rem] xl:-mt-[20rem] lg:-mt-[16rem]">
                         <div className="text-[#2C6252]">Deep</div>
                         <div className="text-[#2C6252]">Blue</div>
                         <div className="text-[#FF4C15]">Delights</div>
                     </h2>
 
-                    <p className="text-sm text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-12 xl:ml-10 lg:ml-5">
+                    <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-12 xl:-ml-12 lg:ml-8">
                         Savor the Secrets of the Sea
                     </p>
                 </div>
@@ -97,7 +97,7 @@ const Delights = () => {
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png"
                     alt="Fish Dish"
-                    className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60  lg:left-44 3xl:w-3/5 2xl:w-3/5 xl:w-3/6 lg:w-64 h-auto object-contain z-0 3xl:top-80 2xl:top-80 xl:top-80 lg:top-44"
+                    className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60  lg:left-44 3xl:w-3/5 2xl:w-3/5 xl:w-3/6 lg:w-52 h-auto object-contain z-0 3xl:top-80 2xl:top-80 xl:top-80 lg:top-44"
                 />
             </div>
         </div>
