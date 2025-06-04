@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion as Motion } from "framer-motion";
+import Container from "../../../components/Container";
 
 const Testimonials = () => {
   const images = [
@@ -31,19 +32,19 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <div className="relative bg-white px-8 3xl:px-16 2xl:px-6 xl:px-6 mx-24 3xl:-top-60 2xl:-top-56 xl:-top-36 lg:-top-32">
+    <Container>
+      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 mx-12 3xl:-top-60 2xl:-top-56 xl:-top-36 lg:-top-32">
       {/* Top section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left content */}
         <div>
-          <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-3 2xl:-ml-14 xl:-ml-16 lg:-ml-20">
+          <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-16 lg:-ml-20">
             Customer <br /> Testimonial <br />
             <span className="text-[#FF4C15]">Examples</span>
           </h2>
           <div className="flex">
             <div>
-              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-4 2xl:-ml-[3.2rem]  xl:-ml-[3.8rem] lg:-ml-20">
+              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[3.8rem] lg:-ml-20">
                 When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
               </p>
             </div>
@@ -99,7 +100,7 @@ const Testimonials = () => {
       </div>
 
       {/* Bottom Cards */}
-      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-8 2xl:gap-12 xl:gap-12 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-5 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4  ">
+      <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-12 2xl:gap-12 xl:gap-12 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4  ">
         {/* Card 1 */}
         <div className="border border-orange-200 p-12 ">
           <h4 className="text-lg font-semibold text-green-900 mb-4">— Emily R.</h4>
@@ -148,7 +149,7 @@ const Testimonials = () => {
         </div>
       </div>
     </div>
-    </div>
+   </Container>
   );
 };
 

@@ -1,7 +1,10 @@
+import Container from "../../../../components/Container";
+
+
 const Buffet = () => {
     return (
 
-       <div className='container mx-auto'>
+      <Container>
          <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14  3xl:-ml-0"> {/* Adjust padding as needed */}
             <div className=" mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Top Section */}
@@ -28,7 +31,7 @@ const Buffet = () => {
 
 
                 {/* Food Cards Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-4 3xl:gap-12 2xl:gap-4 xl:gap-3 lg:gap-3 mb-12 3xl:mt-20 2xl:mt-16 xl:mt-14 lg:mt-12 3xl:px-32 2xl:px-3 xl:px-2 lg:px-0">
+                <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-4 3xl:gap-12 2xl:gap-4 xl:gap-3 lg:gap-3 mb-12 3xl:mt-20 2xl:mt-16 xl:mt-14 lg:mt-12 3xl:px-8 2xl:px-3 xl:px-2 lg:px-0">
                     {/* Food Card 1 */}
                     <div className="bg-[#FFFAF8] overflow-hidden relative"> {/* Added relative for absolute positioning */}
                         <img
@@ -179,7 +182,7 @@ const Buffet = () => {
                 </div>
 
                 {/* Bottom Image Section */}
-                <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden 3xl:px-32 2xl:px-7 xl:px-2 lg:px-2  ">
+                <div className="flex flex-col md:flex-row items-stretch rounded-lg overflow-hidden 3xl:px-6 2xl:px-7 xl:px-2 lg:px-2  ">
                     {/* Left Text */}
                     <div className="flex flex-col justify-center  px-6 py-10 w-full 2xl:w-1/2 3xl:w-1/3 xl:w-1/2 lg:w-1/2  z-50">
                         <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl  3xl:-ml-4 2xl:-ml-8 xl:-ml-4 lg:-ml-6  ">
@@ -194,7 +197,7 @@ const Buffet = () => {
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
                             alt="Deep Blue Delights Buffet"
-                            className="w-full  h-full object-cover 3xl:-ml-0 2xl:ml-4 xl:ml-0 lg:ml-1 "
+                            className="w-full  h-full object-cover 3xl:-ml-1 2xl:ml-4 xl:ml-0 lg:ml-1 "
                         />
 
                         <div className="flex justify-between items-end h-full">
@@ -214,8 +217,8 @@ const Buffet = () => {
 
             </div>
         </div>
-       </div>
-
+     
+</Container>
     );
 };
 

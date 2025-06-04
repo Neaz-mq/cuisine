@@ -6,18 +6,18 @@ import Footer from '../pages/Shared/Footer/Footer';
 
 const Main = () => {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen ">
             {/* Top Bar */}
             <TopBar />
 
             {/* Main Content with Navbar */}
             <div className="flex flex-1">
-                {/* Sidebar Navigation */}
+              
                 <div className="sticky top-44  h-fit w-20 z-40">
                     <Navbar />
                 </div>
 
-                {/* Page Content */}
+             
                 <div className="flex-1 ml-20">
                     <Outlet />
                 </div>

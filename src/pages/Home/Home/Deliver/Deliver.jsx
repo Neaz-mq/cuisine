@@ -1,7 +1,9 @@
+import Container from "../../../../components/Container";
+
 const Deliver = () => {
   return (
-   <div className="container mx-auto">
-     <div className="relative bg-white px-8 3xl:px-32 2xl:px-2 xl:px-2 lg:px-10 3xl:mt-20 2xl:mt-20 xl:mt-32 lg:mt-32 mb-36">
+   <Container>
+     <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-10 3xl:mt-20 2xl:mt-20 xl:mt-32 lg:mt-32 mb-36">
       {/* Main Grid */}
       <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
         {/* Left Text Content */}
@@ -49,7 +51,7 @@ const Deliver = () => {
         </div>
       </div>
     </div>
-   </div>
+  </Container>
   );
 };
 

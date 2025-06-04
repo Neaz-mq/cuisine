@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Container from '../../../components/Container';
 
 const foodItems = [
   {
@@ -59,9 +60,11 @@ const Signature = () => {
   };
 
   return (
-   <div className='container mx-auto'>
-     <div className="bg-[#2C6252] text-white py-24  relative overflow-visible  mb-72 3xl:w-[89rem] 2xl:w-[65rem] xl:w-[58rem] lg:w-[42rem] 3xl:ml-44 2xl:ml-16 xl:ml-14 lg:ml-12 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
-      <div className="max-w-[1200px] mx-auto px-14 relative right-20 ">
+  
+    <Container>
+     <div className="bg-[#2C6252] text-white py-24  relative   mb-72 3xl:w-[75rem] 2xl:w-[65rem] xl:w-[58rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-16 xl:ml-14 lg:ml-12 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+      
+      <div className=" mx-auto px-14 relative left-6 ">
         {/* Vertical Title */}
 
         <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[12rem] xl:top-[11rem] lg:top-[11rem] ">
@@ -75,16 +78,16 @@ const Signature = () => {
 
 
        <div className='2xl:ml-8 xl:ml-[6.3rem] '>
-         <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute  3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-28 2xl:-left-0 xl:-left-3 lg:left-6">
+         <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute  3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-32 2xl:-left-0 xl:-left-3 lg:left-6">
           Chinese Food Set Meals
         </h2>
        </div>
 
         {/* Cards Section */}
-        <div className="3xl:ml-[14rem]  2xl:ml-[13rem] xl:ml-[13.8rem] lg:ml-[14rem]  relative z-10 ">
+        <div className="3xl:ml-[11.6rem]  2xl:ml-[13rem] xl:ml-[13.8rem] lg:ml-[14rem]  relative z-10 ">
           <div
             ref={carouselRef}
-            className="flex 3xl:gap-10 2xl:gap-12 xl:gap-4 lg:gap-10   overflow-hidden scroll-smooth 3xl:w-[calc(24rem*3+3rem*2)] 2xl:w-[calc(17.5rem*3+3rem*2)] xl:w-[calc(15rem*3+3rem*2)] lg:w-[calc(9.6rem*3+3rem*2)] mx-auto"
+            className="flex 3xl:gap-12 2xl:gap-12 xl:gap-4 lg:gap-10   overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17.5rem*3+3rem*2)] xl:w-[calc(15rem*3+3rem*2)] lg:w-[calc(9.6rem*3+3rem*2)] mx-auto"
           >
             {foodItems.map((item, index) => (
               <div key={index} className="bg-white text-black 3xl:w-[20rem]  2xl:w-[18rem]  xl:w-[20rem] lg:w-[16rem] flex-shrink-0  ">
@@ -151,8 +154,10 @@ const Signature = () => {
           </div>
         </div>
       </div>
+     
     </div>
-   </div>
+     </Container>
+ 
   );
 };
 
