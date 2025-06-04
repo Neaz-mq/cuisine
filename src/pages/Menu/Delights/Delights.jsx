@@ -49,7 +49,7 @@ const Delights = () => {
             </div>
 
             {/* Bottom Left - Discount Offer (Modified to match the new screenshot) */}
-            <div className="relative  overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[700px] xl:h-[800px] lg:h-auto 3xl:left-7 2xl:left-7 xl:left-8  lg:left-6    -top-8"> {/* Increased height for better background visibility */}
+            <div className="relative  overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[700px] xl:h-[800px] lg:h-auto 3xl:left-7 2xl:left-7 xl:left-8  lg:left-6    -top-4"> {/* Increased height for better background visibility */}
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146155/Mask_Group_55_ndcfj6.png"
                     alt="Chef Cooking"
