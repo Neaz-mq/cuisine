@@ -1,8 +1,10 @@
+import Container from "../../../components/Container";
+
 const Delights = () => {
     return (
 
-       <div className="container mx-auto">
-         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 px-4 py-12 max-w-7xl mx-auto mt-20 3xl:ml-48 2xl:ml-6 xl:ml-3 3xl:mb-32 lg:-ml-2">
+       <Container>
+         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-4 px-10 py-12   mt-20 3xl:ml-1 2xl:ml-6 xl:ml-3 3xl:mb-32 lg:-ml-2">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
@@ -38,7 +40,7 @@ const Delights = () => {
             </div>
 
             {/* Top Right - Sushi */}
-            <div className="flex justify-center items-center mt-5">
+            <div className="flex justify-center items-center mt-5 w-full">
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146115/Mask_Group_54_uywl3m.png"
                     alt="Sushi"
@@ -51,7 +53,7 @@ const Delights = () => {
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146155/Mask_Group_55_ndcfj6.png"
                     alt="Chef Cooking"
-                    className="absolute inset-0 3xl:w-[35rem] 2xl:w-[35rem] xl:w-[30rem] lg:w-[22rem]  h-auto object-cover object-center" // Image as full background
+                    className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[35rem] xl:w-[30rem] lg:w-[22rem]  h-auto object-cover object-center" // Image as full background
                 />
                 {/* Orange overlay with content */}
                 <div className="absolute top-0 3xl:right-12 2xl:right-12  3xl:w-[20rem] 2xl:w-[20rem] xl:w-[20rem] lg:w-[22rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"> {/* Adjusted width, full height, opacity, padding, and flex for content alignment */}
@@ -101,7 +103,7 @@ const Delights = () => {
                 />
             </div>
         </div>
-       </div>
+       </Container>
     );
 };
 

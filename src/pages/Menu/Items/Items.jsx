@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Container from '../../../components/Container';
 
 const categoryItems = [
   {
@@ -284,10 +285,10 @@ const Items = () => {
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
   return (
-   <div className='container mx-auto'>
-     <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:ml-40 2xl:ml-14 xl:ml-12 lg:ml-6 overflow-hidden '>
+   <Container>
+     <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-14 xl:ml-12 lg:ml-6 overflow-hidden '>
       {/* Category Navigation */}
-      <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-36 2xl:space-x-36 xl:space-x-28 lg:space-x-20 px-8">
+      <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-36 xl:space-x-28 lg:space-x-20 px-8">
         {categoryItems.map((item) => (
           <div
             key={item.label}
@@ -311,12 +312,12 @@ const Items = () => {
         ))}
       </div>
       {/* Main Section - Dynamically rendered based on selected category */}
-      <div className="bg-white py-12 px-4 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
+      <div className="bg-white py-12 px-4 3xl:px-0 grid grid-cols-1 3xl:grid-cols-3 gap-10 mt-10">
 
         {/* Left Section - Menu Items */}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 2xl::-ml-0 xl::-ml-0"> {/* Reduced gap-y */}
           {items.map((item, index) => (
-            <div key={index} className="bg-[#F8F8F8] 3xl:p-16 2xl:p-12 xl:p-10 lg:p-8 flex flex-col items-start h-96">
+            <div key={index} className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-10 lg:p-8 flex flex-col items-start h-96">
               {/* Using dangerouslySetInnerHTML for titles to render <br /> and spans */}
               <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
               <p className="text-gray-500 text-sm mt-1 mb-4">
@@ -355,7 +356,7 @@ const Items = () => {
         </div>
       </div>
     </div>
-   </div>
+  </Container>
   );
 };
 
