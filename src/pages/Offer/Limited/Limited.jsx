@@ -1,9 +1,10 @@
+import Container from "../../../components/Container";
+
 const Limited = () => {
   return (
-    <div className="container mx-auto mb-20">
-
+    <Container>
       {/* Top Text Section */}
-      <div className="bg-white 3xl:px-36 2xl:px-20 xl:px-8 lg:px-4 mt-6">
+      <div className="bg-white 3xl:px-16 2xl:px-20 xl:px-8 lg:px-4 mt-6">
         <div className="text-base text-[#AAAAAA] mb-2 mt-3">
           we dish out <br />
           global favorites <br />
@@ -147,7 +148,7 @@ const Limited = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
