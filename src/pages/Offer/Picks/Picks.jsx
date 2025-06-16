@@ -4,7 +4,7 @@ const Picks = () => {
             {/* Top Section */}
             <div className="container mx-auto px-4 py-8 md:py-12">
                 <div className="grid md:grid-cols-2 gap-8">
-                    {/* Chef's Weekly Picks - Just for You! */}
+                    
                     <div className="bg-orange-50 p-6 md:p-10 rounded-lg shadow-sm">
                         <h2 className="text-3xl md:text-4xl font-semibold text-orange-600 leading-tight mb-4">
                             Chef's Weekly Picks <br /> <span className="text-gray-700">- Just for You!</span>
@@ -75,14 +75,14 @@ const Picks = () => {
             <div className="container mx-auto px-4 py-8 md:py-12">
                 <div className="flex flex-col md:flex-row md:items-start md:space-x-8 mb-6"> {/* Use flex for horizontal layout on medium screens and up */}
                     {/* Left: Chef's Weekly Picks title with horizontal line */}
-                    <div className="flex items-center flex-shrink-0 mb-4 md:mb-0 md:w-1/3"> {/* flex-shrink-0 to prevent title from shrinking */}
+                    <div className="flex items-center flex-shrink-0 mb-4 md:mb-0 md:w-1/3"> 
                         <h2 className="text-3xl font-semibold text-gray-700 whitespace-nowrap">Chef's Weekly <span className="text-orange-600">Picks</span></h2>
-                        <div className="flex-grow border-b border-gray-300 ml-4 hidden md:block"></div> {/* Horizontal line, hidden on small screens */}
+                        <div className="flex-grow border-b border-gray-300 ml-4 hidden md:block"></div>
                     </div>
 
                     {/* Right: Text content */}
-                    <div className="md:w-2/3"> {/* Take up remaining space */}
-                        <p className="text-sm text-gray-600 leading-relaxed mb-4"> {/* Added mb-4 for spacing between paragraphs */}
+                    <div className="md:w-2/3"> 
+                        <p className="text-sm text-gray-600 leading-relaxed mb-4"> 
                             Cheesy Bites Pizza Return: Pizza Hut has reintroduced its popular Cheesy Bites Pizza for a limited time. This large, one-topping pizza features a crust made of 28 pull-apart, cheese-filled bites, perfect for dipping 50% Off Online Orders.
                         </p>
                         <p className="text-sm text-red-500 leading-relaxed"> {/* Adjusted color to red-500 for the Domino's offer */}
@@ -179,3 +179,4 @@ const Picks = () => {
 };
 
 export default Picks;
+

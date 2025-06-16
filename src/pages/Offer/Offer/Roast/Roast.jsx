@@ -1,8 +1,6 @@
-import React from 'react';
-
 const Roast = () => {
     return (
-        <div className="font-sans"> {/* Assuming a sans-serif font for the whole page */}
+        <div className="font-sans"> 
             {/* Header Section */}
             <div className="bg-green-800 text-white relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row items-center md:items-start justify-between">
@@ -22,11 +20,9 @@ const Roast = () => {
                     {/* Right Image */}
                     <div className="md:w-1/2 flex justify-center md:justify-end">
                         <img
-                            src="https://via.placeholder.com/600x400/FF5733/FFFFFF?text=Roasted+Chicken" // Replace with your actual image
+                            src="https://via.placeholder.com/600x400/FF5733/FFFFFF?text=Roasted+Chicken" 
                             alt="Classic Roast Brew"
                             className="w-full max-w-lg rounded-lg shadow-2xl transform translate-x-12 translate-y-8 md:translate-x-16 md:translate-y-0"
-                            // The `translate-x` and `translate-y` are to mimic the slightly off-center position of the image in the design.
-                            // Adjust these values as needed based on your actual image and desired effect.
                         />
                     </div>
                 </div>
@@ -47,26 +43,26 @@ const Roast = () => {
             {/* Features Section */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div className="flex flex-col items-center p-4">
-                    {/* Icon for Speedy Delivery - using a placeholder for now */}
-                    <div className="text-5xl text-gray-700 mb-4">🚚</div> {/* Replace with an actual icon */}
+                 
+                    <div className="text-5xl text-gray-700 mb-4">🚚</div> 
                     <h3 className="font-semibold text-lg">Speedy Delivery</h3>
                 </div>
 
                 <div className="flex flex-col items-center p-4">
                     {/* Icon for 24/7 Customer Support */}
-                    <div className="text-5xl text-gray-700 mb-4">📞</div> {/* Replace with an actual icon */}
+                    <div className="text-5xl text-gray-700 mb-4">📞</div> 
                     <h3 className="font-semibold text-lg">24/7 Customer Support</h3>
                 </div>
 
                 <div className="flex flex-col items-center p-4">
                     {/* Icon for One-Stop Shop */}
-                    <div className="text-5xl text-gray-700 mb-4">🛒</div> {/* Replace with an actual icon */}
+                    <div className="text-5xl text-gray-700 mb-4">🛒</div> 
                     <h3 className="font-semibold text-lg">One-Stop Shop</h3>
                 </div>
 
                 <div className="flex flex-col items-center p-4">
                     {/* Icon for Crafted with Care */}
-                    <div className="text-5xl text-gray-700 mb-4">❤️</div> {/* Replace with an actual icon */}
+                    <div className="text-5xl text-gray-700 mb-4">❤️</div> 
                     <h3 className="font-semibold text-lg">Crafted with Care</h3>
                 </div>
             </div>

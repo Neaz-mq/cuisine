@@ -5,7 +5,6 @@ import Signature from '../Signature/Signature';
 import Testimonials from '../Testimonials/Testimonials';
 import Deliver from './Deliver/Deliver';
 
-
 const Home = () => {
     return (
         <div>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Week = () => {
   return (
     <div className="min-h-screen flex flex-col 3xl:mt-20 2xl:mt-20 container mx-auto">
@@ -10,12 +8,12 @@ const Week = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col lg:flex-row p-8 relative ">
+      <div className="flex flex-col lg:flex-row p-8 relative">
         {/* Left Section: Days */}
         <div className="lg:w-1/2 flex flex-col justify-center items-start p-4 3xl:space-y-20 3xl:mt-[2rem] 2xl:space-y-20 2xl:-mt-[22rem] z-10">
           {/* Sunday */}
           <div className="relative flex items-start">
-            <div className="w-1 bg-gray-400 h-24 mr-4  opacity-70"></div>
+            <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
             <div>
               <h2 className="text-6xl font-extrabold mb-2 text-[#F6F6F6] opacity-70">Sunday</h2>
               <p className="text-lg ml-0 text-[#E1E1E1]">- Buy 1 Get 1 Free on all Pizzas</p>
@@ -24,7 +22,7 @@ const Week = () => {
 
           {/* Monday */}
           <div className="relative flex items-start">
-            <div className="w-1 bg-gray-400 h-24 mr-4  opacity-70"></div>
+            <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
             <div>
               <h2 className="text-6xl font-extrabold mb-2 text-[#F6F6F6] opacity-70">Monday</h2>
               <p className="text-lg ml-0 text-[#E1E1E1]">- 50% OFF on all Pasta Dishes</p>
@@ -32,10 +30,9 @@ const Week = () => {
           </div>
 
          
-
           {/* Tuesday */}
           <div className="relative flex items-start">
-            <div className="w-1 bg-gray-400 h-24 mr-4  opacity-70"></div>
+            <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
             <div>
               <h2 className="text-6xl font-extrabold mb-2 text-[#FF4C15]">Tuesday</h2>
               <p className="text-lg ml-0 text-[#E1E1E1]">- 50% OFF on all Pasta Dishes</p>
@@ -44,7 +41,7 @@ const Week = () => {
 
            {/* Wednesday */}
           <div className="relative flex items-start">
-            <div className="w-1 bg-gray-400 h-24 mr-4  opacity-70"></div>
+            <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
             <div>
               <h2 className="text-6xl font-extrabold mb-2 text-[#F6F6F6] opacity-70">Wednesday</h2>
               <p className="text-lg ml-0 text-[#E1E1E1]">- 50% OFF on all Pasta Dishes</p>
@@ -53,7 +50,7 @@ const Week = () => {
 
            {/* Thursday */}
           <div className="relative flex items-start">
-            <div className="w-1 bg-gray-400 h-24 mr-4  opacity-70"></div>
+            <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
             <div>
               <h2 className="text-6xl font-extrabold mb-2 text-[#F6F6F6] opacity-70">Thursday</h2>
               <p className="text-lg ml-0 text-[#E1E1E1]">- 50% OFF on all Pasta Dishes</p>
@@ -62,7 +59,7 @@ const Week = () => {
 
            {/* Friday */}
           <div className="relative flex items-start">
-            <div className="w-1 bg-gray-400 h-24 mr-4  opacity-70"></div>
+            <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
             <div>
               <h2 className="text-6xl font-extrabold mb-2 text-[#F6F6F6] opacity-70">Friday</h2>
               <p className="text-lg ml-0 text-[#E1E1E1]">- 50% OFF on all Pasta Dishes</p>
@@ -73,7 +70,7 @@ const Week = () => {
         {/* Right Section: Image Collage */}
         <div className="lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-36 3xl:left-2 2xl:mt-36 2xl:left-2">
           {/* Image 1 - Donuts */}
-          <div className="absolute 3xl:top-4 3xl:left-[15%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[8%] 2xl:w-40 2xl:h-52  overflow-hidden z-30 ">
+          <div className="absolute 3xl:top-4 3xl:left-[15%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[8%] 2xl:w-40 2xl:h-52  overflow-hidden z-30">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png"
               alt="Donuts"
@@ -89,11 +86,9 @@ const Week = () => {
               className="w-full h-full object-cover"
             />
           </div>
-
-         
-
+      
           {/* Image 3 - Pasta */}
-          <div className="absolute 3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52  overflow-hidden  z-10">
+          <div className="absolute 3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52  overflow-hidden z-10">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png"
               alt="Pasta"
@@ -102,7 +97,7 @@ const Week = () => {
           </div>
 
           {/* Image 4 - Snacks */}
-          <div className="absolute 3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 h-52  overflow-hidden  z-10 ">
+          <div className="absolute 3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 h-52  overflow-hidden z-10">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png"
               alt="Snacks"
@@ -111,7 +106,7 @@ const Week = () => {
           </div>
 
           {/* Image 5 - Pancakes (moved closer) */}
-          <div className="absolute top-[16rem] 3xl:left-[6%] 2xl:-left-[5%] w-60 h-48  overflow-hidden opacity-15  z-30">
+          <div className="absolute top-[16rem] 3xl:left-[6%] 2xl:-left-[5%] w-60 h-48 overflow-hidden opacity-15 z-30">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png"
               alt="Chicken"
@@ -120,7 +115,7 @@ const Week = () => {
           </div>
 
           {/* Image 6 - Chicken (moved closer) */}        
-          <div className="absolute top-[20rem] 3xl:left-[28%] 2xl:left-[24%] w-36 h-52  overflow-hidden   z-40">
+          <div className="absolute top-[20rem] 3xl:left-[28%] 2xl:left-[24%] w-36 h-52  overflow-hidden z-40">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png"
               alt="Pancakes"
@@ -129,7 +124,7 @@ const Week = () => {
           </div>
 
           {/* Customer Service Card */}
-          <div className="absolute bottom-4 3xl:right-40 2xl:right-2  p-6  max-w-xs text-left z-40 top-56">
+          <div className="absolute bottom-4 3xl:right-40 2xl:right-2 p-6 max-w-xs text-left z-40 top-56">
             <h3 className="text-lg font-bold text-[#2C6252] mb-2">Outstanding <br /> <span className='font-normal'>Customer Service</span></h3>
             <p className="text-xs text-[#CCCCCC]">
               Our staff is dedicated <br /> to providing warm and <br /> attentive service, <br /> making sure that

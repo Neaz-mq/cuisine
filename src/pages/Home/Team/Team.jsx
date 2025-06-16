@@ -1,11 +1,8 @@
-import React from "react";
-
 const Team = () => {
   return (
     <div className="relative bg-white py-16 px-8 md:px-16 lg:px-32">
       {/* Main Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">      
         {/* Left Image */}
         <div className="flex justify-center">
           <img
@@ -111,3 +108,5 @@ const Team = () => {
 };
 
 export default Team;
+
+

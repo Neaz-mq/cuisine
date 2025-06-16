@@ -26,8 +26,6 @@ import Offer from "../pages/Offer/Offer/Offer";
             element: <Offer></Offer>
         }
 
-
-
       ]
     },
   ]);

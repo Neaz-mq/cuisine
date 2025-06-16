@@ -2,9 +2,8 @@ import Container from "../../../components/Container";
 
 const Delights = () => {
     return (
-
        <Container>
-         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-4 px-10 py-12   mt-20 3xl:ml-1 2xl:ml-6 xl:ml-3 3xl:mb-32 lg:-ml-2">
+         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-4 px-10 py-12 mt-20 3xl:ml-1 2xl:ml-6 xl:ml-3 3xl:mb-32 lg:-ml-2">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
@@ -22,11 +21,10 @@ const Delights = () => {
                             <span className="text-[#FFE61C]">★★★★★</span>
                             <span className="text-xs text-[#CCCCCC] whitespace-nowrap">(4.8 Rating)</span>
                         </div>
-
                     </div>
-                    {/* New flex container for paragraph and button */}
-                    <div className="flex items-center justify-between mt-6"> {/* Added flex, items-center, justify-between */}
-                        <p className="text-xs text-[#AAAAAA] w-2/3 pr-4"> {/* Added w-2/3 and pr-4 for text width and spacing */}
+
+                    <div className="flex items-center justify-between mt-6"> 
+                        <p className="text-xs text-[#AAAAAA] w-2/3 pr-4">
                             At Ocean’s Bounty, every dish tells a story of the sea — fresh,
                             vibrant, and full of life. We believe great seafood should taste like a
                             seaside escape, where the salt air kisses your skin and every bite
@@ -44,16 +42,15 @@ const Delights = () => {
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146115/Mask_Group_54_uywl3m.png"
                     alt="Sushi"
-                    className=" w-full 3xl:h-[700px] 2xl:h-[700px] xl:h-[700px] lg:h-[600px] object-cover"
+                    className="w-full 3xl:h-[700px] 2xl:h-[700px] xl:h-[700px] lg:h-[600px] object-cover"
                 />
             </div>
 
-            {/* Bottom Left - Discount Offer (Modified to match the new screenshot) */}
-            <div className="relative  overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[700px] xl:h-[800px] lg:h-auto 3xl:left-7 2xl:left-7 xl:left-8  lg:left-6    -top-4"> {/* Increased height for better background visibility */}
+            <div className="relative overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[700px] xl:h-[800px] lg:h-auto 3xl:left-7 2xl:left-7 xl:left-8 lg:left-6 -top-4"> 
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146155/Mask_Group_55_ndcfj6.png"
                     alt="Chef Cooking"
-                    className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[35rem] xl:w-[30rem] lg:w-[22rem]  h-auto object-cover object-center" // Image as full background
+                    className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[35rem] xl:w-[30rem] lg:w-[22rem]  h-auto object-cover object-center"
                 />
                 {/* Orange overlay with content */}
                 <div className="absolute top-0 3xl:right-12 2xl:right-12  3xl:w-[20rem] 2xl:w-[20rem] xl:w-[20rem] lg:w-[22rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"> {/* Adjusted width, full height, opacity, padding, and flex for content alignment */}
@@ -66,13 +63,13 @@ const Delights = () => {
             </div>
 
             {/* Bottom Right - Deep Blue Delights */}
-            <div className="relative  overflow-hidden w-full lg:h-[450px] xl:h-[630px] 3xl:h-[700px] 2xl:h-[700px] bg-white  p-6 flex -top-3 right-4" >
+            <div className="relative overflow-hidden w-full lg:h-[450px] xl:h-[630px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex -top-3 right-4" >
                 {/* Left content area: descriptive text, rating, button */}
                 <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10">
                     <p className="text-sm text-[#EFEFEF] mb-4 max-w-xs ">
                         Experience the perfect <br /> blend  of taste and joy—every <br /> bite is a moment of <br /> delight, crafted <br /> to satisfy your cravings!
                     </p>
-                    <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 ">
+                    <div className="flex items-center space-x-1 text-base text-gray-500 mb-4">
                         <span className="text-yellow-500">★★★★★</span>
                         <span className="text-sm text-[#CCCCCC] whitespace-nowrap">(4.8 Rating)</span>
                     </div>
@@ -94,12 +91,11 @@ const Delights = () => {
                     </p>
                 </div>
 
-
                 {/* Image on the right, overlapping */}
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png"
                     alt="Fish Dish"
-                    className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60  lg:left-44 3xl:w-3/5 2xl:w-3/5 xl:w-3/6 lg:w-52 h-auto object-contain z-0 3xl:top-80 2xl:top-80 xl:top-80 lg:top-44"
+                    className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-44 3xl:w-3/6 2xl:w-3/5 xl:w-3/6 lg:w-52 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-80 xl:top-80 lg:top-44"
                 />
             </div>
         </div>

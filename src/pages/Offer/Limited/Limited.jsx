@@ -2,154 +2,151 @@ const Limited = () => {
   return (
     <div className="container mx-auto mb-20">
 
-  {/* Top Text Section */}
+      {/* Top Text Section */}
       <div className="bg-white 3xl:px-36 2xl:px-20 xl:px-8 lg:px-4 mt-6">
-         <div className="text-base text-[#AAAAAA] mb-2 mt-3   ">
-        we dish out <br />
-        global favorites <br />
-        and local <br />
-        classics —{" "}
-        <span className="text-[#FF4C15] font-semibold">
-          now <br /> with up to 50% <br /> OFF!
-        </span>
-      </div>
-    
-    <div className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]">
-      {/* Heading */}
-      <div className="mb-36 3xl:-ml-24 2xl:-ml-6 xl:-ml-6 lg:-ml-4 ">
-        <h2 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-green-800 ">Limited Time Offer–</h2>
-        <h3 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-[#FF4C15] mt-4  ">Up To 50% Off!</h3>
-      </div>
-    </div>
+        <div className="text-base text-[#AAAAAA] mb-2 mt-3">
+          we dish out <br />
+          global favorites <br />
+          and local <br />
+          classics —{" "}
+          <span className="text-[#FF4C15] font-semibold">
+            now <br /> with up to 50% <br /> OFF!
+          </span>
+        </div>
 
-      {/* Product Cards */}
-      <div className="flex justify-center 3xl:ml-64 2xl:ml-10 xl:ml-10 lg:ml-36 3xl:-mt-8 2xl:-mt-8 xl:-mt-12 lg:-mt-12">
-        <div className="grid grid-cols-1  lg:grid-cols-3 xl:grid-cols-3 3xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-6 2xl:gap-6 xl:gap-2 lg:gap-6 w-fit">
-          {/* Card 1 */}
-          <div className="bg-white overflow-hidden  3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px]">
-            <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260629/Mask_Group_24_d1rzdd.png"
-              alt="Main Courses"
-              className="w-full h-[160px] object-cover"
-            />
-            <div className="bg-[#2C6252] text-white px-4 py-4">
-              <h4 className="font-bold text-sm">Main Courses</h4>
-              <p className="text-xs mt-1 text-[#15AB7F]">
-                Succulent, space-rubbed lamb chops grilled to...
-              </p>
-            </div>
-            <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
-              <p>• Grilled Lemon Herb Chicken</p>
-              <p>• Paneer Butter Masala (with Naan)</p>
-              <p>• Spaghetti Aglio e Olio</p>
-              <p>• Thai Green Curry with  Rice</p>
-            </div>
-            <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
-              <div>
-                <span className="line-through text-[#CCCCCC] mr-2 text-sm ">$665</span>
-                <span className="text-lg relative top-1">$200</span>
-              </div>
-              <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
-                <img src="/Path 2764.svg" alt="" />
-              </div>
-            </div>
+        <div className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]">
+          {/* Heading */}
+          <div className="mb-36 3xl:-ml-24 2xl:-ml-6 xl:-ml-6 lg:-ml-4">
+            <h2 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-green-800">Limited Time Offer–</h2>
+            <h3 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-[#FF4C15] mt-4">Up To 50% Off!</h3>
           </div>
+        </div>
 
-          {/* Card 2 */}
-          <div className="bg-white overflow-hidden   3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px]">
-            <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260721/Mask_Group_25_sl9hoh.png"
-              alt="Salads & Sides"
-              className="w-full h-[160px] object-cover"
-            />
-            <div className="bg-[#2C6252] text-white px-4 py-4">
-              <h4 className="font-bold text-sm">Salads & Sides</h4>
-              <p className="text-xs mt-1 text-[#15AB7F]">
-                Succulent, space-rubbed lamb chops grilled to...
-              </p>
-            </div>
-            <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
-              <p>• Grilled Lemon Herb Chicken</p>
-              <p>• Paneer Butter Masala (with Naan)</p>
-              <p>• Spaghetti Aglio e Olio</p>
-              <p>• Thai Green Curry with  Rice</p>
-            </div>
-            <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
-              <div>
-                <span className="line-through text-[#CCCCCC] mr-2 text-sm ">$365</span>
-                <span className="text-lg relative top-1">$165</span>
+        {/* Product Cards */}
+        <div className="flex justify-center 3xl:ml-64 2xl:ml-10 xl:ml-10 lg:ml-36 3xl:-mt-8 2xl:-mt-8 xl:-mt-12 lg:-mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 3xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-6 2xl:gap-6 xl:gap-2 lg:gap-6 w-fit">
+            {/* Card 1 */}
+            <div className="bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px]">
+              <img
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260629/Mask_Group_24_d1rzdd.png"
+                alt="Main Courses"
+                className="w-full h-[160px] object-cover"
+              />
+              <div className="bg-[#2C6252] text-white px-4 py-4">
+                <h4 className="font-bold text-sm">Main Courses</h4>
+                <p className="text-xs mt-1 text-[#15AB7F]">
+                  Succulent, space-rubbed lamb chops grilled to...
+                </p>
               </div>
-              <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
-                <img src="/Path 2764.svg" alt="" />
+              <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
+                <p>• Grilled Lemon Herb Chicken</p>
+                <p>• Paneer Butter Masala (with Naan)</p>
+                <p>• Spaghetti Aglio e Olio</p>
+                <p>• Thai Green Curry with  Rice</p>
+              </div>
+              <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
+                <div>
+                  <span className="line-through text-[#CCCCCC] mr-2 text-sm">$665</span>
+                  <span className="text-lg relative top-1">$200</span>
+                </div>
+                <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
+                  <img src="/Path 2764.svg" alt="" />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Card 3 */}
-          <div className="bg-white overflow-hidden   3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px]">
-            <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260767/Mask_Group_26_u8gbdd.png"
-              alt="Salads & Sides"
-              className="w-full h-[160px] object-cover"
-            />
-            <div className="bg-[#2C6252] text-white px-4 py-4">
-              <h4 className="font-bold text-sm">Salads & Sides</h4>
-              <p className="text-xs mt-1 text-[#15AB7F]">
-                Succulent, space-rubbed lamb chops grilled to...
-              </p>
-            </div>
-            <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
-              <p>• Grilled Lemon Herb Chicken</p>
-              <p>• Paneer Butter Masala (with Naan)</p>
-              <p>• Spaghetti Aglio e Olio</p>
-              <p>• Thai Green Curry with  Rice</p>
-            </div>
-            <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
-              <div>
-                <span className="line-through text-[#CCCCCC] mr-2 text-sm ">$69</span>
-                <span className="text-lg relative top-1">$50</span>
+            {/* Card 2 */}
+            <div className="bg-white overflow-hidden   3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px]">
+              <img
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260721/Mask_Group_25_sl9hoh.png"
+                alt="Salads & Sides"
+                className="w-full h-[160px] object-cover"
+              />
+              <div className="bg-[#2C6252] text-white px-4 py-4">
+                <h4 className="font-bold text-sm">Salads & Sides</h4>
+                <p className="text-xs mt-1 text-[#15AB7F]">
+                  Succulent, space-rubbed lamb chops grilled to...
+                </p>
               </div>
-              <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
-                <img src="/Path 2764.svg" alt="" />
+              <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
+                <p>• Grilled Lemon Herb Chicken</p>
+                <p>• Paneer Butter Masala (with Naan)</p>
+                <p>• Spaghetti Aglio e Olio</p>
+                <p>• Thai Green Curry with  Rice</p>
+              </div>
+              <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
+                <div>
+                  <span className="line-through text-[#CCCCCC] mr-2 text-sm">$365</span>
+                  <span className="text-lg relative top-1">$165</span>
+                </div>
+                <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
+                  <img src="/Path 2764.svg" alt="" />
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Card 4 */}
-          <div className="bg-white overflow-hidden  w-[250px] 3xl:block 2xl:hidden xl:hidden lg:hidden  ">
-            <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260812/Mask_Group_27_q5glog.png"
-              alt="Soft Drink"
-              className="w-full h-[160px] object-cover"
-            />
-            <div className="bg-[#2C6252] text-white px-4 py-4">
-              <h4 className="font-bold text-sm">Soft Drink and Hard Drink</h4>
-              <p className="text-xs mt-1 text-[#15AB7F]">
-                Succulent, space-rubbed lamb chops grilled to...
-              </p>
-            </div>
-            <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
-              <p>• Grilled Lemon Herb Chicken</p>
-              <p>• Paneer Butter Masala (with Naan)</p>
-              <p>• Spaghetti Aglio e Olio</p>
-              <p>• Thai Green Curry with Rice</p>
-            </div>
-            <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
-              <div>
-                <span className="line-through text-[#CCCCCC] mr-2 text-sm ">$665</span>
-                <span className="text-lg relative top-1">$200</span>
+            {/* Card 3 */}
+            <div className="bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px]">
+              <img
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260767/Mask_Group_26_u8gbdd.png"
+                alt="Salads & Sides"
+                className="w-full h-[160px] object-cover"
+              />
+              <div className="bg-[#2C6252] text-white px-4 py-4">
+                <h4 className="font-bold text-sm">Salads & Sides</h4>
+                <p className="text-xs mt-1 text-[#15AB7F]">
+                  Succulent, space-rubbed lamb chops grilled to...
+                </p>
               </div>
-              <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
-                <img src="/Path 2764.svg" alt="" />
+              <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
+                <p>• Grilled Lemon Herb Chicken</p>
+                <p>• Paneer Butter Masala (with Naan)</p>
+                <p>• Spaghetti Aglio e Olio</p>
+                <p>• Thai Green Curry with  Rice</p>
+              </div>
+              <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
+                <div>
+                  <span className="line-through text-[#CCCCCC] mr-2 text-sm">$69</span>
+                  <span className="text-lg relative top-1">$50</span>
+                </div>
+                <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
+                  <img src="/Path 2764.svg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white overflow-hidden w-[250px] 3xl:block 2xl:hidden xl:hidden lg:hidden">
+              <img
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1748260812/Mask_Group_27_q5glog.png"
+                alt="Soft Drink"
+                className="w-full h-[160px] object-cover"
+              />
+              <div className="bg-[#2C6252] text-white px-4 py-4">
+                <h4 className="font-bold text-sm">Soft Drink and Hard Drink</h4>
+                <p className="text-xs mt-1 text-[#15AB7F]">
+                  Succulent, space-rubbed lamb chops grilled to...
+                </p>
+              </div>
+              <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
+                <p>• Grilled Lemon Herb Chicken</p>
+                <p>• Paneer Butter Masala (with Naan)</p>
+                <p>• Spaghetti Aglio e Olio</p>
+                <p>• Thai Green Curry with Rice</p>
+              </div>
+              <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
+                <div>
+                  <span className="line-through text-[#CCCCCC] mr-2 text-sm">$665</span>
+                  <span className="text-lg relative top-1">$200</span>
+                </div>
+                <div className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs">
+                  <img src="/Path 2764.svg" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
-
-  
-    </div>
     </div>
   );
 };

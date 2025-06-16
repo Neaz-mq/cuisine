@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Feast = () => {
     return (
         <div className="font-sans max-w-6xl mx-auto p-5 md:p-8 lg:p-10">
@@ -39,7 +37,6 @@ const Feast = () => {
                         <div className="flex justify-between items-center mt-auto">
                             <span className="text-2xl font-bold text-gray-800">$12 <span className="text-sm text-gray-500 font-normal">/ pcs</span></span>
                             <button className="bg-green-600 text-white p-3 rounded-full hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
-                                {/* SVG for shopping cart icon - you can replace with an actual icon library */}
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.769.746 1.769H19V8.5L16.293 5.707a1 1 0 00-1.414 0L12 8.5l-2.293-2.293a1 1 0 00-1.414 0L5.707 8.5z" />
                                 </svg>

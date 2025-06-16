@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
-import Container from '../../../components/Container'; // Adjust path if needed
+import Container from '../../../components/Container';
 
 const Banner = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,7 +20,7 @@ const Banner = () => {
     };
 
     return (
-        <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 ">
+        <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10">
             <Container>
                 <div className="relative bg-white">
                     <div className="flex items-start justify-between">
@@ -120,7 +120,7 @@ const Banner = () => {
                         </div>
 
                         {/* Right Side Image */}
-                        <div className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-16 w-full 2xl:-mt-36 xl:-mt-28 xl:-ml-16 lg:-mt-[7.2rem] lg:-ml-32 object-cover z-20   ">
+                        <div className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-16 w-full 2xl:-mt-36 xl:-mt-28 xl:-ml-16 lg:-mt-[7.2rem] lg:-ml-32 object-cover z-20">
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png"
                                 alt=""
