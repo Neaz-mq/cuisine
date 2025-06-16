@@ -2,7 +2,7 @@ import Feast from "../Feast/Feast";
 import Limited from "../Limited/Limited";
 import Picks from "../Picks/Picks";
 import Week from "../Week/Week";
-// import Roast from "./Roast/Roast";
+import Roast from "./Roast/Roast";
 
 const Offer = () => {
     return (
@@ -11,7 +11,7 @@ const Offer = () => {
             <Week></Week>
             <Feast></Feast>
             <Picks></Picks>
-            {/* <Roast></Roast> */}
+            <Roast></Roast>
         </div>
     );
 };
