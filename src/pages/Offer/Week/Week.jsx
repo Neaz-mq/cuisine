@@ -89,7 +89,7 @@ const Week = () => {
 
   return (
     <Container>
-      <div className="min-h-screen flex flex-col 3xl:mt-20 2xl:mt-20 3xl:px-12 2xl:px-6">
+      <div className=" flex flex-col 3xl:mt-20 2xl:mt-20 3xl:px-12 2xl:px-6">
         {/* Header */}
         <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center 3xl:ml-6 2xl:ml-12">
           <h1 className="text-2xl font-bold ml-8">Don't Miss This Week's Delights</h1>
@@ -99,7 +99,7 @@ const Week = () => {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row p-8 relative">
           {/* Left: 3 Days */}
-          <div className="lg:w-1/2 flex flex-col justify-center items-start 3xl:-ml-2 3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 2xl:-mt-[22rem] z-10">
+          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 2xl:-mt-[22rem] z-10">
             {threeDayWindow.map((dayObj) => {
               const isToday = dayObj.index === todayIndex;
               return (
