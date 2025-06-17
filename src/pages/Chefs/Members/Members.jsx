@@ -15,21 +15,21 @@ const Members = () => {
             id: 2,
             name: "Sophia M.",
             image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750150153/pngegg_28_kzg7un.png", // Placeholder image
-            yearsExperience: 3,
+            yearsExperience: 5,
             rating: 5
         },
         {
             id: 3,
             name: "Sophia M.",
             image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750150223/pngegg_31_opzccv.png", // Placeholder image
-            yearsExperience: 4,
+            yearsExperience: 5,
             rating: 5
         },
         {
             id: 4,
             name: "Sophia M.",
             image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750150180/pngegg_30_djnqeq.png", // Placeholder image
-            yearsExperience: 11,
+            yearsExperience: 5,
             rating: 5
         },
     ];

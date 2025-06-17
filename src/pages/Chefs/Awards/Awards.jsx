@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 const Awards = () => {
   return (
     <Container>
-      <div className="relative  overflow-hidden min-h-[1800px] 3xl:-mt-0 2xl:-mt-40 xl:-mt-28 lg:-mt-44 3xl:right-10 ">
+      <div className="relative  overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-40 xl:-mt-28 lg:-mt-44 3xl:right-10 ">
 
         {/* Foreground Image (Chef) */}
         <div className="absolute left-1/2 lg:top-[33%] xl:top-[38%] 2xl:top-[50%] 3xl:top-[54%] z-10 translate-x-[-50%] translate-y-[-104%] flex items-center justify-center">
@@ -71,7 +71,7 @@ const Awards = () => {
 
       </div>
       {/* Quality | Profitability | Consistency */}
-        <div className="absolute left-1/2 top-[55.8rem]  translate-x-[-45%] z-50 w-full max-w-[1220px]  ">
+        <div className="absolute left-1/2 top-[52rem]  translate-x-[-45%] z-50 w-full max-w-[1220px]  ">
           <div className="grid grid-cols-3 text-white font-bold text-center text-4xl divide-x divide-[#CCCCCC] bg-[#406D5B]  overflow-hidden px-24 py-24 3xl:-ml-6">
             <div className="py-4">Quality</div>
             <div className="py-4">Profitability</div>

@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 const Delights = () => {
     return (
        <Container>
-         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-4 px-10 py-12 mt-20 3xl:ml-1 2xl:ml-6 xl:ml-3 3xl:mb-32 lg:-ml-2">
+         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-4 px-10 py-12 mt-20 3xl:ml-1 2xl:ml-6 xl:ml-3 3xl:mb-44 lg:-ml-2">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
