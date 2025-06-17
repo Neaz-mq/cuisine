@@ -4,7 +4,7 @@ const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Menu', path: '/menu'},
     { name: 'Signature Food', path: '/signature-food'},
-    { name: 'Contact Us', path: '/contact-us' }
+    { name: 'Our Chefs', path: '/chefs' }
 ];
 
 const Navbar = () => {
@@ -50,3 +50,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
