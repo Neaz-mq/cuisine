@@ -40,10 +40,12 @@ const Navbar = () => {
 
             {/* Book Table Button */}
             <button className="bg-[#FF4C15] flex flex-col items-center py-4 px-3 w-full 3xl:ml-32 2xl:ml-24 xl:ml-16 lg:ml-12" style={{ marginTop: '40px' }}>
-                <span className="3xl:text-[18px] 2xl:text-[17px] xl:text-[16px] lg:text-[14px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+              <a href="/table">
+                  <span className="3xl:text-[18px] 2xl:text-[17px] xl:text-[16px] lg:text-[14px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     Book a Table
                 </span>
                 <img src="/table.svg" alt="Table Icon" className="h-5 w-auto mt-4" style={{ writingMode: 'vertical-rl' }} />
+              </a>
             </button>
         </div>
     );
