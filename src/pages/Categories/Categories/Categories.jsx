@@ -1,4 +1,5 @@
 import Category from "../Category/Category";
+import Popular from "../Popular/Popular";
 import Weekly from "../Weekly/Weekly";
 
 const Categories = () => {
@@ -6,6 +7,7 @@ const Categories = () => {
         <div>
              <Category></Category>
              <Weekly></Weekly>
+             <Popular></Popular>
         </div>
     );
 };
