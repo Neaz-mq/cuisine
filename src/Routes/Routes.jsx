@@ -7,6 +7,7 @@ import Menu from "../pages/Menu/Menu/Menu";
 import Offer from "../pages/Offer/Offer/Offer";
 import Chefs from "../pages/Chefs/Chefs/Chefs";
 import Tables from "../pages/Tables/Tables/Tables";
+import Categories from "../pages/Categories/Categories/Categories";
 
 
  export const router = createBrowserRouter([
@@ -34,9 +35,14 @@ import Tables from "../pages/Tables/Tables/Tables";
             element: <Chefs></Chefs>
         }, 
 
-           {
+        {
             path: "/table",
             element: <Tables></Tables>
+        }, 
+
+          {
+            path: "/signature-food",
+            element: <Categories></Categories>
         }, 
 
 

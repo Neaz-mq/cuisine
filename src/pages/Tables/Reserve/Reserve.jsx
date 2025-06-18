@@ -16,7 +16,7 @@ const tableData = [
 const Reserve = () => {
   return (
     <Container>
-    <div className="3xl:px-16 mb-44">
+    <div className="3xl:px-16 mb-24">
           {/* Heading */}
       <div className="text-center lg:text-left mb-10 mt-20 ">
         <h2 className="text-2xl lg:text-4xl font-bold text-[#2C6252] leading-relaxed">
@@ -35,7 +35,7 @@ const Reserve = () => {
         {tableData.map((table, index) => (
           <div
             key={index}
-            className={`w-44 h-44 flex items-center justify-center text-white font-bold text-3xl  ${
+            className={`w-44 h-44 flex items-center justify-center text-white font-bold text-6xl  ${
               table.booked ? "bg-[#FF4C15]" : "bg-[#2C6252]"
             }`}
           >
