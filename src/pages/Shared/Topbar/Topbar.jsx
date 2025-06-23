@@ -148,10 +148,12 @@ const TopBar = () => {
                     </span>
 
                     {/* Order Button */}
-                    <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px]  lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap 3xl:ml-4 3xl:mr-1 2xl:ml-4 2xl:mr-1 xl:ml-4 xl:mr-1 lg:ml-4 lg:mr-1 ">
+                  <a href="/signature-food">
+                      <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px]  lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap 3xl:ml-4 3xl:mr-1 2xl:ml-4 2xl:mr-1 xl:ml-4 xl:mr-1 lg:ml-4 lg:mr-1 ">
                         Order Now
                         <ChevronRight className="ml-1 text-white" size={16} md:size={20} />
                     </button>
+                  </a>
 
                     {/* Divider */}
                     <div className="hidden sm:block">
