@@ -33,7 +33,7 @@ const Deliver = () => {
 
           {/* Right Image with Background */}
           <div
-            className="flex justify-end relative 3xl:-left-4 2xl:-left-2 xl:left-2 lg:left-2"
+            className="flex justify-end relative 3xl:-left-4 2xl:-left-2 xl:-left-6 lg:left-2"
             style={{
               backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
               backgroundRepeat: "no-repeat",
