@@ -33,18 +33,18 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 mx-12 3xl:-top-60 2xl:-top-56 xl:-top-36 lg:-top-32">
+      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 mx-12 3xl:-top-60 2xl:-top-56 xl:-top-36 lg:-top-40">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left content */}
           <div>
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-20">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-10">
               Customer <br /> Testimonial <br />
               <span className="text-[#FF4C15]">Examples</span>
             </h2>
             <div className="flex">
               <div>
-                <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[1.5rem] lg:-ml-20">
+                <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[1.5rem] lg:-ml-10">
                   When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
                 </p>
               </div>
@@ -58,7 +58,7 @@ const Testimonials = () => {
           </div>
 
           {/* Right image with swipe carousel */}
-          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-8 xl:right-12 lg:ml-20">
+          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-8 xl:right-12 lg:ml-12">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -109,7 +109,7 @@ const Testimonials = () => {
               "The food was absolutely delicious, and the service was top-notch! The ambiance
               made our dinner even more special. Highly recommend!"
             </p>
-            <div className="flex items-center mt-4 3xl:space-x-[10px] 2xl:space-x-[20px]">
+            <div className="flex items-center mt-4 3xl:space-x-[10px] 2xl:space-x-[20px] xl:space-x-[10px] lg:space-x-[10px]">
               {/* Left half white, right half green circle */}
               <span className="w-6 h-6 bg-[#2C6252] rounded-full"></span>
               {/* Avatar with orange background and border */}

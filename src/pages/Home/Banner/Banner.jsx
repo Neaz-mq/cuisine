@@ -121,7 +121,7 @@ const Banner = () => {
                         </div>
 
                         {/* Right Side Image */}
-                        <div className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-32 xl:-mt-28 xl:-ml-28 lg:-mt-[5.5rem] lg:-ml-44 object-cover z-20">
+                        <div className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-32 xl:-mt-28 xl:-ml-28 lg:-mt-[5.2rem] lg:-ml-44 object-cover z-20">
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png"
                                 alt=""
