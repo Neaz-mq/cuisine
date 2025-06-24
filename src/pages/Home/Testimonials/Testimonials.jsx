@@ -58,7 +58,7 @@ const Testimonials = () => {
           </div>
 
           {/* Right image with swipe carousel */}
-          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-6 xl:right-2 lg:ml-20">
+          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-8 xl:right-2 lg:ml-20">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -100,7 +100,7 @@ const Testimonials = () => {
         </div>
 
         {/* Bottom Cards */}
-        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-12 2xl:gap-12 xl:gap-12 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4">
+        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-12 2xl:gap-8 xl:gap-12 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4">
 
           {/* Card 1 */}
           <div className="border border-orange-200 p-12">
@@ -109,14 +109,14 @@ const Testimonials = () => {
               "The food was absolutely delicious, and the service was top-notch! The ambiance
               made our dinner even more special. Highly recommend!"
             </p>
-            <div className="flex items-center mt-4 3xl:space-x-[10px] 2xl:space-x-[24px]">
+            <div className="flex items-center mt-4 3xl:space-x-[10px] 2xl:space-x-[20px]">
               {/* Left half white, right half green circle */}
               <span className="w-6 h-6 bg-[#2C6252] rounded-full"></span>
               {/* Avatar with orange background and border */}
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1748515898/Mask_Group_17_ke16wb.jpg"
                 alt="avatar"
-                className="w-6 h-6 rounded-full border-2 border-[#FF4C15] bg-[#FF4C15] object-cover"
+                className="w-6 h-6  border-2 border-[#FF4C15] bg-[#FF4C15] object-cover"
               />
             </div>
           </div>
