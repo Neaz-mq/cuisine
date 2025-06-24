@@ -37,7 +37,7 @@ const Services = () => {
     return (
         <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] flex justify-center">
             <Container>
-                <div className="relative w-full flex flex-col items-center justify-center mb-8">
+                <div className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0">
                     {/* Background Image */}
                     <div
                         className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem]"
@@ -72,7 +72,7 @@ const Services = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-20 xl:gap-y-20 3xl:gap-24 2xl:gap-6 xl:gap-3 lg:gap-8 mt-20">
+                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-20 3xl:gap-24 2xl:gap-24 xl:gap-3 lg:gap-8 mt-20 2xl:mr-10" >
                         {services.map((service, index) => {
                             const words = service.desc.split(' ');
                             const firstLine = words.slice(0, 5).join(' ');
