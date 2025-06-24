@@ -54,16 +54,16 @@ const Signature = () => {
         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
     }
-  };
+  }; 
 
   return (
     <Container>
-      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[65rem] xl:w-[58rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-16 xl:ml-14 lg:ml-12 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[58rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-14 lg:ml-12 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
 
-        <div className=" mx-auto px-14 relative left-6">
+        <div className="mx-auto px-14 relative left-6">
           {/* Vertical Title */}
-          <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[12rem] xl:top-[11rem] lg:top-[11rem]">
-            <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-72 2xl:-ml-20 xl:-ml-24 lg:-ml-24">
+          <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[11rem] lg:top-[11rem]">
+            <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-72 2xl:-ml-60 xl:-ml-24 lg:-ml-24">
               <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
                 <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="" />
               </div>
@@ -72,19 +72,19 @@ const Signature = () => {
           </div>
 
           <div className='2xl:ml-8 xl:ml-[6.3rem]'>
-            <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute 3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-32 2xl:-left-0 xl:-left-3 lg:left-6">
+            <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute 3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-32 2xl:-left-24 xl:-left-3 lg:left-6">
               Chinese Food Set Meals
             </h2>
-          </div>
+          </div> 
 
           {/* Cards Section */}
-          <div className="3xl:ml-[11.6rem] 2xl:ml-[13rem] xl:ml-[13.8rem] lg:ml-[14rem] relative z-10">
+          <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[13.8rem] lg:ml-[14rem] relative z-10">
             <div
               ref={carouselRef}
-              className="flex 3xl:gap-12 2xl:gap-12 xl:gap-4 lg:gap-10 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17.5rem*3+3rem*2)] xl:w-[calc(15rem*3+3rem*2)] lg:w-[calc(9.6rem*3+3rem*2)] mx-auto"
+              className="flex 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-10 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(15rem*3+3rem*2)] lg:w-[calc(9.6rem*3+3rem*2)] mx-auto"
             >
               {foodItems.map((item, index) => (
-                <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[18rem] xl:w-[20rem] lg:w-[16rem] flex-shrink-0">
+                <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[20rem] lg:w-[16rem] flex-shrink-0">
                   <div className="relative">
                     <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
                     {item.available && (
