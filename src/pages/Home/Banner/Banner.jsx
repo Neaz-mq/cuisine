@@ -26,7 +26,7 @@ const Banner = () => {
                 <div className="relative bg-white">
                     <div className="flex items-start justify-between">
                         {/* Left Side Content */}
-                        <div className="relative 3xl:p-8 2xl:p-8 xl:p-8 lg:p-0 top-4 3xl:left-2 2xl:-left-12">
+                        <div className="relative 3xl:p-8 2xl:p-8 xl:p-8 lg:p-0 top-4 3xl:left-2 2xl:-left-12 xl:-left-6">
                             <img
                                 className="absolute 3xl:left-[-20px] 3xl:right-10 3xl:-top-10 2xl:left-[-20px] 2xl:right-10 2xl:-top-10 xl:left-[-20px] xl:right-10 xl:-top-10 lg:left-[-36px] lg:right-16 lg:-top-16 opacity-60 blur-sm"
                                 src="/Ellipse 9.svg"
@@ -121,7 +121,7 @@ const Banner = () => {
                         </div>
 
                         {/* Right Side Image */}
-                        <div className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-32 xl:-mt-28 xl:-ml-16 lg:-mt-[7.2rem] lg:-ml-32 object-cover z-20">
+                        <div className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-32 xl:-mt-28 xl:-ml-28 lg:-mt-[7.2rem] lg:-ml-32 object-cover z-20">
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png"
                                 alt=""

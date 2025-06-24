@@ -39,9 +39,9 @@ const Navbar = () => {
             </div>
 
             {/* Book Table Button */}
-            <button className="bg-[#FF4C15] flex flex-col items-center 3xl:py-4 3xl:px-3 2xl:py-3 2xl:px-3 xl:py-3 xl:px-3 lg:py-2 lg:px-2 w-full 3xl:ml-32 2xl:ml-24 xl:ml-16 lg:ml-10 3xl:mt-10 2xl:mt-6 xl:mt-4 lg:mt-4" >
+            <button className="bg-[#FF4C15] flex flex-col items-center 3xl:py-4 3xl:px-3 2xl:py-3 2xl:px-3 xl:py-3 xl:px-3 lg:py-2 lg:px-2 w-full 3xl:ml-32 2xl:ml-24 xl:ml-14 lg:ml-10 3xl:mt-10 2xl:mt-6 xl:mt-4 lg:mt-4" >
               <a href="/table">
-                  <span className="3xl:text-[18px] 2xl:text-[15px] xl:text-[14px] lg:text-[10px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
+                  <span className="3xl:text-[18px] 2xl:text-[15px] xl:text-[13px] lg:text-[10px] font-bold text-white" style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
                     Book a Table
                 </span>
                 <img src="/table.svg" alt="Table Icon" className="3xl:h-5 2xl:h-4 xl:h-4 lg:h-3 w-auto 3xl:mt-4 2xl:mt-3 xl:mt-2 lg:mt-2" style={{ writingMode: 'vertical-rl' }} />
