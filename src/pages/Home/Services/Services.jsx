@@ -72,7 +72,7 @@ const Services = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-8 mt-20 2xl:mr-10" >
+                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 lg:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-4 mt-20 2xl:mr-10 lg:mr-3 3xl:mr-0 xl:mr-0" >
                         {services.map((service, index) => {
                             const words = service.desc.split(' ');
                             const firstLine = words.slice(0, 5).join(' ');
