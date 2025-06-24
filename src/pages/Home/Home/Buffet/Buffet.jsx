@@ -135,7 +135,7 @@ const Buffet = () => {
                                     Pan-Seared Steak -
                                 </h3>
                                 <p className="text-[#AAAAAA] 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] mb-4">
-                                    Flaky salmon fillet pan-seared to perfection, served with lemon sauce.
+                                    Succulent, spice-rubbed lamb chops grilled to perfection with fresh greens.
                                 </p>
                                 <button className="bg-[#FF4C15] text-white py-2 px-4  text-sm font-semibold hover:bg-[#E64310] mb-4">
                                     Learn more

@@ -5,7 +5,7 @@ const Services = () => {
         {
             icon: '/Path 67.svg',
             title: 'Fresh and High-Quality Ingredients',
-            desc: 'We source only the freshest and highest-quality ingredients to ensure',
+            desc: 'We source only the freshest and highest-quality ingredients ',
         },
         {
             icon: '/unique.svg',
