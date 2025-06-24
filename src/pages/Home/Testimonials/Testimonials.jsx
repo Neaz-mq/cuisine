@@ -38,17 +38,17 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left content */}
           <div>
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-16 lg:-ml-20">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-20">
               Customer <br /> Testimonial <br />
               <span className="text-[#FF4C15]">Examples</span>
             </h2>
             <div className="flex">
               <div>
-                <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[3.8rem] lg:-ml-20">
+                <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[1.5rem] lg:-ml-20">
                   When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
                 </p>
               </div>
-              <div className="3xl:-mt-14 2xl:-mt-[4.5rem] xl:-mt-[4.5rem] lg:-mt-[3em] ml-6">
+              <div className="3xl:-mt-14 2xl:-mt-[4.5rem] xl:-mt-[4rem] lg:-mt-[3em] ml-6">
                 <img
                   src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png"
                   alt=""
@@ -58,7 +58,7 @@ const Testimonials = () => {
           </div>
 
           {/* Right image with swipe carousel */}
-          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-8 xl:right-2 lg:ml-20">
+          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-8 xl:right-12 lg:ml-20">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -100,7 +100,7 @@ const Testimonials = () => {
         </div>
 
         {/* Bottom Cards */}
-        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-12 2xl:gap-8 xl:gap-12 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4">
+        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 3xl:gap-12 2xl:gap-8 xl:gap-6 lg:gap-14 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4">
 
           {/* Card 1 */}
           <div className="border border-orange-200 p-12">
