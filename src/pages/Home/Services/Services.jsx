@@ -72,7 +72,7 @@ const Services = () => {
                     </div>
 
                     {/* Services Grid */}
-                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-20 3xl:gap-24 2xl:gap-24 xl:gap-3 lg:gap-8 mt-20 2xl:mr-10" >
+                    <div className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-8 mt-20 2xl:mr-10" >
                         {services.map((service, index) => {
                             const words = service.desc.split(' ');
                             const firstLine = words.slice(0, 5).join(' ');
@@ -81,7 +81,7 @@ const Services = () => {
                             return (
                                 <div key={index} className="flex items-start gap-4 max-w-md">
                                     {/* Icon Container */}
-                                    <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-20 xl:h-20 lg:w-14 lg:h-14 bg-[#2C6252] flex items-center justify-center">
+                                    <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-14 xl:h-14 lg:w-14 lg:h-14 bg-[#2C6252] flex items-center justify-center">
                                         <img
                                             src={service.icon}
                                             alt={service.title}
