@@ -77,7 +77,7 @@ const Buffet = () => {
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1747027615/Mask_Group_8_o6fhcq.png"
                                 alt="Grilled Steak"
-                                className="w-full h-52  object-cover mb-3"
+                                className="w-full h-52 object-cover mb-3"
                             />
                             <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
                                 <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
@@ -108,7 +108,7 @@ const Buffet = () => {
                         </div>
 
                         {/* Food Card 3 */}
-                        <div className="bg-[#FFFAF8]   overflow-hidden relative">
+                        <div className="bg-[#FFFAF8] overflow-hidden relative">
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1747027686/Mask_Group_9_b1ncuh.png"
                                 alt="Pan-Seared Salmon Fillet"
@@ -180,10 +180,10 @@ const Buffet = () => {
                     </div>
 
                     {/* Bottom Image Section */}
-                    <div className="flex flex-col md:flex-row items-stretch  overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 2xl:-ml-5 3xl:-ml-0 ">
+                    <div className="flex flex-col md:flex-row items-stretch overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 2xl:-ml-5 3xl:-ml-0 ">
                         {/* Left Text */}
-                        <div className="flex flex-col justify-center  px-6 py-10 w-full 2xl:w-1/3 3xl:w-1/3 xl:w-1/2 lg:w-1/2  z-50">
-                            <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl  3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8  ">
+                        <div className="flex flex-col justify-center px-6 py-10 w-full 2xl:w-1/3 3xl:w-1/3 xl:w-1/2 lg:w-1/2 z-50">
+                            <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8">
                                 Deep <br /> Blue <br />
                                 Delights
                             </h2>

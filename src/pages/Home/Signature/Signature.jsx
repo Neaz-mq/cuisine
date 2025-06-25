@@ -59,7 +59,6 @@ const Signature = () => {
   return (
     <Container>
       <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:ml-3 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
-
         <div className="mx-auto px-14 relative left-6">
           {/* Vertical Title */}
           <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem]">
@@ -89,7 +88,7 @@ const Signature = () => {
                     <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
                     {item.available && (
                       <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
-                        <div className=" rounded-full w-4 h-4 flex items-center justify-center mr-1">
+                        <div className="rounded-full w-4 h-4 flex items-center justify-center mr-1">
                           <img src="/svg.svg" className="w-3 h-3" alt="Food Icon" />
                         </div>
                         Food Available
@@ -149,7 +148,6 @@ const Signature = () => {
           </div>
         </div>
       </div>
-
     </Container>
 
   );
