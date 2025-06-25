@@ -284,9 +284,9 @@ const Items = () => {
 
   return (
     <Container>
-      <div className='3xl:mt-24 2xl:mt-24 xl:mt-28 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-12 lg:ml-6 overflow-hidden'>
+      <div className='3xl:mt-24 2xl:mt-24 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:ml-6 overflow-hidden'>
         {/* Category Navigation */}
-        <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-28 lg:space-x-20 px-8">
+        <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-20 px-8">
           {categoryItems.map((item) => (
             <div
               key={item.label}
@@ -302,7 +302,7 @@ const Items = () => {
               </span>
               {
                 selected === item.label && (
-                  <div className="absolute bottom-0 w-full h-1  -mb-4"></div>
+                  <div className="absolute bottom-0 w-full h-1 -mb-4"></div>
                 )
               }
             </div>
@@ -310,12 +310,12 @@ const Items = () => {
         </div>
 
         {/* Main Section - Dynamically rendered based on selected category */}
-        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 gap-10 mt-10">
+        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 gap-10 mt-10">
 
           {/* Left Section - Menu Items */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 2xl::-ml-0 xl::-ml-0">
             {items.map((item, index) => (
-              <div key={index} className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-10 lg:p-8 flex flex-col items-start h-96">
+              <div key={index} className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-7 lg:p-8 flex flex-col items-start h-96">
                 <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
                 <p className="text-gray-500 text-sm mt-1 mb-4">
                   {item.description}
@@ -346,9 +346,9 @@ const Items = () => {
             ))}
           </div>
           {/* Right Section - Today Special */}
-          <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-28 2xl:top-20 3xl:top-10">
+          <div className="bg-white text-[#2C6252]  p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10">
             {/* Using dangerouslySetInnerHTML for todaySpecial text */}
-            <div className="3xl:text-7xl 2xl:text-6xl xl:text-7xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
+            <div className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
             <img src={todaySpecial.mainImage} alt="Main Special" className="mt-8 w-full h-auto object-contain" />
           </div>
         </div>
