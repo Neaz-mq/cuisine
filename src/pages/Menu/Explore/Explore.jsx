@@ -10,7 +10,7 @@ const Explore = () => {
                     <div className="relative w-1/2 p-8 z-0">
                         <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />
                         <div className="ml-4">
-                            <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-4xl lg:text-3xl font-bold text-[#2C6252] flex flex-col items-start -mt-3">
+                            <h1 className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-3xl font-bold text-[#2C6252] flex flex-col items-start -mt-3">
                                 <span className="mb-4">Explore Our</span>
                                 <span className="mb-4">Full Menu of</span>
                                 <span className="mb-4">Signature</span>
@@ -34,7 +34,7 @@ const Explore = () => {
                         <img
                             src="https://res.cloudinary.com/dxohwanal/image/upload/v1747817792/pngegg_-_2025-05-10T174947.812_r4zzrj.png"
                             alt="Banner"
-                            className="w-full max-w-[800px] object-contain 3xl:-mt-10 2xl:-mt-8 xl:-mt-12 lg:-mt-6 3xl:-ml-20 2xl:-ml-20"
+                            className="w-full max-w-[800px] object-contain 3xl:-mt-10 2xl:-mt-8 xl:-mt-6 lg:-mt-6 3xl:-ml-20 2xl:-ml-20 xl:-ml-20"
                         />
                     </div>
                 </div>
