@@ -284,7 +284,7 @@ const Items = () => {
 
   return (
     <Container>
-      <div className='3xl:mt-52 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-14 xl:ml-12 lg:ml-6 overflow-hidden'>
+      <div className='3xl:mt-24 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-14 xl:ml-12 lg:ml-6 overflow-hidden'>
         {/* Category Navigation */}
         <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-36 xl:space-x-28 lg:space-x-20 px-8">
           {categoryItems.map((item) => (
