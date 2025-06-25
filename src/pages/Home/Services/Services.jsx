@@ -37,7 +37,7 @@ const Services = () => {
     return (
         <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] flex justify-center">
             <Container>
-                <div className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0">
+                <div className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 ">
                     {/* Background Image */}
                     <div
                         className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem]"

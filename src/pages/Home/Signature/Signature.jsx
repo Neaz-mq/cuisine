@@ -58,7 +58,7 @@ const Signature = () => {
 
   return (
     <Container>
-      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[40rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:ml-10 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:ml-3 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
 
         <div className="mx-auto px-14 relative left-6">
           {/* Vertical Title */}
@@ -81,10 +81,10 @@ const Signature = () => {
           <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[7rem] relative z-10">
             <div
               ref={carouselRef}
-              className="flex 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-10 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(10rem*3+3rem*2)] mx-auto"
+              className="flex 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] mx-auto"
             >
               {foodItems.map((item, index) => (
-                <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[16rem] flex-shrink-0">
+                <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] flex-shrink-0">
                   <div className="relative">
                     <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
                     {item.available && (

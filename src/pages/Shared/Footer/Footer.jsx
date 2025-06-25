@@ -13,9 +13,9 @@ const Footer = () => {
     <footer className="bg-[#2C6252] text-white">
       {/* Top Footer Content */}
       <Container>
-        <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-28 text-center lg:text-left">
+        <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-20 text-center lg:text-left">
           {/* Logo */}
-          <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-20 2xl:justify-start xl:ml-[7.4rem] lg:ml-32 xl:justify-start lg:justify-start">
+          <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-20 2xl:justify-start xl:ml-[7.4rem] lg:ml-24 xl:justify-start lg:justify-start">
             <a href="/">
               <div className="bg-[#3A7563] 3xl:px-4 3xl:py-4 2xl:px-4 2xl:py-4 xl:px-4 xl:py-4 lg:px-2 lg:py-2 flex items-center space-x-2 w-fit 3xl:mt-1 2xl:mt-1 xl:mt-0 lg:mt-0 mx-auto">
                 <img
@@ -91,7 +91,7 @@ const Footer = () => {
       {/* Divider Line */}
       <div className="w-full flex justify-center">
         <Container>
-          <div className="border-t border-[#ACBCB8] 3xl:w-[80rem] 2xl:w-[62rem] xl:w-[57rem] lg:w-[41rem] mt-6 mb-12 3xl:ml-36 2xl:ml-28 xl:ml-36 lg:ml-40"></div>
+          <div className="border-t border-[#ACBCB8] 3xl:w-[80rem] 2xl:w-[62rem] xl:w-[57rem] lg:w-[45rem] mt-6 mb-12 3xl:ml-36 2xl:ml-28 xl:ml-36 lg:ml-[7.5rem]"></div>
         </Container>
       </div>
 
@@ -99,7 +99,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full flex justify-center">
         <Container>
-          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-32">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-24">
             <div className="flex items-center gap-2">
               <FaRegCopyright />
               <span className="whitespace-nowrap ">

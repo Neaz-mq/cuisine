@@ -4,7 +4,7 @@ const Buffet = () => {
     return (
         <Container>
             <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14 3xl:-ml-0">
-                <div className="mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2">
                     {/* Top Section */}
                     <div
                         className="text-center mb-10 relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1747026768/Buffet_lhk7ax.png')] bg-no-repeat bg-contain bg-center w-full h-[20rem] -mt-52"

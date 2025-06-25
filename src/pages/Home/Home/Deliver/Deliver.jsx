@@ -7,7 +7,7 @@ const Deliver = () => {
         {/* Main Grid */}
         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
           {/* Left Text Content */}
-          <div className="space-y-6 3xl:ml-14 2xl:ml-4 xl:ml-12 lg:ml-3 3xl:-mt-0 2xl:-mt-6 xl:-mt-10 lg:-mt-8">
+          <div className="space-y-6 3xl:ml-14 2xl:ml-4 xl:ml-12 lg:-ml-5 3xl:-mt-0 2xl:-mt-6 xl:-mt-10 lg:-mt-8">
             <h2 className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] 3xl:space-y-4 2xl:space-y-4 xl:space-y-4 lg:space-y-0 flex flex-col">
               <span>We Deliver</span>
               <span>Food Within</span>
