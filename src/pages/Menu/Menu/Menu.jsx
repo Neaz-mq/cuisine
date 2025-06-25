@@ -6,7 +6,7 @@ const Menu = () => {
     return (
         <div>
            <Explore></Explore>
-           {/* <Items></Items> */}
+           <Items></Items>
            <Delights></Delights>
         </div>
     );
