@@ -41,7 +41,7 @@ const categoryItems = [
         },
       ],
       todaySpecial: {
-        text: 'Today<br />special<br /><span class="text-[#FF4C15]">burger</span>',
+        text: 'Today<br />special<br /><span class="text-[#FF4C15]">Burger</span>',
         mainImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748061492/pngegg_16_hkoq5b.png'
       },
     },
@@ -284,9 +284,9 @@ const Items = () => {
 
   return (
     <Container>
-      <div className='3xl:mt-24 2xl:mt-36 xl:mt-28 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-14 xl:ml-12 lg:ml-6 overflow-hidden'>
+      <div className='3xl:mt-24 2xl:mt-24 xl:mt-28 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-6 2xl:mr-10 xl:ml-12 lg:ml-6 overflow-hidden'>
         {/* Category Navigation */}
-        <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-36 xl:space-x-28 lg:space-x-20 px-8">
+        <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-28 lg:space-x-20 px-8">
           {categoryItems.map((item) => (
             <div
               key={item.label}
@@ -310,7 +310,7 @@ const Items = () => {
         </div>
 
         {/* Main Section - Dynamically rendered based on selected category */}
-        <div className="bg-white py-12 px-4 3xl:px-0 grid grid-cols-1 3xl:grid-cols-3 gap-10 mt-10">
+        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 gap-10 mt-10">
 
           {/* Left Section - Menu Items */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 2xl::-ml-0 xl::-ml-0">
@@ -348,7 +348,7 @@ const Items = () => {
           {/* Right Section - Today Special */}
           <div className="bg-white text-[#2C6252] rounded-lg p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-28 2xl:top-20 3xl:top-10">
             {/* Using dangerouslySetInnerHTML for todaySpecial text */}
-            <div className="3xl:text-7xl 2xl:text-7xl xl:text-7xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
+            <div className="3xl:text-7xl 2xl:text-6xl xl:text-7xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
             <img src={todaySpecial.mainImage} alt="Main Special" className="mt-8 w-full h-auto object-contain" />
           </div>
         </div>
