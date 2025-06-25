@@ -30,7 +30,7 @@ const Delights = () => {
                             seaside escape, where the salt air kisses your skin and every bite
                             feels like a wave of pure flavor.
                         </p>
-                        <button className="bg-[#FF4C15] text-white px-3 py-2  hover:bg-orange-600 text-lg font-semibold -mt-4 whitespace-nowrap">
+                        <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 text-lg font-semibold -mt-4 whitespace-nowrap">
                             Order Now
                         </button>
                     </div>
@@ -63,7 +63,7 @@ const Delights = () => {
             </div>
 
             {/* Bottom Right - Deep Blue Delights */}
-            <div className="relative overflow-hidden w-full lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4" >
+            <div className="relative overflow-hidden w-full lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4">
                 {/* Left content area: descriptive text, rating, button */}
                 <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10">
                     <p className="text-sm text-[#EFEFEF] mb-4 max-w-xs ">
@@ -73,13 +73,13 @@ const Delights = () => {
                         <span className="text-yellow-500">★★★★★</span>
                         <span className="text-sm text-[#CCCCCC] whitespace-nowrap">(4.8 Rating)</span>
                     </div>
-                    <button className="bg-[#FF4C15] text-white px-3 py-2  hover:bg-orange-600 text-xl font-semibold w-full max-w-[150px] ">
+                    <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 text-xl font-semibold w-full max-w-[150px]">
                         Order Now
                     </button>
                 </div>
 
                 {/* Right content area: Headline and Savor text - Left-aligned */}
-                <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20  ">
+                <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20">
                     <h2 className="lg:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-2 lg:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[22rem] xl:-mt-[20rem] lg:-mt-[16rem]">
                         <div className="text-[#2C6252]">Deep</div>
                         <div className="text-[#2C6252]">Blue</div>

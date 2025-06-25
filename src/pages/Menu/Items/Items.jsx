@@ -284,7 +284,7 @@ const Items = () => {
 
   return (
     <Container>
-      <div className='3xl:mt-24 2xl:mt-24 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:ml-6 lg:mr-2  overflow-hidden'>
+      <div className='3xl:mt-24 2xl:mt-24 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:ml-6 lg:mr-2 overflow-hidden'>
         {/* Category Navigation */}
         <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 px-8">
           {categoryItems.map((item) => (
@@ -346,7 +346,7 @@ const Items = () => {
             ))}
           </div>
           {/* Right Section - Today Special */}
-          <div className="bg-white text-[#2C6252]  p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0 2xl:left-0 xl:left-0 lg:left-10">
+          <div className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0 2xl:left-0 xl:left-0 lg:left-10">
             {/* Using dangerouslySetInnerHTML for todaySpecial text */}
             <div className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
             <img src={todaySpecial.mainImage} alt="Main Special" className="mt-8 w-full h-auto object-contain" />
