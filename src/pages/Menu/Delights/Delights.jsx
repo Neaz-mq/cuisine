@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 const Delights = () => {
     return (
        <Container>
-         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 py-12 mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-44 2xl:mb-36  xl:mb-14 lg:-ml-2">
+         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 py-12 mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-44 2xl:mb-36 xl:mb-14 lg:mb-28 lg:-ml-0">
 
             {/* Top Left - Shrimp */}
             <div className="flex flex-col bg-white overflow-hidden p-6">
@@ -63,7 +63,7 @@ const Delights = () => {
             </div>
 
             {/* Bottom Right - Deep Blue Delights */}
-            <div className="relative overflow-hidden w-full lg:h-[450px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4" >
+            <div className="relative overflow-hidden w-full lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4" >
                 {/* Left content area: descriptive text, rating, button */}
                 <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10">
                     <p className="text-sm text-[#EFEFEF] mb-4 max-w-xs ">
@@ -79,14 +79,14 @@ const Delights = () => {
                 </div>
 
                 {/* Right content area: Headline and Savor text - Left-aligned */}
-                <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24  ">
+                <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20  ">
                     <h2 className="lg:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-2 lg:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[22rem] xl:-mt-[20rem] lg:-mt-[16rem]">
                         <div className="text-[#2C6252]">Deep</div>
                         <div className="text-[#2C6252]">Blue</div>
                         <div className="text-[#FF4C15]">Delights</div>
                     </h2>
 
-                    <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-1 xl:ml-10 lg:ml-8 whitespace-nowrap">
+                    <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-1 xl:ml-10 lg:ml-14 whitespace-nowrap">
                         Savor the Secrets of the Sea
                     </p>
                 </div>
@@ -95,7 +95,7 @@ const Delights = () => {
                 <img
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png"
                     alt="Fish Dish"
-                    className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-44 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-52 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-44"
+                    className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-52 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem]"
                 />
             </div>
         </div>
