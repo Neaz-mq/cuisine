@@ -68,7 +68,7 @@ const Weekly = () => {
        
        <Container>
         
-        <div className=" px-4 sm:px-6 lg:px-14">
+        <div className=" px-4 sm:px-6 3xl:px-14 2xl:px-4">
             <div className="py-16 mb-40 font-inter"> {/* Added font-inter for consistent typography */}
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left">
