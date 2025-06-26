@@ -245,7 +245,7 @@ const Category = () => {
 
     return (
         <Container>
-            <div className="3xl:px-14 2xl:px-4 3xl:mb-40 2xl:mb-32 mt-6">
+            <div className="3xl:px-14 2xl:px-4 xl:px-14 3xl:mb-40 2xl:mb-32 xl:mb-36 mt-6">
                 <h2 className="text-3xl font-semibold text-[#1D4B3F] mb-10">
                     Delicious<span className="font-bold ml-2">Foods</span>
                 </h2>

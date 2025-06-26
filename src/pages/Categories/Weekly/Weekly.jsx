@@ -68,14 +68,14 @@ const Weekly = () => {
        
        <Container>
         
-        <div className=" px-4 sm:px-6 3xl:px-14 2xl:px-4">
-            <div className="py-16 mb-40 font-inter"> {/* Added font-inter for consistent typography */}
+        <div className=" px-4 sm:px-6 3xl:px-14 2xl:px-4 xl:px-14">
+            <div className="py-16 mb-40 "> 
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left">
-                    <h2 className="text-4xl font-semibold text-[#2C6252] mb-2">
+                    <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl  font-semibold text-[#2C6252] mb-2">
                         Our Weekly<span className="font-bold ml-2">Offer</span>
                     </h2>
-                    <p className="text-lg text-[#B9B9B9]">
+                    <p className="3xl:text-lg 2xl:text-lg xl:text-sm text-[#B9B9B9]">
                         Discover anything you need, the easy way
                     </p>
                 </div>

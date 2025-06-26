@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 const Brew = () => {
   return ( 
       <Container>
-        <div className="3xl:px-16 2xl:px-6 mb-72 3xl:-mt-28">
+        <div className="3xl:px-16 2xl:px-6 xl:px-16 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] 3xl:-mt-28">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
           {/* Left Section */}
           <div className="relative max-w-2xl w-full text-center lg:text-left">
@@ -12,7 +12,7 @@ const Brew = () => {
 
             {/* Text Content */}
             <div className="relative z-10 px-4 lg:px-0">
-              <h2 className="text-[2.5rem] sm:text-6xl font-bold ">
+              <h2 className="3xl:text-[3rem] 2xl:text-[2.5rem] xl:text-[2.4rem] sm:text-6xl font-bold ">
                 <span className="text-[#2C6252] block leading-snug tracking-wide">Classic</span>
                 <span className="text-[#FF4C15] block mt-2 tracking-wide">Roast Brew</span>
               </h2>
