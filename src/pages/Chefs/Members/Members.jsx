@@ -36,10 +36,10 @@ const Members = () => {
 
     return (
         <Container>
-            <div className="py-8 md:py-12 3xl:px-16 mt-36 mb-52 ">
+            <div className="py-8 md:py-12 3xl:px-16 2xl:px-20 mt-36 3xl:mb-52 2xl:mb-40 ">
                 {/* Header Section: Adjusted for left alignment and tag inline with second line */}
                 <div className="mb-10 md:mb-16 text-left flex justify-end items-center "> {/* Ensures overall text alignment is left */}
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#2C6252] mb-2 leading-relaxed mr-28 "> {/* Removed mb-4 md:mb-0 and text-right */}
+                    <h1 className="text-3xl  3xl:text-5xl 2xl:text-4xl font-bold text-[#2C6252] mb-2 leading-relaxed 3xl:mr-28 2xl:mr-16 "> {/* Removed mb-4 md:mb-0 and text-right */}
                         Our expertise all team <br className="hidden md:block" />
                         {/* Display "members" and the tag inline */}
                         <span className="inline-flex items-center leading-relaxed">
@@ -59,14 +59,14 @@ const Members = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Large Chef Image Section */}
                     <div
-                        className="flex justify-end relative 3xl:left-2 2xl:left-2 xl:left-2 lg:left-2 bg-[#3F7765] h-[99%] w-[75%]"
+                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:left-2 lg:left-2 bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%]"
                       
                     >
-                        <div className="3xl:-ml-16 3xl:-mr-[22.4rem] 3xl:-mt-32 2xl:-ml-56 2xl:-mt-48 xl:-ml-56 xl:-mt-48 lg:-ml-60 lg:-mt-48">
+                        <div className="3xl:-ml-16 3xl:-mr-[22.4rem] 3xl:-mt-32 2xl:-ml-60 2xl:-mr-[20rem] 2xl:-mt-36 xl:-ml-56 xl:-mt-48 lg:-ml-60 lg:-mt-48">
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1750143426/portrait-happy-male-chef-dressed-uniform_p1e1of.png"
                                 alt="Delivery Guy"
-                                className="object-contain h-auto w-full 3xl:-ml-2 2xl:-ml-8 xl:-ml-4 lg:ml-4"
+                                className="object-contain h-auto w-full 3xl:-ml-2 2xl:ml-32 xl:-ml-4 lg:ml-4"
                             />
                         </div>
                     </div>
@@ -91,7 +91,7 @@ const Members = () => {
                                 </div>
 
                                 {/* Rotated Name - always visible, positioned relative to card */}
-                                <div className="absolute -left-8  top-28 -translate-y-1/2 -rotate-90 origin-left text-lg font-semibold text-[#2C6252] whitespace-nowrap z-20">
+                                <div className="absolute 3xl:-left-8 2xl:-left-4  top-28 -translate-y-1/2 -rotate-90 origin-left text-lg font-semibold text-[#2C6252] whitespace-nowrap z-20">
                                     - {member.name}
                                 </div>
 

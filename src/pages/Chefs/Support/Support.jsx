@@ -3,9 +3,9 @@ import Container from "../../../components/Container";
 const Support = () => {
     return (
         <Container>
-        <div className="3xl:px-[2.2rem] mt-48">
+        <div className="3xl:px-[2.2rem] 2xl:px-0 3xl:mt-48 2xl:mt-36">
             {/* Main layout grid for desktop: 2/3 for content, 1/3 for image */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4 md:p-8 font-inter">
+            <div className="grid grid-cols-1 lg:grid-cols-3 3xl:gap-6 2xl:gap-6 p-4 3xl:p-8 2xl:p-6 ">
                 {/* Left Section: Contains the two top cards and the bottom large section */}
                 <div className="lg:col-span-2 flex flex-col space-y-6">
 
