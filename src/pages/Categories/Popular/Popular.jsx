@@ -75,7 +75,7 @@ const Popular = () => {
 
   return (
     <Container>
-      <div className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-6 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24">
+      <div className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24">
         {/* Header */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <h1 className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl font-bold text-[#2C6252] mb-4 md:mb-0">

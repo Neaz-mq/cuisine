@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 const Brew = () => {
   return ( 
       <Container>
-        <div className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-7 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] 3xl:-mt-28">
+        <div className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] 3xl:-mt-28">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
           {/* Left Section */}
           <div className="relative max-w-2xl w-full text-center lg:text-left">

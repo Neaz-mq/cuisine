@@ -15,7 +15,7 @@ const Footer = () => {
       <Container>
         <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-20 text-center lg:text-left">
           {/* Logo */}
-          <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-20 2xl:justify-start xl:ml-[7rem] lg:ml-[6.1rem] xl:justify-start lg:justify-start">
+          <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-20 2xl:justify-start xl:ml-[7rem] lg:ml-[5rem] xl:justify-start lg:justify-start relative">
             <a href="/">
               <div className="bg-[#3A7563] 3xl:px-4 3xl:py-4 2xl:px-4 2xl:py-4 xl:px-4 xl:py-4 lg:px-2 lg:py-2 flex items-center space-x-2 w-fit 3xl:mt-1 2xl:mt-1 xl:mt-0 lg:mt-0 mx-auto">
                 <img
