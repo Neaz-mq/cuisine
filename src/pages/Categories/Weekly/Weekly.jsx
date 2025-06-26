@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 // Define FoodCard component for individual food item display
 const FoodCard = ({ item }) => (
     <div className="bg-[#F8F8F8] overflow-hidden flex flex-col  p-6"> {/* Added rounded-xl and shadow-lg */}
-        <div className="w-full h-60 overflow-hidden "> {/* Added rounded-md */}
+        <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden "> {/* Added rounded-md */}
             <img
                 src={item.image}
                 alt={item.title}
@@ -19,7 +19,7 @@ const FoodCard = ({ item }) => (
                 {item.desc}
             </p>
             <div className="flex justify-between items-center mt-auto">
-                <span className="text-3xl font-bold text-[#2C6252]">
+                <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
                     ${item.price} <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
                 </span>
                 <button className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"> {/* Added rounded-full, hover effect */}
@@ -69,10 +69,10 @@ const Weekly = () => {
        <Container>
         
         <div className=" px-4 sm:px-6 3xl:px-14 2xl:px-4 xl:px-14">
-            <div className="py-16 mb-40 "> 
+            <div className="py-16 3xl:mb-40 2xl:mb-40 xl:mb-40 lg:mb-24 "> 
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left">
-                    <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl  font-semibold text-[#2C6252] mb-2">
+                    <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl  font-semibold text-[#2C6252] mb-2">
                         Our Weekly<span className="font-bold ml-2">Offer</span>
                     </h2>
                     <p className="3xl:text-lg 2xl:text-lg xl:text-sm text-[#B9B9B9]">
@@ -92,7 +92,7 @@ const Weekly = () => {
                 </div>
 
                 {/* Food Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-10 xl:gap-10 lg:gap-4 ">
                     {weeklyFoodData.map((item) => (
                         <FoodCard key={item.id} item={item} />
                     ))}

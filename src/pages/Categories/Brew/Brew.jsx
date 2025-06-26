@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 const Brew = () => {
   return ( 
       <Container>
-        <div className="3xl:px-16 2xl:px-6 xl:px-16 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] 3xl:-mt-28">
+        <div className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-7 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] 3xl:-mt-28">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
           {/* Left Section */}
           <div className="relative max-w-2xl w-full text-center lg:text-left">
@@ -12,17 +12,17 @@ const Brew = () => {
 
             {/* Text Content */}
             <div className="relative z-10 px-4 lg:px-0">
-              <h2 className="3xl:text-[3rem] 2xl:text-[2.5rem] xl:text-[2.4rem] sm:text-6xl font-bold ">
+              <h2 className="3xl:text-[3rem] 2xl:text-[2.5rem] xl:text-[2.4rem] lg:text-[2.4rem] sm:text-6xl font-bold ">
                 <span className="text-[#2C6252] block leading-snug tracking-wide">Classic</span>
                 <span className="text-[#FF4C15] block mt-2 tracking-wide">Roast Brew</span>
               </h2>
 
-              <p className="text-[#D7D7D7] mt-10 text-sm leading-relaxed absolute left-72 ">
+              <p className="text-[#D7D7D7] 3xl:mt-10 2xl:mt-10 xl:mt-10 lg:mt-4 text-sm leading-relaxed absolute left-72 ">
                 Enjoy unbeatable deals every week at Flavors & Feast! Whether
                 you're craving a hearty meal, a sweet treat, or a refreshing coffee — our weekly offers have something for everyone.
               </p>
 
-              <button className="mt-40 px-6 py-2 bg-[#FF4C15] text-white font-semibold absolute left-72">
+              <button className="3xl:mt-40 2xl:mt-40 xl:mt-40 lg:mt-52 px-6 py-2 bg-[#FF4C15] text-white font-semibold absolute left-72">
                 Claim Offer
               </button>
             </div>

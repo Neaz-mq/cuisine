@@ -245,8 +245,8 @@ const Category = () => {
 
     return (
         <Container>
-            <div className="3xl:px-14 2xl:px-4 xl:px-14 3xl:mb-40 2xl:mb-32 xl:mb-36 mt-6">
-                <h2 className="text-3xl font-semibold text-[#1D4B3F] mb-10">
+            <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-4 3xl:mb-40 2xl:mb-32 xl:mb-36 lg:mb-28 mt-6">
+                <h2 className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-[#1D4B3F] mb-10">
                     Delicious<span className="font-bold ml-2">Foods</span>
                 </h2>
 
@@ -273,7 +273,7 @@ const Category = () => {
                 </div>
 
                 {/* Next up to 4 Cards (only if available, max 7 total) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-4 mt-12">
                     {filteredItems.slice(3, 7).map((item) => (
                         <FoodCard key={item.id} item={item} />
                     ))}
@@ -286,7 +286,7 @@ const Category = () => {
 
 const FoodCard = ({ item }) => (
     <div className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6">
-        <div className="w-full h-60 overflow-hidden">
+        <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36  overflow-hidden">
             <img
                 src={item.image}
                 alt={item.title}
@@ -301,7 +301,7 @@ const FoodCard = ({ item }) => (
                 {item.desc}
             </p>
             <div className="flex justify-between items-center mt-auto">
-                <span className="text-3xl font-bold text-[#2C6252]">
+                <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
                     ${item.price} <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
                 </span>
                 <button className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50">
