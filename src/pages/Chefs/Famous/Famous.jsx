@@ -25,7 +25,7 @@ const Famous = () => {
                         className="w-full h-auto object-cover "
                     />
                     {/* 🔥 Orange label on bottom-right */}
-                    <div className="absolute bottom-0 right-0 bg-[#FF4C15] text-white 3xl:px-12 3xl:py-14 2xl:px-[3.5rem] 2xl:py-[3.6rem] text-xl font-bold leading-snug">
+                    <div className="absolute bottom-0 right-0 bg-[#FF4C15] text-white 3xl:px-[3.5rem] 3xl:py-[3.5rem] 2xl:px-[3.5rem] 2xl:py-[3.6rem] text-xl font-bold leading-snug">
                         World <br /> famous chef
                     </div>
                 </div>
@@ -47,9 +47,9 @@ const Famous = () => {
             </div>
 
             {/* Bottom Right Text Block */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 3xl:-mt-[10.6rem] 2xl:-mt-[10.6rem] -ml-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 3xl:-mt-[10.5rem] 2xl:-mt-[10.6rem] -ml-8">
                 <div></div> {/* Left empty to align right side only */}
-                <div className="bg-[#F8F8F8] 3xl:text-sm 2xl:text-[12px] text-[#2C6252] 3xl:px-14 3xl:py-10 2xl:px-[3.3rem] 2xl:py-[2.9rem] leading-relaxed ">
+                <div className="bg-[#F8F8F8] 3xl:text-sm 2xl:text-[12px] text-[#2C6252] 3xl:px-[3.3rem] 3xl:py-[2.8rem] 2xl:px-[3.3rem] 2xl:py-[2.9rem] leading-relaxed ">
                     Thanks for the clarification — it sounds like you're asking for restaurant <br /> kitchen section names meant
                     for content purposes (<span className="text-[#FF4C15] font-medium">like a blog, video series, or social media</span>). Here's a set of catchy and
                     themed section <br /> name ideas that could help organize.

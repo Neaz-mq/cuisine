@@ -68,7 +68,7 @@ const Weekly = () => {
        
        <Container>
         
-        <div className=" px-4 sm:px-6 3xl:px-14 2xl:px-4 xl:px-14 lg:px-1">
+        <div className="px-4 sm:px-6 3xl:px-14 2xl:px-4 xl:px-14 lg:px-1">
             <div className="py-16 3xl:mb-40 2xl:mb-40 xl:mb-40 lg:mb-24 "> 
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left">
@@ -84,7 +84,7 @@ const Weekly = () => {
                 <div className="relative w-full h-[400px] bg-cover bg-center  overflow-hidden mb-16"
                     style={{ backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1750229832/Mask_Group_30_g2huve.png')" }} // Example background image
                 >
-                    <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-[#2C6252] bg-opacity-90 flex items-center justify-center p-8   md:rounded-bl-none text-white text-lg font-medium text-center md:text-left shadow-lg">
+                    <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-[#2C6252] bg-opacity-90 flex items-center justify-center p-8 md:rounded-bl-none text-white text-lg font-medium text-center md:text-left shadow-lg">
                         <p className="max-w-md">
                             Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—<span className="text-[#FF4D00]">our weekly offers</span> have something for everyone.
                         </p>
@@ -92,7 +92,7 @@ const Weekly = () => {
                 </div>
 
                 {/* Food Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-10 xl:gap-10 lg:gap-4 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-10 xl:gap-10 lg:gap-4">
                     {weeklyFoodData.map((item) => (
                         <FoodCard key={item.id} item={item} />
                     ))}

@@ -286,7 +286,7 @@ const Category = () => {
 
 const FoodCard = ({ item }) => (
     <div className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6">
-        <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36  overflow-hidden">
+        <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden">
             <img
                 src={item.image}
                 alt={item.title}

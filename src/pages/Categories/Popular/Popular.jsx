@@ -99,7 +99,7 @@ const Popular = () => {
               className="absolute inset-0 w-full h-full object-cover z-0"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-            <div className="relative z-20 text-white bg-[#FF4C15] 3xl:p-10 2xl:p-8 xl:p-8 lg:p-8 3xl:bottom-36 2xl:bottom-44 xl:bottom-52 lg:bottom-52 mx-6 ">
+            <div className="relative z-20 text-white bg-[#FF4C15] 3xl:p-10 2xl:p-8 xl:p-8 lg:p-8 3xl:bottom-36 2xl:bottom-44 xl:bottom-52 lg:bottom-52 mx-6">
               <span className="inline-block text-white text-xl font-semibold px-3 py-1 mb-3 -ml-3">
                 Only online order
               </span>
@@ -108,13 +108,13 @@ const Popular = () => {
               </h2>
               <div className="flex 3xl:space-x-3 2xl:space-x-3 xl:space-x-3 lg:space-x-1 mb-6">
                 {[['DAY', timeLeft.days], ['HRS', timeLeft.hours], ['MIN', timeLeft.minutes], ['SEC', timeLeft.seconds]].map(([label, val]) => (
-                  <div key={label} className="flex flex-col items-center justify-center bg-yellow-500  3xl:p-2 2xl:p-4 xl:p-6 lg:p-4 3xl:w-16 3xl:h-16 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-10 lg:h-10 sm:w-20 sm:h-20 flex-shrink-0">
-                    <span className="3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-lg sm:text-lg font-bold font-mono">{formatTime(val)}</span>
+                  <div key={label} className="flex flex-col items-center justify-center bg-yellow-500 3xl:p-2 2xl:p-4 xl:p-6 lg:p-4 3xl:w-16 3xl:h-16 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-10 lg:h-10 sm:w-20 sm:h-20 flex-shrink-0">
+                    <span className="3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-lg sm:text-lg font-bold">{formatTime(val)}</span>
                     <span className="3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[8px] sm:text-sm">{label}</span>
                   </div>
                 ))}
               </div>
-              <button className="bg-[#2C6252] text-white px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm whitespace-nowrap ">
+              <button className="bg-[#2C6252] text-white px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm whitespace-nowrap">
                 Order Now
               </button>
             </div>
