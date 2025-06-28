@@ -36,15 +36,15 @@ const Members = () => {
 
     return (
         <Container>
-            <div className="py-8 md:py-12 3xl:px-16 2xl:px-20 mt-36 3xl:mb-52 2xl:mb-40 ">
+            <div className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 mt-36 3xl:mb-52 2xl:mb-40 xl:mb-28 ">
                 {/* Header Section: Adjusted for left alignment and tag inline with second line */}
                 <div className="mb-10 md:mb-16 text-left flex justify-end items-center "> {/* Ensures overall text alignment is left */}
-                    <h1 className="text-3xl  3xl:text-5xl 2xl:text-4xl font-bold text-[#2C6252] mb-2 leading-relaxed 3xl:mr-28 2xl:mr-16 "> {/* Removed mb-4 md:mb-0 and text-right */}
+                    <h1 className="text-3xl  3xl:text-5xl 2xl:text-4xl xl:text-2xl font-bold text-[#2C6252] mb-2 leading-relaxed 3xl:mr-8 2xl:mr-16 xl:-mr-16 "> {/* Removed mb-4 md:mb-0 and text-right */}
                         Our expertise all team <br className="hidden md:block" />
                         {/* Display "members" and the tag inline */}
                         <span className="inline-flex items-center leading-relaxed">
                             members
-                            <span className="bg-[#FF4C15] text-white text-sm px-4 py-2 rounded-full shadow-md flex items-center space-x-2 ml-4"> {/* Added ml-4 for spacing */}
+                            <span className="bg-[#FF4C15] text-white text-sm px-4 py-2  flex items-center space-x-2 ml-4"> {/* Added ml-4 for spacing */}
                                 {/* Company Details (Chef) icon */}
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd"></path>
@@ -59,22 +59,22 @@ const Members = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Large Chef Image Section */}
                     <div
-                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:left-2 lg:left-2 bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%]"
+                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%]"
                       
                     >
-                        <div className="3xl:-ml-16 3xl:-mr-[22.4rem] 3xl:-mt-32 2xl:-ml-60 2xl:-mr-[20rem] 2xl:-mt-36 xl:-ml-56 xl:-mt-48 lg:-ml-60 lg:-mt-48">
+                        <div className="3xl:-ml-16 3xl:-mr-[22.4rem] 3xl:-mt-32 2xl:-ml-60 2xl:-mr-[20rem] xl:-ml-36 xl:-mr-[27rem] 2xl:-mt-36  xl:-mt-48 lg:-ml-60 lg:-mt-48">
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1750143426/portrait-happy-male-chef-dressed-uniform_p1e1of.png"
                                 alt="Delivery Guy"
-                                className="object-contain h-auto w-full 3xl:-ml-2 2xl:ml-32 xl:-ml-4 lg:ml-4"
+                                className="object-contain h-auto w-full 3xl:-ml-2 2xl:ml-6 xl:-ml-16 lg:ml-4 xl:mt-[5.93rem] 3xl:mt-0 2xl:mt-0  "
                             />
                         </div>
                     </div>
 
                     {/* Team Members Grid */}
-                    <div className="grid grid-cols-2 gap-20">
+                    <div className="grid grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24  3xl:ml-20 2xl:ml-0 xl:ml-10">
                         {teamMembers.map((member) => (
-                           <div key={member.id} className="relative bg-white  p-4 flex flex-col justify-end items-center text-center h-[200px] w-[250px] border  border-gray-400"> {/* Increased height and overflow-visible */}
+                           <div key={member.id} className="relative bg-white  p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] border  border-gray-400"> {/* Increased height and overflow-visible */}
                                 {/* Image: positioned absolutely and taller to overflow */}
                                 <img
                                     src={member.image}
@@ -91,7 +91,7 @@ const Members = () => {
                                 </div>
 
                                 {/* Rotated Name - always visible, positioned relative to card */}
-                                <div className="absolute 3xl:-left-8 2xl:-left-4  top-28 -translate-y-1/2 -rotate-90 origin-left text-lg font-semibold text-[#2C6252] whitespace-nowrap z-20">
+                                <div className="absolute 3xl:-left-8 2xl:-left-4  xl:-left-4 top-28 -translate-y-1/2 -rotate-90 origin-left text-lg font-semibold text-[#2C6252] whitespace-nowrap z-20">
                                     - {member.name}
                                 </div>
 

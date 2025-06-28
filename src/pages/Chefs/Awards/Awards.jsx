@@ -5,14 +5,14 @@ import Container from "../../../components/Container";
 const Awards = () => {
   return (
     <Container>
-      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-12  lg:-mt-44 3xl:right-10 2xl:right-20 xl:right-20 ">
+      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-48  lg:-mt-44 3xl:right-10 2xl:right-20 xl:right-20 ">
 
         {/* Foreground Image (Chef) */}
-        <div className="absolute left-1/2 lg:top-[33%] xl:top-[50%] 2xl:top-[50%] 3xl:top-[54%] z-10 translate-x-[-50%] translate-y-[-104%] flex items-center justify-center">
+        <div className="absolute left-1/2 lg:top-[33%] xl:top-[50%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1744793493/chef_j9jlya.png"
             alt="Awards"
-            className="lg:w-[420px] 2xl:w-[1100px] xl:w-[1100px] 3xl:w-[1250px] max-w-none"
+            className="lg:w-[420px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
           />
         </div>
 
@@ -25,7 +25,7 @@ const Awards = () => {
           />
         </div>
         <Motion.div
-          className="absolute 3xl:left-28 2xl:left-16 xl:left-16 lg:top-80 xl:top-[13rem] 2xl:top-[13rem] 3xl:top-48 z-50 "
+          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:top-80 xl:top-[17rem] 2xl:top-[13rem] 3xl:top-48 z-50 "
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -37,12 +37,12 @@ const Awards = () => {
         </Motion.div>
 
         {/* Green Food */}
-        <div className="absolute left-1/2 lg:top-[25rem] xl:top-[22rem] 2xl:top-[22rem] 3xl:top-72 z-50 lg:-translate-x-[140px] xl:-translate-x-[300px] 2xl:-translate-x-[300px] 3xl:-translate-x-[320px]">
+        <div className="absolute left-1/2 lg:top-[25rem] xl:top-[27rem] 2xl:top-[22rem] 3xl:top-[24rem] z-50 lg:-translate-x-[140px] xl:-translate-x-[260px] 2xl:-translate-x-[300px] 3xl:-translate-x-[360px]">
           <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Green</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Food</span>
         </div>
 
         {/* Healthy Food */}
-        <div className="absolute left-1/2 lg:top-[27rem] xl:top-[36rem] 2xl:top-[36rem] 3xl:top-[33rem] z-50 lg:-translate-x-[240px] xl:-translate-x-[440px] 2xl:-translate-x-[440px] 3xl:-translate-x-[520px]">
+        <div className="absolute left-1/2 lg:top-[27rem] xl:top-[36rem] 2xl:top-[36rem] 3xl:top-[33rem] z-50 lg:-translate-x-[240px] xl:-translate-x-[400px] 2xl:-translate-x-[440px] 3xl:-translate-x-[520px]">
           <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Healthy</span> <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Food</span>
         </div>
 
@@ -52,7 +52,7 @@ const Awards = () => {
 
         {/* Experiences Tag */}
         <Motion.div
-          className="absolute 3xl:left-[18rem] 2xl:left-[18rem] xl:left-[18rem] lg:top-[19rem] xl:top-44 2xl:top-44 3xl:top-36 z-50 rounded-full px-4 py-2 lg:-translate-x-[150px] xl:-translate-x-[250px] 2xl:-translate-x-[250px] 3xl:-translate-x-[300px] 3xl:w-36 2xl:w-36 xl:w-36 lg:w-24"
+          className="absolute 3xl:left-[18rem] 2xl:left-[18rem] xl:left-[17rem] lg:top-[19rem] xl:top-[18rem] 2xl:top-44 3xl:top-36 z-50 rounded-full px-4 py-2 lg:-translate-x-[150px] xl:-translate-x-[250px] 2xl:-translate-x-[250px] 3xl:-translate-x-[300px] 3xl:w-36 2xl:w-36 xl:w-36 lg:w-24"
           style={{ border: "2px solid #4B5563" }}
           animate={{ rotate: 360 }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
@@ -66,13 +66,13 @@ const Awards = () => {
         </Motion.div>
 
         {/* 24/7 Open (top right) */}
-        <div className="absolute left-1/2 lg:top-72 xl:top-[14rem] 2xl:top-52 3xl:top-48 text-gray-800 px-3 py-1 text-lg z-50 lg:translate-x-[40px] xl:translate-x-[200px] 2xl:translate-x-[200px] 3xl:translate-x-[200px]">
+        <div className="absolute left-1/2 lg:top-72 xl:top-[16rem] 2xl:top-52 3xl:top-48 text-gray-800 px-3 py-1 text-lg z-50 lg:translate-x-[40px] xl:translate-x-[180px] 2xl:translate-x-[200px] 3xl:translate-x-[200px]">
           <span className='text-[#FF4C15] font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>24/7</span> <span className='text-[#2C6252] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>open</span>
         </div>
 
         {/* 5 Star Rating */}
         <Motion.div
-          className="absolute 3xl:right-[34rem] 2xl:right-[25rem] xl:right-[25rem]  lg:top-[21.5rem] xl:top-[19rem] 2xl:top-[18rem] 3xl:top-72 bg-white rounded-full border border-gray-400 shadow-md py-1 px-3 text-yellow-400 text-base z-50 lg:translate-x-[30px] xl:translate-x-[100px] 2xl:translate-x-[100px] 3xl:translate-x-[100px]"
+          className="absolute 3xl:right-[34rem] 2xl:right-[25rem] xl:right-[22rem]  lg:top-[21.5rem] xl:top-[23rem] 2xl:top-[18rem] 3xl:top-72 bg-white rounded-full border border-gray-400 shadow-md py-1 px-3 text-yellow-400 text-base z-50 lg:translate-x-[30px] xl:translate-x-[100px] 2xl:translate-x-[100px] 3xl:translate-x-[100px]"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -83,7 +83,7 @@ const Awards = () => {
 
         {/* Live Kitchen - Dynamic */}
         <Motion.div
-          className="absolute left-1/2 lg:top-72 xl:top-[16rem] 2xl:top-[16rem] 3xl:top-64 text-gray-800 px-3 py-1 rounded-full text-[26px] z-50 lg:translate-x-[120px] xl:translate-x-[350px] 2xl:translate-x-[350px] 3xl:translate-x-[430px]"
+          className="absolute left-1/2 lg:top-72 xl:top-[21rem] 2xl:top-[16rem] 3xl:top-64 text-gray-800 px-3 py-1 rounded-full text-[26px] z-50 lg:translate-x-[120px] xl:translate-x-[320px] 2xl:translate-x-[350px] 3xl:translate-x-[430px]"
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity }}
@@ -130,14 +130,14 @@ const Awards = () => {
         </Motion.div>
 
         {/* Organic Food */}
-        <div className="absolute left-1/2 lg:top-[24rem] xl:top-[23rem] 2xl:top-[24rem] 3xl:top-96 px-3 py-1 text-lg z-50 lg:translate-x-[55px] xl:translate-x-[190px] 2xl:translate-x-[190px] 3xl:translate-x-[210px]">
+        <div className="absolute left-1/2 lg:top-[24rem] xl:top-[27rem] 2xl:top-[24rem] 3xl:top-96 px-3 py-1 text-lg z-50 lg:translate-x-[55px] xl:translate-x-[170px] 2xl:translate-x-[190px] 3xl:translate-x-[210px]">
           <span className='font-bold text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px]'>Organic</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px]'>Food</span>
         </div>
 
       </div>
       {/* Quality | Profitability | Consistency */}
-      <div className="absolute left-1/2 3xl:top-[52rem] 2xl:top-[48rem] xl:top-[48rem]  translate-x-[-45%] z-50 w-full 3xl:max-w-[1220px] 2xl:max-w-[1200px] xl:max-w-[1200px]  ">
-        <div className="grid grid-cols-3 text-white font-bold text-center text-4xl divide-x divide-[#CCCCCC] bg-[#406D5B]  overflow-hidden 3xl:px-24 3xl:py-24 2xl:px-20 2xl:py-20 xl:px-20 xl:py-20   3xl:-ml-6">
+      <div className="absolute left-1/2 3xl:top-[52rem] 2xl:top-[48rem] xl:top-[41rem]  translate-x-[-45%] z-50 w-full 3xl:max-w-[1220px] 2xl:max-w-[1110px] xl:max-w-[950px]  ">
+        <div className="grid grid-cols-3 text-white font-bold text-center text-4xl divide-x divide-[#CCCCCC] bg-[#406D5B]  overflow-hidden 3xl:px-24 3xl:py-24 2xl:px-20 2xl:py-20 xl:px-16 xl:py-16 3xl:-ml-6 2xl:-ml-10 xl:-ml-10">
           <div className="py-4">Quality</div>
           <div className="py-4">Profitability</div>
           <div className="py-4">Consistency</div>
