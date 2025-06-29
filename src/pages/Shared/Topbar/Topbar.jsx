@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react';
 import { ChevronRight, ShoppingCart } from 'lucide-react';
 import Container from '../../../components/Container';
+import { useCart } from '../../../context/CartContext';
+import { Link } from 'react-router-dom';
+
+
 
 const AnalogClock = () => {
     const [time, setTime] = useState(new Date());
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -105,6 +110,7 @@ const AnalogClock = () => {
 const TopBar = () => {
     const [time, setTime] = useState(new Date());
     const [isKitchenOpen, setIsKitchenOpen] = useState(true);
+    const { cartCount } = useCart();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -186,18 +192,16 @@ const TopBar = () => {
 
                         {/* Cart Icon with Circular Background and Badge (Modern Style) */}
                         <div className="relative ml-6">
-                            <a href="/carts">
+                            <Link to="/carts">
                                 <div className="relative w-9 h-9 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] transition duration-200 hover:scale-105">
-                                    {/* Trendy Lucide Cart Icon */}
                                     <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]" strokeWidth={2.2} />
-
-                                    {/* Badge */}
                                     <div className="absolute -top-1.5 -right-1.5 bg-[#FF4C15] text-white text-[10px] md:text-[11px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-md border-2 border-white">
-                                        0
+                                        {cartCount}
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
+
 
                     </div>
 

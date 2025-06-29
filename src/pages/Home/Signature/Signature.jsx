@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Container from '../../../components/Container';
+import { useCart } from '../../../context/CartContext';
 
 const foodItems = [
   {
@@ -43,6 +44,7 @@ const foodItems = [
 
 const Signature = () => {
   const carouselRef = useRef(null);
+  const { addToCart } = useCart();
 
   const scroll = (direction) => {
     const carousel = carouselRef.current;
@@ -54,7 +56,7 @@ const Signature = () => {
         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
     }
-  }; 
+  };
 
   return (
     <Container>
@@ -74,7 +76,7 @@ const Signature = () => {
             <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute 3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-32 2xl:-left-24 xl:-left-24 lg:-left-20">
               Chinese Food Set Meals
             </h2>
-          </div> 
+          </div>
 
           {/* Cards Section */}
           <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[7rem] relative z-10">
@@ -120,7 +122,10 @@ const Signature = () => {
                     </ul>
 
                     <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
-                    <button className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2">
+                    <button
+                      onClick={addToCart}
+                      className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2"
+                    >
                       Order Now
                     </button>
                   </div>
