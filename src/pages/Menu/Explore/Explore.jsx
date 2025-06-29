@@ -5,7 +5,7 @@ const Explore = () => {
         <Container>
             <div className="relative bg-white 3xl:-top-4">
                 {/* Content and Image Container */}
-                <div className="flex items-start justify-between 6 2xl:-ml-10 3xl:-ml-0 xl:-ml-0 lg:-ml-10">
+                <div className="flex items-start justify-between 6 2xl:-ml-10 3xl:-ml-0 xl:-ml-0 lg:-ml-16">
                     {/* Left Side Content */}
                     <div className="relative w-1/2 p-8 z-0">
                         <img className='absolute left-[-20px] right-10 -top-10 opacity-60 blur-sm' src="/Ellipse 9.svg" alt="" />

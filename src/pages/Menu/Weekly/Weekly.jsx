@@ -68,7 +68,7 @@ const Weekly = () => {
        
        <Container>
         
-        <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-1 3xl:ml-2 3xl:mt-28">
+        <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 3xl:mt-28">
             <div className="py-16 3xl:mb-32 2xl:mb-40 xl:mb-40 lg:mb-24 "> 
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left">
