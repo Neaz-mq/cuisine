@@ -51,7 +51,7 @@ const Support = () => {
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1750141710/Mask_Group_63_b6f8fz.png" // Placeholder image URL
                         alt="Chef holding a dish"
-                        className="3xl:w-full 2xl:w-full xl:w-full lg:w-60 h-full object-cover  max-h-[565px] "
+                        className="3xl:w-full 2xl:w-full xl:w-full lg:w-64 h-full object-cover  max-h-[565px] "
                         // Fallback in case the image fails to load
                         onError={(e) => {
                             e.target.onerror = null; // Prevent infinite loop
