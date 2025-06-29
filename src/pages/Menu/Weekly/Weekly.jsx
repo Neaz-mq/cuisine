@@ -68,12 +68,12 @@ const Weekly = () => {
        
        <Container>
         
-        <div className="px-4 sm:px-6 3xl:px-14 2xl:px-4 xl:px-14 lg:px-1">
-            <div className="py-16 3xl:mb-40 2xl:mb-40 xl:mb-40 lg:mb-24 "> 
+        <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-1 3xl:ml-2 3xl:mt-28">
+            <div className="py-16 3xl:mb-32 2xl:mb-40 xl:mb-40 lg:mb-24 "> 
                 {/* Section Header */}
                 <div className="mb-10 text-center md:text-left">
                     <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl  font-semibold text-[#2C6252] mb-2">
-                        Our Weekly<span className="font-bold ml-2">Offer</span>
+                        Our Signature<span className="font-bold ml-2">Foods</span>
                     </h2>
                     <p className="3xl:text-lg 2xl:text-lg xl:text-sm text-[#B9B9B9]">
                         Discover anything you need, the easy way
@@ -86,7 +86,7 @@ const Weekly = () => {
                 >
                     <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-[#2C6252] bg-opacity-90 flex items-center justify-center p-8 md:rounded-bl-none text-white text-lg font-medium text-center md:text-left shadow-lg">
                         <p className="max-w-md">
-                            Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—<span className="text-[#FF4D00]">our weekly offers</span> have something for everyone.
+                            Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—<span className="text-[#FF4D00]">our signature foods</span> have something for everyone.
                         </p>
                     </div>
                 </div>

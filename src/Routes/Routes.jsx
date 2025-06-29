@@ -8,6 +8,7 @@ import Offer from "../pages/Offer/Offer/Offer";
 import Chefs from "../pages/Chefs/Chefs/Chefs";
 import Tables from "../pages/Tables/Tables/Tables";
 import Categories from "../pages/Categories/Categories/Categories";
+import Carts from "../pages/Carts/Carts";
 
 
  export const router = createBrowserRouter([
@@ -40,10 +41,16 @@ import Categories from "../pages/Categories/Categories/Categories";
             element: <Tables></Tables>
         }, 
 
-          {
-            path: "/signature-food",
+        {
+            path: "/order",
             element: <Categories></Categories>
         }, 
+
+         {
+            path: "/carts",
+            element: <Carts></Carts>
+        }, 
+
 
 
       ]
