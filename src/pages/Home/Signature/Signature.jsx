@@ -60,7 +60,7 @@ const Signature = () => {
 
   return (
     <Container>
-      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:ml-3 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
         <div className="mx-auto px-14 relative left-6">
           {/* Vertical Title */}
           <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem]">
@@ -79,7 +79,7 @@ const Signature = () => {
           </div>
 
           {/* Cards Section */}
-          <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[7rem] relative z-10">
+          <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[8.5rem] relative z-10">
             <div
               ref={carouselRef}
               className="flex 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] mx-auto"

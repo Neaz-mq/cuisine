@@ -26,7 +26,7 @@ const Banner = () => {
                 <div className="relative bg-white">
                     <div className="flex items-start justify-between">
                         {/* Left Side Content */}
-                        <div className="relative 3xl:p-8 2xl:p-8 xl:p-8 lg:p-0 3xl:top-4 2xl:top-4 xl:top-4 lg:top-8 3xl:left-2 2xl:-left-12 xl:-left-6 lg:-left-6">
+                        <div className="relative 3xl:p-8 2xl:p-8 xl:p-8 lg:p-0 3xl:top-4 2xl:top-4 xl:top-4 lg:top-8 3xl:left-2 2xl:-left-12 xl:-left-6 lg:-left-8">
                             <img
                                 className="absolute 3xl:left-[-20px] 3xl:right-10 3xl:-top-10 2xl:left-[-20px] 2xl:right-10 2xl:-top-10 xl:left-[-20px] xl:right-10 xl:-top-10 lg:left-[-36px] lg:right-16 lg:-top-16 opacity-60 blur-sm"
                                 src="/Ellipse 9.svg"

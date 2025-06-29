@@ -38,13 +38,13 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left content */}
           <div>
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-10">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-16">
               Customer <br /> Testimonial <br />
               <span className="text-[#FF4C15]">Examples</span>
             </h2>
             <div className="flex">
               <div>
-                <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[1.5rem] lg:-ml-10">
+                <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem]  xl:-ml-[1.5rem] lg:-ml-16">
                   When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
                 </p>
               </div>

@@ -3,7 +3,7 @@ import Container from "../../../../components/Container";
 const Buffet = () => {
     return (
         <Container>
-            <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14 3xl:-ml-0">
+            <div className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3">
                 <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2">
                     {/* Top Section */}
                     <div
@@ -180,7 +180,7 @@ const Buffet = () => {
                     </div>
 
                     {/* Bottom Image Section */}
-                    <div className="flex flex-col md:flex-row items-stretch overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 2xl:-ml-5 3xl:-ml-0 ">
+                    <div className="flex flex-col md:flex-row items-stretch overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 2xl:-ml-5 3xl:-ml-0 xl:-ml-0 lg:-ml-1 ">
                         {/* Left Text */}
                         <div className="flex flex-col justify-center px-6 py-10 w-full 2xl:w-1/3 3xl:w-1/3 xl:w-1/2 lg:w-1/2 z-50">
                             <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-4xl xl:text-2xl lg:text-xl 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8">
