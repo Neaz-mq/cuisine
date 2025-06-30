@@ -1,5 +1,6 @@
 import Container from "../../components/Container";
-import { useCart } from "../../context/CartContext";
+import useCart from "../../hooks/useCart";
+
 
 const Carts = () => {
   const { cartItems, increaseQty, decreaseQty } = useCart();

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { ChevronRight, ShoppingCart } from 'lucide-react';
 import Container from '../../../components/Container';
-import { useCart } from '../../../context/CartContext';
+
 import { Link } from 'react-router-dom';
+import useCart from '../../../hooks/useCart';
 
 
 

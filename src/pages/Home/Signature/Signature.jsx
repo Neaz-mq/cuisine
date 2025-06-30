@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Container from '../../../components/Container';
-import { useCart } from '../../../context/CartContext';
 import { toast } from 'react-toastify';
+import useCart from '../../../hooks/useCart';
 
 const foodItems = [
   {
