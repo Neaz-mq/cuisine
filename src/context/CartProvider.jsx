@@ -38,12 +38,26 @@ export const CartProvider = ({ children }) => {
     setCartItems(updated);
   };
 
+  // Remove an item by title
+  const removeItem = (title) => {
+    const updated = cartItems.filter(item => item.title !== title);
+    setCartItems(updated);
+  };
+
+  // Clear entire cart
+  const clearCart = () => {
+    setCartItems([]);
+    localStorage.removeItem('cartItems');
+  };
+
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
 
   return (
-    <CartContext.Provider value={{ cartItems, cartCount, addToCart, increaseQty, decreaseQty }}>
+    <CartContext.Provider
+      value={{ cartItems, cartCount, addToCart, increaseQty, decreaseQty, removeItem, clearCart }}
+    >
       {children}
     </CartContext.Provider>
   );
