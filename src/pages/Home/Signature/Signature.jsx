@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Container from '../../../components/Container';
 import { useCart } from '../../../context/CartContext';
+import { toast } from 'react-toastify';
 
 const foodItems = [
   {
@@ -122,12 +123,35 @@ const Signature = () => {
                     </ul>
 
                     <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
+
                     <button
-                      onClick={addToCart}
+                      onClick={() => {
+                        const result = addToCart(item);
+                        if (result.success) {
+                          toast.success("Added to cart successfully!", {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                          });
+                        } else {
+                          toast.warning("Item already in cart!", {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                          });
+                        }
+                      }}
                       className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2"
                     >
                       Order Now
                     </button>
+
                   </div>
                 </div>
               ))}
