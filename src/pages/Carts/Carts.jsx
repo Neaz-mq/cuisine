@@ -132,6 +132,10 @@ const Carts = () => {
                   <span>${subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
+                  <span>Discount</span>
+                  <span>$0</span>
+                </div>
+                <div className="flex justify-between">
                   <span>Delivery charges</span>
                   <span className="text-green-600">Free</span>
                 </div>
