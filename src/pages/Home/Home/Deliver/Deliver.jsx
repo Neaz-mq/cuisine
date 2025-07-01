@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../../../components/Container";
 
 const Deliver = () => {
@@ -20,10 +21,12 @@ const Deliver = () => {
 
             {/* Buttons */}
             <div className="flex space-x-4 mt-20">
+             <Link to= "/order">
               <button className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-2 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap">
                 <img src="/order.svg" alt="" className="w-4 h-4 mr-2" />
                 Order Now
               </button>
+             </Link>
               <button className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px]  lg:text-[10px] whitespace-nowrap">
                 <img src="/download.svg" alt="" className="w-4 h-4 mr-2" />
                 Download Apps

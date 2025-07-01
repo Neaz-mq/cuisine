@@ -85,76 +85,85 @@ const Signature = () => {
               ref={carouselRef}
               className="flex 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] mx-auto"
             >
-              {foodItems.map((item, index) => (
-                <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] flex-shrink-0">
-                  <div className="relative">
-                    <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
-                    {item.available && (
-                      <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
-                        <div className="rounded-full w-4 h-4 flex items-center justify-center mr-1">
-                          <img src="/svg.svg" className="w-3 h-3" alt="Food Icon" />
-                        </div>
-                        Food Available
-                      </span>
-                    )}
-                  </div>
+              {foodItems.map((item, index) => {
+                const parsedPrice = parseFloat(item.price.replace('$', '')) || 0;
 
-                  <div className="p-4">
-                    <h3 className="text-[#2C6252] text-lg font-medium mt-2 ml-2">{item.cuisine}</h3>
-                    <h2 className="font-semibold text-lg text-[#2C6252] ml-2">{item.title} - {item.price}</h2>
-                    <ul className="text-[#AAAAAA] mt-6 list-none text-sm p-0">
-                      {item.tags.map((tag, idx) => (
-                        <li key={idx} className="flex items-center gap-2 mb-1 ml-2">
-                          <div className="w-5 h-5 bg-green-500 rounded-sm flex items-center justify-center">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="w-3.5 h-3.5 text-white"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth={3}
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
+                return (
+                  <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] flex-shrink-0">
+                    <div className="relative">
+                      <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                      {item.available && (
+                        <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
+                          <div className="rounded-full w-4 h-4 flex items-center justify-center mr-1">
+                            <img src="/svg.svg" className="w-3 h-3" alt="Food Icon" />
                           </div>
-                          <span className="text-gray-400 text-sm">{tag}</span>
-                        </li>
-                      ))}
-                    </ul>
+                          Food Available
+                        </span>
+                      )}
+                    </div>
 
-                    <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
+                    <div className="p-4">
+                      <h3 className="text-[#2C6252] text-lg font-medium mt-2 ml-2">{item.cuisine}</h3>
+                      <h2 className="font-semibold text-lg text-[#2C6252] ml-2">{item.title} - {item.price}</h2>
+                      <ul className="text-[#AAAAAA] mt-6 list-none text-sm p-0">
+                        {item.tags.map((tag, idx) => (
+                          <li key={idx} className="flex items-center gap-2 mb-1 ml-2">
+                            <div className="w-5 h-5 bg-green-500 rounded-sm flex items-center justify-center">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-3.5 h-3.5 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={3}
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                            <span className="text-gray-400 text-sm">{tag}</span>
+                          </li>
+                        ))}
+                      </ul>
 
-                    <button
-                      onClick={() => {
-                        const result = addToCart(item);
-                        if (result.success) {
-                          toast.success("Added to cart successfully!", {
-                            position: "top-center",
-                            autoClose: 2000,
-                            hideProgressBar: true,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                          });
-                        } else {
-                          toast.warning("Item already in cart!", {
-                            position: "top-center",
-                            autoClose: 2000,
-                            hideProgressBar: true,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                          });
-                        }
-                      }}
-                      className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2"
-                    >
-                      Order Now
-                    </button>
+                      <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
 
+                      <button
+                        onClick={() => {
+                          const formattedItem = {
+                            ...item,
+                            price: parsedPrice,
+                          };
+
+                          const result = addToCart(formattedItem);
+
+                          if (result.success) {
+                            toast.success(`${item.title} added to cart successfully!`, {
+                              position: "top-center",
+                              autoClose: 2000,
+                              hideProgressBar: true,
+                              closeOnClick: true,
+                              pauseOnHover: true,
+                              draggable: true,
+                            });
+                          } else {
+                            toast.warning(`${item.title} is already in cart!`, {
+                              position: "top-center",
+                              autoClose: 2000,
+                              hideProgressBar: true,
+                              closeOnClick: true,
+                              pauseOnHover: true,
+                              draggable: true,
+                            });
+                          }
+                        }}
+                        className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2"
+                      >
+                        Order Now
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Scroll Buttons */}
@@ -178,11 +187,7 @@ const Signature = () => {
         </div>
       </div>
     </Container>
-
   );
 };
 
 export default Signature;
-
-
-

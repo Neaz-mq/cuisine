@@ -1,42 +1,45 @@
 import { useState } from 'react';
 import Container from '../../../components/Container';
+import useCart from '../../../hooks/useCart';
+import { toast } from 'react-toastify';
+
 
 const categoryItems = [
   {
-    label: 'BURGERS',
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893314/burger_rpgir8.png',
+    label: 'BURGERS', 
+    itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893314/burger_rpgir8.png',
     mainContent: {
       items: [
         {
-          title: 'Fresh and High-<br /><span class="text-[#FF4C15]">Quality Ingredients</span>',
+          title: 'Fresh Burger',
           description: 'We source only the freshest and highest-quality ingredients to ensure every dish bursts with flavor.',
           price: '$300',
           originalPrice: '$562',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
         {
-          title: 'Juicy Beef<br /><span class="text-[#FF4C15]">Classic</span>',
+          title: 'Juicy Burger',
           description: 'Our signature beef patty, cooked to perfection and served on a toasted bun with fresh veggies.',
           price: '$320',
           originalPrice: '$580',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: true,
         },
         {
-          title: 'Spicy BBQ<br /><span class="text-[#FF4C15]">Burger</span>',
+          title: 'Spicy BBQ Burger',
           description: 'A smoky and spicy delight with a zesty BBQ sauce, crispy onions, and melted cheese.',
           price: '$310',
           originalPrice: '$570',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
         {
-          title: 'Mushroom Swiss<br /><span class="text-[#FF4C15]">Burger</span>',
+          title: 'Mushroom Swiss Burger',
           description: 'Earthy mushrooms and melted Swiss cheese complement our succulent beef patty perfectly.',
           price: '$305',
           originalPrice: '$565',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
       ],
@@ -48,39 +51,39 @@ const categoryItems = [
   },
   {
     label: 'CHICKEN',
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893398/chicken_pibox1.png',
+    itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893398/chicken_pibox1.png',
     mainContent: {
       items: [
         {
-          title: 'Crispy Fried<br /><span class="text-[#FF4C15]">Chicken</span>',
+          title: 'Crispy Fried Chicken',
           description: 'Our chicken is fried to golden perfection, crispy on the outside, juicy on the inside, a true delight.',
           price: '$250',
           originalPrice: '$450',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
           hasOrderButton: false,
         },
         {
-          title: 'Spicy Chicken<br /><span class="text-[#FF4C15]">Wings</span>',
+          title: 'Spicy Chicken Wings',
           description: 'Experience the fiery kick of our spicy chicken wings, perfect for those who love a bit of heat.',
           price: '$280',
           originalPrice: '$490',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
           hasOrderButton: true,
         },
         {
-          title: 'Grilled Chicken<br /><span class="text-[#FF4C15]">Salad</span>',
+          title: 'Grilled Chicken Salad',
           description: 'Healthy and delicious, our grilled chicken salad is packed with fresh greens and tender chicken.',
           price: '$220',
           originalPrice: '$400',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
           hasOrderButton: false,
         },
         {
-          title: 'Chicken Nuggets<br /><span class="text-[#FF4C15]">Kids Meal</span>',
+          title: 'Chicken Nuggets Meal',
           description: 'A perfect meal for the little ones, tender chicken nuggets with a side of crispy fries.',
           price: '$180',
           originalPrice: '$350',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png',
           hasOrderButton: false,
         },
       ],
@@ -92,40 +95,40 @@ const categoryItems = [
   },
   {
     label: 'PIZZA',
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893341/pizza_hhbhaj.png',
+    itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893341/pizza_hhbhaj.png',
     mainContent: {
       items: [
         {
-          title: 'Classic Pepperoni<br /><span class="text-[#FF4C15]">Pizza</span>',
+          title: 'Classic Pepperoni Pizza',
           description: 'A timeless favorite with rich tomato sauce, mozzarella, and savory pepperoni slices.',
           price: '$450',
           originalPrice: '$700',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png',
           hasOrderButton: false,
         },
         {
-          title: 'Margherita<br /><span class="text-[#FF4C15]">Delight</span>',
+          title: 'Margherita Delight',
           description: 'Simple yet perfect, with fresh basil, mozzarella, and a hint of olive oil on a crispy crust.',
           price: '$400',
           originalPrice: '$650',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png',
           hasOrderButton: true,
         },
         {
-          title: 'Veggie Supreme<br /><span class="text-[#FF4C15]">Pizza</span>',
+          title: 'Veggie Supreme Pizza',
           description: 'Loaded with a colorful array of fresh vegetables, olives, and bell peppers.',
           price: '$420',
           originalPrice: '$680',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060906/pngegg_100_r1c5t3.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060906/pngegg_100_r1c5t3.png',
           hasOrderButton: false,
         },
 
         {
-          title: 'Chicken BBQ<br /><span class="text-[#FF4C15]">Pizza</span>',
+          title: 'Chicken BBQ Pizza',
           description: 'Tangy BBQ sauce, grilled chicken, red onions, and cilantro create a unique flavor.',
           price: '$480',
           originalPrice: '$750',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060906/pngegg_100_r1c5t3.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748060906/pngegg_100_r1c5t3.png',
           hasOrderButton: false,
         },
       ],
@@ -136,40 +139,40 @@ const categoryItems = [
     },
   },
   {
-    label: 'SALAD',
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893487/salad_g519yo.png',
+    label: 'SALAD', 
+    itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893487/salad_g519yo.png',
     mainContent: {
       items: [
         {
-          title: 'Garden Fresh<br /><span class="text-[#FF4C15]">Salad</span>',
+          title: 'Garden Fresh Salad',
           description: 'Crisp, fresh greens with a mix of vibrant vegetables and a light vinaigrette dressing.',
           price: '$150',
           originalPrice: '$280',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png',
           hasOrderButton: false,
         },
         {
-          title: 'Caesar Salad<br /><span class="text-[#FF4C15]">with Chicken</span>',
+          title: 'Caesar Salad Chicken',
           description: 'Classic Caesar salad with grilled chicken, croutons, and Parmesan cheese.',
           price: '$200',
           originalPrice: '$350',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png',
           hasOrderButton: true,
         },
         {
-          title: 'Mediterranean<br /><span class="text-[#FF4C15]">Quinoa Salad</span>',
+          title: 'Mediterranean Quinoa Salad',
           description: 'A hearty and healthy salad with quinoa, olives, feta, and sun-dried tomatoes.',
           price: '$230',
           originalPrice: '$420',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
           hasOrderButton: false,
         },
         {
-          title: 'Cobb Salad<br /><span class="text-[#FF4C15]">Supreme</span>',
+          title: 'Cobb Salad Supreme',
           description: 'A rich Cobb salad with chicken, bacon, avocado, egg, and blue cheese.',
           price: '$280',
           originalPrice: '$500',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1748062107/pngegg_-_2025-05-10T162604.036_wiikj2.png',
           hasOrderButton: false,
         },
       ],
@@ -180,40 +183,40 @@ const categoryItems = [
     },
   },
   {
-    label: 'APPETIZER',
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894100/appetizer_k8n5uw.png',
+    label: 'APPETIZER', 
+    itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894100/appetizer_k8n5uw.png',
     mainContent: {
       items: [
         {
-          title: 'Crispy French<br /><span class="text-[#FF4C15]">Fries</span>',
+          title: 'Crispy French Fries',
           description: 'Golden, crispy, and perfectly salted french fries, a classic appetizer.',
           price: '$80',
           originalPrice: '$150',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
         {
-          title: 'Onion Rings<br /><span class="text-[#FF4C15]">with Sauce</span>',
+          title: 'Onion Rings Sauce',
           description: 'Sweet and savory onion rings, deep-fried to perfection, served with a special dipping sauce.',
           price: '$100',
           originalPrice: '$180',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: true,
         },
         {
-          title: 'Mozzarella<br /><span class="text-[#FF4C15]">Sticks</span>',
+          title: 'Mozzarella Sticks',
           description: 'Warm, gooey mozzarella sticks coated in crispy breading, served with marinara.',
           price: '$120',
           originalPrice: '$200',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
         {
-          title: 'Garlic Bread<br /><span class="text-[#FF4C15]">with Cheese</span>',
+          title: 'Garlic Bread with Cheese',
           description: 'Toasted garlic bread topped with melted cheese, a perfect companion to any meal.',
           price: '$90',
           originalPrice: '$160',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747895053/pngegg_16_t1bk16.png',
           hasOrderButton: false,
         },
       ],
@@ -224,40 +227,40 @@ const categoryItems = [
     },
   },
   {
-    label: 'DRINKS',
-    image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894070/drinks_lhdlws.png',
+    label: 'DRINKS', 
+    itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894070/drinks_lhdlws.png',
     mainContent: {
       items: [
         {
-          title: 'Classic<br /><span class="text-[#FF4C15]">Coca-Cola</span>',
+          title: 'Classic Coca-Cola',
           description: 'The refreshing taste of Coca-Cola, perfectly chilled to quench your thirst.',
           price: '$50',
           originalPrice: '$80',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
         {
-          title: 'Freshly Squeezed<br /><span class="text-[#FF4C15]">Orange Juice</span>',
+          title: 'Freshly Squeezed Orange Juice',
           description: 'Natural and invigorating, our freshly squeezed orange juice is a burst of citrus flavor.',
           price: '$100',
           originalPrice: '$120',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: true,
         },
         {
-          title: 'Creamy Vanilla<br /><span class="text-[#FF4C15]">Milkshake</span>',
+          title: 'Creamy Vanilla Milkshake',
           description: 'Indulge in our rich and creamy vanilla milkshake, a sweet treat for any time.',
           price: '$90',
           originalPrice: '$160',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
         {
-          title: 'Iced Lemon<br /><span class="text-[#FF4C15]">Tea</span>',
+          title: 'Iced Lemon Tea',
           description: 'Cool down with our refreshing iced lemon tea, perfectly balanced between sweet and tart.',
           price: '$60',
           originalPrice: '$100',
-          itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
+          image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894970/pngegg_15_quduhw.png',
           hasOrderButton: false,
         },
       ],
@@ -271,6 +274,8 @@ const categoryItems = [
 
 const Items = () => {
   const [selected, setSelected] = useState('BURGERS');
+  const { addToCart } = useCart();
+
 
   // Find the currently selected category's data
   const selectedCategoryData = categoryItems.find(item => item.label === selected);
@@ -293,7 +298,7 @@ const Items = () => {
               onClick={() => setSelected(item.label)}
               className="flex flex-col items-center cursor-pointer relative"
             >
-              <img src={item.image} alt={item.label} className="w-14 h-14" />
+              <img src={item.itemImage} alt={item.label} className="w-14 h-14" />
               <span
                 className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'
                   }`}
@@ -315,14 +320,14 @@ const Items = () => {
           {/* Left Section - Menu Items */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 2xl::-ml-0 xl::-ml-0">
             {items.map((item, index) => (
-              <div key={index} className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-7 lg:p-8 flex flex-col items-start h-96">
+              <div key={index} className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 flex flex-col items-start h-96">
                 <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-                <p className="text-gray-500 text-sm mt-1 mb-4">
+                <p className="text-gray-500 text-sm mt-4 mb-4">
                   {item.description}
                 </p>
                 <div className="flex items-center justify-between w-full mt-auto">
                   <img
-                    src={item.itemImage}
+                    src={item.image}
                     alt="Food"
                     className="w-40 h-auto object-contain -ml-4"
                   />
@@ -335,11 +340,30 @@ const Items = () => {
                         {item.originalPrice}
                       </span>
                     </div>
+
                     {item.hasOrderButton && (
-                      <button className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap">
+                      <button
+                        className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap"
+                        onClick={() => {
+                          const result = addToCart({
+                            title: item.title,
+                            description: item.description,
+                            image: item.image,
+                            price: parseFloat(item.price.replace('$', '')),
+                          });
+
+                          if (result.success) {
+                            toast.success(`${item.title.replace(/<[^>]+>/g, '')} added to cart!`);
+                          } else {
+                            toast.warning(`${item.title.replace(/<[^>]+>/g, '')} is already in cart!`);
+                          }
+                        }}
+                      >
                         Order Now
                       </button>
                     )}
+
+
                   </div>
                 </div>
               </div>

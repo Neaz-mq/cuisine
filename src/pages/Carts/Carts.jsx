@@ -39,9 +39,10 @@ const Carts = () => {
 
 
   const subtotal = cartItems.reduce(
-    (acc, item) => acc + parseFloat(item.price.replace("$", "")) * item.quantity,
-    0
-  );
+  (acc, item) => acc + item.price * item.quantity,
+  0
+);
+
   const total = subtotal;
 
   useEffect(() => {
@@ -536,7 +537,8 @@ const Carts = () => {
                       </div>
                     </div>
                     <div className="text-sm font-semibold text-gray-800 whitespace-nowrap">
-                      ${(parseFloat(item.price.replace("$", "")) * item.quantity).toFixed(2)}
+                      ${(item.price * item.quantity).toFixed(2)}
+
                     </div>
                     <button
                       onClick={() => removeItem(item.title)}
