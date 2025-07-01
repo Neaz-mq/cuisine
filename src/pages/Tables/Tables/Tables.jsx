@@ -6,7 +6,7 @@ const Tables = () => {
     return (
         <div>
            <Reserve></Reserve>
-           {/* <Spend></Spend> */}
+           <Spend></Spend>
         </div>
     );
 };
