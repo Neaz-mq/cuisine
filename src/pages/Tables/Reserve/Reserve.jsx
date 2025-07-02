@@ -121,7 +121,7 @@ const Reserve = () => {
           {tables.map((table, index) => (
             <Motion.div
               key={index}
-              className={`cursor-pointer 3xl:w-44 3xl:h-44 2xl:w-44 2xl:h-44 xl:w-40 xl:h-40 lg:w-28 lg:h-28 flex items-center justify-center text-white font-bold 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl rounded-md shadow ${
+              className={`cursor-pointer 3xl:w-44 3xl:h-44 2xl:w-44 2xl:h-44 xl:w-40 xl:h-40 lg:w-28 lg:h-28 flex items-center justify-center text-white font-bold 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl  ${
                 table.booked ? "bg-[#FF4C15]" : "bg-[#2C6252]"
               }`}
               whileHover={{ scale: 1.08 }}
@@ -141,18 +141,18 @@ const Reserve = () => {
           variants={fadeInUp}
         >
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#2C6252] rounded-sm"></div>
+            <div className="w-6 h-6 bg-[#2C6252]"></div>
             <span className="text-[#A9A2A2] text-sm">Free Table Indicator</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#FF4C15] rounded-sm"></div>
+            <div className="w-6 h-6 bg-[#FF4C15]"></div>
             <span className="text-[#A9A2A2] text-sm">Booked Table Indicator</span>
           </div>
         </Motion.div>
 
         {/* Reservation Form */}
         <Motion.div
-          className="mt-20 p-6 bg-white shadow-md rounded-xl max-w-xl mx-auto border"
+          className="mt-20 p-6 bg-white shadow-md  max-w-xl mx-auto border"
           variants={fadeInUp}
         >
           <h3 className="text-2xl font-semibold text-center text-[#2C6252] mb-6">
@@ -163,7 +163,7 @@ const Reserve = () => {
             <Motion.input
               type="text"
               placeholder="Your Name"
-              className="w-full border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
+              className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
               value={name}
               onChange={(e) => setName(e.target.value)}
               whileFocus={{ scale: 1.02 }}
@@ -172,7 +172,7 @@ const Reserve = () => {
             <Motion.input
               type="tel"
               placeholder="Phone Number"
-              className="w-full border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
+              className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               whileFocus={{ scale: 1.02 }}
@@ -181,7 +181,7 @@ const Reserve = () => {
             <Motion.input
               type="number"
               placeholder="Number of Guests"
-              className="w-full border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
+              className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
               value={guestCount}
               onChange={(e) => setGuestCount(e.target.value)}
               min={1}
@@ -197,7 +197,7 @@ const Reserve = () => {
                 timeIntervals={30}
                dateFormat="MMMM do, yyyy ' & ' h:mm aa"
                 placeholderText="Select Date & Time"
-                className="w-full border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C6252] cursor-pointer text-sm"
+                className="w-full border p-3  focus:outline-none focus:ring-2 focus:ring-[#2C6252] cursor-pointer text-sm"
                 wrapperClassName="w-full"
                 minDate={new Date()}
               />
@@ -228,7 +228,7 @@ const Reserve = () => {
             <Motion.button
               type="button"
               onClick={handleBookTable}
-              className="mt-4 bg-[#2C6252] hover:bg-[#244f42] text-white font-semibold py-3 rounded-md transition-all"
+              className="mt-4 bg-[#2C6252] hover:bg-[#244f42] text-white font-semibold py-3  transition-all"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.96 }}
             >
