@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Container from "../../../components/Container";
 import { FaMugHot } from "react-icons/fa";
 import { PiPizzaBold } from "react-icons/pi";
 import { GiCutDiamond, GiMushroom } from "react-icons/gi";
+import { CartContext } from "../../../context/CartContext";
+import { toast } from "react-toastify";
 
 const foodData = [
     {
         id: 1,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -16,7 +18,7 @@ const foodData = [
     {
         id: 2,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -24,7 +26,7 @@ const foodData = [
     {
         id: 3,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -32,7 +34,7 @@ const foodData = [
     {
         id: 4,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -40,7 +42,7 @@ const foodData = [
     {
         id: 5,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -48,7 +50,7 @@ const foodData = [
     {
         id: 6,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -56,7 +58,7 @@ const foodData = [
     {
         id: 7,
         title: "Crispy Fried Chicken",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 14,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
         category: "Signature",
@@ -64,7 +66,7 @@ const foodData = [
     {
         id: 8,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -72,7 +74,7 @@ const foodData = [
     {
         id: 9,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -80,7 +82,7 @@ const foodData = [
     {
         id: 10,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -88,7 +90,7 @@ const foodData = [
     {
         id: 11,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -96,7 +98,7 @@ const foodData = [
     {
         id: 12,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -104,7 +106,7 @@ const foodData = [
     {
         id: 13,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -112,7 +114,7 @@ const foodData = [
     {
         id: 14,
         title: "Stuffed Mushrooms",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 10,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
         category: "Mushroom",
@@ -120,7 +122,7 @@ const foodData = [
     {
         id: 15,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -128,7 +130,7 @@ const foodData = [
     {
         id: 16,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -136,7 +138,7 @@ const foodData = [
     {
         id: 17,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -144,7 +146,7 @@ const foodData = [
     {
         id: 18,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -152,7 +154,7 @@ const foodData = [
     {
         id: 19,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -160,7 +162,7 @@ const foodData = [
     {
         id: 20,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -168,7 +170,7 @@ const foodData = [
     {
         id: 21,
         title: "Cappuccino",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 12,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
         category: "Coffee",
@@ -176,7 +178,7 @@ const foodData = [
     {
         id: 22,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -184,7 +186,7 @@ const foodData = [
     {
         id: 23,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -192,7 +194,7 @@ const foodData = [
     {
         id: 24,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -200,7 +202,7 @@ const foodData = [
     {
         id: 25,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -208,7 +210,7 @@ const foodData = [
     {
         id: 26,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -216,7 +218,7 @@ const foodData = [
     {
         id: 27,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -224,7 +226,7 @@ const foodData = [
     {
         id: 28,
         title: "Pepperoni",
-        desc: "Our menu is carefully crafted by expert chefs who bring creativity",
+        description: "Our menu is carefully crafted by expert chefs who bring creativity",
         price: 16,
         image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
         category: "Pizza",
@@ -233,13 +235,14 @@ const foodData = [
 
 const tabs = [
     { name: "Signature", icon: <GiCutDiamond size={18} /> },
-     { name: "Mushroom", icon: <GiMushroom size={18} /> },
+    { name: "Mushroom", icon: <GiMushroom size={18} /> },
     { name: "Coffee", icon: <FaMugHot size={18} /> },
     { name: "Pizza", icon: <PiPizzaBold size={18} /> },
 ];
 
 const Category = () => {
     const [activeTab, setActiveTab] = useState("Coffee");
+    const { addToCart } = useContext(CartContext);
 
     const filteredItems = foodData.filter((item) => item.category === activeTab);
 
@@ -255,9 +258,11 @@ const Category = () => {
                         <button
                             key={tab.name}
                             onClick={() => setActiveTab(tab.name)}
-                            className={`flex items-center gap-2 px-6 py-2  border 
-                    ${activeTab === tab.name ? "bg-[#FF4C15] text-white" : "bg-gray-100 text-gray-500"}
-                    font-medium text-sm transition-all`}
+                            className={`flex items-center gap-2 px-6 py-2 border 
+                                ${activeTab === tab.name
+                                    ? "bg-[#FF4C15] text-white"
+                                    : "bg-gray-100 text-gray-500"
+                                } font-medium text-sm transition-all`}
                         >
                             {tab.icon}
                             {tab.name}
@@ -268,29 +273,32 @@ const Category = () => {
                 {/* First 3 Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                     {filteredItems.slice(0, 3).map((item) => (
-                        <FoodCard key={item.id} item={item} />
+                        <FoodCard key={item.id} item={item} addToCart={addToCart} />
                     ))}
                 </div>
 
-                {/* Next up to 4 Cards (only if available, max 7 total) */}
+                {/* Next up to 4 Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-4 mt-12">
                     {filteredItems.slice(3, 7).map((item) => (
-                        <FoodCard key={item.id} item={item} />
+                        <FoodCard key={item.id} item={item} addToCart={addToCart} />
                     ))}
                 </div>
-
             </div>
         </Container>
     );
 };
 
-const FoodCard = ({ item }) => (
+const FoodCard = ({ item, addToCart }) => (
     <div className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6">
         <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden">
             <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://placehold.co/400x240/CCCCCC/FFFFFF?text=Image+Not+Found";
+                }}
             />
         </div>
         <div className="flex flex-col flex-grow mt-6">
@@ -298,13 +306,20 @@ const FoodCard = ({ item }) => (
                 {item.title}
             </h3>
             <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">
-                {item.desc}
+                {item.description}
             </p>
             <div className="flex justify-between items-center mt-auto">
                 <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
-                    ${item.price} <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
+                    ${item.price}
+                    <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
                 </span>
-                <button className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50">
+                <button
+                    className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+                    onClick={() => {
+                        addToCart({ ...item, hasOrderButton: true });
+                        toast.success(`${item.title} added to cart!`);
+                    }}
+                >
                     <img src="/Path 2764.svg" alt="Add" />
                 </button>
             </div>
