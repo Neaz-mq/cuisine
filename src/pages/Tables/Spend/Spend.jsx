@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 
 const Spend = () => {
@@ -23,9 +24,12 @@ const Spend = () => {
             Enjoy unbeatable deals every week at Flavors & Feast! Whether you're
             craving a hearty meal, a sweet treat, or a refreshing coffee—
           </p>
-          <button className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold">
-            Please checkout
+         <Link to="/order"> 
+           <button className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold">
+            Checkout Menu
           </button>
+         
+         </Link>
         </div>
       </div>
     </Container>
