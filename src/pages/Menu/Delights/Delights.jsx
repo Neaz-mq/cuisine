@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 
 const Delights = () => {
@@ -30,9 +31,11 @@ const Delights = () => {
                             seaside escape, where the salt air kisses your skin and every bite
                             feels like a wave of pure flavor.
                         </p>
+                        <Link to="/order">
                         <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 text-lg font-semibold -mt-4 whitespace-nowrap">
                             Order Now
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -73,9 +76,12 @@ const Delights = () => {
                         <span className="text-yellow-500">★★★★★</span>
                         <span className="text-sm text-[#CCCCCC] whitespace-nowrap">(4.8 Rating)</span>
                     </div>
+
+                    <Link to="/order">
                     <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 text-xl font-semibold w-full max-w-[150px]">
                         Order Now
                     </button>
+                    </Link>
                 </div>
 
                 {/* Right content area: Headline and Savor text - Left-aligned */}
