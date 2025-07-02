@@ -8,10 +8,10 @@ const Offer = () => {
     return (
         <div>
             <Limited></Limited>
-            <Week></Week>
+            {/* <Week></Week>
             <Feast></Feast>
             <Picks></Picks>
-            <Roast></Roast>
+            <Roast></Roast> */}
         </div>
     );
 };
