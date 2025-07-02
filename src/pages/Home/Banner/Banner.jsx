@@ -21,7 +21,7 @@ const Banner = () => {
 
     return (
         <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10">
-            {/* Container use for better experience */}
+            {/* Container use for better experience here */}
             <Container>
                 <div className="relative bg-white">
                     <div className="flex items-start justify-between">
