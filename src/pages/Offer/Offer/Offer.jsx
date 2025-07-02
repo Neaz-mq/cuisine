@@ -11,7 +11,7 @@ const Offer = () => {
             <Week></Week>
             <Feast></Feast>
             <Picks></Picks>
-            {/* <Roast></Roast> */}
+            <Roast></Roast>
         </div>
     );
 };

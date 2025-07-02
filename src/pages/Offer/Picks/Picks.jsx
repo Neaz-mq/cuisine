@@ -6,7 +6,7 @@ const Picks = () => {
         <Container>
 
             {/* Top Section */}
-            <div className="3xl:px-12 3xl:ml-7 3xl:-mt-2 3xl:mb-44 ">
+            <div className="3xl:px-12 3xl:ml-7 3xl:-mt-2 3xl:mb-44 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 ">
                 <div className="grid md:grid-cols-2 gap-12 mb-24">
                     <div className="bg-[#FFFAF8] p-6 md:p-16 ">
                         <h2 className="text-3xl md:text-4xl font-semibold text-[#2C6252]   mb-4">
@@ -104,12 +104,12 @@ const Picks = () => {
                                 <p className="font-semibold text-[#FF4C15]">Cheesy</p>
                                 <p className="font-semibold text-[#FF4C15]">Crust Deluxe</p>
                                 <p className="mt-6 text-xs text-[#2D6252]">Our menu is carefully crafted by expert
-                                    chefs who bring creativity</p>
+                                    chefs only </p>
                             </div>
 
 
                             <div className="p-4">
-                                <p className="text-2xl font-semibold text-white -mt-4 whitespace-nowrap">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4 3xl:whitespace-nowrap">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
 
@@ -132,11 +132,11 @@ const Picks = () => {
                                 <p className="font-semibold text-[#FF4C15]">Cheesy</p>
                                 <p className="font-semibold text-[#FF4C15]">Crust Deluxe</p>
                                 <p className="mt-6 text-xs text-[#2D6252]">Our menu is carefully crafted by expert
-                                    chefs who bring creativity</p>
+                                    chefs only</p>
                             </div>
 
                               <div className="p-4">
-                                <p className="text-2xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
                             <img
@@ -158,10 +158,10 @@ const Picks = () => {
                                <p className="font-semibold text-[#FF4C15]">Cheesy</p>
                                 <p className="font-semibold text-[#FF4C15]">Crust Deluxe</p>
                                 <p className="mt-6 text-xs text-[#2D6252]">Our menu is carefully crafted by expert
-                                    chefs who bring creativity</p>
+                                    chefs only</p>
                             </div>
                               <div className="p-4">
-                                <p className="text-2xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
                             <img
@@ -181,10 +181,10 @@ const Picks = () => {
                                  <p className="font-semibold text-[#FF4C15]">Cheesy</p>
                                 <p className="font-semibold text-[#FF4C15]">Crust Deluxe</p>
                                 <p className="mt-6 text-xs text-[#2D6252]">Our menu is carefully crafted by expert
-                                    chefs who bring creativity</p>
+                                    chefs only</p>
                             </div>
                             <div className="p-4">
-                                <p className="text-2xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
                               <img
