@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../../../components/Container";
 
 const Roast = () => {
@@ -15,9 +16,13 @@ const Roast = () => {
                             <p className="text-xs mb-8 max-w-md mx-auto md:mx-0 mt-6">
                                 Management reserves the right to modify or cancel the offer without prior notice.
                             </p>
+                           <Link to="/menu">
+                           
                             <button className="bg-[#FF4C15]  text-white font-semibold py-2 px-6">
                                 Order Now &gt;
                             </button>
+                           
+                           </Link>
                         </div>
 
                         {/* Right Image */}

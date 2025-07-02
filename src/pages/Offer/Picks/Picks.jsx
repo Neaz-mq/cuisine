@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 
 const Picks = () => {
@@ -14,9 +15,11 @@ const Picks = () => {
                         <p className="text-sm  text-[#2C6252] mb-6">
                             Management reserves the right to modify or cancel the <br /> offer without prior notice.
                         </p>
+                       <Link to="/menu">
                         <button className="bg-[#FF4C15]  text-white font-semibold py-2 px-6">
                             Order Now &gt;
                         </button>
+                       </Link>
                         <div className="flex justify-end -mt-28 ml-44">
                             {/* Image of Chicken Nuggets and Fries */}
                             <img
