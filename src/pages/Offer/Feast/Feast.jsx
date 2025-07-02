@@ -52,7 +52,7 @@ const Feast = () => {
 
   return (
     <Container>
-      <div className="3xl:px-12 3xl:ml-7 3xl:-mt-24 3xl:mb-44">
+      <div className="3xl:px-12 3xl:ml-7 3xl:-mt-24 3xl:mb-44 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-44">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center justify-between bg-[#F8F8F8] p-8 mb-10 md:mb-12">
           <div className="flex-1 min-w-[300px] md:mr-5 text-center md:text-left mb-8 md:mb-0">
@@ -63,7 +63,7 @@ const Feast = () => {
               – Free Dessert with any Main Course
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem]">
+          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem]">
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748323779/pngegg_63_yi9xit.png"
               alt="Fried Chicken"
