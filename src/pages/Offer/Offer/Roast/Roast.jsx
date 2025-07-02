@@ -4,7 +4,7 @@ import Container from "../../../../components/Container";
 const Roast = () => {
     return (
         <Container>
-            <div className="3xl:px-12 3xl:ml-7 3xl:mb-24">
+            <div className="3xl:px-12 3xl:ml-7 3xl:mb-24 2xl:px-1 2xl:ml-7 2xl:mb-24">
                 {/* Header Section */}
                 <div className="bg-[#2C6252] text-white relative overflow-hidden p-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-center md:items-start justify-between">
@@ -39,8 +39,8 @@ const Roast = () => {
 
                 {/* Enjoy Unbeatable Deals Section */}
                 <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-10 -mt-10 md:-mt-16 relative z-20 left-28">
-                    <div className="bg-white p-12  text-center md:text-left max-w-xl shadow-lg mx-auto relative left-64 ">
-                        <h2 className="text-3xl font-bold text-[#2C6252] mb-4 leading-normal">
+                    <div className="bg-white p-12  text-center md:text-left max-w-xl shadow-lg mx-auto relative 3xl:left-64 2xl:left-36">
+                        <h2 className="3xl:text-3xl 2xl:text-2xl font-bold text-[#2C6252] mb-4 leading-normal">
                             Enjoy unbeatable <br />  deals with us
                         </h2>
                         <p className="text-[#BCB1AD] text-sm">
@@ -50,7 +50,7 @@ const Roast = () => {
                 </div>
 
                 {/* Features Section */}
-                <div className=" px-4 sm:px-6  py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-72 text-center mt-20 whitespace-nowrap">
+                <div className=" 3xl:px-4 2xl:px-0 sm:px-6  py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 3xl:gap-72 2xl:gap-44  text-center mt-20 whitespace-nowrap">
                     <div className="flex flex-col items-center p-4">
 
                         <div className="text-5xl text-gray-700 mb-4">🚚</div>
