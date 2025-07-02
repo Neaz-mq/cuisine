@@ -89,9 +89,9 @@ const Week = () => {
 
   return (
     <Container>
-      <div className=" flex flex-col 3xl:mt-20 2xl:mt-20 3xl:px-12 2xl:px-6">
+      <div className=" flex flex-col 3xl:mt-20 2xl:mt-20 3xl:px-12 2xl:px-0">
         {/* Header */}
-        <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center 3xl:ml-6 2xl:ml-12">
+        <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center 3xl:ml-6 2xl:ml-4">
           <h1 className="text-2xl font-bold ml-8">Don't Miss This Week's Delights</h1>
           <span className="mr-[4.5rem]">* Authority suggested food</span>
         </div>
@@ -99,7 +99,7 @@ const Week = () => {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row p-8 relative">
           {/* Left: 3 Days */}
-          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 2xl:-mt-[22rem] z-10">
+          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 2xl:-mt-[12rem] z-10">
             {threeDayWindow.map((dayObj) => {
               const isToday = dayObj.index === todayIndex;
               return (
@@ -124,12 +124,12 @@ const Week = () => {
               <div
                 key={index}
                 className={`absolute overflow-hidden ${
-                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 z-30" :
-                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
-                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 z-10" :
-                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 z-10" :
-                  index === 4 ? "top-[16rem] 3xl:-left-[4%] w-60 h-48 opacity-15 z-30" :
-                  "top-[20rem] 3xl:left-[24%] w-36 h-52 z-40"
+                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 z-30" :
+                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
+                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 z-10" :
+                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10" :
+                  index === 4 ? "top-[16rem] 3xl:-left-[4%] 2xl:-left-[10.3%] w-60 h-48 opacity-15 z-30" :
+                  "top-[20rem] 3xl:left-[24%] 2xl:left-[24%] w-36 h-52 z-40"
                 }`}
               >
                 <img src={url} alt={`dish-${index}`} className="w-full h-full object-cover" />
@@ -137,7 +137,7 @@ const Week = () => {
             ))}
 
             {/* Customer Service Card */}
-            <div className="absolute bottom-4 3xl:right-6 2xl:right-2 p-6 max-w-xs text-left z-40 top-[26.5%]">
+            <div className="absolute bottom-4 3xl:right-6 2xl:-right-8 p-6 max-w-xs text-left z-40 top-[26.5%]">
               <h3 className="text-lg font-bold text-[#2C6252] mb-2">
                 Outstanding <br /> <span className="font-normal">Customer Service</span>
               </h3>
@@ -147,7 +147,7 @@ const Week = () => {
             </div>
 
             {/* 50% Text */}
-            <div className="absolute 3xl:right-[0rem] 2xl:right-[1rem] 3xl:top-[14%] 2xl:top-[10%] transform 3xl:-translate-y-1/2 rotate-90 text-[#FF4C15] text-7xl font-extrabold opacity-70 z-0">
+            <div className="absolute 3xl:right-[0rem] 2xl:-right-[4.2rem] 3xl:top-[14%] 2xl:top-[10%] transform 3xl:-translate-y-1/2 2xl:-translate-y-1/2 rotate-90 text-[#FF4C15] text-7xl font-extrabold opacity-70 z-0">
               50%
             </div>
           </div>

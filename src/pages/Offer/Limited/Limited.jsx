@@ -54,7 +54,7 @@ const Limited = () => {
 
   return (
     <Container>
-      <div className="bg-white 3xl:px-16 2xl:px-3 xl:px-8 lg:px-4 mt-6">
+      <div className="bg-white 3xl:px-16 2xl:px-1 xl:px-8 lg:px-4 mt-6">
         <div className="text-base text-[#AAAAAA] mb-2 mt-3">
           we dish out <br />
           global favorites <br />
@@ -66,7 +66,7 @@ const Limited = () => {
         </div>
 
         <div className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]">
-          <div className="mb-36 3xl:-ml-24 2xl:-ml-24 xl:-ml-6 lg:-ml-4">
+          <div className="mb-36 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-4">
             <h2 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-green-800">Limited Time Offer–</h2>
             <h3 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-[#FF4C15] mt-4">Up To 50% Off!</h3>
           </div>
@@ -77,7 +77,7 @@ const Limited = () => {
             {limitedItems.map((item) => (
               <div
                 key={item.id}
-                className={`bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[200px] xl:w-[200px] lg:w-[190px] ${item.id === 4 ? "3xl:block 2xl:block xl:hidden lg:hidden hidden" : ""}`}
+                className={`bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[220px] xl:w-[200px] lg:w-[190px] ${item.id === 4 ? "3xl:block 2xl:block xl:hidden lg:hidden hidden" : ""}`}
               >
                 <img
                   src={item.image}
