@@ -89,24 +89,24 @@ const Week = () => {
 
   return (
     <Container>
-      <div className=" flex flex-col 3xl:mt-20 2xl:mt-20 xl:mt-20 3xl:px-12 2xl:px-0 xl:px-6">
+      <div className=" flex flex-col 3xl:mt-20 2xl:mt-20 xl:mt-20 lg:mt-20 3xl:px-12 2xl:px-0 xl:px-6 lg:px-6">
         {/* Header */}
-        <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center 3xl:ml-6 2xl:ml-4 xl:ml-4">
-          <h1 className="text-2xl font-bold ml-8">Don't Miss This Week's Delights</h1>
-          <span className="mr-[4.5rem]">* Authority suggested food</span>
+        <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center 3xl:ml-6 2xl:ml-4 xl:ml-4 lg:-ml-8">
+          <h1 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-xl font-bold ml-8">Don't Miss This Week's Delights</h1>
+          <span className="3xl:mr-[4.5rem] 2xl:mr-[4.5rem] xl:mr-[4.5rem] lg:mr-[3rem]">* Authority suggested food</span>
         </div>
 
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row p-8 relative">
           {/* Left: 3 Days */}
-          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 xl:space-y-20 2xl:-mt-[12rem] xl:-mt-[13rem] z-10">
+          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 xl:space-y-20 lg:space-y-20 2xl:-mt-[12rem] xl:-mt-[13rem] lg:-mt-[14rem] z-10 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-14">
             {threeDayWindow.map((dayObj) => {
               const isToday = dayObj.index === todayIndex;
               return (
                 <div key={dayObj.name} className="relative flex items-start">
                   <div className="w-1 bg-gray-400 h-24 mr-4 opacity-70"></div>
                   <div>
-                    <h2 className={`3xl:text-7xl 2xl:text-7xl xl:text-6xl font-extrabold mb-2 ${isToday ? "text-[#FF4C15]" : "text-[#F6F6F6] opacity-70"}`}>
+                    <h2 className={`3xl:text-7xl 2xl:text-7xl xl:text-6xl lg:text-4xl font-extrabold mb-2 ${isToday ? "text-[#FF4C15]" : "text-[#F6F6F6] opacity-70"}`}>
                       {dayObj.name}
                     </h2>
                     <p className={`text-lg ml-0 ${isToday ? "text-[#2C6252]" : "text-[#E1E1E1]"}`}>
@@ -119,17 +119,17 @@ const Week = () => {
           </div>
 
           {/* Right: Dynamic Image Layout */}
-          <div className="lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-40 3xl:left-2 xl:left-2 2xl:mt-36 xl:mt-36 2xl:left-2">
+          <div className="lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-40 3xl:left-2 xl:left-2 2xl:mt-36 xl:mt-36 2xl:left-2 lg:left-2">
             {images.map((url, index) => (
               <div
                 key={index}
                 className={`absolute overflow-hidden ${
-                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 xl:top-4 xl:left-[0%] xl:w-40 xl:h-52 z-30" :
-                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 xl:top-[4.5rem] xl:left-[35%] xl:w-40 xl:h-52 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
-                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 xl:top-4 xl:left-[38%] xl:w-64 xl:h-52 z-10" :
-                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10 xl:top-[16rem] xl:left-[38%] xl:w-40 xl:h-52" :
-                  index === 4 ? "top-[16rem] 3xl:-left-[4%] 2xl:-left-[10.3%] xl:-left-[17%] w-60 h-48 opacity-15 z-30" :
-                  "top-[20rem] 3xl:left-[24%] 2xl:left-[24%] xl:left-[24%] w-36 h-52 z-40"
+                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 xl:top-4 xl:left-[0%] xl:w-40 xl:h-52 lg:top-4 lg:left-[0%] lg:w-32 lg:h-44 z-30" :
+                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 xl:top-[4.5rem] xl:left-[35%] xl:w-40 xl:h-52 lg:top-[4.5rem] lg:left-[35%] lg:w-28 lg:h-44 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
+                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 xl:top-4 xl:left-[38%] xl:w-64 xl:h-52 lg:top-4 lg:left-[38%] lg:w-48 lg:h-44 z-10" :
+                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10 xl:top-[16rem] xl:left-[38%] xl:w-40 xl:h-52 lg:top-[16rem] lg:left-[38%] lg:w-28 lg:h-44" :
+                  index === 4 ? "3xl:top-[16rem] 2xl:top-[16rem] xl:top-[16rem] lg:top-[16rem]  3xl:-left-[4%] 2xl:-left-[10.3%] xl:-left-[17%] lg:-left-[17%] 3xl:w-60 3xl:h-48 2xl:w-60 2xl:h-48 xl:w-60 xl:h-48 lg:w-32 lg:h-48 opacity-15 z-30" :
+                  "3xl:top-[20rem] 2xl:top-[20rem] xl:top-[20rem] lg:top-[20rem] 3xl:left-[24%] 2xl:left-[24%] xl:left-[24%] lg:left-[24%] 3xl:w-36 3xl:h-52 2xl:w-36 2xl:h-52 xl:w-36 xl:h-52 lg:w-28 lg:h-44 z-40"
                 }`}
               >
                 <img src={url} alt={`dish-${index}`} className="w-full h-full object-cover" />
