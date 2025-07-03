@@ -6,13 +6,13 @@ const Picks = () => {
         <Container>
 
             {/* Top Section */}
-            <div className="3xl:px-12 3xl:ml-7 3xl:-mt-2 3xl:mb-44 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 ">
+            <div className="3xl:px-12 3xl:ml-7 3xl:-mt-2 3xl:mb-44 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-44 ">
                 <div className="grid md:grid-cols-2 gap-12 mb-24">
                     <div className="bg-[#FFFAF8] p-6 md:p-16 ">
-                        <h2 className="text-3xl md:text-4xl font-semibold text-[#2C6252]   mb-4">
+                        <h2 className="text-3xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl font-semibold text-[#2C6252]   3xl:mb-4  2xl:mb-4  xl:mb-6">
                             Chef's Weekly Picks <br /> <span className="text-[#FF4C15] leading-relaxed  font-normal">- Just for You!</span>
                         </h2>
-                        <p className="text-sm  text-[#2C6252] mb-6">
+                        <p className="text-sm  text-[#2C6252] 3xl:mb-6 2xl:mb-6 xl:mb-14">
                             Management reserves the right to modify or cancel the <br /> offer without prior notice.
                         </p>
                        <Link to="/menu">
@@ -42,10 +42,10 @@ const Picks = () => {
                                 />
                             </div>
                             <div className="w-2/3">
-                                <h3 className="text-2xl font-semibold text-[#2C6252] mb-2">
+                                <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-xl font-semibold text-[#2C6252] mb-2">
                                     Enjoy unbeatable <br /> deals with us
                                 </h3>
-                                <p className="text-sm text-[#BCB1AD]">
+                                <p className="3xl:text-sm 2xl:text-sm xl:text-[10px] text-[#BCB1AD]">
                                     Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—our weekly offers have.
                                 </p>
                             </div>
@@ -54,13 +54,13 @@ const Picks = () => {
                         {/* Don't Miss This Week's Delights */}
                         <div className="bg-[#2C6252] p-6 md:p-8  text-white flex items-center">
                             <div className="w-2/3 pr-4">
-                                <h3 className="text-2xl font-semibold mb-2">
+                                <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-xl font-semibold mb-2">
                                     Don't Miss This Week's <br /> Delights
                                 </h3>
-                                <p className="text-sm mb-4 text-[#BCB1AD]">
+                                <p className="3xl:text-sm 2xl:text-sm xl:text-[10px] mb-4 text-[#BCB1AD]">
                                     Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee
                                 </p>
-                                <a href="#" className="text-sm text-white underline hover:no-underline">
+                                <a href="#" className="3xl:text-sm 2xl:text-sm xl:text-[10px] text-white underline hover:no-underline">
                                     learn more
                                 </a>
                             </div>
@@ -109,7 +109,7 @@ const Picks = () => {
 
 
                             <div className="p-4">
-                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4 3xl:whitespace-nowrap">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl xl:text-lg font-semibold text-white -mt-4 3xl:whitespace-nowrap">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
 
@@ -136,7 +136,7 @@ const Picks = () => {
                             </div>
 
                               <div className="p-4">
-                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl xl:text-lg  font-semibold text-white -mt-4">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
                             <img
@@ -161,7 +161,7 @@ const Picks = () => {
                                     chefs only</p>
                             </div>
                               <div className="p-4">
-                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl xl:text-lg font-semibold text-white -mt-4">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
                             <img
@@ -184,7 +184,7 @@ const Picks = () => {
                                     chefs only</p>
                             </div>
                             <div className="p-4">
-                                <p className="3xl:text-2xl 2xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                                <p className="3xl:text-2xl 2xl:text-xl xl:text-lg font-semibold text-white -mt-4">Crispy Garden Glory</p>
                                 <p className="text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
                             </div>
                               <img
