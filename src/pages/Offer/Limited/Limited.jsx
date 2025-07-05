@@ -4,7 +4,7 @@ import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 
 const Limited = () => {
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, cartItems } = useContext(CartContext);
 
   const limitedItems = [
     {
@@ -42,14 +42,34 @@ const Limited = () => {
   ];
 
   const handleAddToCart = (item) => {
-    addToCart({
-      id: item.id,
-      title: item.title,
-      price: item.price,
-      image: item.image,
-      description: item.description, 
-    });
-    toast.success(`${item.title} added to cart!`);
+    const isAlreadyInCart = cartItems.some(cartItem => cartItem.id === item.id);
+
+    if (isAlreadyInCart) {
+      toast.warning(`${item.title} is already in cart!`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } else {
+      addToCart({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        image: item.image,
+        description: item.description,
+      });
+      toast.success(`${item.title} added to cart!`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
   };
 
   return (
