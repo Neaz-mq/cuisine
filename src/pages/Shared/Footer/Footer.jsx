@@ -99,7 +99,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full flex justify-center">
         <Container>
-          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-24">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-16">
             <div className="flex items-center gap-2">
               <FaRegCopyright />
               <span className="whitespace-nowrap ">

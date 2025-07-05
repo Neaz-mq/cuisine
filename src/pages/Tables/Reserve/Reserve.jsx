@@ -152,7 +152,7 @@ const Reserve = () => {
 
         {/* Reservation Form */}
         <Motion.div
-          className="mt-20 p-6 bg-white shadow-md  max-w-xl mx-auto border"
+          className="mt-20 p-6 bg-white   max-w-xl mx-auto border"
           variants={fadeInUp}
         >
           <h3 className="text-2xl font-semibold text-center text-[#2C6252] mb-6">
