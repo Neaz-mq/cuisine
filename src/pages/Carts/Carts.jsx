@@ -182,7 +182,7 @@ const Carts = () => {
 
   return (
     <Container>
-      <div className="bg-white min-h-screen px-4 py-8 md:px-10 3xl:px-[4.2rem] xl:px-32 2xl:px-48 mb-20">
+      <div className="bg-white min-h-screen px-4 py-8 md:px-10 3xl:px-[4.2rem] xl:px-14 lg:px-0 2xl:px-4 3xl:mb-36 2xl:mb-28 xl:mb-28 lg:mb-24 lg:-ml-2 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-6">
@@ -554,16 +554,16 @@ const Carts = () => {
             {/* Discount Code Section */}
             <div className="pt-10 border-t border-gray-200">
               <div className="flex mb-10"> {/* Added mb-4 for spacing */}
-                <input
+                <input 
                   type="text"
                   placeholder="Gift card or discount code"
-                  className="flex-1 border border-gray-300 px-4 py-2  text-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
+                  className="flex-1 border border-gray-300 3xl:px-4 2xl:px-4 xl:px-2 lg:px-2 py-2  3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] focus:outline-none focus:ring-1 focus:ring-gray-400"
                   value={discountCode}
                   onChange={handleDiscountCodeChange}
                 />
                 <button
                   onClick={applyDiscount}
-                  className="bg-gray-400 text-white px-6 py-2  font-semibold text-sm hover:bg-gray-500 transition-colors"
+                  className="bg-gray-400 text-white 3xl:px-6 2xl:px-6 xl:px-2 lg:px-2 py-2  font-semibold 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] hover:bg-gray-500 transition-colors"
                 >
                   Apply
                 </button>
