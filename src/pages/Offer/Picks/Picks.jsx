@@ -167,9 +167,9 @@ const Picks = () => {
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1750070674/pngegg_53_o3eh9m.png" // Replace with actual image path
                                 alt="Shrimp Fritters"
-                                 className="w-full  object-cover mt-20 "
+                                 className="w-full  object-cover 3xl:mt-20 2xl:mt-20 xl:mt-20 lg:mt-12 "
                             />
-                           <div className="absolute right-6 3xl:top-72 2xl:top-72 xl:top-72 lg:top-[17rem] bg-[#2B6050] text-white rounded-full  w-20 h-20 flex flex-col items-center justify-center">
+                           <div className="absolute right-6 3xl:top-72 2xl:top-72 xl:top-72 lg:top-[17rem] bg-[#2B6050] text-white rounded-full   3xl:w-20 3xl:h-20 2xl:w-20 2xl:h-20 xl:w-20 xl:h-20 lg:w-14 lg:h-14 flex flex-col items-center justify-center">
                                 <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm font-bold leading-tight">36%</span>
                                 <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm font-medium">off</span>
                             </div>
@@ -193,9 +193,9 @@ const Picks = () => {
                                  className="w-full  object-cover "
                             />
                             
-                           <div className="absolute right-6 top-72 bg-[#FF4C15] text-white rounded-full  w-20 h-20 flex flex-col items-center justify-center">
-                                <span className="text-lg font-bold leading-tight">45%</span>
-                                <span className="text-lg font-medium">off</span>
+                           <div className="absolute right-6 3xl:top-72 2xl:top-72 xl:top-72 lg:top-[17rem] bg-[#FF4C15] text-white rounded-full  3xl:w-20 3xl:h-20 2xl:w-20 2xl:h-20 xl:w-20 xl:h-20 lg:w-14 lg:h-14 flex flex-col items-center justify-center">
+                                <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm font-bold leading-tight">45%</span>
+                                <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm font-medium">off</span>
                             </div>
                         </div>
                     </div>
