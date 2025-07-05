@@ -45,12 +45,12 @@ const imageSets = {
     "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
   ],
   4: [ // Thursday
-     "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
+   "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
   ],
   5: [ // Friday
     "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
@@ -61,16 +61,16 @@ const imageSets = {
     "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
   ],
   6: [ // Saturday
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
+     "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
   ],
 };
 
-
+ 
  
 
 const getThreeDayWindow = (days, todayIndex) => {
@@ -99,7 +99,7 @@ const Week = () => {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row p-8 relative">
           {/* Left: 3 Days */}
-          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 xl:space-y-20 lg:space-y-20 2xl:-mt-[12rem] xl:-mt-[13rem] lg:-mt-[14rem] z-10 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-14">
+          <div className="lg:w-1/2 flex flex-col justify-center items-start  3xl:space-y-20 3xl:-mt-[12rem] 2xl:space-y-20 xl:space-y-20 lg:space-y-20 2xl:-mt-[12rem] xl:-mt-[13rem] lg:-mt-[20rem] z-10 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-14">
             {threeDayWindow.map((dayObj) => {
               const isToday = dayObj.index === todayIndex;
               return (
@@ -119,17 +119,17 @@ const Week = () => {
           </div>
 
           {/* Right: Dynamic Image Layout */}
-          <div className="lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-40 3xl:left-2 xl:left-2 2xl:mt-36 xl:mt-36 2xl:left-2 lg:left-2">
+          <div className="lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-40 3xl:left-2 xl:left-2 2xl:mt-36 xl:mt-36 lg:mt-28 2xl:left-2 lg:left-12">
             {images.map((url, index) => (
               <div
                 key={index}
                 className={`absolute overflow-hidden ${
-                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 xl:top-4 xl:left-[0%] xl:w-40 xl:h-52 lg:top-4 lg:left-[0%] lg:w-32 lg:h-44 z-30" :
-                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 xl:top-[4.5rem] xl:left-[35%] xl:w-40 xl:h-52 lg:top-[4.5rem] lg:left-[35%] lg:w-28 lg:h-44 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
-                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 xl:top-4 xl:left-[38%] xl:w-64 xl:h-52 lg:top-4 lg:left-[38%] lg:w-48 lg:h-44 z-10" :
-                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10 xl:top-[16rem] xl:left-[38%] xl:w-40 xl:h-52 lg:top-[16rem] lg:left-[38%] lg:w-28 lg:h-44" :
-                  index === 4 ? "3xl:top-[16rem] 2xl:top-[16rem] xl:top-[16rem] lg:top-[16rem]  3xl:-left-[4%] 2xl:-left-[10.3%] xl:-left-[17%] lg:-left-[17%] 3xl:w-60 3xl:h-48 2xl:w-60 2xl:h-48 xl:w-60 xl:h-48 lg:w-32 lg:h-48 opacity-15 z-30" :
-                  "3xl:top-[20rem] 2xl:top-[20rem] xl:top-[20rem] lg:top-[20rem] 3xl:left-[24%] 2xl:left-[24%] xl:left-[24%] lg:left-[24%] 3xl:w-36 3xl:h-52 2xl:w-36 2xl:h-52 xl:w-36 xl:h-52 lg:w-28 lg:h-44 z-40"
+                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 xl:top-4 xl:left-[0%] xl:w-40 xl:h-52 lg:top-4 lg:left-[3%] lg:w-28 lg:h-40 z-30" :
+                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 xl:top-[4.5rem] xl:left-[35%] xl:w-40 xl:h-52 lg:top-[4.5rem] lg:left-[35%] lg:w-32 lg:h-40 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
+                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 xl:top-4 xl:left-[38%] xl:w-64 xl:h-52 lg:top-4 lg:left-[38%] lg:w-44 lg:h-40 z-10" :
+                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10 xl:top-[16rem] xl:left-[38%] xl:w-40 xl:h-52 lg:top-[12rem] lg:left-[38%] lg:w-32 lg:h-44" :
+                  index === 4 ? "3xl:top-[16rem] 2xl:top-[16rem] xl:top-[16rem] lg:top-[12rem]  3xl:-left-[4%] 2xl:-left-[10.3%] xl:-left-[17%] lg:-left-[10.2%] 3xl:w-60 3xl:h-48 2xl:w-60 2xl:h-48 xl:w-60 xl:h-48 lg:w-40 lg:h-44 opacity-15 z-30" :
+                  "3xl:top-[20rem] 2xl:top-[20rem] xl:top-[20rem] lg:top-[20rem] 3xl:left-[24%] 2xl:left-[24%] xl:left-[22%] lg:left-[18%] 3xl:w-36 3xl:h-52 2xl:w-36 2xl:h-52 xl:w-36 xl:h-52 lg:w-32 lg:h-40 z-40"
                 }`}
               >
                 <img src={url} alt={`dish-${index}`} className="w-full h-full object-cover" />
@@ -137,17 +137,17 @@ const Week = () => {
             ))}
 
             {/* Customer Service Card */}
-            <div className="absolute bottom-4 3xl:right-6 2xl:-right-8 xl:-right-12 p-6 max-w-xs text-left z-40 top-[26.5%]">
-              <h3 className="3xl:text-lg 2xl:text-lg xl:text-base  font-bold text-[#2C6252] mb-2">
+            <div className="absolute bottom-4 3xl:right-6 2xl:-right-8 xl:-right-12 lg:-right-16 p-6 max-w-xs text-left z-40 3xl:top-[26.5%] 2xl:top-[26.5%] xl:top-[26.5%] lg:top-[19%]">
+              <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[13px]   font-bold text-[#2C6252] mb-2">
                 Outstanding <br /> <span className="font-normal">Customer Service</span>
               </h3>
-              <p className="3xl:text-xs 2xl:text-xs xl:text-[10px] text-[#CCCCCC]">
+              <p className="3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[10px] text-[#CCCCCC]">
                 Our staff is dedicated <br /> to providing warm and <br /> attentive service, <br /> making sure that
               </p>
             </div>
 
             {/* 50% Text */}
-            <div className="absolute 3xl:right-[0rem] 2xl:-right-[4.2rem] xl:-right-[4rem] 3xl:top-[14%] 2xl:top-[10%] xl:top-[9%] transform 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 rotate-90 text-[#FF4C15] 3xl:text-7xl 2xl:text-7xl xl:text-6xl font-extrabold opacity-70 z-0">
+            <div className="absolute 3xl:right-[0rem] 2xl:-right-[4.2rem] xl:-right-[4rem] lg:-right-[3rem] 3xl:top-[14%] 2xl:top-[10%] xl:top-[9%] lg:top-[5%] transform 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 rotate-90 text-[#FF4C15] 3xl:text-7xl 2xl:text-7xl xl:text-6xl lg:text-5xl font-extrabold opacity-70 z-0">
               50%
             </div>
           </div>
