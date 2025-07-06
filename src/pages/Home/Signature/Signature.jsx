@@ -3,6 +3,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Container from '../../../components/Container';
 import { toast } from 'react-toastify';
 import useCart from '../../../hooks/useCart';
+import { motion as Motion } from 'framer-motion';
 
 const foodItems = [
   {
@@ -52,7 +53,7 @@ const Signature = () => {
     if (carousel) {
       const card = carousel.querySelector('div');
       if (card) {
-        const cardWidth = card.offsetWidth + 48; // card width + gap
+        const cardWidth = card.offsetWidth + 48;
         const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
@@ -63,7 +64,6 @@ const Signature = () => {
     <Container>
       <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
         <div className="mx-auto px-14 relative left-6">
-          {/* Vertical Title */}
           <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem]">
             <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-72 2xl:-ml-60 xl:-ml-72 lg:-ml-72">
               <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
@@ -79,7 +79,6 @@ const Signature = () => {
             </h2>
           </div>
 
-          {/* Cards Section */}
           <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[8.5rem] relative z-10">
             <div
               ref={carouselRef}
@@ -89,9 +88,23 @@ const Signature = () => {
                 const parsedPrice = parseFloat(item.price.replace('$', '')) || 0;
 
                 return (
-                  <div key={index} className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] flex-shrink-0">
+                  <Motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.03, rotate: 0.5 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    className="bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] flex-shrink-0 shadow-md hover:shadow-lg"
+                  >
                     <div className="relative">
-                      <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                      <Motion.img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-48 object-cover"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.5, ease: 'easeInOut' }}
+                      />
                       {item.available && (
                         <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
                           <div className="rounded-full w-4 h-4 flex items-center justify-center mr-1">
@@ -127,7 +140,9 @@ const Signature = () => {
 
                       <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
 
-                      <button
+                      <Motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => {
                           const formattedItem = {
                             ...item,
@@ -156,17 +171,16 @@ const Signature = () => {
                             });
                           }
                         }}
-                        className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2"
+                        className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 px-4 cursor-pointer border-none ml-2 w-1/2"
                       >
                         Order Now
-                      </button>
+                      </Motion.button>
                     </div>
-                  </div>
+                  </Motion.div>
                 );
               })}
             </div>
 
-            {/* Scroll Buttons */}
             <div className="absolute -bottom-14 left-0 w-full flex justify-start z-20">
               <div className="flex gap-2">
                 <button
