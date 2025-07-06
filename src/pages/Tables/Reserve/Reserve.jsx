@@ -25,9 +25,44 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.1,
+      delay: i * 0.12,
+      duration: 0.6,
+      ease: [0.4, 0, 0.2, 1], // smooth ease out cubic-bezier
+    },
+  }),
+};
+
+const tableContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const tableItem = {
+  hidden: { opacity: 0, scale: 0.85 },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: [0.4, 0, 0.2, 1],
+    }
+  }
+};
+
+const inputField = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.5,
+      ease: [0.4, 0, 0.2, 1],
     },
   }),
 };
@@ -68,7 +103,7 @@ const Reserve = () => {
     }).format(reservationDate);
 
     toast.success(
-      `Table ${selectedTable.label} has been booked on ${formattedDate}  !`
+      `Table ${selectedTable.label} has been booked on ${formattedDate} !`
     );
 
     setName("");
@@ -100,7 +135,11 @@ const Reserve = () => {
         variants={fadeInUp}
       >
         {/* Heading */}
-        <Motion.div className="text-center lg:text-left mb-10 mt-20" variants={fadeInUp}>
+        <Motion.div
+          className="text-center lg:text-left mb-10 mt-20"
+          variants={fadeInUp}
+          custom={1}
+        >
           <h2 className="text-2xl lg:text-4xl font-bold text-[#2C6252] leading-relaxed">
             Know which tables are available <br className="hidden lg:block" />
             <span className="text-[#FF4C15] font-semibold leading-relaxed">
@@ -111,24 +150,27 @@ const Reserve = () => {
               alt="table"
               className="inline-block w-24 h-8 ml-2 align-middle"
               animate={{ y: [0, -8, 0], scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, ease: "easeInOut", repeat: Infinity }}
+              transition={{ duration: 2.2, ease: "easeInOut", repeat: Infinity }}
             />
           </h2>
         </Motion.div>
 
-        {/* Grid of Tables */}
-        <Motion.div className="grid grid-cols-5 gap-y-12" variants={fadeInUp}>
+        {/* Tables Grid */}
+        <Motion.div
+          className="grid grid-cols-5 gap-y-12"
+          variants={tableContainer}
+          initial="hidden"
+          animate="visible"
+        >
           {tables.map((table, index) => (
             <Motion.div
               key={index}
-              className={`cursor-pointer 3xl:w-44 3xl:h-44 2xl:w-44 2xl:h-44 xl:w-40 xl:h-40 lg:w-28 lg:h-28 flex items-center justify-center text-white font-bold 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl  ${
+              className={`cursor-pointer 3xl:w-44 3xl:h-44 2xl:w-44 2xl:h-44 xl:w-40 xl:h-40 lg:w-28 lg:h-28 flex items-center justify-center text-white font-bold 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl ${
                 table.booked ? "bg-[#FF4C15]" : "bg-[#2C6252]"
               }`}
-              whileHover={{ scale: 1.08 }}
+              variants={tableItem}
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
             >
               {table.label}
             </Motion.div>
@@ -139,71 +181,75 @@ const Reserve = () => {
         <Motion.div
           className="flex items-start justify-start gap-16 mt-28 flex-wrap"
           variants={fadeInUp}
+          custom={2}
         >
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#2C6252]"></div>
+            <div className="w-6 h-6 bg-[#2C6252] "></div>
             <span className="text-[#A9A2A2] text-sm">Free Table Indicator</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-[#FF4C15]"></div>
+            <div className="w-6 h-6 bg-[#FF4C15] "></div>
             <span className="text-[#A9A2A2] text-sm">Booked Table Indicator</span>
           </div>
         </Motion.div>
 
         {/* Reservation Form */}
         <Motion.div
-          className="mt-20 p-6 bg-white   max-w-xl mx-auto border"
+          className="mt-20 p-6 bg-white max-w-xl mx-auto border "
           variants={fadeInUp}
+          custom={3}
         >
           <h3 className="text-2xl font-semibold text-center text-[#2C6252] mb-6">
             Book a Table
           </h3>
           <form className="flex flex-col gap-4">
-            {/* Name */}
-            <Motion.input
-              type="text"
-              placeholder="Your Name"
-              className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              whileFocus={{ scale: 1.02 }}
-            />
-            {/* Phone */}
-            <Motion.input
-              type="tel"
-              placeholder="Phone Number"
-              className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              whileFocus={{ scale: 1.02 }}
-            />
-            {/* Guests */}
-            <Motion.input
-              type="number"
-              placeholder="Number of Guests"
-              className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
-              value={guestCount}
-              onChange={(e) => setGuestCount(e.target.value)}
-              min={1}
-              whileFocus={{ scale: 1.02 }}
-            />
-            {/* Date Picker */}
-            <Motion.div whileFocus={{ scale: 1.02 }}>
+            {[ 
+              { type: "text", placeholder: "Your Name", value: name, setter: setName },
+              { type: "tel", placeholder: "Phone Number", value: phone, setter: setPhone },
+              { type: "number", placeholder: "Number of Guests", value: guestCount, setter: setGuestCount, min: 1 }
+            ].map(({ type, placeholder, value, setter, min }, i) => (
+              <Motion.input
+                key={placeholder}
+                type={type}
+                placeholder={placeholder}
+                className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
+                value={value}
+                onChange={(e) => setter(e.target.value)}
+                min={min}
+                variants={inputField}
+                custom={i + 1}
+                initial="hidden"
+                animate="visible"
+                whileFocus={{ scale: 1.03 }}
+              />
+            ))}
+            <Motion.div
+              variants={inputField}
+              custom={4}
+              initial="hidden"
+              animate="visible"
+              whileFocus={{ scale: 1.03 }}
+            >
               <DatePicker
                 selected={reservationDate}
                 onChange={handleDateChange}
                 showTimeSelect
                 timeFormat="HH:mm"
                 timeIntervals={30}
-               dateFormat="MMMM do, yyyy ' & ' h:mm aa"
+                dateFormat="MMMM do, yyyy ' & ' h:mm aa"
                 placeholderText="Select Date & Time"
-                className="w-full border p-3  focus:outline-none focus:ring-2 focus:ring-[#2C6252] cursor-pointer text-sm"
+                className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252] cursor-pointer text-sm "
                 wrapperClassName="w-full"
                 minDate={new Date()}
               />
             </Motion.div>
-            {/* Table Select */}
-            <Motion.div whileFocus={{ scale: 1.02 }}>
+            <Motion.div
+              variants={inputField}
+              custom={5}
+              initial="hidden"
+              animate="visible"
+              whileFocus={{ scale: 1.03 }}
+            >
               <Select
                 options={tableOptions}
                 value={selectedTable}
@@ -224,12 +270,11 @@ const Reserve = () => {
                 isSearchable={false}
               />
             </Motion.div>
-            {/* Submit */}
             <Motion.button
               type="button"
               onClick={handleBookTable}
               className="mt-4 bg-[#2C6252] hover:bg-[#244f42] text-white font-semibold py-3  transition-all"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.96 }}
             >
               Book Table
