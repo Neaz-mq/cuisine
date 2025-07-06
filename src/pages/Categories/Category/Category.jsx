@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { motion as Motion } from "framer-motion";
 import Container from "../../../components/Container";
 import { FaMugHot } from "react-icons/fa";
 import { PiPizzaBold } from "react-icons/pi";
@@ -234,123 +235,163 @@ const foodData = [
 ];
 
 const tabs = [
-    { name: "Signature", icon: <GiCutDiamond size={18} /> },
-    { name: "Mushroom", icon: <GiMushroom size={18} /> },
-    { name: "Coffee", icon: <FaMugHot size={18} /> },
-    { name: "Pizza", icon: <PiPizzaBold size={18} /> },
+  { name: "Signature", icon: <GiCutDiamond size={18} /> },
+  { name: "Mushroom", icon: <GiMushroom size={18} /> },
+  { name: "Coffee", icon: <FaMugHot size={18} /> },
+  { name: "Pizza", icon: <PiPizzaBold size={18} /> },
 ];
 
-const Category = () => {
-    const [activeTab, setActiveTab] = useState("Coffee");
-    const { addToCart, cartItems } = useContext(CartContext);
-
-    const filteredItems = foodData.filter((item) => item.category === activeTab);
-
-    return (
-        <Container>
-            <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-32 xl:mb-36 lg:mb-28 mt-6">
-                <h2 className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-[#1D4B3F] mb-10">
-                    Delicious<span className="font-bold ml-2">Foods</span>
-                </h2>
-
-                <div className="flex justify-start gap-6 mb-10 flex-wrap">
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.name}
-                            onClick={() => setActiveTab(tab.name)}
-                            className={`flex items-center gap-2 px-6 py-2 border 
-                                ${activeTab === tab.name
-                                    ? "bg-[#FF4C15] text-white"
-                                    : "bg-gray-100 text-gray-500"
-                                } font-medium text-sm transition-all`}
-                        >
-                            {tab.icon}
-                            {tab.name}
-                        </button>
-                    ))}
-                </div>
-
-                {/* First 3 Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                    {filteredItems.slice(0, 3).map((item) => (
-                        <FoodCard key={item.id} item={item} addToCart={addToCart} cartItems={cartItems} />
-                    ))}
-                </div>
-
-                {/* Next up to 4 Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-4 mt-12">
-                    {filteredItems.slice(3, 7).map((item) => (
-                        <FoodCard key={item.id} item={item} addToCart={addToCart} cartItems={cartItems} />
-                    ))}
-                </div>
-            </div>
-        </Container>
-    );
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.5,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  }),
 };
 
-const FoodCard = ({ item, addToCart, cartItems }) => {
-    // Check if item with same ID already exists
-    const isAlreadyInCart = cartItems.some(cartItem => cartItem.id === item.id);
+const Category = () => {
+  const [activeTab, setActiveTab] = useState("Coffee");
+  const { addToCart, cartItems } = useContext(CartContext);
 
-    const handleClick = () => {
-        if (isAlreadyInCart) {
-            toast.warning(`${item.title} is already in cart!`, {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-        } else {
-            const cleanItem = { ...item, hasOrderButton: true }; // Add custom field *after* check
-            addToCart(cleanItem);
-            toast.success(`${item.title} added to cart!`, {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-        }
-    };
+  const filteredItems = foodData.filter((item) => item.category === activeTab);
 
-    return (
-        <div className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6">
-            <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden">
-                <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "https://placehold.co/400x240/CCCCCC/FFFFFF?text=Image+Not+Found";
-                    }}
-                />
-            </div>
-            <div className="flex flex-col flex-grow mt-6">
-                <h3 className="text-xl font-semibold text-[#2C6252] leading-tight mb-1">
-                    {item.title}
-                </h3>
-                <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">
-                    {item.description}
-                </p>
-                <div className="flex justify-between items-center mt-auto">
-                    <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
-                        ${item.price}
-                        <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
-                    </span>
-                    <button
-                        className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
-                        onClick={handleClick}
-                    >
-                        <img src="/Path 2764.svg" alt="Add" />
-                    </button>
-                </div>
-            </div>
+  return (
+    <Container>
+      <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-32 xl:mb-36 lg:mb-28 mt-6">
+        <Motion.h2
+          className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-[#1D4B3F] mb-10"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          Delicious<span className="font-bold ml-2">Foods</span>
+        </Motion.h2>
+
+        <div className="flex justify-start gap-6 mb-10 flex-wrap">
+          {tabs.map((tab, i) => (
+            <Motion.button
+              key={tab.name}
+              onClick={() => setActiveTab(tab.name)}
+              className={`flex items-center gap-2 px-6 py-2 border font-medium text-sm transition-all ${
+                activeTab === tab.name
+                  ? "bg-[#FF4C15] text-white"
+                  : "bg-gray-100 text-gray-500"
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              variants={fadeUp}
+              custom={i}
+              initial="hidden"
+              animate="visible"
+            >
+              {tab.icon}
+              {tab.name}
+            </Motion.button>
+          ))}
         </div>
-    );
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          {filteredItems.slice(0, 3).map((item, i) => (
+            <FoodCard
+              key={item.id}
+              item={item}
+              addToCart={addToCart}
+              cartItems={cartItems}
+              index={i}
+            />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-4 mt-12">
+          {filteredItems.slice(3, 7).map((item, i) => (
+            <FoodCard
+              key={item.id}
+              item={item}
+              addToCart={addToCart}
+              cartItems={cartItems}
+              index={i + 3}
+            />
+          ))}
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+const FoodCard = ({ item, addToCart, cartItems, index }) => {
+  const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
+
+  const handleClick = () => {
+    if (isAlreadyInCart) {
+      toast.warning(`${item.title} is already in cart!`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    } else {
+      const cleanItem = { ...item, hasOrderButton: true };
+      addToCart(cleanItem);
+      toast.success(`${item.title} added to cart!`, {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
+
+  return (
+    <Motion.div
+      className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6"
+      variants={fadeUp}
+      custom={index}
+      initial="hidden"
+      animate="visible"
+      whileHover={{ scale: 1.02 }}
+    >
+      <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden">
+        <img
+          src={item.image}
+          alt={item.title}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://placehold.co/400x240/CCCCCC/FFFFFF?text=Image+Not+Found";
+          }}
+        />
+      </div>
+      <div className="flex flex-col flex-grow mt-6">
+        <h3 className="text-xl font-semibold text-[#2C6252] leading-tight mb-1">
+          {item.title}
+        </h3>
+        <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">
+          {item.description}
+        </p>
+        <div className="flex justify-between items-center mt-auto">
+          <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
+            ${item.price}
+            <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
+          </span>
+          <button
+            className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+            onClick={handleClick}
+          >
+            <img src="/Path 2764.svg" alt="Add" />
+          </button>
+        </div>
+      </div>
+    </Motion.div>
+  );
 };
 
 export default Category;
