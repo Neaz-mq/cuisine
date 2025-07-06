@@ -1,7 +1,22 @@
 import { useState, useEffect, useContext } from "react";
+import { motion as Motion } from "framer-motion";
 import Container from "../../../components/Container";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: [0.42, 0, 0.58, 1],
+    },
+  }),
+};
 
 const Popular = () => {
   const { addToCart } = useContext(CartContext);
@@ -10,10 +25,10 @@ const Popular = () => {
     const now = new Date();
     const targetDate = new Date(
       now.getTime() +
-        7 * 24 * 60 * 60 * 1000 +
-        9 * 60 * 60 * 1000 +
-        5 * 60 * 1000 +
-        39 * 1000
+      7 * 24 * 60 * 60 * 1000 +
+      9 * 60 * 60 * 1000 +
+      5 * 60 * 1000 +
+      39 * 1000
     );
     return targetDate.getTime();
   };
@@ -103,8 +118,12 @@ const Popular = () => {
   return (
     <Container>
       <div className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
+        <Motion.div
+          className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+        >
           <h1 className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl font-bold text-[#2C6252] mb-4 md:mb-0">
             Our Most Popular Item
           </h1>
@@ -116,14 +135,18 @@ const Popular = () => {
                 clipRule="evenodd"
               />
             </svg>
-            **Authority suggested food list
+            Authority suggested food list
           </div>
-        </div>
+        </Motion.div>
 
-        {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-14">
-          {/* Left Countdown Section */}
-          <div className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] min-h-[48rem] w-full">
+          <Motion.div
+            className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] min-h-[48rem] w-full"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1750236294/Mask_Group_33_oso3cc.png"
               alt="Weekly best sales products"
@@ -138,32 +161,40 @@ const Popular = () => {
                 Weekly best sales products
               </h2>
               <div className="flex 3xl:space-x-3 2xl:space-x-3 xl:space-x-3 lg:space-x-1 mb-6">
-                {[["DAY", timeLeft.days], ["HRS", timeLeft.hours], ["MIN", timeLeft.minutes], ["SEC", timeLeft.seconds]].map(
-                  ([label, val]) => (
-                    <div
-                      key={label}
-                      className="flex flex-col items-center justify-center bg-yellow-500 3xl:p-2 2xl:p-4 xl:p-6 lg:p-4 3xl:w-16 3xl:h-16 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-10 lg:h-10 sm:w-20 sm:h-20 flex-shrink-0"
-                    >
-                      <span className="3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-lg sm:text-lg font-bold">
-                        {formatTime(val)}
-                      </span>
-                      <span className="3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[8px] sm:text-sm">
-                        {label}
-                      </span>
-                    </div>
-                  )
-                )}
+                {["DAY", "HRS", "MIN", "SEC"].map((label, idx) => (
+                  <Motion.div
+                    key={label}
+                    className="flex flex-col items-center justify-center bg-yellow-500 3xl:p-2 2xl:p-4 xl:p-6 lg:p-4 3xl:w-16 3xl:h-16 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-10 lg:h-10 sm:w-20 sm:h-20 flex-shrink-0"
+                    initial={{ opacity: 0, x: -30, y: 30 }}
+                    animate={{ opacity: 1, x: 0, y: 0 }}
+                    transition={{ duration: 0.6, delay: idx * 0.2, ease: "easeOut" }}
+                  >
+                    <span className="3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-lg sm:text-lg font-bold">
+                      {formatTime([timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds][idx])}
+                    </span>
+                    <span className="3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[8px] sm:text-sm">
+                      {label}
+                    </span>
+                  </Motion.div>
+                ))}
               </div>
-              <button className="bg-[#2C6252] text-white px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm whitespace-nowrap">
-                Order Now
-              </button>
+              <Link to="/menu">
+                <button className="bg-[#2C6252] text-white px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm whitespace-nowrap">
+                  Order Now
+                </button></Link>
             </div>
-          </div>
+          </Motion.div>
 
-          {/* Right Food Cards */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 3xl:gap-6 2xl:gap-6 xl:gap-4">
-            {foodItems.map((item) => (
-              <div key={item.id} className="bg-[#F8F8F8] p-4 flex flex-col">
+            {foodItems.map((item, index) => (
+              <Motion.div
+                key={item.id}
+                className="bg-[#F8F8F8] p-4 flex flex-col"
+                initial="hidden"
+                animate="visible"
+                custom={index}
+                variants={fadeInUp}
+              >
                 <div className="w-full h-52 overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                 </div>
@@ -183,7 +214,7 @@ const Popular = () => {
                     </button>
                   </div>
                 </div>
-              </div>
+              </Motion.div>
             ))}
           </div>
         </div>

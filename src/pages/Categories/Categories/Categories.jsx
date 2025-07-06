@@ -10,7 +10,7 @@ const Categories = () => {
     }, []); // The empty dependency array makes this run once on mount
 
     return (
-        <div>
+        <div> 
             <Category></Category>
             <Popular></Popular>
             <Brew></Brew>
