@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { motion as Motion } from "framer-motion";
 import Container from "../../../components/Container";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
@@ -38,7 +39,7 @@ const weeklyFoodData = [
 const Weekly = () => {
   const { addToCart, cartItems } = useContext(CartContext);
 
-  const FoodCard = ({ item }) => {
+  const FoodCard = ({ item, index }) => {
     const handleAddToCart = () => {
       const isAlreadyInCart = cartItems.some(cartItem => cartItem.id === item.id);
 
@@ -65,8 +66,21 @@ const Weekly = () => {
     };
 
     return (
-      <div className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6">
-        <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden">
+      <Motion.div
+        className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6"
+        initial={{ opacity: 0, y: 30, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.02 }}
+      >
+        <Motion.div
+          className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
           <img
             src={item.image}
             alt={item.title}
@@ -76,7 +90,8 @@ const Weekly = () => {
               e.target.src = "https://placehold.co/400x240/CCCCCC/FFFFFF?text=Image+Not+Found";
             }}
           />
-        </div>
+        </Motion.div>
+
         <div className="flex flex-col flex-grow mt-6">
           <h3 className="text-xl font-semibold text-[#2C6252] leading-tight mb-1">{item.title}</h3>
           <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">{item.description}</p>
@@ -93,7 +108,7 @@ const Weekly = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Motion.div>
     );
   };
 
@@ -111,25 +126,32 @@ const Weekly = () => {
             </p>
           </div>
 
-          {/* Main Offer Image and Text */}
+          {/* Main Offer Image and Animated Text Block */}
           <div
             className="relative w-full h-[400px] bg-cover bg-center overflow-hidden mb-16"
             style={{
-              backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1750229832/Mask_Group_30_g2huve.png')",
+              backgroundImage:
+                "url('https://res.cloudinary.com/dxohwanal/image/upload/v1750229832/Mask_Group_30_g2huve.png')",
             }}
           >
-            <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-[#2C6252] bg-opacity-90 flex items-center justify-center p-8 md:rounded-bl-none text-white text-lg font-medium text-center md:text-left shadow-lg">
+            <Motion.div
+              className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-[#2C6252] bg-opacity-90 flex items-center justify-center p-8 md:rounded-bl-none text-white text-lg font-medium text-center md:text-left shadow-lg"
+              initial={{ x: "100%" }}
+              whileInView={{ x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
               <p className="max-w-md">
-                Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—
+                Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—{" "}
                 <span className="text-[#FF4D00]">our signature foods</span> have something for everyone.
               </p>
-            </div>
+            </Motion.div>
           </div>
 
           {/* Food Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-10 xl:gap-10 lg:gap-4">
-            {weeklyFoodData.map((item) => (
-              <FoodCard key={item.id} item={item} />
+            {weeklyFoodData.map((item, index) => (
+              <FoodCard key={item.id} item={item} index={index} />
             ))}
           </div>
         </div>

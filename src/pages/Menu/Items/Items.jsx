@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion as Motion } from 'framer-motion';
 import Container from '../../../components/Container';
 import useCart from '../../../hooks/useCart';
 import { toast } from 'react-toastify';
@@ -276,14 +277,8 @@ const Items = () => {
   const [selected, setSelected] = useState('BURGERS');
   const { addToCart } = useCart();
 
-
-  // Find the currently selected category's data
   const selectedCategoryData = categoryItems.find(item => item.label === selected);
-
-  if (!selectedCategoryData) {
-    // Handle case where no data is found for the selected category
-    return <div className="text-center mt-64 text-red-500">Category not found.</div>;
-  }
+  if (!selectedCategoryData) return <div className="text-center mt-64 text-red-500">Category not found.</div>;
 
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
@@ -291,45 +286,62 @@ const Items = () => {
     <Container>
       <div className='3xl:mt-24 2xl:mt-24 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 overflow-hidden'>
         {/* Category Navigation */}
-        <div className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 px-8">
+        <Motion.div 
+          className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 px-8"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeInOut" }}
+          viewport={{ once: true }}
+        >
           {categoryItems.map((item) => (
-            <div
+            <Motion.div
               key={item.label}
               onClick={() => setSelected(item.label)}
               className="flex flex-col items-center cursor-pointer relative"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
-              <img src={item.itemImage} alt={item.label} className="w-14 h-14" />
-              <span
-                className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'
-                  }`}
-              >
+              <Motion.img 
+                src={item.itemImage} 
+                alt={item.label} 
+                className="w-14 h-14" 
+                initial={{ rotate: 0 }}
+                whileHover={{ rotate: 10 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+              />
+              <span className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'}`}>
                 {item.label}
               </span>
-              {
-                selected === item.label && (
-                  <div className="absolute bottom-0 w-full h-1 -mb-4"></div>
-                )
-              }
-            </div>
+              {selected === item.label && (
+                <div className="absolute bottom-0 w-full h-1 -mb-4"></div>
+              )}
+            </Motion.div>
           ))}
-        </div>
+        </Motion.div>
 
-        {/* Main Section - Dynamically rendered based on selected category */}
+        {/* Main Section */}
         <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 gap-10 mt-10">
-
-          {/* Left Section - Menu Items */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 2xl::-ml-0 xl::-ml-0">
+          {/* Left Section */}
+          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0">
             {items.map((item, index) => (
-              <div key={index} className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 flex flex-col items-start h-96">
+              <Motion.div
+                key={index}
+                className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 flex flex-col items-start h-96"
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeInOut" }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.03 }}
+              >
                 <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-                <p className="text-gray-500 text-sm mt-4 mb-4">
-                  {item.description}
-                </p>
+                <p className="text-gray-500 text-sm mt-4 mb-4">{item.description}</p>
                 <div className="flex items-center justify-between w-full mt-auto">
-                  <img
-                    src={item.image}
-                    alt="Food"
+                  <Motion.img 
+                    src={item.image} 
+                    alt="Food" 
                     className="w-40 h-auto object-contain -ml-4"
+                    whileHover={{ rotate: 5 }}
+                    transition={{ type: 'spring', stiffness: 100 }}
                   />
                   <div className="flex flex-col items-end">
                     <div className="flex items-end gap-x-1">
@@ -340,10 +352,10 @@ const Items = () => {
                         {item.originalPrice}
                       </span>
                     </div>
-
                     {item.hasOrderButton && (
-                      <button
+                      <Motion.button
                         className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap"
+                        whileTap={{ scale: 0.95 }}
                         onClick={() => {
                           const result = addToCart({
                             title: item.title,
@@ -351,7 +363,6 @@ const Items = () => {
                             image: item.image,
                             price: parseFloat(item.price.replace('$', '')),
                           });
-
                           if (result.success) {
                             toast.success(`${item.title.replace(/<[^>]+>/g, '')} added to cart!`);
                           } else {
@@ -360,21 +371,42 @@ const Items = () => {
                         }}
                       >
                         Order Now
-                      </button>
+                      </Motion.button>
                     )}
-
-
                   </div>
                 </div>
-              </div>
+              </Motion.div>
             ))}
           </div>
+
           {/* Right Section - Today Special */}
-          <div className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0 2xl:left-0 xl:left-0 lg:left-10">
-            {/* Using dangerouslySetInnerHTML for todaySpecial text */}
-            <div className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10" dangerouslySetInnerHTML={{ __html: todaySpecial.text }}></div>
-            <img src={todaySpecial.mainImage} alt="Main Special" className="mt-8 w-full h-auto object-contain" />
-          </div>
+          <Motion.div
+            className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <Motion.div
+              className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10"
+              dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: 'easeInOut' }}
+              viewport={{ once: true }}
+            />
+            <Motion.div
+              className="relative w-full"
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <img 
+                src={todaySpecial.mainImage} 
+                alt="Main Special" 
+                className="mt-8 w-full h-auto object-contain"
+              />
+            </Motion.div>
+          </Motion.div>
         </div>
       </div>
     </Container>
@@ -382,3 +414,4 @@ const Items = () => {
 };
 
 export default Items;
+
