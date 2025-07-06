@@ -4,7 +4,8 @@ import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 
 const Popular = () => {
-  const { addToCart } = useContext(CartContext); // ✅ Get addToCart
+  const { addToCart } = useContext(CartContext);
+
   const calculateTimeLeft = () => {
     const now = new Date();
     const targetDate = new Date(
@@ -38,12 +39,8 @@ const Popular = () => {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) / (1000 * 60)
-      );
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       setTimeLeft({ days, hours, minutes, seconds });
@@ -58,44 +55,49 @@ const Popular = () => {
     {
       id: 1,
       title: "Classic Roast Brew",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 12,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
     },
     {
       id: 2,
       title: "Cheesy Crust Deluxe",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
-      price: 12,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      price: 14,
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
     },
     {
       id: 3,
-      title: "Classic Roast Brew",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
-      price: 12,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+      title: "Classic Roast Special",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      price: 16,
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
     },
     {
       id: 4,
-      title: "Cheesy Crust Deluxe",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
-      price: 12,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+      title: "Cheesy Crust Superior",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      price: 18,
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
     },
   ];
 
   const handleAddToCart = (item) => {
-    addToCart(item);
-    toast.success(`${item.title} added to cart!`);
+    const result = addToCart(item);
+    const toastOptions = {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    };
+
+    if (result.success) {
+      toast.success(`${item.title} added to cart!`, toastOptions);
+    } else {
+      toast.warning(`${item.title} is already in the cart!`, toastOptions);
+    }
   };
 
   return (
@@ -107,11 +109,7 @@ const Popular = () => {
             Our Most Popular Item
           </h1>
           <div className="flex items-center text-[#FF4C15] text-sm font-medium">
-            <svg
-              className="w-4 h-4 mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
+            <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
                 d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
@@ -165,30 +163,17 @@ const Popular = () => {
           {/* Right Food Cards */}
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 3xl:gap-6 2xl:gap-6 xl:gap-4">
             {foodItems.map((item) => (
-              <div
-                key={item.id}
-                className="bg-[#F8F8F8] p-4 flex flex-col"
-              >
+              <div key={item.id} className="bg-[#F8F8F8] p-4 flex flex-col">
                 <div className="w-full h-52 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex flex-col flex-grow mt-6">
-                  <h3 className="text-xl font-semibold text-[#2C6252] mb-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-[#CCCCCC] mb-4">
-                    {item.description}
-                  </p>
+                  <h3 className="text-xl font-semibold text-[#2C6252] mb-1">{item.title}</h3>
+                  <p className="text-xs text-[#CCCCCC] mb-4">{item.description}</p>
                   <div className="flex justify-between items-center mt-auto">
                     <span className="text-2xl font-bold text-[#2C6252]">
                       ${item.price}
-                      <span className="text-lg text-[#B9B9B9] ml-1 font-semibold">
-                        / pcs
-                      </span>
+                      <span className="text-lg text-[#B9B9B9] ml-1 font-semibold">/ pcs</span>
                     </span>
                     <button
                       onClick={() => handleAddToCart(item)}
