@@ -2,6 +2,7 @@ import Container from "../../../components/Container";
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
+import { motion as Motion } from "framer-motion";
 
 const Feast = () => {
   const { addToCart, cartItems } = useContext(CartContext);
@@ -11,29 +12,37 @@ const Feast = () => {
       id: 1,
       title: "Crispy Chicken Wings",
       price: 12,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1748323910/Mask_Group_28_hem67i.png",
-      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      image:
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323910/Mask_Group_28_hem67i.png",
+      description:
+        "Our menu is carefully crafted by expert chefs who bring creativity",
     },
     {
       id: 2,
       title: "Santa's Stuff Mushrooms",
-      price: 12,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1748323817/Mask_Group_28_ovt62q.png",
-      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      price: 14,
+      image:
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323817/Mask_Group_28_ovt62q.png",
+      description:
+        "Our menu is carefully crafted by expert chefs who bring creativity",
     },
     {
       id: 3,
       title: "Classic Roast Brew",
-      price: 12,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1748323853/Mask_Group_28_vyk1th.png",
-      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      price: 16,
+      image:
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323853/Mask_Group_28_vyk1th.png",
+      description:
+        "Our menu is carefully crafted by expert chefs who bring creativity",
     },
     {
       id: 4,
       title: "Cheesy Crust Deluxe",
-      price: 12,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1748323949/Mask_Group_28_re0mpe.png",
-      description: "Our menu is carefully crafted by expert chefs who bring creativity",
+      price: 18,
+      image:
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323949/Mask_Group_28_re0mpe.png",
+      description:
+        "Our menu is carefully crafted by expert chefs who bring creativity",
     },
   ];
 
@@ -68,9 +77,34 @@ const Feast = () => {
     }
   };
 
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.15,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    hover: { scale: 1.05 },
+  };
+
+  const buttonVariants = {
+    hover: { scale: 1.1, backgroundColor: "#FF4C15", transition: { duration: 0.3 } },
+    tap: { scale: 0.95 },
+  };
+
   return (
     <Container>
-      <div className="3xl:px-12 3xl:ml-7 3xl:-mt-24 3xl:mb-44 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-44 xl:px-8 xl:ml-5 xl:-mt-32 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-52 lg:mb-44">
+      <div className="3xl:px-12 3xl:ml-7 3xl:-mt-16 3xl:mb-44 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-44 xl:px-8 xl:ml-5 xl:-mt-32 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-52 lg:mb-44">
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center justify-between bg-[#F8F8F8] p-8 mb-10 md:mb-12">
           <div className="flex-1 min-w-[300px] md:mr-5 text-center md:text-left mb-8 md:mb-0">
@@ -83,28 +117,49 @@ const Feast = () => {
             </p>
           </div>
           <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem]">
-            <img
+            <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1748323779/pngegg_63_yi9xit.png"
               alt="Fried Chicken"
               className="w-full h-auto"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
             />
           </div>
         </div>
 
         {/* Menu Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <Motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {feastItems.map((item) => (
-            <div key={item.id} className="bg-[#F8F8F8] overflow-hidden flex flex-col p-4">
-              <div className="w-full h-48 overflow-hidden">
-                <img
+            <Motion.div
+              key={item.id}
+              className="bg-[#F8F8F8] overflow-hidden flex flex-col p-4 "
+              variants={itemVariants}
+              whileHover="hover"
+              tabIndex={0}
+              role="button"
+              aria-pressed="false"
+            >
+              <div className="w-full h-48 overflow-hidden ">
+                <Motion.img
                   src={item.image}
                   alt={item.title}
                   className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  draggable={false}
                 />
               </div>
               <div className="flex flex-col flex-grow mt-6">
                 <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base font-semibold text-[#2C6252] leading-tight mb-1">
-                  {item.title.split(" ")[0]} <br /> {item.title.split(" ").slice(1).join(" ")}
+                  {item.title.split(" ")[0]} <br />{" "}
+                  {item.title.split(" ").slice(1).join(" ")}
                   <p className="text-xs mt-1 text-[#15AB7F]"></p>
                 </h3>
                 <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] text-[#CCCCCC] mb-4 flex-grow mt-2">
@@ -117,17 +172,21 @@ const Feast = () => {
                       / pcs
                     </span>
                   </span>
-                  <button
+                  <Motion.button
                     onClick={() => handleAddToCart(item)}
-                    className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+                    className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50 "
+                    variants={buttonVariants}
+                    whileHover="hover"
+                    whileTap="tap"
+                    aria-label={`Add ${item.title} to cart`}
                   >
                     <img src="/Path 2764.svg" alt="Add to cart" />
-                  </button>
+                  </Motion.button>
                 </div>
               </div>
-            </div>
+            </Motion.div>
           ))}
-        </div>
+        </Motion.div>
       </div>
     </Container>
   );

@@ -2,6 +2,7 @@ import Container from "../../../components/Container";
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
+import { motion as Motion } from "framer-motion";
 
 const Limited = () => {
   const { addToCart, cartItems } = useContext(CartContext);
@@ -42,40 +43,35 @@ const Limited = () => {
   ];
 
   const handleAddToCart = (item) => {
-    const isAlreadyInCart = cartItems.some(cartItem => cartItem.id === item.id);
+    const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
+
+    const toastOptions = {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    };
 
     if (isAlreadyInCart) {
-      toast.warning(`${item.title} is already in cart!`, {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
+      toast.warning(`${item.title} is already in cart!`, toastOptions);
     } else {
-      addToCart({
-        id: item.id,
-        title: item.title,
-        price: item.price,
-        image: item.image,
-        description: item.description,
-      });
-      toast.success(`${item.title} added to cart!`, {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
+      addToCart(item);
+      toast.success(`${item.title} added to cart!`, toastOptions);
     }
   };
 
   return (
     <Container>
-      <div className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6 ">
-        <div className="text-base text-[#AAAAAA] mb-2 mt-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-4">
+      <div className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6">
+        {/* Promo Text */}
+        <Motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-base text-[#AAAAAA] mb-2 mt-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-4"
+        >
           we dish out <br />
           global favorites <br />
           and local <br />
@@ -83,21 +79,42 @@ const Limited = () => {
           <span className="text-[#FF4C15] font-semibold">
             now <br /> with up to 50% <br /> OFF!
           </span>
-        </div>
+        </Motion.div>
 
+        {/* Headings */}
         <div className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]">
           <div className="mb-36 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2">
-            <h2 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-green-800">Limited Time Offer–</h2>
-            <h3 className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-[#FF4C15] mt-4">Up To 50% Off!</h3>
+            <Motion.h2
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-green-800"
+            >
+              Limited Time Offer–
+            </Motion.h2>
+            <Motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-[#FF4C15] mt-4"
+            >
+              Up To 50% Off!
+            </Motion.h3>
           </div>
         </div>
 
+        {/* Card Grid */}
         <div className="flex justify-center 3xl:ml-64 2xl:ml-48 xl:ml-44 lg:ml-36 3xl:-mt-8 2xl:-mt-8 xl:-mt-12 lg:-mt-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-4 2xl:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-4 lg:gap-6 w-fit">
-            {limitedItems.map((item) => (
-              <div
+            {limitedItems.map((item, index) => (
+              <Motion.div
                 key={item.id}
-                className={`bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[220px] xl:w-[190px] lg:w-[190px] ${item.id === 4 ? "3xl:block 2xl:block xl:block lg:hidden hidden" : ""}`}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                className={`bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[220px] xl:w-[190px] lg:w-[190px] ${
+                  item.id === 4 ? "3xl:block 2xl:block xl:block lg:hidden hidden" : ""
+                }`}
               >
                 <img
                   src={item.image}
@@ -116,7 +133,9 @@ const Limited = () => {
                 </div>
                 <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
                   <div>
-                    <span className="line-through text-[#CCCCCC] mr-2 text-sm">${item.originalPrice}</span>
+                    <span className="line-through text-[#CCCCCC] mr-2 text-sm">
+                      ${item.originalPrice}
+                    </span>
                     <span className="text-lg relative top-1">${item.price}</span>
                   </div>
                   <button
@@ -126,7 +145,7 @@ const Limited = () => {
                     <img src="/Path 2764.svg" alt="Add" />
                   </button>
                 </div>
-              </div>
+              </Motion.div>
             ))}
           </div>
         </div>
