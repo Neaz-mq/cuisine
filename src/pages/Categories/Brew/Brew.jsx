@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 
 const Brew = () => {
@@ -22,9 +23,12 @@ const Brew = () => {
                 you're craving a hearty meal, a sweet treat, or a refreshing coffee — our weekly offers have something for everyone.
               </p>
 
+             <Link to="/carts">
               <button className="3xl:mt-40 2xl:mt-40 xl:mt-40 lg:mt-52 px-6 py-2 bg-[#FF4C15] text-white font-semibold absolute left-72">
                 Claim Offer
               </button>
+             
+             </Link>
             </div>
           </div>
 

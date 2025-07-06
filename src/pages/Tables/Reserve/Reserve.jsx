@@ -212,7 +212,7 @@ const Reserve = () => {
                 key={placeholder}
                 type={type}
                 placeholder={placeholder}
-                className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252]"
+                className="w-full border p-3 focus:outline-none focus:ring-1 focus:ring-[#2C6252]"
                 value={value}
                 onChange={(e) => setter(e.target.value)}
                 min={min}
@@ -238,7 +238,7 @@ const Reserve = () => {
                 timeIntervals={30}
                 dateFormat="MMMM do, yyyy ' & ' h:mm aa"
                 placeholderText="Select Date & Time"
-                className="w-full border p-3 focus:outline-none focus:ring-2 focus:ring-[#2C6252] cursor-pointer text-sm "
+                className="w-full border p-3 focus:outline-none focus:ring-1 focus:ring-[#2C6252] cursor-pointer text-sm "
                 wrapperClassName="w-full"
                 minDate={new Date()}
               />

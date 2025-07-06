@@ -5,6 +5,10 @@ import Select from "react-select";
 import { toast } from "react-toastify";
 
 const Carts = () => {
+  useEffect(() => {
+        // Scroll to the top of the page when the component mounts
+        window.scrollTo(0, 0);
+    }, []);
   const { cartItems, increaseQty, decreaseQty, removeItem, clearCart } = useCart();
   const [selectedShipping, setSelectedShipping] = useState("uber-eats");
   const [paymentMethod, setPaymentMethod] = useState("cod"); // 'cod' = Cash on Delivery
