@@ -93,10 +93,10 @@ const Weekly = () => {
         </Motion.div>
 
         <div className="flex flex-col flex-grow mt-6">
-          <h3 className="text-xl font-semibold text-[#2C6252] leading-tight mb-1">{item.title}</h3>
+          <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-[14px] font-semibold text-[#2C6252] leading-tight mb-1">{item.title}</h3>
           <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">{item.description}</p>
           <div className="flex justify-between items-center mt-auto">
-            <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
+            <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-xl font-bold text-[#2C6252]">
               ${item.price}
               <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
             </span>
@@ -114,8 +114,8 @@ const Weekly = () => {
 
   return (
     <Container>
-      <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 3xl:mt-24 2xl:mt-20 xl:mt-16">
-        <div className="py-16 3xl:mb-32 2xl:mb-24 xl:mb-16 lg:mb-24">
+      <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-12 ">
+        <div className="py-16 3xl:mb-32 2xl:mb-24 xl:mb-16 lg:mb-12">
           {/* Section Header */}
           <div className="mb-10 text-center md:text-left">
             <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] mb-2">
