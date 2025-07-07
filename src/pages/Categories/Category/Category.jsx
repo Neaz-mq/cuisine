@@ -262,7 +262,7 @@ const Category = () => {
 
   return (
     <Container>
-      <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-32 xl:mb-36 lg:mb-28 mt-6">
+      <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-28 mt-6">
         <Motion.h2
           className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-[#1D4B3F] mb-10"
           initial="hidden"

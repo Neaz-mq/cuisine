@@ -21,6 +21,14 @@ const staggerContainer = {
 };
 
 const Picks = () => {
+  const discounts = ["30%", "10%", "36%", "45%"];
+  const images = [
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1750068539/pngegg_51_uh0wtk.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1750069731/pngegg_57_pp0xjv.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1750070674/pngegg_53_o3eh9m.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1750070975/pngegg_61_kdlgnr.png",
+  ];
+
   return (
     <Container>
       {/* Top Section */}
@@ -37,7 +45,7 @@ const Picks = () => {
             variants={fadeUp}
             custom={1}
           >
-            <h2 className="text-3xl 3xl:text-4xl font-semibold text-[#2C6252] 3xl:mb-4">
+            <h2 className="text-3xl 3xl:text-5xl font-semibold text-[#2C6252] 3xl:mb-4">
               Chef's Weekly Picks <br />
               <span className="text-[#FF4C15] font-normal">- Just for You!</span>
             </h2>
@@ -117,14 +125,12 @@ const Picks = () => {
         </div>
 
         {/* Text Section */}
-        <Motion.div
-          className="py-8 md:py-12"
-          variants={fadeUp}
-          custom={4}
-        >
+        <Motion.div className="py-8 md:py-12" variants={fadeUp} custom={4}>
           <div className="flex flex-col md:flex-row md:items-start md:space-x-8 mb-6">
             <div className="flex items-center flex-shrink-0 mb-4 md:mb-0 md:w-1/3">
-              <h2 className="3xl:text-3xl font-semibold text-[#2C6252] whitespace-nowrap">Chef's Weekly Picks </h2>
+              <h2 className="3xl:text-3xl font-semibold text-[#2C6252] whitespace-nowrap">
+                Chef's Weekly Picks{" "}
+              </h2>
               <div className="flex-grow border-b border-[#D4D4D4] ml-10 hidden md:block"></div>
             </div>
             <div className="md:w-2/3 -mt-3">
@@ -132,48 +138,52 @@ const Picks = () => {
                 Cheesy Bites Pizza Return: Pizza Hut has reintroduced its popular Cheesy Bites Pizza for a limited time. This large, one-topping pizza features a crust made of 28 pull-apart, cheese-filled bites, perfect for dipping 50% Off Online Orders.
               </p>
               <p className="3xl:text-sm text-[#FF4C15] leading-relaxed 3xl:ml-[13.5rem]">
-                Domino's is offering 50% off all menu-priced pizzas ordered online from March 17 to 23, 2025. Customers can choose from any size pizza with any type. <a href="#" className="text-[#FF4C15] underline hover:no-underline">Learn more.</a>
+                Domino's is offering 50% off all menu-priced pizzas ordered online from March 17 to 23, 2025. Customers can choose from any size pizza with any type.{" "}
+                <a href="#" className="text-[#FF4C15] underline hover:no-underline">
+                  Learn more.
+                </a>
               </p>
             </div>
           </div>
 
           {/* Product Grid */}
-          <Motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-24"
-            variants={staggerContainer}
-          >
-            {[...Array(4)].map((_, i) => (
-              <Motion.div
-                key={i}
-                className="relative bg-[#E9EFED] overflow-hidden p-4"
-                variants={fadeUp}
-                custom={i + 5}
-              >
-                <div className="p-4">
-                  <p className="font-semibold text-[#FF4C15]">Cheesy</p>
-                  <p className="font-semibold text-[#FF4C15]">Crust Deluxe</p>
-                  <p className="mt-6 3xl:text-xs text-[#2D6252]">Our menu is carefully crafted by expert chefs only</p>
-                </div>
-                <div className="p-4">
-                  <p className="3xl:text-2xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
-                  <p className="3xl:text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
-                </div>
-                <img
-                  src={[
-                    "https://res.cloudinary.com/dxohwanal/image/upload/v1750068539/pngegg_51_uh0wtk.png",
-                    "https://res.cloudinary.com/dxohwanal/image/upload/v1750069731/pngegg_57_pp0xjv.png",
-                    "https://res.cloudinary.com/dxohwanal/image/upload/v1750070674/pngegg_53_o3eh9m.png",
-                    "https://res.cloudinary.com/dxohwanal/image/upload/v1750070975/pngegg_61_kdlgnr.png"
-                  ][i]}
-                  alt="Food"
-                  className={`w-full object-cover ${i === 2 ? "3xl:mt-20" : "mt-6"}`}
-                />
-                <div className={`absolute right-6 3xl:top-72 bg-[${i % 2 === 0 ? "#2B6050" : "#FF4C15"}] text-white rounded-full 3xl:w-20 3xl:h-20 flex flex-col items-center justify-center`}>
-                  <span className="3xl:text-lg font-bold leading-tight">{["30%", "10%", "36%", "45%"][i]}</span>
-                  <span className="3xl:text-lg font-medium">off</span>
-                </div>
-              </Motion.div>
-            ))}
+          <Motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-24" variants={staggerContainer}>
+            {[...Array(4)].map((_, i) => {
+              const discount = discounts[i];
+              const isGreen = discount === "30%" || discount === "36%";
+              const badgeColor = isGreen ? "#2B6050" : "#FF4C15";
+
+              return (
+                <Motion.div
+                  key={i}
+                  className="relative bg-[#E9EFED] overflow-hidden p-4"
+                  variants={fadeUp}
+                  custom={i + 5}
+                >
+                  <div className="p-4">
+                    <p className="font-semibold text-[#FF4C15] 3xl:text-lg">Cheesy</p>
+                    <p className="font-semibold text-[#FF4C15] 3xl:text-lg">Crust Deluxe</p>
+                    <p className="mt-6 3xl:text-xs 2xl:text-xs text-[#2D6252]">Our menu is carefully crafted by expert chefs only</p>
+                  </div>
+                  <div className="p-4">
+                    <p className="3xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
+                    <p className="3xl:text-2xl font-bold text-gray-900 mt-3">- $10.99</p>
+                  </div>
+                  <img
+                    src={images[i]}
+                    alt="Food"
+                    className={`w-full object-cover mt-6 ${i === 2 ? " 3xl:mt-20 2xl:mt-20 xl:mt-6" : ""}`}
+                  />
+                  <div
+                    className="absolute right-6 3xl:top-72 2xl:top-72 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center"
+                    style={{ backgroundColor: badgeColor }}
+                  >
+                    <span className="3xl:text-lg font-bold leading-tight">{discount}</span>
+                    <span className="3xl:text-lg font-medium">off</span>
+                  </div>
+                </Motion.div>
+              );
+            })}
           </Motion.div>
         </Motion.div>
       </Motion.div>
