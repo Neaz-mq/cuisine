@@ -30,7 +30,7 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-60 2xl:-top-56 xl:-top-36 lg:-top-40">
+      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-56 xl:-top-36 lg:-top-40">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left content */}
@@ -99,7 +99,7 @@ const Testimonials = () => {
         </div>
 
         {/* Bottom Cards */}
-        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-12 2xl:gap-8 xl:gap-6 lg:gap-3 3xl:-mt-20 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-2 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4">
+        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-8 2xl:gap-8 xl:gap-6 lg:gap-3 3xl:-mt-14 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-3 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4">
           {[
             {
               name: "— Emily R.",
