@@ -29,10 +29,10 @@ const Spend = () => {
 
   return (
     <Container>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 py-16 mb-28">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 mb-28">
         {/* Left: Image Section */}
         <Motion.div
-          className="w-full flex justify-center 3xl:-ml-14 2xl:-ml-20 xl:-ml-10 lg:-ml-20 2xl:mt-8 3xl:mt-0"
+          className="w-full flex justify-center 3xl:-ml-14 2xl:-ml-20 xl:-ml-10 lg:-ml-20 2xl:mt-8 3xl:mt-0 xl:mt-4 lg:mt-8"
           initial={{ opacity: 0, rotateY: 45, scale: 0.85 }}
           whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
           transition={{ duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }}
