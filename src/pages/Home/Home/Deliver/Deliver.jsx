@@ -34,7 +34,7 @@ const Deliver = () => {
             </Motion.h2>
 
             <Motion.p
-              className="text-[#CCCCCC] max-w-md 3xl:text-[14px] 2xl:text-[13px] xl:text-[13px] lg:text-[9px] mt-2 2xl:pt-3 3xl:pt-0 pb-5"
+              className="text-[#CCCCCC] max-w-md 3xl:text-[14px] 2xl:text-[13px] xl:text-[13px] lg:text-[9px] mt-2 2xl:pt-3 3xl:pt-0 3xl:pb-5 2xl:pb-5 xl:pb-5 lg:pb-0"
               custom={1}
               variants={textVariants}
             >

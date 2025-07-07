@@ -172,16 +172,16 @@ const Buffet = () => {
                                                 />
                                             </svg>
                                         )}
-                                        <span className="text-[#777777] font-semibold text-sm ml-2 select-none">
+                                        <span className="text-[#777777] font-semibold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[10px] ml-2 select-none whitespace-nowrap">
                                             ({ratingValue})
                                         </span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-[#2C6252] mb-4">{title}</h3>
-                                    <p className="text-[#666666] text-sm mb-5 leading-relaxed">{description}</p>
+                                    <h3 className="3xl:text-xl 2xl:text-xl xl:text-lg lg:text-[14px] font-bold text-[#2C6252] mb-4">{title}</h3>
+                                    <p className="text-[#666666] 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[12px] mb-5 leading-relaxed">{description}</p>
                                   <Link to="/chefs">
                                     <Motion.button
                                         whileHover={buttonHover}
-                                        className="bg-gradient-to-r from-[#FF4C15] to-[#FF6A00] text-white py-3 px-6 text-sm font-semibold   transition-all duration-300 flex items-center justify-center w-full"
+                                        className="bg-gradient-to-r from-[#FF4C15] to-[#FF6A00] text-white py-3 px-6 text-sm font-semibold   transition-all duration-300 flex items-center justify-center w-full whitespace-nowrap"
                                     >
                                         Learn More
                                         <svg
