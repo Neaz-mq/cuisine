@@ -359,7 +359,7 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
       animate="visible"
       whileHover={{ scale: 1.02 }}
     >
-      <div className="w-full 3xl:h-60 2xl:h-60 xl:h-60 lg:h-36 overflow-hidden">
+      <div className="w-full 3xl:h-60 2xl:h-60 xl:h-44 lg:h-36 overflow-hidden">
         <img
           src={item.image}
           alt={item.title}
