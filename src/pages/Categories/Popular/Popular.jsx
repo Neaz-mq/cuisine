@@ -164,7 +164,7 @@ const Popular = () => {
                 {["DAY", "HRS", "MIN", "SEC"].map((label, idx) => (
                   <Motion.div
                     key={label}
-                    className="flex flex-col items-center justify-center bg-yellow-500 3xl:p-2 2xl:p-4 xl:p-6 lg:p-4 3xl:w-16 3xl:h-16 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-10 lg:h-10 sm:w-20 sm:h-20 flex-shrink-0"
+                    className="flex flex-col items-center justify-center bg-yellow-500 3xl:p-2 2xl:p-4 xl:p-6 lg:p-5 3xl:w-16 3xl:h-16 2xl:w-14 2xl:h-14 xl:w-12 xl:h-12 lg:w-12 lg:h-12 sm:w-20 sm:h-20 flex-shrink-0"
                     initial={{ opacity: 0, x: -30, y: 30 }}
                     animate={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ duration: 0.6, delay: idx * 0.2, ease: "easeOut" }}
@@ -199,12 +199,12 @@ const Popular = () => {
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex flex-col flex-grow mt-6">
-                  <h3 className="text-xl font-semibold text-[#2C6252] mb-1">{item.title}</h3>
+                  <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-lg font-semibold text-[#2C6252] mb-1">{item.title}</h3>
                   <p className="text-xs text-[#CCCCCC] mb-4">{item.description}</p>
                   <div className="flex justify-between items-center mt-auto">
-                    <span className="text-2xl font-bold text-[#2C6252]">
+                    <span className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-xl font-bold text-[#2C6252]">
                       ${item.price}
-                      <span className="text-lg text-[#B9B9B9] ml-1 font-semibold">/ pcs</span>
+                      <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm text-[#B9B9B9] ml-1 font-semibold">/ pcs</span>
                     </span>
                     <button
                       onClick={() => handleAddToCart(item)}

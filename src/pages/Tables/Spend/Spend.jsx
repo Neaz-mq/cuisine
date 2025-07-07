@@ -83,7 +83,7 @@ const Spend = () => {
           </p>
           <Link to="/order">
             <Motion.button
-              className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold rounded shadow-md"
+              className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold  shadow-md"
               whileHover={{
                 scale: 1.12,
                 boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",

@@ -262,7 +262,7 @@ const Category = () => {
 
   return (
     <Container>
-      <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-28 mt-6">
+      <div className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-52 mt-6">
         <Motion.h2
           className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-[#1D4B3F] mb-10"
           initial="hidden"
@@ -371,16 +371,16 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
         />
       </div>
       <div className="flex flex-col flex-grow mt-6">
-        <h3 className="text-xl font-semibold text-[#2C6252] leading-tight mb-1">
+        <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-lg font-semibold text-[#2C6252] leading-tight mb-1">
           {item.title}
         </h3>
         <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">
           {item.description}
         </p>
         <div className="flex justify-between items-center mt-auto">
-          <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252]">
+          <span className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-xl font-bold text-[#2C6252]">
             ${item.price}
-            <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
+            <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
           </span>
           <button
             className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
