@@ -39,7 +39,7 @@ const Members = () => {
 
     return (
         <Container>
-            <div className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 lg:px-0 3xl:mt-36 2xl:mt-36 xl:mt-36 lg:mt-24 3xl:mb-52 2xl:mb-40 xl:mb-28 lg:mb-28">
+            <div className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 lg:px-0 3xl:mt-36 2xl:mt-36 xl:mt-36 lg:mt-24 3xl:mb-36 2xl:mb-40 xl:mb-28 lg:mb-28">
                 {/* Header Section */}
                 <Motion.div
                     className="mb-10 md:mb-16 text-left flex justify-end items-center"
