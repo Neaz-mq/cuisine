@@ -18,23 +18,23 @@ const Deliver = () => {
         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
           {/* Left Animated Text Content */}
           <Motion.div
-            className="space-y-6 3xl:ml-14 2xl:ml-4 xl:ml-12 lg:-ml-5 3xl:-mt-0 2xl:-mt-6 xl:-mt-10 lg:-mt-8"
+            className="space-y-6 3xl:ml-14 2xl:ml-4 xl:ml-12 lg:-ml-5 3xl:-mt-4 2xl:-mt-6 xl:-mt-10 lg:-mt-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             <Motion.h2
-              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col"
+              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col "
               custom={0}
               variants={textVariants}
             >
-              <span>We Deliver</span>
-              <span>Food Within</span>
-              <span className="text-[#FF4C15]">30 Min ⏰</span>
+              <span className="mb-3">We Deliver</span>
+              <span className="mb-3">Food Within</span>
+              <span className="text-[#FF4C15] mb-3">30 Min ⏰</span>
             </Motion.h2>
 
             <Motion.p
-              className="text-[#CCCCCC] max-w-md 3xl:text-sm 2xl:text-[11px] xl:text-[10px] lg:text-[9px] mt-2"
+              className="text-[#CCCCCC] max-w-md 3xl:text-[14px] 2xl:text-[11px] xl:text-[10px] lg:text-[9px] mt-2 pb-5"
               custom={1}
               variants={textVariants}
             >
@@ -42,14 +42,14 @@ const Deliver = () => {
             </Motion.p>
 
             <Motion.div
-              className="flex space-x-4 mt-20"
+              className="flex space-x-4 mt-20 "
               custom={2}
               variants={textVariants}
             >
               <Link to="/order">
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-2 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap"
+                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-2 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap mt-2"
                 >
                   <img src="/order.svg" alt="" className="w-4 h-4 mr-2" />
                   Order Now
@@ -57,7 +57,7 @@ const Deliver = () => {
               </Link>
               <Motion.button
                 whileHover={{ scale: 1.05 }}
-                className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap"
+                className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap mt-2"
               >
                 <img src="/download.svg" alt="" className="w-4 h-4 mr-2" />
                 Download Apps

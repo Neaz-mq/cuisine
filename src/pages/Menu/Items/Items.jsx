@@ -284,7 +284,7 @@ const Items = () => {
 
   return (
     <Container>
-      <div className='3xl:mt-24 2xl:mt-24 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 overflow-hidden'>
+      <div className='3xl:mt-32 2xl:mt-24 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 overflow-hidden'>
         {/* Category Navigation */}
         <Motion.div 
           className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 px-8"
