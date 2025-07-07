@@ -25,7 +25,7 @@ const Picks = () => {
     <Container>
       {/* Top Section */}
       <Motion.div
-        className="3xl:px-12 3xl:ml-7 3xl:-mt-2 3xl:mb-44 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-44 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-44"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-44 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-44"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
