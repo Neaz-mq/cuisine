@@ -33,7 +33,7 @@ const Picks = () => {
     <Container>
       {/* Top Section */}
       <Motion.div
-        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-44 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-44"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-44"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
@@ -45,11 +45,11 @@ const Picks = () => {
             variants={fadeUp}
             custom={1}
           >
-            <h2 className="text-3xl 3xl:text-5xl font-semibold text-[#2C6252] 3xl:mb-4">
+            <h2 className="text-3xl 3xl:text-5xl 2xl:text-4xl xl:text-3xl font-semibold text-[#2C6252] 3xl:mb-4 2xl:mb-4 xl:mb-4">
               Chef's Weekly Picks <br />
               <span className="text-[#FF4C15] font-normal">- Just for You!</span>
             </h2>
-            <p className="3xl:text-sm text-[#2C6252] 3xl:mb-6">
+            <p className="3xl:text-sm 2xl:text-sm xl:text-[11px] text-[#2C6252] 3xl:mb-6 2xl:mb-6 xl:mb-6">
               Management reserves the right to modify or cancel the <br />
               offer without prior notice.
             </p>
@@ -58,7 +58,7 @@ const Picks = () => {
                 Order Now &gt;
               </button>
             </Link>
-            <div className="flex justify-end 3xl:-mt-28 ml-44">
+            <div className="flex justify-end 3xl:-mt-[6.8rem] ml-44 2xl:-mt-[3.2rem] xl:-mt-[1.3rem]">
               <Motion.img
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -85,10 +85,10 @@ const Picks = () => {
                 />
               </div>
               <div className="w-2/3">
-                <h3 className="3xl:text-2xl font-semibold text-[#2C6252] mb-2">
+                <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-xl font-semibold text-[#2C6252] mb-2">
                   Enjoy unbeatable <br /> deals with us
                 </h3>
-                <p className="3xl:text-sm text-[#BCB1AD]">
+                <p className="3xl:text-sm 2xl:text-sm xl:text-[10px] text-[#BCB1AD]">
                   Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—our weekly offers have.
                 </p>
               </div>
@@ -100,13 +100,13 @@ const Picks = () => {
               custom={3}
             >
               <div className="w-2/3 pr-4">
-                <h3 className="3xl:text-2xl font-semibold mb-2">
+                <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-xl font-semibold mb-2">
                   Don't Miss This Week's <br /> Delights
                 </h3>
-                <p className="3xl:text-sm mb-4 text-[#BCB1AD]">
+                <p className="3xl:text-sm 2xl:text-sm xl:text-[10px] mb-4 text-[#BCB1AD]">
                   Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee
                 </p>
-                <a href="#" className="3xl:text-sm text-white underline hover:no-underline">
+                <a href="#" className="3xl:text-sm 2xl:text-sm xl:text-sm text-white underline hover:no-underline">
                   learn more
                 </a>
               </div>
@@ -128,16 +128,16 @@ const Picks = () => {
         <Motion.div className="py-8 md:py-12" variants={fadeUp} custom={4}>
           <div className="flex flex-col md:flex-row md:items-start md:space-x-8 mb-6">
             <div className="flex items-center flex-shrink-0 mb-4 md:mb-0 md:w-1/3">
-              <h2 className="3xl:text-3xl font-semibold text-[#2C6252] whitespace-nowrap">
+              <h2 className="3xl:text-3xl 2xl:text-2xl xl:text-2xl font-semibold text-[#2C6252] whitespace-nowrap">
                 Chef's Weekly Picks{" "}
               </h2>
               <div className="flex-grow border-b border-[#D4D4D4] ml-10 hidden md:block"></div>
             </div>
             <div className="md:w-2/3 -mt-3">
-              <p className="3xl:text-sm text-[#BCB1AD] leading-relaxed mb-4 3xl:ml-[13.5rem]">
+              <p className="3xl:text-sm 2xl:text-sm xl:text-sm text-[#BCB1AD] leading-relaxed mb-4 3xl:ml-[13.5rem] 2xl:ml-[11.2rem] xl:ml-[10rem]">
                 Cheesy Bites Pizza Return: Pizza Hut has reintroduced its popular Cheesy Bites Pizza for a limited time. This large, one-topping pizza features a crust made of 28 pull-apart, cheese-filled bites, perfect for dipping 50% Off Online Orders.
               </p>
-              <p className="3xl:text-sm text-[#FF4C15] leading-relaxed 3xl:ml-[13.5rem]">
+              <p className="3xl:text-sm 2xl:text-sm xl:text-sm text-[#FF4C15] leading-relaxed 3xl:ml-[13.5rem] 2xl:ml-[11.2rem] xl:ml-[10rem]">
                 Domino's is offering 50% off all menu-priced pizzas ordered online from March 17 to 23, 2025. Customers can choose from any size pizza with any type.{" "}
                 <a href="#" className="text-[#FF4C15] underline hover:no-underline">
                   Learn more.
@@ -161,9 +161,9 @@ const Picks = () => {
                   custom={i + 5}
                 >
                   <div className="p-4">
-                    <p className="font-semibold text-[#FF4C15] 3xl:text-lg">Cheesy</p>
-                    <p className="font-semibold text-[#FF4C15] 3xl:text-lg">Crust Deluxe</p>
-                    <p className="mt-6 3xl:text-xs 2xl:text-xs text-[#2D6252]">Our menu is carefully crafted by expert chefs only</p>
+                    <p className="font-semibold text-[#FF4C15] 3xl:text-lg 2xl:text-lg xl:text-lg">Cheesy</p>
+                    <p className="font-semibold text-[#FF4C15] 3xl:text-lg 2xl:text-lg xl:text-lg">Crust Deluxe</p>
+                    <p className="mt-6 3xl:text-xs 2xl:text-xs xl:text-xs text-[#2D6252]">Our menu is carefully crafted by expert chefs only</p>
                   </div>
                   <div className="p-4">
                     <p className="3xl:text-xl font-semibold text-white -mt-4">Crispy Garden Glory</p>
@@ -172,14 +172,14 @@ const Picks = () => {
                   <img
                     src={images[i]}
                     alt="Food"
-                    className={`w-full object-cover mt-6 ${i === 2 ? " 3xl:mt-20 2xl:mt-20 xl:mt-6" : ""}`}
+                    className={`w-full object-cover mt-6 ${i === 2 ? " 3xl:mt-20 2xl:mt-20 xl:mt-16" : ""}`}
                   />
                   <div
-                    className="absolute right-6 3xl:top-72 2xl:top-72 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 flex flex-col items-center justify-center"
+                    className="absolute right-6 3xl:top-80 2xl:top-72 xl:top-80 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 flex flex-col items-center justify-center"
                     style={{ backgroundColor: badgeColor }}
                   >
-                    <span className="3xl:text-lg font-bold leading-tight">{discount}</span>
-                    <span className="3xl:text-lg font-medium">off</span>
+                    <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] font-bold leading-tight">{discount}</span>
+                    <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] font-medium">off</span>
                   </div>
                 </Motion.div>
               );

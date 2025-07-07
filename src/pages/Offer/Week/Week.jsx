@@ -89,7 +89,7 @@ const Week = () => {
 
   return (
     <Container>
-      <div className=" flex flex-col 3xl:mt-52 2xl:mt-48 xl:mt-20 lg:mt-20 3xl:px-12 2xl:px-0 xl:px-6 lg:px-6">
+      <div className=" flex flex-col 3xl:mt-52 2xl:mt-48 xl:mt-40 lg:mt-20 3xl:px-12 2xl:px-0 xl:px-6 lg:px-6">
         {/* Header */}
         <div className="bg-[#3D6A5D] text-white p-4 flex justify-between items-center 3xl:ml-6 2xl:ml-4 xl:ml-4 lg:-ml-8">
           <h1 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-xl font-bold ml-8">Don't Miss This Week's Delights</h1>
