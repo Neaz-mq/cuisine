@@ -4,7 +4,7 @@ import Container from "../../../components/Container";
 const Support = () => {
   return (
     <Container>
-      <div className="3xl:px-[2.2rem] 2xl:px-0 xl:px-10 lg:px-0 3xl:mt-52 2xl:mt-44 xl:mt-40 lg:-ml-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
+      <div className="3xl:px-[2.2rem] 2xl:px-0 xl:px-10 lg:px-0 3xl:mt-52 2xl:mt-44 xl:mt-40 lg:mt-40 lg:-ml-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
         {/* Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-2 p-4 3xl:p-8 2xl:p-6 xl:p-4 lg:p-4">
           {/* Left Section */}

@@ -26,7 +26,7 @@ const slideRight = {
 const Famous = () => {
     return (
         <Container>
-            <div className="3xl:-mt-[44rem] 2xl:-mt-[50rem] xl:-mt-[51rem] lg:-mt-[70rem] 3xl:px-[4.3rem] 2xl:px-[1.3rem] xl:px-[3.4rem] lg:px-[0.2rem] mb-24">
+            <div className="3xl:-mt-[44rem] 2xl:-mt-[50rem] xl:-mt-[51rem] lg:-mt-[71rem] 3xl:px-[4.3rem] 2xl:px-[1.3rem] xl:px-[3.4rem] lg:px-[0.2rem] mb-24">
 
                 {/* Top Headings */}
                 <Motion.div
