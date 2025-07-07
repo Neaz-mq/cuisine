@@ -14,7 +14,7 @@ const textVariants = {
 const Deliver = () => {
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 3xl:mt-32 2xl:mt-56 xl:mt-32 lg:mt-32 mb-44">
+      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 3xl:mt-32 2xl:mt-56 xl:mt-44 lg:mt-32 mb-44">
         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
           {/* Left Animated Text Content */}
           <Motion.div
@@ -24,7 +24,7 @@ const Deliver = () => {
             viewport={{ once: true }}
           >
             <Motion.h2
-              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col "
+              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col xl:mt-4 2xl:mt-0 3xl:mt-0 "
               custom={0}
               variants={textVariants}
             >
@@ -34,7 +34,7 @@ const Deliver = () => {
             </Motion.h2>
 
             <Motion.p
-              className="text-[#CCCCCC] max-w-md 3xl:text-[14px] 2xl:text-[13px] xl:text-[10px] lg:text-[9px] mt-2 2xl:pt-3 3xl:pt-0 pb-5"
+              className="text-[#CCCCCC] max-w-md 3xl:text-[14px] 2xl:text-[13px] xl:text-[13px] lg:text-[9px] mt-2 2xl:pt-3 3xl:pt-0 pb-5"
               custom={1}
               variants={textVariants}
             >
