@@ -30,7 +30,7 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-56 xl:-top-36 lg:-top-40">
+      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-36 lg:-top-40">
         {/* Top section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left content */}
@@ -39,7 +39,7 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-48 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-16">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-14 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-16">
               Customer <br /> Testimonial <br />
               <span className="text-[#FF4C15]">Examples</span>
             </h2>
@@ -51,7 +51,7 @@ const Testimonials = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="3xl:-mt-14 2xl:-mt-[4.5rem] xl:-mt-[4rem] lg:-mt-[3.5em] ml-6"
+                className="3xl:-mt-14 2xl:-mt-[1.7rem] xl:-mt-[4rem] lg:-mt-[3.5em] ml-6"
               >
                 <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png" alt="" />
               </Motion.div>
@@ -59,7 +59,7 @@ const Testimonials = () => {
           </Motion.div>
 
           {/* Right swipe image */}
-          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-8 xl:right-12 lg:ml-12">
+          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-2 xl:right-12 lg:ml-12">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -99,7 +99,7 @@ const Testimonials = () => {
         </div>
 
         {/* Bottom Cards */}
-        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-8 2xl:gap-8 xl:gap-6 lg:gap-3 3xl:-mt-14 2xl:-mt-10 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-3 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4">
+        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-8 2xl:gap-8 xl:gap-6 lg:gap-3 3xl:-mt-14 2xl:mt-24 xl:mt-10 lg:mt-10 3xl:ml-3 3xl:mr-3 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4">
           {[
             {
               name: "— Emily R.",
