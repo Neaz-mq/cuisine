@@ -114,8 +114,8 @@ const Weekly = () => {
 
   return (
     <Container>
-      <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 3xl:mt-24">
-        <div className="py-16 3xl:mb-32 2xl:mb-40 xl:mb-40 lg:mb-24">
+      <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 3xl:mt-24 2xl:mt-20">
+        <div className="py-16 3xl:mb-32 2xl:mb-24 xl:mb-40 lg:mb-24">
           {/* Section Header */}
           <div className="mb-10 text-center md:text-left">
             <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] mb-2">
