@@ -117,17 +117,17 @@ const Popular = () => {
 
   return (
     <Container>
-      <div className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24 3xl:mt-52 2xl:mt-20 xl:mt-44">
+      <section aria-labelledby="popular-heading" className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24 3xl:mt-52 2xl:mt-20 xl:mt-44">
         <Motion.div
           className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
         >
-          <h1 className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl font-bold text-[#2C6252] mb-4 md:mb-0">
+          <h1 id="popular-heading" className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl font-bold text-[#2C6252] mb-4 md:mb-0">
             Our Most Popular Item
           </h1>
-          <div className="flex items-center text-[#FF4C15] text-sm font-medium">
+          <div className="flex items-center text-[#FF4C15] text-sm font-medium" aria-hidden="true">
             <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
@@ -140,7 +140,7 @@ const Popular = () => {
         </Motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-14">
-          <Motion.div
+          <Motion.article
             className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] min-h-[48rem] w-full"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -152,7 +152,7 @@ const Popular = () => {
               alt="Weekly best sales products"
               className="absolute inset-0 w-full h-full object-cover z-0"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+            <div className="absolute inset-0 bg-black bg-opacity-40 z-10" aria-hidden="true"></div>
             <div className="relative z-20 text-white bg-[#FF4C15] 3xl:p-10 2xl:p-8 xl:p-8 lg:p-8 3xl:bottom-36 2xl:bottom-44 xl:bottom-52 lg:bottom-52 mx-6">
               <span className="inline-block text-white text-xl font-semibold px-3 py-1 mb-3 -ml-3">
                 Only online order
@@ -160,7 +160,7 @@ const Popular = () => {
               <h2 className="text-3xl sm:text-4xl 3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-extrabold leading-tight mb-4 drop-shadow-lg">
                 Weekly best sales products
               </h2>
-              <div className="flex 3xl:space-x-3 2xl:space-x-3 xl:space-x-3 lg:space-x-1 mb-6">
+              <div className="flex 3xl:space-x-3 2xl:space-x-3 xl:space-x-3 lg:space-x-1 mb-6" role="timer" aria-label="Countdown to deal end">
                 {["DAY", "HRS", "MIN", "SEC"].map((label, idx) => (
                   <Motion.div
                     key={label}
@@ -178,16 +178,17 @@ const Popular = () => {
                   </Motion.div>
                 ))}
               </div>
-              <Link to="/menu">
+              <Link to="/menu" aria-label="View full menu">
                 <button className="bg-[#2C6252] text-white px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm whitespace-nowrap">
                   Order Now
-                </button></Link>
+                </button>
+              </Link>
             </div>
-          </Motion.div>
+          </Motion.article>
 
           <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 3xl:gap-6 2xl:gap-6 xl:gap-4">
             {foodItems.map((item, index) => (
-              <Motion.div
+              <Motion.article
                 key={item.id}
                 className="bg-[#F8F8F8] p-4 flex flex-col"
                 initial="hidden"
@@ -195,9 +196,9 @@ const Popular = () => {
                 custom={index}
                 variants={fadeInUp}
               >
-                <div className="w-full h-52 overflow-hidden">
+                <figure className="w-full h-52 overflow-hidden">
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                </div>
+                </figure>
                 <div className="flex flex-col flex-grow mt-6">
                   <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-lg font-semibold text-[#2C6252] mb-1">{item.title}</h3>
                   <p className="text-xs text-[#CCCCCC] mb-4">{item.description}</p>
@@ -209,16 +210,17 @@ const Popular = () => {
                     <button
                       onClick={() => handleAddToCart(item)}
                       className="bg-[#2C6252] text-white p-2"
+                      aria-label={`Add ${item.title} to cart`}
                     >
-                      <img src="/Path 2764.svg" alt="Add" />
+                      <img src="/Path 2764.svg" alt="Add to cart" />
                     </button>
                   </div>
                 </div>
-              </Motion.div>
+              </Motion.article>
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 };
