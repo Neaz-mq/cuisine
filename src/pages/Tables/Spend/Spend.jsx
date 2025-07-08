@@ -96,12 +96,18 @@ const Spend = () => {
               whileHover={{
                 scale: 1.12,
                 boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
-                transition: { duration: 0.5, yoyo: Infinity, ease: "easeInOut" },
+                transition: {
+                  duration: 0.5,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeInOut",
+                },
               }}
               whileTap={{ scale: 0.95 }}
             >
               Checkout Menu
             </Motion.button>
+
           </Link>
         </Motion.div>
       </section>
