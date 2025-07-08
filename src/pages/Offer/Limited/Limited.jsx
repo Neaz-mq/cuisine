@@ -64,7 +64,7 @@ const Limited = () => {
 
   return (
     <Container>
-      <div className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6">
+      <section className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6" aria-labelledby="limited-heading">
         {/* Promo Text */}
         <Motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,19 +72,24 @@ const Limited = () => {
           transition={{ duration: 0.7 }}
           className="text-base text-[#AAAAAA] mb-2 mt-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-4"
         >
-          we dish out <br />
-          global favorites <br />
-          and local <br />
-          classics —{" "}
-          <span className="text-[#FF4C15] font-semibold">
-            now <br /> with up to 50% <br /> OFF!
-          </span>
+          <p>
+            we dish out <br />
+            global favorites <br />
+            and local <br />
+            classics —{" "}
+            <span className="text-[#FF4C15] font-semibold">
+              now <br /> with up to 50% <br /> OFF!
+            </span>
+          </p>
         </Motion.div>
 
         {/* Headings */}
-        <div className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]">
-          <div className="mb-36 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2">
+        <header
+          className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]"
+        >
+          <div className="mb-36 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2 text-center lg:text-left">
             <Motion.h2
+              id="limited-heading"
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -101,13 +106,13 @@ const Limited = () => {
               Up To 50% Off!
             </Motion.h3>
           </div>
-        </div>
+        </header>
 
         {/* Card Grid */}
         <div className="flex justify-center 3xl:ml-64 2xl:ml-48 xl:ml-44 lg:ml-36 3xl:-mt-8 2xl:-mt-8 xl:-mt-12 lg:-mt-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-4 2xl:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-4 lg:gap-6 w-fit">
             {limitedItems.map((item, index) => (
-              <Motion.div
+              <Motion.article
                 key={item.id}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -116,21 +121,27 @@ const Limited = () => {
                   item.id === 4 ? "3xl:block 2xl:block xl:block lg:hidden hidden" : ""
                 }`}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-[160px] object-cover"
-                />
-                <div className="bg-[#2C6252] text-white px-4 py-4">
-                  <h4 className="font-bold text-sm">{item.title}</h4>
-                  <p className="text-xs mt-1 text-[#15AB7F]">{item.description}</p>
+                <figure>
+                  <img
+                    src={item.image}
+                    alt={`Discounted ${item.title}`}
+                    className="w-full h-[160px] object-cover"
+                  />
+                  <figcaption className="bg-[#2C6252] text-white px-4 py-4">
+                    <h4 className="font-bold text-sm">{item.title}</h4>
+                    <p className="text-xs mt-1 text-[#15AB7F]">{item.description}</p>
+                  </figcaption>
+                </figure>
+
+                <div className="text-xs text-[#CCCCCC] px-4 pt-3">
+                  <ul className="space-y-1 list-disc list-inside">
+                    <li>Grilled Lemon Herb Chicken</li>
+                    <li>Paneer Butter Masala (with Naan)</li>
+                    <li>Spaghetti Aglio e Olio</li>
+                    <li>Thai Green Curry with Rice</li>
+                  </ul>
                 </div>
-                <div className="text-xs text-[#CCCCCC] px-4 pt-3 space-y-1">
-                  <p>• Grilled Lemon Herb Chicken</p>
-                  <p>• Paneer Butter Masala (with Naan)</p>
-                  <p>• Spaghetti Aglio e Olio</p>
-                  <p>• Thai Green Curry with Rice</p>
-                </div>
+
                 <div className="px-4 py-3 flex justify-between items-center text-[#2C6252] font-bold">
                   <div>
                     <span className="line-through text-[#CCCCCC] mr-2 text-sm">
@@ -141,15 +152,16 @@ const Limited = () => {
                   <button
                     onClick={() => handleAddToCart(item)}
                     className="bg-[#FF4C15] w-7 h-7 flex items-center justify-center text-white rounded-sm text-xs"
+                    aria-label={`Add ${item.title} to cart`}
                   >
-                    <img src="/Path 2764.svg" alt="Add" />
+                    <img src="/Path 2764.svg" alt="Add item to cart" />
                   </button>
                 </div>
-              </Motion.div>
+              </Motion.article>
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 };
