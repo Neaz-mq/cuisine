@@ -4,7 +4,6 @@ import Container from '../../../components/Container';
 import useCart from '../../../hooks/useCart';
 import { toast } from 'react-toastify';
 
-
 const categoryItems = [
   {
     label: 'BURGERS', 
@@ -278,33 +277,40 @@ const Items = () => {
   const { addToCart } = useCart();
 
   const selectedCategoryData = categoryItems.find(item => item.label === selected);
-  if (!selectedCategoryData) return <div className="text-center mt-64 text-red-500">Category not found.</div>;
+  if (!selectedCategoryData) 
+    return (
+      <Container>
+        <p className="text-center mt-64 text-red-500" role="alert">Category not found.</p>
+      </Container>
+    );
 
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
   return (
     <Container>
-      <div className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 overflow-hidden'>
+      <section
+        aria-label="Food Categories Navigation and Menu Items"
+        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 overflow-hidden'
+      >
         {/* Category Navigation */}
-        <Motion.div 
+        <nav
+          aria-label="Food categories"
           className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 px-8"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          viewport={{ once: true }}
         >
           {categoryItems.map((item) => (
-            <Motion.div
+            <Motion.button
               key={item.label}
               onClick={() => setSelected(item.label)}
-              className="flex flex-col items-center cursor-pointer relative"
+              className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none"
+              aria-current={selected === item.label ? 'true' : 'false'}
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 300 }}
+              type="button"
             >
-              <Motion.img 
-                src={item.itemImage} 
-                alt={item.label} 
-                className="w-14 h-14" 
+              <Motion.img
+                src={item.itemImage}
+                alt={`${item.label} category icon`}
+                className="w-14 h-14"
                 initial={{ rotate: 0 }}
                 whileHover={{ rotate: 10 }}
                 transition={{ type: 'spring', stiffness: 200 }}
@@ -313,32 +319,32 @@ const Items = () => {
                 {item.label}
               </span>
               {selected === item.label && (
-                <div className="absolute bottom-0 w-full h-1 -mb-4"></div>
+                <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true"></div>
               )}
-            </Motion.div>
+            </Motion.button>
           ))}
-        </Motion.div>
+        </nav>
 
         {/* Main Section */}
         <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 gap-10 mt-10">
           {/* Left Section */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0">
+          <section aria-label={`${selected} menu items`} className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0">
             {items.map((item, index) => (
-              <Motion.div
+              <article
                 key={index}
                 className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 flex flex-col items-start h-96"
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1, ease: "easeInOut" }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.03 }}
+                tabIndex={0}
+                aria-label={`${item.title} - ${item.description}. Price: ${item.price}, original price ${item.originalPrice}`}
               >
-                <h2 className="text-lg font-semibold text-[#2C6252]" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
+                <h2
+                  className="text-lg font-semibold text-[#2C6252]"
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                />
                 <p className="text-gray-500 text-sm mt-4 mb-4">{item.description}</p>
                 <div className="flex items-center justify-between w-full mt-auto">
-                  <Motion.img 
-                    src={item.image} 
-                    alt="Food" 
+                  <Motion.img
+                    src={item.image}
+                    alt={`${item.title} image`}
                     className="w-40 h-auto object-contain -ml-4"
                     whileHover={{ rotate: 5 }}
                     transition={{ type: 'spring', stiffness: 100 }}
@@ -348,7 +354,10 @@ const Items = () => {
                       <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg font-bold text-[#2C6252] leading-none">
                         {item.price}
                       </div>
-                      <span className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm line-through text-[#FF4C15] relative top-4 font-bold">
+                      <span
+                        className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm line-through text-[#FF4C15] relative top-4 font-bold"
+                        aria-label={`Original price ${item.originalPrice}`}
+                      >
                         {item.originalPrice}
                       </span>
                     </div>
@@ -369,25 +378,25 @@ const Items = () => {
                             toast.warning(`${item.title.replace(/<[^>]+>/g, '')} is already in cart!`);
                           }
                         }}
+                        aria-label={`Order now: ${item.title}`}
+                        type="button"
                       >
                         Order Now
                       </Motion.button>
                     )}
                   </div>
                 </div>
-              </Motion.div>
+              </article>
             ))}
-          </div>
+          </section>
 
           {/* Right Section - Today Special */}
-          <Motion.div
+          <aside
+            aria-labelledby="today-special-title"
             className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
           >
-            <Motion.div
+            <Motion.h3
+              id="today-special-title"
               className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10"
               dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
               initial={{ y: 30, opacity: 0 }}
@@ -400,18 +409,17 @@ const Items = () => {
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              <img 
-                src={todaySpecial.mainImage} 
-                alt="Main Special" 
+              <img
+                src={todaySpecial.mainImage}
+                alt={`${selected} today special`}
                 className="mt-8 w-full h-auto object-contain"
               />
             </Motion.div>
-          </Motion.div>
+          </aside>
         </div>
-      </div>
+      </section>
     </Container>
   );
 };
 
 export default Items;
-
