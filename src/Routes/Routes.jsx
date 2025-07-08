@@ -50,9 +50,6 @@ import Carts from "../pages/Carts/Carts";
             path: "/carts",
             element: <Carts></Carts>
         }, 
-
-
-
       ]
     },
   ]);

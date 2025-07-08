@@ -9,10 +9,10 @@ const Carts = () => {
         // Scroll to the top of the page when the component mounts
         window.scrollTo(0, 0);
     }, []);
+
   const { cartItems, increaseQty, decreaseQty, removeItem, clearCart } = useCart();
   const [selectedShipping, setSelectedShipping] = useState("uber-eats");
   const [paymentMethod, setPaymentMethod] = useState("cod"); // 'cod' = Cash on Delivery
-
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [formData, setFormData] = useState({
@@ -34,14 +34,12 @@ const Carts = () => {
     expiryDate: "",
     ccv: "",
   });
-  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false); // For the "agree to condition" checkbox
 
+  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false); // For the "agree to condition" checkbox
   const [discountCode, setDiscountCode] = useState("");
   const [errors, setErrors] = useState({});
   // Errors for online payment fields
   const [paymentErrors, setPaymentErrors] = useState({});
-
-
   const subtotal = cartItems.reduce(
   (acc, item) => acc + item.price * item.quantity,
   0
@@ -90,25 +88,20 @@ const Carts = () => {
     if (!formData.zip.trim()) newErrors.zip = "Zip code is required.";
     if (!formData.phoneNumber.trim()) newErrors.phoneNumber = "Phone number is required.";
     if (!selectedCountry) newErrors.selectedCountry = "Country is required.";
-    // The subscription checkbox seems unrelated to order confirmation for billing, so I'll remove its validation here unless it's explicitly needed.
-    // if (!isSubscribed) newErrors.isSubscribed = "You must agree to receive emails.";
-
-
+    
     if (paymentMethod === "online") {
       if (!cardDetails.cardholderName.trim()) newPaymentErrors.cardholderName = "Cardholder name is required.";
       if (!cardDetails.cardNumber.trim()) newPaymentErrors.cardNumber = "Card number is required.";
-      if (!/^\d{16}$/.test(cardDetails.cardNumber.replace(/\s/g, ''))) newPaymentErrors.cardNumber = "Invalid card number (16 digits required)."; // Basic validation
+      if (!/^\d{16}$/.test(cardDetails.cardNumber.replace(/\s/g, ''))) newPaymentErrors.cardNumber = "Invalid card number (16 digits required)."; 
       if (!cardDetails.expiryDate.trim()) newPaymentErrors.expiryDate = "Expiry date is required.";
-      if (!/^\d{2}\/\d{2}$/.test(cardDetails.expiryDate)) newPaymentErrors.expiryDate = "Invalid expiry date (MM/YY)."; // Basic validation
+      if (!/^\d{2}\/\d{2}$/.test(cardDetails.expiryDate)) newPaymentErrors.expiryDate = "Invalid expiry date (MM/YY)."; 
       if (!cardDetails.ccv.trim()) newPaymentErrors.ccv = "CCV is required.";
-      if (!/^\d{3,4}$/.test(cardDetails.ccv)) newPaymentErrors.ccv = "Invalid CCV (3 or 4 digits)."; // Basic validation
+      if (!/^\d{3,4}$/.test(cardDetails.ccv)) newPaymentErrors.ccv = "Invalid CCV (3 or 4 digits)."; 
       if (!isAgreedToTerms) newPaymentErrors.isAgreedToTerms = "You must agree to the condition.";
     }
 
-
     setErrors(newErrors);
     setPaymentErrors(newPaymentErrors);
-
 
     if (Object.keys(newErrors).length === 0 && Object.keys(newPaymentErrors).length === 0) {
       toast.success("The Food order successfully!", {
@@ -161,7 +154,6 @@ const Carts = () => {
     setCardDetails((prev) => ({ ...prev, [name]: value }));
   };
 
-
   // Handler for discount code input
   const handleDiscountCodeChange = (e) => {
     setDiscountCode(e.target.value);
@@ -169,8 +161,6 @@ const Carts = () => {
 
   const applyDiscount = () => {
     console.log("Applying discount code:", discountCode);
-    // You would typically send this discountCode to your backend
-    // to validate and apply the discount, then update the total.
     toast.info(`Discount code "${discountCode}" applied (for demonstration).`, {
       position: "bottom-center",
       autoClose: 2000,
@@ -179,14 +169,11 @@ const Carts = () => {
       pauseOnHover: true,
       draggable: true,
     });
-    // In a real app, you would fetch updated cart totals or recalculate with discount.
-    // For now, it just shows a toast.
   };
-
 
   return (
     <Container>
-      <div className="bg-white min-h-screen px-4 py-8 md:px-10 3xl:px-[4.2rem] xl:px-14 lg:px-0 2xl:px-4 3xl:mb-36 2xl:mb-28 xl:mb-28 lg:mb-24 lg:-ml-2 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 ">
+      <div className="bg-white min-h-screen px-4 py-8 md:px-10 3xl:px-[4.2rem] xl:px-14 lg:px-0 2xl:px-4 3xl:mb-36 2xl:mb-28 xl:mb-28 lg:mb-24 lg:-ml-2 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-6">
@@ -234,8 +221,6 @@ const Carts = () => {
               {errors.selectedCountry && (
                 <p className="text-red-500 text-xs">{errors.selectedCountry}</p>
               )}
-
-
 
               <input
                 name="address"
@@ -368,7 +353,6 @@ const Carts = () => {
 
               <div className="space-y-4">
                 <h4 className="text-2xl font-semibold text-gray-800 mb-2 pt-8">Payment Method</h4>
-
                 <div className="space-y-3 bg-gray-50 p-4 rounded-md">
                   {/* Online Payment */}
                   <label className="flex items-start gap-3 cursor-pointer">
@@ -414,7 +398,6 @@ const Carts = () => {
                       <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348700/pngegg_85_i6czbr.png" alt="Visa" className="h-10" />
                       <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348721/pngegg_86_icrxs1.png" alt="American Express" className="h-10" />
                       <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348785/pngegg_92_lbmpaf.png" alt="Ria Money Transfer" className="h-10" />
-
                     </div>
                   </div>
 
@@ -557,7 +540,7 @@ const Carts = () => {
             </div>
             {/* Discount Code Section */}
             <div className="pt-10 border-t border-gray-200">
-              <div className="flex mb-10"> {/* Added mb-4 for spacing */}
+              <div className="flex mb-10"> 
                 <input 
                   type="text"
                   placeholder="Gift card or discount code"

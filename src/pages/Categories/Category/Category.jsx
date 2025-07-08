@@ -257,7 +257,6 @@ const fadeUp = {
 const Category = () => {
   const [activeTab, setActiveTab] = useState("Coffee");
   const { addToCart, cartItems } = useContext(CartContext);
-
   const filteredItems = foodData.filter((item) => item.category === activeTab);
 
   return (

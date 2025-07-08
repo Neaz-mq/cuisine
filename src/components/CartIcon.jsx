@@ -1,7 +1,6 @@
 import { ShoppingCart } from 'lucide-react';
 import useCart from '../hooks/useCart';
 
-
 const CartIcon = () => {
   const { cartCount } = useCart();
 
