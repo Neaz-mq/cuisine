@@ -29,7 +29,10 @@ const Spend = () => {
 
   return (
     <Container>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 mb-28">
+      <section
+        className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 mb-28"
+        aria-labelledby="spend-heading"
+      >
         {/* Left: Image Section */}
         <Motion.div
           className="w-full flex justify-center 3xl:-ml-14 2xl:-ml-20 xl:-ml-10 lg:-ml-20 2xl:mt-8 3xl:mt-0 xl:mt-4 lg:mt-8"
@@ -41,49 +44,55 @@ const Spend = () => {
         >
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1750220026/Image_65_tjh3jt.png"
-            alt="Couple Spending Time"
+            alt="Couple enjoying quality dining time at Flavors & Feast"
             className="w-[90%] max-w-md lg:max-w-full h-auto"
           />
         </Motion.div>
 
         {/* Right: Text Section */}
         <Motion.div
-          className="w-full text-center lg:text-left mt-10 3xl:ml-36 2xl:ml-20 xl:ml-16"
+          className="w-full text-center lg:text-left 3xl:mt-4 2xl:mt-10 xl:mt-10 lg:mt-10 3xl:ml-36 2xl:ml-20 xl:ml-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={textContainer}
         >
-          <h2 className="text-4xl 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold text-[#2C6252] leading-relaxed mb-4">
-            {[...headerText1].map((char, index) => (
-              <Motion.span
-                key={`char1-${index}`}
-                variants={letter}
-                style={{ display: "inline-block" }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </Motion.span>
-            ))}
-            <br />
-            <span className="text-[#2C6252] leading-relaxed">
-              {[...headerText2].map((char, index) => (
+          <header>
+            <h2
+              id="spend-heading"
+              className="text-4xl 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold text-[#2C6252] leading-relaxed mb-4"
+            >
+              {[...headerText1].map((char, index) => (
                 <Motion.span
-                  key={`char2-${index}`}
+                  key={`char1-${index}`}
                   variants={letter}
                   style={{ display: "inline-block" }}
                 >
                   {char === " " ? "\u00A0" : char}
                 </Motion.span>
               ))}
-            </span>
-          </h2>
+              <br />
+              <span className="text-[#2C6252] leading-relaxed">
+                {[...headerText2].map((char, index) => (
+                  <Motion.span
+                    key={`char2-${index}`}
+                    variants={letter}
+                    style={{ display: "inline-block" }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </Motion.span>
+                ))}
+              </span>
+            </h2>
+          </header>
+
           <p className="text-[#D7D7D7] text-sm 3xl:text-base 2xl:text-base xl:text-sm lg:text-xs mt-4 max-w-md">
-            Enjoy unbeatable deals every week at Flavors & Feast! Whether you're
-            craving a hearty meal, a sweet treat, or a refreshing coffee—
+            Discover unforgettable moments at Flavors & Feast — where every bite brings joy. Whether it’s a romantic evening, a friends' hangout, or a cozy weekend brunch, we’ve got unbeatable food deals just for you.
           </p>
-          <Link to="/order">
+
+          <Link to="/order" aria-label="Go to menu page">
             <Motion.button
-              className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold  shadow-md"
+              className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold shadow-md"
               whileHover={{
                 scale: 1.12,
                 boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
@@ -95,7 +104,7 @@ const Spend = () => {
             </Motion.button>
           </Link>
         </Motion.div>
-      </div>
+      </section>
     </Container>
   );
 };
