@@ -52,37 +52,39 @@ const Signature = () => {
     const carousel = carouselRef.current;
     if (carousel) {
       const card = carousel.querySelector('div');
-      if (card) {
-        const cardWidth = card.offsetWidth + 48;
-        const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
-        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
+      const cardWidth = card?.offsetWidth || 0;
+      const scrollAmount = direction === 'left' ? -cardWidth - 48 : cardWidth + 48;
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
   return (
     <Container>
-      <div className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+      <section className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
         <div className="mx-auto px-14 relative left-6">
+
+          {/* Rotated label */}
           <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem]">
             <div className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-72 2xl:-ml-60 xl:-ml-72 lg:-ml-72">
               <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
-                <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="" />
+                <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="Flag Icon" />
               </div>
               Foreign customer for (food menu)
             </div>
           </div>
 
-          <div className='2xl:ml-8'>
+          {/* Vertical headline */}
+          <div className="2xl:ml-8">
             <h2 className="3xl:text-[40px] 2xl:text-[36px] xl:text-[36px] lg:text-[30px] font-semibold rotate-[-90deg] absolute 3xl:top-[14.5rem] 2xl:top-[14rem] xl:top-[14rem] lg:top-[14rem] 3xl:-left-32 2xl:-left-24 xl:-left-24 lg:-left-20">
               Chinese Food Set Meals
             </h2>
           </div>
 
+          {/* Carousel */}
           <div className="3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[8.5rem] relative z-10">
             <div
               ref={carouselRef}
-              className="flex 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 overflow-hidden scroll-smooth 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] mx-auto"
+              className="flex overflow-hidden scroll-smooth 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] mx-auto"
             >
               {foodItems.map((item, index) => {
                 const parsedPrice = parseFloat(item.price.replace('$', '')) || 0;
@@ -100,16 +102,14 @@ const Signature = () => {
                     <div className="relative">
                       <Motion.img
                         src={item.image}
-                        alt={item.title}
+                        alt={`${item.title} Image`}
                         className="w-full h-48 object-cover"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                       />
                       {item.available && (
                         <span className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center">
-                          <div className="rounded-full w-4 h-4 flex items-center justify-center mr-1">
-                            <img src="/svg.svg" className="w-3 h-3" alt="Food Icon" />
-                          </div>
+                          <img src="/svg.svg" className="w-3 h-3 mr-1" alt="Available Icon" />
                           Food Available
                         </span>
                       )}
@@ -117,7 +117,10 @@ const Signature = () => {
 
                     <div className="p-4">
                       <h3 className="text-[#2C6252] text-lg font-medium mt-2 ml-2">{item.cuisine}</h3>
-                      <h2 className="font-semibold text-lg text-[#2C6252] ml-2">{item.title} - {item.price}</h2>
+                      <h2 className="font-semibold text-lg text-[#2C6252] ml-2">
+                        {item.title} - {item.price}
+                      </h2>
+
                       <ul className="text-[#AAAAAA] mt-6 list-none text-sm p-0">
                         {item.tags.map((tag, idx) => (
                           <li key={idx} className="flex items-center gap-2 mb-1 ml-2">
@@ -138,22 +141,18 @@ const Signature = () => {
                         ))}
                       </ul>
 
-                      <h4 className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</h4>
+                      <p className="text-[#c2c2c2] text-[12px] ml-2 mt-4">{item.description}</p>
 
                       <Motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => {
-                          const formattedItem = {
-                            ...item,
-                            price: parsedPrice,
-                          };
-
+                          const formattedItem = { ...item, price: parsedPrice };
                           const result = addToCart(formattedItem);
 
                           if (result.success) {
                             toast.success(`${item.title} added to cart successfully!`, {
-                              position: "top-center",
+                              position: 'top-center',
                               autoClose: 2000,
                               hideProgressBar: true,
                               closeOnClick: true,
@@ -162,7 +161,7 @@ const Signature = () => {
                             });
                           } else {
                             toast.warning(`${item.title} is already in cart!`, {
-                              position: "top-center",
+                              position: 'top-center',
                               autoClose: 2000,
                               hideProgressBar: true,
                               closeOnClick: true,
@@ -181,16 +180,19 @@ const Signature = () => {
               })}
             </div>
 
+            {/* Navigation Arrows */}
             <div className="absolute -bottom-14 left-0 w-full flex justify-start z-20">
               <div className="flex gap-2">
                 <button
                   onClick={() => scroll('left')}
+                  aria-label="Scroll Left"
                   className="bg-white text-teal-900 p-2 shadow-md cursor-pointer"
                 >
                   <FaChevronLeft />
                 </button>
                 <button
                   onClick={() => scroll('right')}
+                  aria-label="Scroll Right"
                   className="bg-white text-teal-900 p-2 shadow-md cursor-pointer"
                 >
                   <FaChevronRight />
@@ -199,7 +201,7 @@ const Signature = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 };

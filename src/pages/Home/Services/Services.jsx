@@ -38,17 +38,17 @@ const Services = () => {
   return (
     <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] flex justify-center">
       <Container>
-        <div className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3">
-          {/* Background Image */}
+        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3">
           <div
             className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem]"
             style={{
               backgroundImage:
                 'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
             }}
-          ></div>
+            aria-hidden="true"
+          />
 
-          {/* Foreground Content */}
+          {/* Section Header */}
           <Motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -57,15 +57,13 @@ const Services = () => {
             className="relative z-10 text-center mt-[15rem]"
           >
             <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
-              <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center transform rotate-[5deg] w-fit mx-auto">
-                <div className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
-                  <img src="/svg.png" className="w-3 h-3" alt="Services Icon" />
-                </div>
-                <div className="text-center">
-                  <span className="text-xs">
-                    Your Services <span className="font-thin">(And Benefits)</span>
-                  </span>
-                </div>
+              <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center rotate-[5deg] w-fit mx-auto">
+                <span className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
+                  <img src="/svg.png" className="w-3 h-3" alt="Service Badge Icon" />
+                </span>
+                <span className="text-xs">
+                  Your Services <span className="font-thin">(And Benefits)</span>
+                </span>
               </span>
             </h2>
 
@@ -73,9 +71,10 @@ const Services = () => {
               What Makes Us Stand Out
             </h1>
 
-            <h1 className="text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl">
-              At <span className="font-medium">[Restaurant Name]</span>, we don’t just serve food— we create unforgettable dining experiences. From the moment you step through our doors.
-            </h1>
+            <p className="text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
+              At <span className="font-medium">[Restaurant Name]</span>, we don’t just serve food—
+              we create unforgettable dining experiences. From the moment you step through our doors.
+            </p>
           </Motion.div>
 
           {/* Services Grid */}
@@ -111,7 +110,7 @@ const Services = () => {
                   <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-14 xl:h-14 lg:w-14 lg:h-14 bg-[#2C6252] flex items-center justify-center">
                     <img
                       src={service.icon}
-                      alt={service.title}
+                      alt={`${service.title} Icon`}
                       className="3xl:w-7 3xl:h-7 2xl:w-10 2xl:h-10 xl:w-6 xl:h-6 lg:w-4 lg:h-4 object-contain"
                     />
                   </div>
@@ -136,7 +135,7 @@ const Services = () => {
           </Motion.div>
 
           <div className="py-24" />
-        </div>
+        </section>
       </Container>
     </div>
   );

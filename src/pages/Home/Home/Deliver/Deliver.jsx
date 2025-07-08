@@ -24,7 +24,7 @@ const Deliver = () => {
             viewport={{ once: true }}
           >
             <Motion.h2
-              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col xl:mt-4 2xl:mt-0 3xl:mt-0 "
+              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col xl:mt-4 2xl:mt-0 3xl:mt-0"
               custom={0}
               variants={textVariants}
             >
@@ -41,17 +41,13 @@ const Deliver = () => {
               When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers...
             </Motion.p>
 
-            <Motion.div
-              className="flex space-x-4 mt-20 "
-              custom={2}
-              variants={textVariants}
-            >
+            <Motion.div className="flex space-x-4 mt-20" custom={2} variants={textVariants}>
               <Link to="/order">
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
                   className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-2 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap mt-2"
                 >
-                  <img src="/order.svg" alt="" className="w-4 h-4 mr-2" />
+                  <img src="/order.svg" alt="Order Icon" className="w-4 h-4 mr-2" />
                   Order Now
                 </Motion.button>
               </Link>
@@ -59,7 +55,7 @@ const Deliver = () => {
                 whileHover={{ scale: 1.05 }}
                 className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap mt-2"
               >
-                <img src="/download.svg" alt="" className="w-4 h-4 mr-2" />
+                <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
                 Download Apps
               </Motion.button>
             </Motion.div>

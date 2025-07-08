@@ -30,10 +30,9 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-32 lg:-top-48">
-        {/* Top section */}
+      <section className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-32 lg:-top-48">
+        {/* Heading + Description */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Left content */}
           <Motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -53,19 +52,23 @@ const Testimonials = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="3xl:-mt-14 2xl:-mt-[1.7rem] xl:-mt-[2.4rem] lg:-mt-[3.5em] ml-6"
               >
-                <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png" alt="" />
+                <img
+                  src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png"
+                  alt="Decorative testimonial icon"
+                />
               </Motion.div>
             </div>
           </Motion.div>
 
-          {/* Right swipe image */}
+          {/* Swipeable Image Section */}
           <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-2 xl:right-12 lg:ml-12">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
                 src={images[currentIndex]}
+                alt={`Testimonial visual ${currentIndex + 1}`}
                 custom={direction}
-                className="absolute w-full h-full object-cover "
+                className="absolute w-full h-full object-cover"
                 initial={{ x: direction > 0 ? -300 : 300, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: direction > 0 ? 300 : -300, opacity: 0 }}
@@ -81,24 +84,25 @@ const Testimonials = () => {
               />
             </AnimatePresence>
 
-            {/* Dots */}
+            {/* Slide Indicators */}
             <div className="absolute bottom-8 left-12 transform -translate-x-1/2 flex space-x-2">
               {images.map((_, index) => (
                 <Motion.button
                   key={index}
                   onClick={() => goToSlide(index)}
                   whileHover={{ scale: 1.2 }}
+                  aria-label={`Go to slide ${index + 1}`}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                      ? "bg-white border-2 border-[#FF4C15]"
-                      : "bg-gray-300 border border-transparent"
-                    }`}
+                    ? "bg-white border-2 border-[#FF4C15]"
+                    : "bg-gray-300 border border-transparent"
+                  }`}
                 />
               ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom Cards */}
+        {/* Testimonial Cards */}
         <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 3xl:gap-8 2xl:gap-8 xl:gap-6 lg:gap-3 3xl:-mt-14 2xl:mt-24 xl:mt-14 lg:mt-10 3xl:ml-3 3xl:mr-3 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4">
           {[
             {
@@ -133,26 +137,23 @@ const Testimonials = () => {
                     <span className="w-6 h-6 bg-[#2C6252] rounded-full" />
                     <img
                       src={card.img}
-                      alt="avatar"
+                      alt={`Avatar of ${card.name}`}
                       className="w-6 h-6 border-2 border-[#FF4C15] rounded-full object-cover"
                     />
                   </>
                 ) : (
-                  // Always show 2 colored dots
                   [0, 1].map((idx) => (
                     <span
                       key={idx}
-                      className={`w-6 h-6 rounded-full ${card.dots[idx] ? "bg-[#FF4C15]" : "bg-[#2C6252]"
-                        }`}
+                      className={`w-6 h-6 rounded-full ${card.dots[idx] ? "bg-[#FF4C15]" : "bg-[#2C6252]"}`}
                     />
                   ))
                 )}
               </div>
             </Motion.div>
-
           ))}
         </div>
-      </div>
+      </section>
     </Container>
   );
 };
