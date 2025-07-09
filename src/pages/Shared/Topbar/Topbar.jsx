@@ -144,7 +144,7 @@ const TopBar = () => {
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1742451276/Group_22_fwl6sw.png"
                         alt="Group 22"
-                        className="w-full sm:w-auto h-auto sm:h-[12rem] md:h-[18rem] lg:h-[22rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] -mt-48 sm:-mt-[6rem]  3xl:-mt-[13rem] 2xl:-mt-[13rem] xl:-mt-[13rem] lg:-mt-[13rem] sm:ml-0 3xl:ml-16 lg:-ml-12 md:-ml-4"
+                        className="w-full sm:w-auto h-auto sm:h-[12rem] md:h-[18rem] lg:h-[20rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] -mt-48 sm:-mt-[6rem]  3xl:-mt-[13rem] 2xl:-mt-[13rem] xl:-mt-[13rem] lg:-mt-[13rem] sm:ml-0 3xl:ml-16 lg:-ml-12 md:-ml-4"
                     />
 
                     {/* Content */}
@@ -156,7 +156,7 @@ const TopBar = () => {
 
                         {/* Order Button */}
                         <a href="/order">
-                            <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px]  lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap 3xl:ml-4 3xl:mr-1 2xl:ml-4 2xl:mr-1 xl:ml-4 xl:mr-1 lg:ml-4 lg:mr-1 ">
+                            <button className="bg-[#FF4C15] text-white text-sm md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px]  lg:text-[12px] md:text-[12px] px-2 md:px-3 py-1 md:py-2 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 lg:whitespace-nowrap 3xl:ml-4 3xl:mr-1 2xl:ml-4 2xl:mr-1 xl:ml-4 xl:mr-1 lg:ml-4 lg:mr-1">
                                 Order Now
                                 <ChevronRight className="ml-1 text-white" size={16} md:size={20} />
                             </button>

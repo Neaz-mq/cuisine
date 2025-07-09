@@ -4,10 +4,10 @@ import Container from "../../../components/Container";
 const Awards = () => {
   return (
     <Container>
-      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-48  lg:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 ">
+      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20  lg:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20">
 
         {/* Foreground Image (Chef) */}
-        <div className="absolute left-1/2 lg:top-[33%] xl:top-[50%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
+        <div className="absolute left-1/2 lg:top-[33%] xl:top-[40%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center ">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1744793493/chef_j9jlya.png"
             alt="Award-winning chef with culinary excellence"
