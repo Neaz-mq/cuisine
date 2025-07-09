@@ -83,11 +83,11 @@ const Buffet = () => {
 
   return (
     <Container>
-      <section className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 overflow-hidden">
+      <section className="mb-36 z-50 3xl:mt-28 2xl:mt-20 xl:mt-16 lg:mt-14 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 ">
         <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2">
           {/* Top Image Background */}
           <Motion.div
-            className="text-center mb-10 relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1747026768/Buffet_lhk7ax.png')] bg-no-repeat bg-contain bg-center w-full h-[20rem] -mt-52"
+            className="text-center mb-10 relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1747026768/Buffet_lhk7ax.png')] bg-no-repeat bg-contain bg-center w-full h-[20rem] -mt-52 overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
