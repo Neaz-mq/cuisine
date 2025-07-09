@@ -14,7 +14,7 @@ const fadeUp = {
 const Roast = () => {
   return (
     <Container>
-      <main className="3xl:px-12 3xl:ml-7 3xl:mb-24 2xl:px-1 2xl:ml-7 2xl:mb-24 xl:px-6 xl:ml-7 xl:mb-24 lg:px-1 lg:-ml-3 lg:mb-24 ">
+      <main className="3xl:px-12 3xl:ml-7 3xl:mb-24 2xl:px-1 2xl:ml-7 2xl:mb-24 xl:px-6 xl:ml-7 xl:mb-24 lg:px-1 lg:-ml-3 lg:mb-24 overflow-hidden ">
         {/* Header Section */}
         <Motion.section
           aria-labelledby="roast-header"

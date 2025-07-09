@@ -262,7 +262,7 @@ const Category = () => {
   return (
     <Container>
       <section
-        className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-52 mt-6"
+        className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-52 mt-6 overflow-hidden"
         aria-labelledby="category-heading"
       >
         <Motion.h2

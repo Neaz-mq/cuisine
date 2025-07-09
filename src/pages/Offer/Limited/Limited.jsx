@@ -64,7 +64,7 @@ const Limited = () => {
 
   return (
     <Container>
-      <section className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6" aria-labelledby="limited-heading">
+      <section className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6 overflow-hidden" aria-labelledby="limited-heading">
         {/* Promo Text */}
         <Motion.div
           initial={{ opacity: 0, y: 30 }}
