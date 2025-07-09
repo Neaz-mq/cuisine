@@ -60,7 +60,7 @@ const Signature = () => {
 
   return (
     <Container>
-      <section className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-48">
+      <section className="bg-[#2C6252] text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-44">
         <div className="mx-auto px-14 relative left-6">
 
           {/* Rotated label */}
