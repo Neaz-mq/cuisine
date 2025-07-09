@@ -40,7 +40,7 @@ const Services = () => {
       <Container>
         <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3">
           <div
-            className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[60rem]"
+            className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[30rem]"
             style={{
               backgroundImage:
                 'url("https://res.cloudinary.com/dxohwanal/image/upload/v1745037051/Stand_out_aj6upw.png")',
