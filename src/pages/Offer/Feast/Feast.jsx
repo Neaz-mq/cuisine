@@ -106,7 +106,7 @@ const Feast = () => {
     <Container>
       <section
         aria-labelledby="feast-hero-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 overflow-hidden"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44"
       >
         {/* Hero Section */}
         <div

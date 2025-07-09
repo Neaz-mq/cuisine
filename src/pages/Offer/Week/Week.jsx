@@ -13,12 +13,13 @@ const daysOfWeek = [
 // Image sets by weekday index (0=Sunday, 1=Monday, ..., 6=Saturday)
 const imageSets = {
   0: [ // Sunday
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
+   "https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
+ 
   ],
   1: [ // Monday
     "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
@@ -37,12 +38,12 @@ const imageSets = {
     "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
   ],
   3: [ // Wednesday
-   "https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
   ],
   4: [ // Thursday
    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
@@ -69,7 +70,6 @@ const imageSets = {
     "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
   ],
 };
-
  
  
 
