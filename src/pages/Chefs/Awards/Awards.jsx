@@ -9,7 +9,7 @@ const Awards = () => {
         {/* Foreground Image (Chef) */}
         <div className="absolute left-1/2 lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
           <img
-            src="https://res.cloudinary.com/dxohwanal/image/upload/v1744793493/chef_j9jlya.png"
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
             className="lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px]  max-w-none"
           />

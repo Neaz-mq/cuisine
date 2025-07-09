@@ -67,7 +67,7 @@ const Famous = () => {
             aria-label="Famous Chef Image with Label"
           >
             <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1750152925/Mask_Group_62_hvwc6j.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1752058500/chef2_ivfy0a.webp"
               alt="Portrait of a world-famous chef"
               className="w-full h-auto object-cover"
             />

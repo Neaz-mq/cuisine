@@ -7,7 +7,7 @@ const Members = () => {
             id: 1,
             name: "Sophia M.",
             image:
-                "https://res.cloudinary.com/dxohwanal/image/upload/v1750150180/pngegg_30_djnqeq.png",
+                "https://res.cloudinary.com/dxohwanal/image/upload/v1752061029/chef5_w0l3nb.webp",
             yearsExperience: 5,
             rating: 5,
         },
@@ -15,7 +15,7 @@ const Members = () => {
             id: 2,
             name: "Sophia M.",
             image:
-                "https://res.cloudinary.com/dxohwanal/image/upload/v1750150153/pngegg_28_kzg7un.png",
+                "https://res.cloudinary.com/dxohwanal/image/upload/v1752061398/chef6_aqp9rp.webp",
             yearsExperience: 5,
             rating: 5,
         },
@@ -23,7 +23,7 @@ const Members = () => {
             id: 3,
             name: "Sophia M.",
             image:
-                "https://res.cloudinary.com/dxohwanal/image/upload/v1750150223/pngegg_31_opzccv.png",
+                "https://res.cloudinary.com/dxohwanal/image/upload/v1752061291/pngegg_31_opzccv_nwcjk9.webp",
             yearsExperience: 5,
             rating: 5,
         },
@@ -31,7 +31,7 @@ const Members = () => {
             id: 4,
             name: "Sophia M.",
             image:
-                "https://res.cloudinary.com/dxohwanal/image/upload/v1750150180/pngegg_30_djnqeq.png",
+                "https://res.cloudinary.com/dxohwanal/image/upload/v1752061029/chef5_w0l3nb.webp",
             yearsExperience: 5,
             rating: 5,
         },
@@ -95,7 +95,7 @@ const Members = () => {
                             viewport={{ once: true }}
                         >
                             <img
-                                src="https://res.cloudinary.com/dxohwanal/image/upload/v1750143426/portrait-happy-male-chef-dressed-uniform_p1e1of.png"
+                                src="https://res.cloudinary.com/dxohwanal/image/upload/v1752059008/chef4_pgbdux.webp"
                                 alt="Portrait of happy male chef in uniform"
                                 className="object-contain h-auto w-full 3xl:-ml-2 2xl:ml-6 xl:-ml-16 lg:ml-4 xl:mt-[5.93rem] 3xl:mt-0 2xl:mt-0 lg:mt-[5.93rem]"
                                 onError={(e) => {

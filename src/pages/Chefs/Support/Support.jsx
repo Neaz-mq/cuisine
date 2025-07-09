@@ -91,7 +91,7 @@ const Support = () => {
             aria-label="Chef Image"
           >
             <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1750141710/Mask_Group_63_b6f8fz.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1752058752/chef3_xhva7c.webp"
               alt="Chef holding a dish smiling"
               className="3xl:w-full 2xl:w-full xl:w-full lg:w-64 h-full object-cover max-h-[565px]"
               onError={(e) => {
