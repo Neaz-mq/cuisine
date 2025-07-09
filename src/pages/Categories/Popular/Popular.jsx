@@ -117,7 +117,7 @@ const Popular = () => {
 
   return (
     <Container>
-      <section aria-labelledby="popular-heading" className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24 3xl:mt-52 2xl:mt-20 xl:mt-44">
+      <section aria-labelledby="popular-heading" className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24 3xl:mt-52 2xl:mt-20 xl:mt-44 overflow-hidden">
         <Motion.div
           className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8"
           initial="hidden"
