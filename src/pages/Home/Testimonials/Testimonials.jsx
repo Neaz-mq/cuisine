@@ -4,9 +4,9 @@ import Container from "../../../components/Container";
 
 const Testimonials = () => {
   const images = [
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748515898/Mask_Group_17_ke16wb.jpg",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748516128/pexels-nicole-michalou-5778894_hz19iu.jpg",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748516355/pexels-askar-abayev-5638751_vinx63.jpg"
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752052934/testimonial1_a2ozpv.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752053389/testimonial2_rkf0yx.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752053648/testimonial3_h1phwx.webp"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

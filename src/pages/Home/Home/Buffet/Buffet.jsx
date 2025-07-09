@@ -36,7 +36,7 @@ const Buffet = () => {
   const foodItems = [
     {
       id: 1,
-      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1747027495/Mask_Group_7_ezrscz.png",
+      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1752051031/buffet1_ek10ch.webp",
       alt: "Grilled Lamb Chops",
       ratingFull: 4,
       ratingHalf: true,
@@ -47,7 +47,7 @@ const Buffet = () => {
     },
     {
       id: 2,
-      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1747027615/Mask_Group_8_o6fhcq.png",
+      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1752051223/buffet2_lv0gz5.webp",
       alt: "Grilled Super Steak",
       ratingFull: 5,
       ratingHalf: false,
@@ -58,7 +58,7 @@ const Buffet = () => {
     },
     {
       id: 3,
-      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1747027686/Mask_Group_9_b1ncuh.png",
+      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1752051401/buffet3_brkpjm.webp",
       alt: "Pan-Seared Steak",
       ratingFull: 4,
       ratingHalf: false,
@@ -69,7 +69,7 @@ const Buffet = () => {
     },
     {
       id: 4,
-      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1747027737/Mask_Group_10_mzcepf.png",
+      img: "https://res.cloudinary.com/dxohwanal/image/upload/v1752051554/buffet4_cwwunl.webp",
       alt: "Special Sandwich",
       ratingFull: 5,
       ratingHalf: false,
@@ -226,7 +226,7 @@ const Buffet = () => {
 
             <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60">
               <Motion.img
-                src="https://res.cloudinary.com/dxohwanal/image/upload/v1747031825/Mask_Group_57_qgijfs.png"
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1752051794/buffet5_zp25b9.webp"
                 alt="Deep Blue Delights Image"
                 className="w-full h-full object-cover 3xl:-ml-1 2xl:ml-4 xl:ml-0 lg:ml-2"
                 initial={{ opacity: 0, scale: 1.1 }}

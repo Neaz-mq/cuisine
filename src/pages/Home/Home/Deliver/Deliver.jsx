@@ -78,7 +78,7 @@ const Deliver = () => {
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             >
               <img
-                src="https://res.cloudinary.com/dxohwanal/image/upload/v1747282614/young-smiling-courier-guy-red-uniform-sitting-scooter-holding-paper-bag-saying-hello-white-wall_haw6vn.png"
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1752053930/deliver1_a5xpyd.webp"
                 alt="Delivery Guy"
                 className="object-contain h-auto w-full 3xl:-ml-32 2xl:-ml-8 xl:-ml-4 lg:ml-4"
               />

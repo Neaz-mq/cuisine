@@ -108,11 +108,11 @@ const Banner = () => {
               <div className="flex items-center 3xl:space-x-20 2xl:space-x-20 xl:space-x-20 lg:space-x-10 -mt-20 3xl:ml-5">
                 {[
                   {
-                    src: 'https://res.cloudinary.com/dxohwanal/image/upload/v1742626992/pngegg_17_u4hkq7.png',
+                    src: 'https://res.cloudinary.com/dxohwanal/image/upload/v1752050418/banner2_wtpney.webp',
                     price: '20$', top: '60px',
                   },
                   {
-                    src: 'https://res.cloudinary.com/dxohwanal/image/upload/v1742627043/pngegg_18_fyzuz7.png',
+                    src: 'https://res.cloudinary.com/dxohwanal/image/upload/v1752050599/banner3_yocvwl.webp',
                     price: '10$', top: '32px', extraClass: '-mt-16',
                   },
                 ].map((item, i) => (
