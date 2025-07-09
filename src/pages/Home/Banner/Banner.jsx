@@ -142,7 +142,7 @@ const Banner = () => {
               className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-32 xl:-mt-28 xl:-ml-28 lg:-mt-[5.2rem] lg:-ml-44 object-cover z-20"
             >
               <img
-                src="https://res.cloudinary.com/dxohwanal/image/upload/v1744105102/pngegg_27_jjdv28.png"
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
                 alt="Delicious Dish"
                 className="3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[32rem] 3xl:-ml-24 2xl:-ml-10 xl:-ml-16 lg:-ml-0 3xl:h-[50rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem] object-cover"
               />
