@@ -137,7 +137,7 @@ const Weekly = () => {
             className="relative w-full h-[400px] bg-cover bg-center overflow-hidden mb-16"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/dxohwanal/image/upload/v1750229832/Mask_Group_30_g2huve.png')",
+                "url('https://res.cloudinary.com/dxohwanal/image/upload/v1752054831/young-smiling-courier-guy-red-uniform-sitting-scooter-holding-paper-bag-saying-hello-white-wall_haw6vn_hdlpgf.webp')",
             }}
             role="img"
             aria-label="Background with promotional text about signature foods"

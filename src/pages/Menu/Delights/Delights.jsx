@@ -18,7 +18,7 @@ const Delights = () => {
         {/* Top Left - Shrimp */}
         <Motion.article {...fadeInUp} className="flex flex-col bg-white overflow-hidden p-6">
           <Motion.img
-            src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146051/Mask_Group_51_pfs869.png"
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752055520/menu2_cvwcfg.webp"
             alt="Shrimp dish with fresh ingredients"
             className="w-full h-auto object-cover"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -55,7 +55,7 @@ const Delights = () => {
         {/* Top Right - Sushi */}
         <Motion.div {...fadeInUp} className="flex justify-center items-center mt-5 w-full">
           <img
-            src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146115/Mask_Group_54_uywl3m.png"
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056680/menu3_yskhz3.webp"
             alt="Assorted sushi served with traditional garnish"
             className="3xl:w-full 2xl:w-[32rem] xl:w-[29rem] 3xl:h-[700px] 2xl:h-[650px] xl:h-[640px] lg:h-[600px] object-cover"
           />
@@ -64,7 +64,7 @@ const Delights = () => {
         {/* Middle Banner - Chef Cooking */}
         <Motion.div {...fadeInUp} className="relative overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[680px] xl:h-[680px] lg:h-auto 3xl:left-7 2xl:left-7 xl:left-6 lg:left-6 3xl:-top-4 2xl:-top-0">
           <img
-            src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146155/Mask_Group_55_ndcfj6.png"
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056828/menu4_kx7c9q.webp"
             alt="Chef preparing seafood dishes"
             className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[33.1rem] xl:w-[27.5rem] lg:w-[22rem] h-auto object-cover object-center"
           />
@@ -112,7 +112,7 @@ const Delights = () => {
           </div>
 
           <Motion.img
-            src="https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png"
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056997/menu5_ngludm.webp"
             alt="Grilled fish with herbs and spices"
             className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-52 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem]"
             initial={{ opacity: 0, y: 30 }}

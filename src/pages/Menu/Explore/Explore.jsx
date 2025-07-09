@@ -80,7 +80,7 @@ const Explore = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1747817792/pngegg_-_2025-05-10T174947.812_r4zzrj.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1752054404/menu1_nkbnfg.webp"
               alt="Delicious full menu dishes display banner"
               className="w-full max-w-[800px] object-contain 3xl:-mt-10 2xl:-mt-8 xl:-mt-6 lg:-mt-6 3xl:-ml-20 2xl:-ml-20 xl:-ml-20"
             />
