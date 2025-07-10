@@ -43,7 +43,7 @@ const Spend = () => {
           style={{ perspective: 900 }}
         >
           <img
-            src="https://res.cloudinary.com/dxohwanal/image/upload/v1750220026/Image_65_tjh3jt.png"
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752120958/table1_jf0nwc.webp"
             alt="Couple enjoying quality dining time at Flavors & Feast"
             className="w-[90%] max-w-md lg:max-w-full h-auto"
           />
