@@ -72,28 +72,28 @@ const Popular = () => {
       title: "Classic Roast Brew",
       description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 12,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     },
     {
       id: 2,
       title: "Cheesy Crust Deluxe",
       description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 14,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     },
     {
       id: 3,
       title: "Classic Roast Special",
       description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 16,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     },
     {
       id: 4,
       title: "Cheesy Crust Superior",
       description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 18,
-      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     },
   ];
 
@@ -148,7 +148,7 @@ const Popular = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1750236294/Mask_Group_33_oso3cc.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1752122434/order5_fvpldv.webp"
               alt="Weekly best sales products"
               className="absolute inset-0 w-full h-full object-cover z-0"
             />

@@ -62,7 +62,7 @@ const Brew = () => {
             className="relative top-28"
           >
             <img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1750668908/pngegg_34_hj3lzk.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1752122855/order6_cmhxns.webp"
               alt="Roast Brew Dish with weekly offer"
               className="w-full h-auto object-cover"
             />

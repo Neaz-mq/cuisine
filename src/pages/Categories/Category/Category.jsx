@@ -13,7 +13,7 @@ const foodData = [
     title: "Crispy Fried Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 14,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -21,7 +21,7 @@ const foodData = [
     title: "Crispy Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 12,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -29,7 +29,7 @@ const foodData = [
     title: "Crispy Hot Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 10,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -37,7 +37,7 @@ const foodData = [
     title: "Fried Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 8,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -45,7 +45,7 @@ const foodData = [
     title: "Normal Fried Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 6,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -53,7 +53,7 @@ const foodData = [
     title: "Average Fried Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 4,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -61,7 +61,7 @@ const foodData = [
     title: "Thai Fried Chicken",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 2,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     category: "Signature",
   },
   {
@@ -69,7 +69,7 @@ const foodData = [
     title: "Mozila Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 16,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -77,7 +77,7 @@ const foodData = [
     title: "Donald Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 14,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -85,7 +85,7 @@ const foodData = [
     title: "Sticky Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 10,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -93,7 +93,7 @@ const foodData = [
     title: "Mehoniz Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 10,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -101,7 +101,7 @@ const foodData = [
     title: "Italian Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 9,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -109,7 +109,7 @@ const foodData = [
     title: "Hot Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 6,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -117,7 +117,7 @@ const foodData = [
     title: "Normal Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 4,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121724/order2_hizrrd.webp",
     category: "Mushroom",
   },
   {
@@ -125,7 +125,7 @@ const foodData = [
     title: "Cappuccino Creamy",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 14,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -133,7 +133,7 @@ const foodData = [
     title: "Cappuccino Coffee",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 13,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -141,7 +141,7 @@ const foodData = [
     title: "Cappuccino Italian",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 12,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -149,7 +149,7 @@ const foodData = [
     title: "Cappuccino Mozila",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 11,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -157,7 +157,7 @@ const foodData = [
     title: "Cappuccino Cup",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 10,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -165,7 +165,7 @@ const foodData = [
     title: "Cappuccino Brazilian",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 8,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -173,7 +173,7 @@ const foodData = [
     title: "Cappuccino Latte",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 7,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122040/order3_tsiibf.webp",
     category: "Coffee",
   },
   {
@@ -181,7 +181,7 @@ const foodData = [
     title: "Pepperoni Pizza",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 26,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
   {
@@ -189,7 +189,7 @@ const foodData = [
     title: "Pepperoni Mojito",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 22,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
   {
@@ -197,7 +197,7 @@ const foodData = [
     title: "Pepperoni Deluxe",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 20,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
   {
@@ -205,7 +205,7 @@ const foodData = [
     title: "Pepperoni Supreme",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 18,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
   {
@@ -213,7 +213,7 @@ const foodData = [
     title: "Pepperoni Special",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 16,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
   {
@@ -221,7 +221,7 @@ const foodData = [
     title: "Pepperoni Fieasta",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 14,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
   {
@@ -229,7 +229,7 @@ const foodData = [
     title: "Pepperoni Normal",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 12,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     category: "Pizza",
   },
 ];
