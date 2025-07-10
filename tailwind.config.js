@@ -1,24 +1,29 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],  // Add Poppins font family
+        poppins: ['Poppins', 'sans-serif'],
       },
-      // Custom screen sizes (breakpoints)
       screens: {
-        'sm': '640px',  // Small devices (mobile)
-        'md': '768px',  // Medium devices (tablet)
-        'lg': '1024px', // Large devices (laptops)
-        'xl': '1280px', // Extra large devices (large laptops)
-        '2xl': '1440px', // Bigger devices
-        '3xl': '1920px', // Custom 1920px breakpoint
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+        '3xl': '1920px',
       },
     },
   },
   plugins: [],
+  // 🚀 Enable just-in-time mode and minify unused styles
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+  // 🧹 Helps remove unused CSS for production
+  safelist: [], // add utility classes here if needed for dynamic usage
 };

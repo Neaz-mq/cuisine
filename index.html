@@ -2,13 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- Preconnect to font CDN for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Use font-display: swap to prevent render-blocking -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload favicon -->
+    <link rel="preload" as="image" href="/cuisine.svg" type="image/svg+xml" />
     <link rel="icon" type="image/svg+xml" href="/cuisine.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Mobile-friendly settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO-friendly title -->
     <title>Cuisine</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Load script with module and defer to avoid blocking rendering -->
+    <script type="module" src="/src/main.jsx" defer></script>
   </body>
 </html>
