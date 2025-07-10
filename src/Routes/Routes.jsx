@@ -1,28 +1,56 @@
-import { createBrowserRouter } from "react-router-dom";
-import { lazy } from "react";
+import {
+    createBrowserRouter,
+  } from "react-router-dom";
+import Main from "../layout/Main";
+import Home from "../pages/Home/Home/Home";
+import Menu from "../pages/Menu/Menu/Menu";
+import Offer from "../pages/Offer/Offer/Offer";
+import Chefs from "../pages/Chefs/Chefs/Chefs";
+import Tables from "../pages/Tables/Tables/Tables";
+import Categories from "../pages/Categories/Categories/Categories";
+import Carts from "../pages/Carts/Carts";
 
-// Lazy load all components
-const Main = lazy(() => import("../layout/Main"));
-const Home = lazy(() => import("../pages/Home/Home/Home"));
-const Menu = lazy(() => import("../pages/Menu/Menu/Menu"));
-const Offer = lazy(() => import("../pages/Offer/Offer/Offer"));
-const Chefs = lazy(() => import("../pages/Chefs/Chefs/Chefs"));
-const Tables = lazy(() => import("../pages/Tables/Tables/Tables"));
-const Categories = lazy(() => import("../pages/Categories/Categories/Categories"));
-const Carts = lazy(() => import("../pages/Carts/Carts"));
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/menu", element: <Menu /> },
-      { path: "/offer", element: <Offer /> },
-      { path: "/chefs", element: <Chefs /> },
-      { path: "/table", element: <Tables /> },
-      { path: "/order", element: <Categories /> },
-      { path: "/carts", element: <Carts /> },
-    ],
-  },
-]);
+ export const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Main></Main>,
+      children: [
+        {
+            path: "/",
+            element: <Home></Home>
+        },
+
+        {
+            path: "/menu",
+            element: <Menu></Menu>
+        },
+
+        {
+            path: "/offer",
+            element: <Offer></Offer>
+        },
+
+         {
+            path: "/chefs",
+            element: <Chefs></Chefs>
+        }, 
+
+        {
+            path: "/table",
+            element: <Tables></Tables>
+        }, 
+
+        {
+            path: "/order",
+            element: <Categories></Categories>
+        }, 
+
+         {
+            path: "/carts",
+            element: <Carts></Carts>
+        }, 
+      ]
+    },
+  ]);
+  
