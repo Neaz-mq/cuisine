@@ -60,7 +60,7 @@ const Roast = () => {
               custom={2}
             >
               <img
-                src="https://res.cloudinary.com/dxohwanal/image/upload/v1750073781/Mask_Group_49_lumoct.png"
+                src="https://res.cloudinary.com/dxohwanal/image/upload/v1752128891/offer23_sy9zro.webp"
                 alt="Classic Roast Brew coffee cup"
                 className="translate-x-24 translate-y-10 md:translate-x-20 3xl:-mt-16 2xl:-mt-8 xl:mt-4 lg:mt-16"
                 draggable={false}

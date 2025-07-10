@@ -13,65 +13,65 @@ const daysOfWeek = [
 // Image sets by weekday index (0=Sunday, 1=Monday, ..., 6=Saturday)
 const imageSets = {
   0: [ // Sunday
-   "https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
- 
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
+
   ],
   1: [ // Monday
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp"
   ],
   2: [ // Tuesday
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
   ],
   3: [ // Wednesday
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp"
   ],
   4: [ // Thursday
-   "https://res.cloudinary.com/dxohwanal/image/upload/v1748060806/pngegg_98_himcvk.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060318/pngegg_2_e2f6jx.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748060880/pngegg_99_qo0dd8.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062201/pngegg_-_2025-05-10T162941.070_l0cowy.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748062060/pngegg_-_2025-05-10T162558.555_qajswo.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748146220/pngegg_70_kfw3ly.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
   ],
   5: [ // Friday
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
   ],
   6: [ // Saturday
-     "https://res.cloudinary.com/dxohwanal/image/upload/v1748321038/Mask_Group_35_csn6xf.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321078/Mask_Group_37_fqhmcm.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748320998/Mask_Group_36_gbjtya.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321319/Mask_Group_34_mtkkiw.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748321962/Mask_Group_39_emmfxr.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1748322031/Mask_Group_38_xhbv7y.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124388/offer6_s6eui8.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124622/offer8_sdthfe.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124936/offer10_yaohib.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124492/offer7_rqv65z.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124722/offer9_t9bjvu.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752124288/offer5_uemicz.webp",
   ],
 };
- 
- 
+
+
 
 const getThreeDayWindow = (days, todayIndex) => {
   const threeDays = [];
@@ -123,14 +123,13 @@ const Week = () => {
             {images.map((url, index) => (
               <div
                 key={index}
-                className={`absolute overflow-hidden ${
-                  index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 xl:top-4 xl:left-[0%] xl:w-40 xl:h-52 lg:top-4 lg:left-[3%] lg:w-28 lg:h-40 z-30" :
-                  index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 xl:top-[4.5rem] xl:left-[35%] xl:w-40 xl:h-52 lg:top-[4.5rem] lg:left-[35%] lg:w-32 lg:h-40 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
-                  index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 xl:top-4 xl:left-[38%] xl:w-64 xl:h-52 lg:top-4 lg:left-[38%] lg:w-44 lg:h-40 z-10" :
-                  index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10 xl:top-[16rem] xl:left-[38%] xl:w-40 xl:h-52 lg:top-[12rem] lg:left-[38%] lg:w-32 lg:h-44" :
-                  index === 4 ? "3xl:top-[16rem] 2xl:top-[16rem] xl:top-[16rem] lg:top-[12rem]  3xl:-left-[4%] 2xl:-left-[10.3%] xl:-left-[17%] lg:-left-[10.2%] 3xl:w-60 3xl:h-48 2xl:w-60 2xl:h-48 xl:w-60 xl:h-48 lg:w-40 lg:h-44 opacity-15 z-30" :
-                  "3xl:top-[20rem] 2xl:top-[20rem] xl:top-[20rem] lg:top-[20rem] 3xl:left-[24%] 2xl:left-[24%] xl:left-[22%] lg:left-[18%] 3xl:w-36 3xl:h-52 2xl:w-36 2xl:h-52 xl:w-36 xl:h-52 lg:w-32 lg:h-40 z-40"
-                }`}
+                className={`absolute overflow-hidden ${index === 0 ? "3xl:top-4 3xl:left-[8%] 3xl:w-40 3xl:h-52 2xl:top-4 2xl:left-[4%] 2xl:w-40 2xl:h-52 xl:top-4 xl:left-[0%] xl:w-40 xl:h-52 lg:top-4 lg:left-[3%] lg:w-28 lg:h-40 z-30" :
+                    index === 1 ? "3xl:top-[4.5rem] 3xl:left-[35%] 3xl:w-40 3xl:h-52 2xl:top-[4.5rem] 2xl:left-[35%] 2xl:w-40 2xl:h-52 xl:top-[4.5rem] xl:left-[35%] xl:w-40 xl:h-52 lg:top-[4.5rem] lg:left-[35%] lg:w-32 lg:h-40 -translate-x-1/2 -translate-y-36 z-20 opacity-10" :
+                      index === 2 ? "3xl:top-4 3xl:left-[38%] 3xl:w-64 3xl:h-52 2xl:top-4 2xl:left-[38%] 2xl:w-64 2xl:h-52 xl:top-4 xl:left-[38%] xl:w-64 xl:h-52 lg:top-4 lg:left-[38%] lg:w-44 lg:h-40 z-10" :
+                        index === 3 ? "3xl:top-[16rem] 3xl:left-[38%] 3xl:w-40 3xl:h-52 2xl:top-[16rem] 2xl:left-[38%] 2xl:w-40 2xl:h-52 z-10 xl:top-[16rem] xl:left-[38%] xl:w-40 xl:h-52 lg:top-[12rem] lg:left-[38%] lg:w-32 lg:h-44" :
+                          index === 4 ? "3xl:top-[16rem] 2xl:top-[16rem] xl:top-[16rem] lg:top-[12rem]  3xl:-left-[4%] 2xl:-left-[10.3%] xl:-left-[17%] lg:-left-[10.2%] 3xl:w-60 3xl:h-48 2xl:w-60 2xl:h-48 xl:w-60 xl:h-48 lg:w-40 lg:h-44 opacity-15 z-30" :
+                            "3xl:top-[20rem] 2xl:top-[20rem] xl:top-[20rem] lg:top-[20rem] 3xl:left-[24%] 2xl:left-[24%] xl:left-[22%] lg:left-[18%] 3xl:w-36 3xl:h-52 2xl:w-36 2xl:h-52 xl:w-36 xl:h-52 lg:w-32 lg:h-40 z-40"
+                  }`}
               >
                 <img src={url} alt={`dish-${index}`} className="w-full h-full object-cover" />
               </div>

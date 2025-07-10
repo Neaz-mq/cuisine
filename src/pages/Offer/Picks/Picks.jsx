@@ -23,10 +23,10 @@ const staggerContainer = {
 const Picks = () => {
   const discounts = ["30%", "10%", "36%", "45%"];
   const images = [
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1750068539/pngegg_51_uh0wtk.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1750069731/pngegg_57_pp0xjv.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1750070674/pngegg_53_o3eh9m.png",
-    "https://res.cloudinary.com/dxohwanal/image/upload/v1750070975/pngegg_61_kdlgnr.png",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752128290/offer19_xobxvx.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752128529/offer21_u9mern.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752128419/offer20_gpdke3.webp",
+    "https://res.cloudinary.com/dxohwanal/image/upload/v1752128742/offer22_oaxxn4.webp",
   ];
 
   return (
@@ -72,7 +72,7 @@ const Picks = () => {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  src="https://res.cloudinary.com/dxohwanal/image/upload/v1750063830/pngegg_58_muaisk.png"
+                  src="https://res.cloudinary.com/dxohwanal/image/upload/v1752127492/offer16_mnskf5.webp"
                   alt="Plate with chicken nuggets and fries"
                   className="rounded-lg w-full max-w-lg object-cover"
                   draggable={false}
@@ -91,7 +91,7 @@ const Picks = () => {
               >
                 <div className="w-1/3 pr-4">
                   <img
-                    src="https://res.cloudinary.com/dxohwanal/image/upload/v1750064469/pngegg_60_paxfnc.png"
+                    src="https://res.cloudinary.com/dxohwanal/image/upload/v1752127749/offer17_z4vxy7.webp"
                     alt="Grilled meat on plate"
                     className="rounded-lg w-full object-cover"
                     draggable={false}
@@ -134,7 +134,7 @@ const Picks = () => {
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    src="https://res.cloudinary.com/dxohwanal/image/upload/v1750064994/Mask_Group_44_jlddtq.png"
+                    src="https://res.cloudinary.com/dxohwanal/image/upload/v1752127873/offer18_bdlnxr.webp"
                     alt="Delicious pizza"
                     className="w-full object-cover relative top-12 left-10"
                     draggable={false}

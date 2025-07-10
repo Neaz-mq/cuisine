@@ -13,7 +13,7 @@ const Feast = () => {
       title: "Crispy Chicken Wings",
       price: 12,
       image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323910/Mask_Group_28_hem67i.png",
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1752126479/offer12_wn37pv.webp",
       description:
         "Our menu is carefully crafted by expert chefs who bring creativity",
     },
@@ -22,7 +22,7 @@ const Feast = () => {
       title: "Santa's Stuff Mushrooms",
       price: 14,
       image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323817/Mask_Group_28_ovt62q.png",
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1752126715/offer13_jefv2j.webp",
       description:
         "Our menu is carefully crafted by expert chefs who bring creativity",
     },
@@ -31,7 +31,7 @@ const Feast = () => {
       title: "Classic Roast Brew",
       price: 16,
       image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323853/Mask_Group_28_vyk1th.png",
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1752127012/offer14_viddzm.webp",
       description:
         "Our menu is carefully crafted by expert chefs who bring creativity",
     },
@@ -40,7 +40,7 @@ const Feast = () => {
       title: "Cheesy Crust Deluxe",
       price: 18,
       image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1748323949/Mask_Group_28_re0mpe.png",
+        "https://res.cloudinary.com/dxohwanal/image/upload/v1752127252/offer15_fc5m1h.webp",
       description:
         "Our menu is carefully crafted by expert chefs who bring creativity",
     },
@@ -128,7 +128,7 @@ const Feast = () => {
           </div>
           <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem]">
             <Motion.img
-              src="https://res.cloudinary.com/dxohwanal/image/upload/v1748323779/pngegg_63_yi9xit.png"
+              src="https://res.cloudinary.com/dxohwanal/image/upload/v1752125671/offer11_hhovyb.webp"
               alt="Delicious fried chicken wings"
               className="w-full h-auto"
               initial={{ opacity: 0, y: 40 }}
