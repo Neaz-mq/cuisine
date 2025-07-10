@@ -11,28 +11,28 @@ const weeklyFoodData = [
     title: "Crispy Chicken Wings",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 10,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750225749/Mask_Group_28_xk4xjk.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752131105/menu14_ic1vqr.webp",
   },
   {
     id: 2,
     title: "Santa's Stuffed Mushrooms",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 12,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750227110/Mask_Group_28_o3zjoz.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752131180/menu15_b2jpqw.webp",
   },
   {
     id: 3,
     title: "Classic Roast Brew",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 14,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750223554/Mask_Group_31_g0a4u5.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752131250/menu16_kvd8lx.webp",
   },
   {
     id: 4,
     title: "Cheesy Crust Deluxe",
     description: "Our menu is carefully crafted by expert chefs who bring creativity",
     price: 16,
-    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1750226948/Mask_Group_32_tntr4o.png",
+    image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752131326/menu17_i0xaie.webp",
   },
 ];
 
