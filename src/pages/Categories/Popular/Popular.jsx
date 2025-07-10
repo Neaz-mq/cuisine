@@ -141,7 +141,7 @@ const Popular = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-14">
           <Motion.article
-            className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] min-h-[48rem] w-full"
+            className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] 3xl:min-h-[48rem] 2xl:min-h-[50rem] xl:min-h-[50rem] lg:min-h-[50rem] w-full"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
