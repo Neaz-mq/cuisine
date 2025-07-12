@@ -107,7 +107,6 @@ const Spend = () => {
             >
               Checkout Menu
             </Motion.button>
-
           </Link>
         </Motion.div>
       </section>

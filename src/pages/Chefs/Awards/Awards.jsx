@@ -4,19 +4,19 @@ import Container from "../../../components/Container";
 const Awards = () => {
   return (
     <Container>
-      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20  lg:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 ">
+      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20">
 
         {/* Foreground Image (Chef) */}
         <div className="absolute left-1/2 lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
-            className="lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px]  max-w-none"
+            className="lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
           />
         </div>
 
         {/* Centered Specialty Image */}
-        <div className="relative flex justify-start lg:ml-32  2xl:ml-32 xl:ml-32 3xl:ml-0 lg:w-[600px] xl:w-[1100px] 2xl:w-[1100px] 3xl:w-full 3xl:justify-center">
+        <div className="relative flex justify-start lg:ml-32 2xl:ml-32 xl:ml-32 3xl:ml-0 lg:w-[600px] xl:w-[1100px] 2xl:w-[1100px] 3xl:w-full 3xl:justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1744863980/Specialty_c98mbf.png"
             alt="Our food specialty display"
@@ -74,7 +74,7 @@ const Awards = () => {
 
         {/* 5 Star Rating */}
         <Motion.div
-          className="absolute 3xl:right-[34rem] 2xl:right-[25rem] xl:right-[22rem] lg:right-[16rem]  lg:top-[9rem] xl:top-[16rem] 2xl:top-[18rem] 3xl:top-72 bg-white rounded-full border border-gray-400 shadow-md py-1 px-3 text-yellow-400 text-base z-50 lg:translate-x-[30px] xl:translate-x-[100px] 2xl:translate-x-[100px] 3xl:translate-x-[100px]"
+          className="absolute 3xl:right-[34rem] 2xl:right-[25rem] xl:right-[22rem] lg:right-[16rem] lg:top-[9rem] xl:top-[16rem] 2xl:top-[18rem] 3xl:top-72 bg-white rounded-full border border-gray-400 shadow-md py-1 px-3 text-yellow-400 text-base z-50 lg:translate-x-[30px] xl:translate-x-[100px] 2xl:translate-x-[100px] 3xl:translate-x-[100px]"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -126,7 +126,6 @@ const Awards = () => {
         <div className="absolute left-1/2 lg:top-[13rem] xl:top-[27rem] 2xl:top-[24rem] 3xl:top-96 px-3 py-1 text-lg z-50 lg:translate-x-[160px] xl:translate-x-[170px] 2xl:translate-x-[190px] 3xl:translate-x-[210px]">
           <span className='font-bold text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px]'>Organic</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px]'>Food</span>
         </div>
-
       </div>
 
       {/* Quality | Profitability | Consistency */}

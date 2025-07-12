@@ -91,7 +91,6 @@ const Reserve = () => {
     toast.success(
       `Table ${selectedTable.label} has been booked on ${formattedDate} !`
     );
-
     setName("");
     setPhone("");
     setGuestCount("");

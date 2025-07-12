@@ -20,7 +20,7 @@ const fadeInUp = {
 
 const Popular = () => {
   const { addToCart } = useContext(CartContext);
-
+  
   const calculateTimeLeft = () => {
     const now = new Date();
     const targetDate = new Date(

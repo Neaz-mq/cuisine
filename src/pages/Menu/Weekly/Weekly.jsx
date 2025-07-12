@@ -4,7 +4,6 @@ import Container from "../../../components/Container";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 
-// Data for the weekly food offers
 const weeklyFoodData = [
   {
     id: 1,

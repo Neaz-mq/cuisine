@@ -134,7 +134,7 @@ const Buffet = () => {
                   whileHover={cardHover}
                   className="overflow-hidden relative cursor-pointer"
                 >
-                  <img src={img} alt={alt} className="w-full h-52 object-cover mb-3" />
+                  <img src={img} alt={alt} className="w-full h-52 object-cover mb-3"/>
                   <span className="absolute top-2 right-2 bg-gradient-to-r from-[#FFCA46] to-[#FFD966] text-xs px-2 py-1 text-[#F6F6F6] font-semibold flex items-center backdrop-blur-sm bg-opacity-80">
                     <img
                       src="/svg.svg"

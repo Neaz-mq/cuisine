@@ -71,8 +71,6 @@ const imageSets = {
   ],
 };
 
-
-
 const getThreeDayWindow = (days, todayIndex) => {
   const threeDays = [];
   for (let i = 0; i < 3; i++) {
@@ -85,7 +83,7 @@ const getThreeDayWindow = (days, todayIndex) => {
 const Week = () => {
   const todayIndex = new Date().getDay();
   const threeDayWindow = getThreeDayWindow(daysOfWeek, todayIndex);
-  const images = imageSets[todayIndex] || []; // fallback to empty array if no images set
+  const images = imageSets[todayIndex] || []; 
 
   return (
     <Container>
@@ -137,7 +135,7 @@ const Week = () => {
 
             {/* Customer Service Card */}
             <div className="absolute bottom-4 3xl:right-6 2xl:-right-8 xl:-right-12 lg:-right-16 p-6 max-w-xs text-left z-40 3xl:top-[26.5%] 2xl:top-[26.5%] xl:top-[26.5%] lg:top-[19%]">
-              <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[13px]   font-bold text-[#2C6252] mb-2">
+              <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[13px] font-bold text-[#2C6252] mb-2">
                 Outstanding <br /> <span className="font-normal">Customer Service</span>
               </h3>
               <p className="3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[10px] text-[#CCCCCC]">

@@ -95,7 +95,6 @@ const Footer = () => {
         </Container>
       </div>
 
-
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full flex justify-center">
         <Container>

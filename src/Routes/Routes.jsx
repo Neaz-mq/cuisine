@@ -10,8 +10,7 @@ import Tables from "../pages/Tables/Tables/Tables";
 import Categories from "../pages/Categories/Categories/Categories";
 import Carts from "../pages/Carts/Carts";
 
-
- export const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,

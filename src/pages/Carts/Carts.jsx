@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 const Carts = () => {
   useEffect(() => {
-        // Scroll to the top of the page when the component mounts
         window.scrollTo(0, 0);
     }, []);
 
@@ -35,10 +34,9 @@ const Carts = () => {
     ccv: "",
   });
 
-  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false); // For the "agree to condition" checkbox
+  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false); 
   const [discountCode, setDiscountCode] = useState("");
   const [errors, setErrors] = useState({});
-  // Errors for online payment fields
   const [paymentErrors, setPaymentErrors] = useState({});
   const subtotal = cartItems.reduce(
   (acc, item) => acc + item.price * item.quantity,
@@ -298,7 +296,7 @@ const Carts = () => {
                 <div className="space-y-4">
                   {/* Uber Eats */}
                   <label
-                    className={`flex items-center justify-between border  px-4 py-3 cursor-pointer ${selectedShipping === "uber-eats" ? "border-gray-500 bg-gray-50" : "border-gray-200"
+                    className={`flex items-center justify-between border px-4 py-3 cursor-pointer ${selectedShipping === "uber-eats" ? "border-gray-500 bg-gray-50" : "border-gray-200"
                       }`}
                   >
                     <div className="flex items-center gap-4">
@@ -326,7 +324,7 @@ const Carts = () => {
 
                   {/* Food Panda */}
                   <label
-                    className={`flex items-center justify-between border  px-4 py-3 cursor-pointer ${selectedShipping === "food-panda" ? "border-gray-500 bg-gray-50" : "border-gray-200"
+                    className={`flex items-center justify-between border px-4 py-3 cursor-pointer ${selectedShipping === "food-panda" ? "border-gray-500 bg-gray-50" : "border-gray-200"
                       }`}
                   >
                     <div className="flex items-center gap-4">
@@ -390,7 +388,7 @@ const Carts = () => {
 
               {/* Online Payment Form Section - Conditionally Rendered */}
               {paymentMethod === "online" && (
-                <div className="mt-8 p-6 border border-gray-200  space-y-4">
+                <div className="mt-8 p-6 border border-gray-200 space-y-4">
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-semibold text-gray-800">Credit card / debit card</h3>
                     <div className="flex items-center gap-8">
@@ -423,7 +421,7 @@ const Carts = () => {
                           type="text"
                           id="cardNumber"
                           name="cardNumber"
-                          placeholder="5316 8e71 7571 5545" // Placeholder for visual reference
+                          placeholder="5316 8e71 7571 5545" 
                           className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
                           value={cardDetails.cardNumber}
                           onChange={handleCardDetailsChange}
@@ -437,7 +435,7 @@ const Carts = () => {
                           type="text"
                           id="expiryDate"
                           name="expiryDate"
-                          placeholder="24/28" // Placeholder for visual reference
+                          placeholder="24/28" 
                           className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
                           value={cardDetails.expiryDate}
                           onChange={handleCardDetailsChange}
@@ -451,7 +449,7 @@ const Carts = () => {
                           type="text"
                           id="ccv"
                           name="ccv"
-                          placeholder="2659" // Placeholder for visual reference
+                          placeholder="2659" 
                           className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
                           value={cardDetails.ccv}
                           onChange={handleCardDetailsChange}
@@ -525,7 +523,6 @@ const Carts = () => {
                     </div>
                     <div className="text-sm font-semibold text-gray-800 whitespace-nowrap">
                       ${(item.price * item.quantity).toFixed(2)}
-
                     </div>
                     <button
                       onClick={() => removeItem(item.title)}
@@ -538,25 +535,26 @@ const Carts = () => {
                 ))
               )}
             </div>
+
             {/* Discount Code Section */}
             <div className="pt-10 border-t border-gray-200">
               <div className="flex mb-10"> 
                 <input 
                   type="text"
                   placeholder="Gift card or discount code"
-                  className="flex-1 border border-gray-300 3xl:px-4 2xl:px-4 xl:px-2 lg:px-2 py-2  3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] focus:outline-none focus:ring-1 focus:ring-gray-400"
+                  className="flex-1 border border-gray-300 3xl:px-4 2xl:px-4 xl:px-2 lg:px-2 py-2 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] focus:outline-none focus:ring-1 focus:ring-gray-400"
                   value={discountCode}
                   onChange={handleDiscountCodeChange}
                 />
                 <button
                   onClick={applyDiscount}
-                  className="bg-gray-400 text-white 3xl:px-6 2xl:px-6 xl:px-2 lg:px-2 py-2  font-semibold 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] hover:bg-gray-500 transition-colors"
+                  className="bg-gray-400 text-white 3xl:px-6 2xl:px-6 xl:px-2 lg:px-2 py-2 font-semibold 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] hover:bg-gray-500 transition-colors"
                 >
                   Apply
                 </button>
               </div>
             </div>
-            <div className="space-y-10  bg-white p-6 ">
+            <div className="space-y-10 bg-white p-6 ">
               <div className="text-sm text-gray-700 space-y-5">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
@@ -574,7 +572,6 @@ const Carts = () => {
 
               {/* Dotted line - Added here */}
               <div className="border-t border-dashed border-gray-300 my-4"></div>
-
               <div className="flex justify-between text-md font-bold pt-2">
                 <span>Total</span>
                 <span className="text-green-700">USD ${total.toFixed(2)}</span>

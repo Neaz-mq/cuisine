@@ -51,6 +51,7 @@ const Deliver = () => {
                   Order Now
                 </Motion.button>
               </Link>
+              
               <Motion.button
                 whileHover={{ scale: 1.05 }}
                 className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] whitespace-nowrap mt-2"

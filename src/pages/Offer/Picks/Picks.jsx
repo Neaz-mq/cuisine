@@ -220,7 +220,7 @@ const Picks = () => {
                       draggable={false}
                     />
                     <div
-                      className="absolute right-6 3xl:top-80 2xl:top-72 xl:top-80 lg:top-72 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 lg:w-14 lg:h-14 flex flex-col items-center justify-center"
+                      className="absolute right-6 3xl:top-80 2xl:top-80 xl:top-80 lg:top-72 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 lg:w-14 lg:h-14 flex flex-col items-center justify-center"
                       style={{ backgroundColor: badgeColor }}
                     >
                       <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] lg:text-[10px] font-bold leading-tight">
