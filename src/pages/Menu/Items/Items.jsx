@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 const categoryItems = [
   {
-    label: 'BURGERS', 
+    label: 'BURGERS',
     itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893314/burger_rpgir8.png',
     mainContent: {
       items: [
@@ -139,7 +139,7 @@ const categoryItems = [
     },
   },
   {
-    label: 'SALAD', 
+    label: 'SALAD',
     itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747893487/salad_g519yo.png',
     mainContent: {
       items: [
@@ -183,7 +183,7 @@ const categoryItems = [
     },
   },
   {
-    label: 'APPETIZER', 
+    label: 'APPETIZER',
     itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894100/appetizer_k8n5uw.png',
     mainContent: {
       items: [
@@ -227,7 +227,7 @@ const categoryItems = [
     },
   },
   {
-    label: 'DRINKS', 
+    label: 'DRINKS',
     itemImage: 'https://res.cloudinary.com/dxohwanal/image/upload/v1747894070/drinks_lhdlws.png',
     mainContent: {
       items: [
@@ -277,7 +277,7 @@ const Items = () => {
   const { addToCart } = useCart();
 
   const selectedCategoryData = categoryItems.find(item => item.label === selected);
-  if (!selectedCategoryData) 
+  if (!selectedCategoryData)
     return (
       <Container>
         <p className="text-center mt-64 text-red-500" role="alert">Category not found.</p>
@@ -346,9 +346,14 @@ const Items = () => {
                     src={item.image}
                     alt={`${item.title} image`}
                     className="w-40 h-auto object-contain -ml-4"
-                    whileHover={{ rotate: 5 }}
-                    transition={{ type: 'spring', stiffness: 100 }}
+                    animate={selected === 'PIZZA' ? { rotate: 360 } : {}}
+                    transition={
+                      selected === 'PIZZA'
+                        ? { repeat: Infinity, duration: 10, ease: 'linear' }
+                        : { type: 'spring', stiffness: 100 }
+                    }
                   />
+
                   <div className="flex flex-col items-end">
                     <div className="flex items-end gap-x-1">
                       <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg font-bold text-[#2C6252] leading-none">

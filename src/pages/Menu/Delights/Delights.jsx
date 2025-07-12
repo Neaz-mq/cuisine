@@ -115,11 +115,15 @@ const Delights = () => {
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056997/menu5_ngludm.webp"
             alt="Grilled fish with herbs and spices"
             className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-52 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 10,
+              ease: "linear",
+            }}
           />
+
+
         </Motion.article>
       </section>
     </Container>
