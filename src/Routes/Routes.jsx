@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
             element: <Offer></Offer>
         },
 
-         {
+        {
             path: "/chefs",
             element: <Chefs></Chefs>
         }, 
@@ -45,7 +45,7 @@ export const router = createBrowserRouter([
             element: <Categories></Categories>
         }, 
 
-         {
+        {
             path: "/carts",
             element: <Carts></Carts>
         }, 
