@@ -82,7 +82,7 @@ const TopBar = memo(() => {
     return (
         <div className="flex items-center justify-center overflow-hidden">
             <Container>
-                <div className="flex flex-col sm:flex-row items-center bg-white px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:ml-0">
+                <div className="flex flex-col sm:flex-row items-center bg-white px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-10">
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1752050762/Group_22_fhiuuw.png"
                         alt="Group 22"
@@ -92,7 +92,7 @@ const TopBar = memo(() => {
                         }}
                         className="w-full sm:w-auto h-auto sm:h-[12rem] md:h-[18rem] lg:h-[20rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] -mt-48 sm:-mt-[6rem] 3xl:-mt-[13rem] 2xl:-mt-[13rem] xl:-mt-[13rem] lg:-mt-[13rem] sm:ml-0 3xl:ml-16 lg:-ml-12 md:-ml-4"
                     />
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 3xl:-ml-12 2xl:-ml-14 xl:-ml-14 lg:-ml-14 -mt-2 sm:-mt-10 ml-5">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-2 3xl:-ml-12 2xl:-ml-14 xl:-ml-14 lg:-ml-14 -mt-2 sm:-mt-10 ml-5 relative">
                         <span className="text-[#E4E4E4] mr-0 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[12px] mb-2 sm:mb-0 whitespace-nowrap">
                             Online place order
                         </span>
@@ -102,7 +102,7 @@ const TopBar = memo(() => {
                                 <ChevronRight className="ml-1 text-white" size={16} />
                             </button>
                         </a>
-                        <div className="mx-1 md:mx-2 mb-2 sm:mb-0 ">
+                        <div className="mx-1 md:mx-2 mb-2 sm:mb-0">
                             <div className="h-3 w-[1px] md:w-[2px] md:h-4 bg-gray-400 ml-2" />
                         </div>
                         <div className="flex items-center space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0 ml-2">
@@ -119,13 +119,15 @@ const TopBar = memo(() => {
                                 {isKitchenOpen ? 'Kitchen available' : 'Kitchen unavailable'}
                             </span>
                         </div>
-                        <div className="flex items-center space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0 ml-2">
+                        <div className="flex items-center space-x-2 md:space-x-4 mr-2 mb-2 sm:mb-0 ml-2">
                             <AnalogClock />
                             <span className="3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] text-[#2C6252] font-semibold whitespace-nowrap">{formattedTime}</span>
                         </div>
-                        <div className="relative ml-6">
+
+                        {/* Cart icon pushed to the right */}
+                        <div className="ml-auto mb-2 sm:mb-0  relative">
                             <Link to="/carts">
-                                <div className="relative w-9 h-9 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 transition-transform">
+                                <div className="relative w-9 h-9 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-14  transition-transform">
                                     <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]" strokeWidth={2.2} />
                                     <div className="absolute -top-1.5 -right-1.5 bg-[#FF4C15] text-white text-[10px] md:text-[11px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-md border-2 border-white">
                                         {cartCount}
@@ -133,6 +135,7 @@ const TopBar = memo(() => {
                                 </div>
                             </Link>
                         </div>
+
                     </div>
                 </div>
             </Container>
