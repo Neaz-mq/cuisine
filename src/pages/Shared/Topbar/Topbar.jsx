@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from 'react';
+import { useEffect, useState, useRef, memo, useMemo } from 'react';
 import { ChevronRight, ShoppingCart } from 'lucide-react';
 import Container from '../../../components/Container';
 import { Link } from 'react-router-dom';
@@ -41,18 +41,53 @@ const AnalogClock = memo(() => {
     };
 
     return (
-        <svg viewBox="0 0 40 40" className="h-4 w-4 md:h-5 md:w-5 drop-shadow-sm 3xl:ml-0 2xl:ml-0 xl:ml-2 lg:ml-2">
+        <svg
+            viewBox="0 0 40 40"
+            className="h-4 w-4 md:h-5 md:w-5 drop-shadow-sm 3xl:ml-0 2xl:ml-0 xl:ml-2 lg:ml-2"
+        >
             <defs>
                 <radialGradient id="clockGradient" cx="50%" cy="50%" r="50%">
                     <stop offset="0%" stopColor="#ffffff" />
                     <stop offset="100%" stopColor="#D2F1E5" />
                 </radialGradient>
             </defs>
-            <circle cx={center} cy={center} r={radius - 1} stroke="#2C6252" strokeWidth="1.5" fill="url(#clockGradient)" />
+            <circle
+                cx={center}
+                cy={center}
+                r={radius - 1}
+                stroke="#2C6252"
+                strokeWidth="1.5"
+                fill="url(#clockGradient)"
+            />
             {renderTicks()}
-            <line x1={center} y1={center} x2={center + (radius - 10) * Math.sin((hour * Math.PI) / 180)} y2={center - (radius - 10) * Math.cos((hour * Math.PI) / 180)} stroke="#2C6252" strokeWidth="2" strokeLinecap="round" />
-            <line x1={center} y1={center} x2={center + (radius - 6) * Math.sin((min * Math.PI) / 180)} y2={center - (radius - 6) * Math.cos((min * Math.PI) / 180)} stroke="#2C6252" strokeWidth="1.5" strokeLinecap="round" />
-            <line x1={center} y1={center} x2={center + (radius - 4) * Math.sin((sec * Math.PI) / 180)} y2={center - (radius - 4) * Math.cos((sec * Math.PI) / 180)} stroke="#FF4C15" strokeWidth="1" strokeLinecap="round" style={{ filter: 'drop-shadow(0 0 1px #FF4C15)' }} />
+            <line
+                x1={center}
+                y1={center}
+                x2={center + (radius - 10) * Math.sin((hour * Math.PI) / 180)}
+                y2={center - (radius - 10) * Math.cos((hour * Math.PI) / 180)}
+                stroke="#2C6252"
+                strokeWidth="2"
+                strokeLinecap="round"
+            />
+            <line
+                x1={center}
+                y1={center}
+                x2={center + (radius - 6) * Math.sin((min * Math.PI) / 180)}
+                y2={center - (radius - 6) * Math.cos((min * Math.PI) / 180)}
+                stroke="#2C6252"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+            />
+            <line
+                x1={center}
+                y1={center}
+                x2={center + (radius - 4) * Math.sin((sec * Math.PI) / 180)}
+                y2={center - (radius - 4) * Math.cos((sec * Math.PI) / 180)}
+                stroke="#FF4C15"
+                strokeWidth="1"
+                strokeLinecap="round"
+                style={{ filter: 'drop-shadow(0 0 1px #FF4C15)' }}
+            />
             <circle cx={center} cy={center} r="1.5" fill="#FF4C15" />
         </svg>
     );
@@ -62,22 +97,34 @@ const TopBar = memo(() => {
     const [time, setTime] = useState(new Date());
     const [isKitchenOpen, setIsKitchenOpen] = useState(true);
     const { cartCount } = useCart();
+    const ampmRef = useRef(time.getHours() >= 12 ? 'PM' : 'AM');
 
     useEffect(() => {
         const interval = setInterval(() => {
             const now = new Date();
             setTime(now);
+
+            const currentAMPM = now.getHours() >= 12 ? 'PM' : 'AM';
+            if (ampmRef.current !== currentAMPM) {
+                ampmRef.current = currentAMPM;
+            }
+
             setIsKitchenOpen(now.getHours() >= 10 && now.getHours() < 20);
         }, 1000);
         return () => clearInterval(interval);
     }, []);
 
-    const formattedTime = time.toLocaleTimeString(undefined, {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true,
-    });
+    // Memoize formatted time without AM/PM to prevent flickering
+    const formattedTime = useMemo(() => {
+        return time
+            .toLocaleTimeString(undefined, {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+            })
+            .replace(/ (AM|PM)/, '');
+    }, [time]);
 
     return (
         <div className="flex items-center justify-center overflow-hidden">
@@ -107,7 +154,7 @@ const TopBar = memo(() => {
                         </div>
                         <div className="flex items-center space-x-2 md:space-x-4 mr-0 sm:mr-2 md:mr-4 mb-2 sm:mb-0 ml-2">
                             <img
-                                src={isKitchenOpen ? "/kitchen.svg" : "/kitchen-unavailable.svg"}
+                                src={isKitchenOpen ? '/kitchen.svg' : '/kitchen-unavailable.svg'}
                                 alt="Kitchen status"
                                 loading="lazy"
                                 onError={(e) => {
@@ -115,27 +162,45 @@ const TopBar = memo(() => {
                                 }}
                                 className="h-4 w-4 md:h-5 md:w-5"
                             />
-                            <span className={`3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] font-semibold whitespace-nowrap ${isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'}`}>
+                            <span
+                                className={`3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] font-semibold whitespace-nowrap ${isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
+                                    }`}
+                            >
                                 {isKitchenOpen ? 'Kitchen available' : 'Kitchen unavailable'}
                             </span>
                         </div>
-                        <div className="flex items-center space-x-2 md:space-x-4 mr-2 mb-2 sm:mb-0 ml-2">
+                        <div className="flex items-center space-x-1 md:space-x-4 mr-2 mb-2 sm:mb-0 ml-2">
                             <AnalogClock />
-                            <span className="3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] text-[#2C6252] font-semibold whitespace-nowrap">{formattedTime}</span>
+                            <div className="inline-flex items-baseline 3xl:min-w-[100px] 2xl:min-w-[90px] xl:min-w-[80px] lg:min-w-[50px] justify-end">
+                                <span
+                                    className="3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] text-[#2C6252] font-semibold whitespace-nowrap [font-variant-numeric:tabular-nums]"
+                                    style={{ minWidth: '82px', display: 'inline-block', fontVariantNumeric: 'tabular-nums' }}
+                                >
+                                    {formattedTime}
+                                </span>
+                                <span className="text-[#2C6252] font-semibold text-[12px] md:text-[13px] lg:text-[13px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[16px] 3xl:-ml-2 2xl:-ml-3 xl:-ml-4 lg:-ml-6">
+                                    {ampmRef.current}
+                                </span>
+                            </div>
+
+
+
                         </div>
 
-                        {/* Cart icon pushed to the right */}
-                        <div className="ml-auto mb-2 sm:mb-0  relative">
+                        {/* Cart */}
+                        <div className="ml-auto mb-2 sm:mb-0 relative">
                             <Link to="/carts">
-                                <div className="relative w-9 h-9 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-14  transition-transform">
-                                    <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]" strokeWidth={2.2} />
+                                <div className="relative w-9 h-9 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-14 transition-transform">
+                                    <ShoppingCart
+                                        className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]"
+                                        strokeWidth={2.2}
+                                    />
                                     <div className="absolute -top-1.5 -right-1.5 bg-[#FF4C15] text-white text-[10px] md:text-[11px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-md border-2 border-white">
                                         {cartCount}
                                     </div>
                                 </div>
                             </Link>
                         </div>
-
                     </div>
                 </div>
             </Container>
