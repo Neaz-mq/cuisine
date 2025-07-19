@@ -100,7 +100,7 @@ const Buffet = () => {
                 Delicious <span className="font-thin lowercase">(Food)</span>
               </span>
             </span>
-            <h2 className="3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-extrabold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
               Buffet for Signature Food
             </h2>
           </Motion.div>
@@ -219,7 +219,7 @@ const Buffet = () => {
               viewport={{ once: true }}
               variants={fadeUpVariant}
             >
-              <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-5xl xl:text-3xl lg:text-2xl font-extrabold tracking-wide drop-shadow-md 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8">
+              <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-5xl xl:text-3xl lg:text-2xl font-semibold tracking-wide drop-shadow-md 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8">
                 Deep <br /> Blue <br /> Delights
               </h2>
             </Motion.div>

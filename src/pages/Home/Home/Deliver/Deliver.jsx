@@ -24,7 +24,7 @@ const Deliver = () => {
             viewport={{ once: true }}
           >
             <Motion.h2
-              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#33856D] flex flex-col xl:mt-4 2xl:mt-0 3xl:mt-0"
+              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl text-[#2C6252] flex flex-col xl:mt-4 2xl:mt-0 3xl:mt-0"
               custom={0}
               variants={textVariants}
             >

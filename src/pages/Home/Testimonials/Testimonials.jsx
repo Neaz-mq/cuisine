@@ -38,7 +38,7 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-regular text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-14 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-16">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-semibold text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-14 xl:mt-28 lg:mt-24 3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-16">
               Customer <br /> Testimonial <br />
               <span className="text-[#FF4C15]">Examples</span>
             </h2>

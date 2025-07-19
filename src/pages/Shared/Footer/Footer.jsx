@@ -10,7 +10,7 @@ import Container from '../../../components/Container';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C6252] text-white">
+    <footer className="bg-[#2C6252] text-white"> 
       {/* Top Footer Content */}
       <Container>
         <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-20 text-center lg:text-left">
