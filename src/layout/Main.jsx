@@ -19,7 +19,7 @@ const Main = () => {
                 </div>
 
                 <div className="flex-1 ml-20">
-                    <Outlet />
+                    {/* <Outlet /> */}
                 </div>
             </div>
 
