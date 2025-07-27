@@ -134,7 +134,7 @@ const TopBar = memo(() => {
                         onError={(e) => {
                             e.currentTarget.src = 'https://placehold.co/600x400?text=Image';
                         }}
-                        className="w-full sm:w-auto h-auto sm:h-[10.5rem] md:h-[18rem] lg:h-[20rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] sm:-mt-[5.4rem] 3xl:-mt-[13rem] 2xl:-mt-[13rem] xl:-mt-[13rem] lg:-mt-[11rem] md:-mt-[11rem] sm:-ml-2 3xl:ml-16 lg:-ml-12 md:-ml-32"
+                        className="w-full sm:w-auto h-auto sm:h-[10.5rem] md:h-[18rem] lg:h-[20rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] sm:-mt-[5.4rem] 3xl:-mt-[13rem] 2xl:-mt-[13rem] xl:-mt-[13rem] lg:-mt-[11rem] md:-mt-[11rem] sm:-ml-2 3xl:ml-16 lg:-ml-8 md:-ml-16"
                     />
                     <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-9 3xl:-ml-12 2xl:-ml-14 xl:-ml-14 lg:-ml-14 md:-ml-16 md:-mt-8 sm:-mt-10 relative">
                         <span className="text-[#E4E4E4] mr-0 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] sm:text-[0.7rem] mb-2 sm:mb-0 whitespace-nowrap sm:hidden 3xl:block 2xl:block xl:block lg:block md:block">
@@ -179,7 +179,7 @@ const TopBar = memo(() => {
                                     >
                                         {formattedTime}
                                     </span>
-                                    <span className="text-[#2C6252] font-semibold text-[9px] md:text-[13px] lg:text-[13px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[16px] 3xl:-ml-[0.8rem] 2xl:-ml-[1rem] xl:-ml-[1rem] lg:-ml-[1.7rem] md:-ml-6 -ml-10">
+                                    <span className="text-[#2C6252] font-semibold text-[9px] md:text-[13px] lg:text-[13px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[16px] 3xl:-ml-[0.8rem] 2xl:-ml-[1rem] xl:-ml-[1rem] lg:-ml-[1.4rem] md:-ml-6 -ml-10">
                                         {ampmRef.current}
                                     </span>
                                 </div>
@@ -189,7 +189,7 @@ const TopBar = memo(() => {
                         {/* Cart */}
                         <div className="ml-auto mb-2 sm:mb-0 relative">
                             <Link to="/carts">
-                                <div className="relative 3xl:w-9 3xl:h-9 2xl:w-9 2xl:h-9 xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-6 h-6 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-14 md:-right-1 -right-4 transition-transform sm:mt-2 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+                                <div className="relative 3xl:w-9 3xl:h-9 2xl:w-9 2xl:h-9 xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-6 h-6 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-7 md:-right-1 -right-4 transition-transform sm:mt-2 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
                                     <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]" strokeWidth={2.2} />
                                     <div className="absolute -top-1.5 -right-1.5 bg-[#FF4C15] text-white text-[10px] md:text-[11px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-md border-2 border-white">
                                         {cartCount}

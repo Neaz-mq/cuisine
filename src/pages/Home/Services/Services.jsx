@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react";
 import Container from "../../../components/Container";
 import { motion as Motion } from "framer-motion";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Services = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const services = [
     {
       icon: "/Path 67.svg",
@@ -35,10 +51,14 @@ const Services = () => {
     },
   ];
 
+  const visibleServices =
+    isSmallScreen && !showAll ? services.slice(0, 2) : services;
+
   return (
-    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[6rem] sm:-mt-[6rem] flex justify-center">
+    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[28rem] flex justify-center">
       <Container>
-        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-3 sm:right-3">
+        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-16 ">
+          {/* Background image */}
           <div
             className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[30rem] md:-top-[30rem] sm:-top-[30rem]"
             style={{
@@ -56,7 +76,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="relative z-10 text-center mt-[15rem]"
           >
-            <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2">
+            <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2 sm:-ml-2 sm:-mr-6 md:-ml-0 md:-mr-0 lg:-ml-0 lg:-mr-0 xl:-ml-0 xl:-mr-0 2xl:-ml-0 2xl:-mr-0 3xl:-ml-0 3xl:-mr-0 3xl:block 2xl:block xl:block lg:block md:block sm:hidden">
               <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center rotate-[5deg] w-fit mx-auto">
                 <span className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
                   <img src="/svg.png" className="w-3 h-3" alt="Service Badge Icon" />
@@ -67,11 +87,11 @@ const Services = () => {
               </span>
             </h2>
 
-            <h1 className="3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 mb-6">
+            <h1 className="3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 sm:mt-5 mb-6 whitespace-nowrap">
               What Makes Us Stand Out
             </h1>
 
-            <p className="text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-sm font-normal leading-relaxed max-w-2xl mx-auto">
+            <p className="text-[#888888] 3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-[9px] font-normal leading-relaxed max-w-2xl mx-auto">
               At <span className="font-medium">[Restaurant Name]</span>, we don’t just serve food—
               we create unforgettable dining experiences. From the moment you step through our doors.
             </p>
@@ -89,9 +109,9 @@ const Services = () => {
                 },
               },
             }}
-            className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 lg:gap-y-16 md:gap-y-16 sm:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-4 md:gap-4 sm:gap-4 mt-20 2xl:mr-10 lg:mr-3 md:mr-3 sm:mr-3 3xl:mr-0 xl:mr-0"
+            className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 lg:gap-y-16 md:gap-y-16 sm:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-4 md:gap-4 sm:gap-4 mt-20 2xl:mr-10 lg:mr-3 md:mr-3 sm:mr-3 3xl:mr-0 xl:mr-0"
           >
-            {services.map((service, index) => { 
+            {visibleServices.map((service, index) => {
               const words = service.desc.split(" ");
               const firstLine = words.slice(0, 5).join(" ");
               const secondLine = words.slice(4).join(" ");
@@ -106,21 +126,18 @@ const Services = () => {
                   transition={{ duration: 0.6, ease: "easeOut" }}
                   className="flex items-start gap-4 max-w-md"
                 >
-                  {/* Icon */}
-                  <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-14 xl:h-14 lg:w-14 md:w-14 lg:h-14 md:h-14 sm:h-14 bg-[#2C6252] flex items-center justify-center">
+                  <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-14 xl:h-14 lg:w-14 md:w-14 sm:w-10 lg:h-14 md:h-14 sm:h-10 bg-[#2C6252] flex items-center justify-center">
                     <img
                       src={service.icon}
                       alt={`${service.title} Icon`}
                       className="3xl:w-7 3xl:h-7 2xl:w-10 2xl:h-10 xl:w-6 xl:h-6 lg:w-4 lg:h-4 md:w-4 md:h-4 sm:w-4 sm:h-4 object-contain"
                     />
                   </div>
-
-                  {/* Text */}
                   <div className="flex-1">
-                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[16px] md:text-[16px] sm:text-[16px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[16px] md:text-[16px] sm:text-[13px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
                       {service.title}
                     </h3>
-                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[9px] xl:text-[8px] lg:text-[8px] md:text-[8px] sm:text-[8px] py-2 leading-snug">
+                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[9px] xl:text-[8px] lg:text-[8px] md:text-[6px] sm:text-[8px] py-2 leading-snug">
                       {firstLine}
                       <br />
                       {secondLine}
@@ -133,7 +150,23 @@ const Services = () => {
               );
             })}
           </Motion.div>
-  
+
+          {/* Dropdown icon on small screens */}
+          {isSmallScreen && (
+            <div className="sm:flex md:hidden mt-6 z-10">
+              <button
+                onClick={() => setShowAll((prev) => !prev)}
+                className="text-[#2C6252] flex flex-col items-center text-sm"
+              >
+                {showAll ? (
+                  <FaChevronUp className="animate-bounce" />
+                ) : (
+                  <FaChevronDown className="animate-bounce" />
+                )}
+              </button>
+            </div>
+          )}
+
           <div className="py-24" />
         </section>
       </Container>

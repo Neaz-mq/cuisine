@@ -15,6 +15,7 @@ const Menu = () => {
            <Items></Items>
            <Weekly></Weekly>
            <Delights></Delights>
+           
         </div>
     );
 

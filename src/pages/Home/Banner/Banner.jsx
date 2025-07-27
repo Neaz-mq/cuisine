@@ -13,7 +13,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 md:-ml-16 sm:-ml-36 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0">
+    <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 md:-ml-16 sm:-ml-60 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0">
       <Container>
         <div className="relative bg-white">
           <div className="flex items-start justify-between">
@@ -208,7 +208,7 @@ const Banner = () => {
         <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
                 alt="Delicious Dish"
-                className=" sm:block md:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden relative bottom-80 left-36 z-0"
+                className=" sm:block md:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden relative bottom-80 left-44 z-0"
               />
       </Container>
     </div>
