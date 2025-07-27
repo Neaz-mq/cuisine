@@ -55,9 +55,9 @@ const Services = () => {
     isSmallScreen && !showAll ? services.slice(0, 2) : services;
 
   return (
-    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[28rem] flex justify-center">
+    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[32rem] flex justify-center sm:-ml-12 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0  ">
       <Container>
-        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-16 ">
+        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-7 overflow-hidden  ">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[30rem] md:-top-[30rem] sm:-top-[30rem]"
@@ -101,7 +101,7 @@ const Services = () => {
           {isSmallScreen ? (
             <div
               key={showAll}
-              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-6 mt-20"
+              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-6 mt-14"
             >
               {visibleServices.map((service, index) => {
                 const words = service.desc.split(" ");
@@ -192,10 +192,10 @@ const Services = () => {
 
           {/* Dropdown icon on small screens */}
           {isSmallScreen && (
-            <div className="sm:flex md:hidden mt-6 z-10">
+            <div className="sm:flex md:hidden mt-10 z-10">
               <button
                 onClick={() => setShowAll((prev) => !prev)}
-                className="text-[#2C6252] flex flex-col items-center text-sm"
+                className="text-[#2C6252] flex flex-col items-center text-xl"
               >
                 {showAll ? (
                   <FaChevronUp className="animate-bounce" />
