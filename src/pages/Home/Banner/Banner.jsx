@@ -205,11 +205,11 @@ const Banner = () => {
             </div>
           )}
         </div>
-        <img
+        {/* <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
                 alt="Delicious Dish"
                 className=" sm:block md:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden relative bottom-[21rem] left-36 z-0"
-              />
+              /> */}
       </Container>
     </div>
   );
