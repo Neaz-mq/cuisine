@@ -126,7 +126,7 @@ const TopBar = memo(() => {
     return (
         <div className="flex items-center justify-center overflow-hidden">
             <Container>
-                <div className="flex flex-col sm:flex-row items-center bg-white px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-10 md:-ml-0 -ml-24">
+                <div className="flex flex-col sm:flex-row items-center bg-white px-4 sm:px-6 text-gray-700 text-sm relative z-0 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-10 md:-ml-0 -ml-28">
                     <img
                         src="https://res.cloudinary.com/dxohwanal/image/upload/v1752050762/Group_22_fhiuuw.png"
                         alt="Group 22"
