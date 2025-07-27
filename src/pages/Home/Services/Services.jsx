@@ -98,58 +98,97 @@ const Services = () => {
           </Motion.div>
 
           {/* Services Grid */}
-          <Motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              visible: {
-                transition: {
-                  staggerChildren: 0.15,
-                },
-              },
-            }}
-            className="relative z-10 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 lg:gap-y-16 md:gap-y-16 sm:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-4 md:gap-4 sm:gap-4 mt-20 2xl:mr-10 lg:mr-3 md:mr-3 sm:mr-3 3xl:mr-0 xl:mr-0"
-          >
-            {visibleServices.map((service, index) => {
-              const words = service.desc.split(" ");
-              const firstLine = words.slice(0, 5).join(" ");
-              const secondLine = words.slice(4).join(" ");
+          {isSmallScreen ? (
+            <div
+              key={showAll}
+              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-6 mt-20"
+            >
+              {visibleServices.map((service, index) => {
+                const words = service.desc.split(" ");
+                const firstLine = words.slice(0, 5).join(" ");
+                const secondLine = words.slice(4).join(" ");
 
-              return (
-                <Motion.div
-                  key={index}
-                  variants={{
-                    hidden: { opacity: 0, y: 30 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="flex items-start gap-4 max-w-md"
-                >
-                  <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-14 xl:h-14 lg:w-14 md:w-14 sm:w-10 lg:h-14 md:h-14 sm:h-10 bg-[#2C6252] flex items-center justify-center">
-                    <img
-                      src={service.icon}
-                      alt={`${service.title} Icon`}
-                      className="3xl:w-7 3xl:h-7 2xl:w-10 2xl:h-10 xl:w-6 xl:h-6 lg:w-4 lg:h-4 md:w-4 md:h-4 sm:w-4 sm:h-4 object-contain"
-                    />
+                return (
+                  <div key={index} className="flex items-start gap-4 max-w-md">
+                    <div className="flex-shrink-0 sm:w-10 sm:h-10 bg-[#2C6252] flex items-center justify-center">
+                      <img
+                        src={service.icon}
+                        alt={`${service.title} Icon`}
+                        className="sm:w-4 sm:h-4 object-contain"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="sm:text-[13px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                        {service.title}
+                      </h3>
+                      <p className="text-[#CCCCCC] sm:text-[8px] py-2 leading-snug">
+                        {firstLine}
+                        <br />
+                        {secondLine}
+                      </p>
+                      <button className="text-[11px] text-[#2C6252] font-medium hover:underline">
+                        Discover More
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[16px] md:text-[16px] sm:text-[13px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
-                      {service.title}
-                    </h3>
-                    <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[9px] xl:text-[8px] lg:text-[8px] md:text-[6px] sm:text-[8px] py-2 leading-snug">
-                      {firstLine}
-                      <br />
-                      {secondLine}
-                    </p>
-                    <button className="text-[11px] text-[#2C6252] font-medium hover:underline">
-                      Discover More
-                    </button>
-                  </div>
-                </Motion.div>
-              );
-            })}
-          </Motion.div>
+                );
+              })}
+            </div>
+          ) : (
+            <Motion.div
+              key={showAll}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: {
+                  transition: {
+                    staggerChildren: 0.15,
+                  },
+                },
+              }}
+              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:gap-y-16 2xl:gap-y-16 xl:gap-y-16 lg:gap-y-16 md:gap-y-16 sm:gap-y-16 3xl:gap-24 2xl:gap-24 xl:gap-16 lg:gap-4 md:gap-4 sm:gap-4 mt-20 2xl:mr-10 lg:mr-3 md:mr-3 sm:mr-3 3xl:mr-0 xl:mr-0"
+            >
+              {visibleServices.map((service, index) => {
+                const words = service.desc.split(" ");
+                const firstLine = words.slice(0, 5).join(" ");
+                const secondLine = words.slice(4).join(" ");
+
+                return (
+                  <Motion.div
+                    key={index}
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: { opacity: 1, y: 0 },
+                    }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="flex items-start gap-4 max-w-md"
+                  >
+                    <div className="flex-shrink-0 3xl:w-16 3xl:h-16 2xl:w-16 2xl:h-16 xl:w-14 xl:h-14 lg:w-14 md:w-14 sm:w-10 lg:h-14 md:h-14 sm:h-10 bg-[#2C6252] flex items-center justify-center">
+                      <img
+                        src={service.icon}
+                        alt={`${service.title} Icon`}
+                        className="3xl:w-7 3xl:h-7 2xl:w-10 2xl:h-10 xl:w-6 xl:h-6 lg:w-4 lg:h-4 md:w-4 md:h-4 sm:w-4 sm:h-4 object-contain"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[16px] md:text-[16px] sm:text-[13px] font-semibold text-[#2C6252] mb-1 leading-snug max-w-[220px]">
+                        {service.title}
+                      </h3>
+                      <p className="text-[#CCCCCC] 3xl:text-[12px] 2xl:text-[9px] xl:text-[8px] lg:text-[8px] md:text-[6px] sm:text-[8px] py-2 leading-snug">
+                        {firstLine}
+                        <br />
+                        {secondLine}
+                      </p>
+                      <button className="text-[11px] text-[#2C6252] font-medium hover:underline">
+                        Discover More
+                      </button>
+                    </div>
+                  </Motion.div>
+                );
+              })}
+            </Motion.div>
+          )}
 
           {/* Dropdown icon on small screens */}
           {isSmallScreen && (
