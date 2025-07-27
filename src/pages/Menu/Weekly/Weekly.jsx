@@ -75,7 +75,7 @@ const Weekly = () => {
         aria-label={`${item.title} - ${item.description}, priced at $${item.price} per piece`}
       >
         <Motion.div
-          className="w-full 3xl:h-60 2xl:h-60 xl:h-40 lg:h-36 overflow-hidden"
+          className="w-full 3xl:h-60 2xl:h-60 xl:h-40 lg:h-36 md:h-36 sm:h-36 overflow-hidden"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -94,7 +94,7 @@ const Weekly = () => {
         </Motion.div>
 
         <div className="flex flex-col flex-grow mt-6">
-          <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-[14px] font-semibold text-[#2C6252] leading-tight mb-1">
+          <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-[14px] md:text-[14px] sm:text-[14px] font-semibold text-[#2C6252] leading-tight mb-1">
             {item.title}
           </h3>
           <p className="text-xs text-[#CCCCCC] mb-4 flex-grow mt-2">{item.description}</p>
@@ -119,11 +119,11 @@ const Weekly = () => {
 
   return (
     <Container>
-      <div className="px-4 sm:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-12 ">
-        <div className="py-16 3xl:mb-32 2xl:mb-24 xl:mb-16 lg:mb-12">
+      <div className="sm:px-4 md:px-6 3xl:px-[3.5rem] 2xl:px-4 xl:px-14 lg:px-14 3xl:ml-2 2xl:ml-0 xl:ml-0 lg:-ml-16 md:-ml-16 sm:-ml-16 3xl:mt-24 2xl:mt-20 xl:mt-16 lg:mt-12 md:mt-12 sm:mt-12">
+        <div className="py-16 3xl:mb-32 2xl:mb-24 xl:mb-16 lg:mb-12 md:mb-12 sm:mb-12">
           {/* Section Header */}
           <header className="mb-10 text-center md:text-left" aria-label="Section header">
-            <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] mb-2">
+            <h2 className="3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl font-semibold text-[#2C6252] mb-2">
               Our Signature<span className="font-bold ml-2">Foods</span>
             </h2>
             <p className="3xl:text-lg 2xl:text-lg xl:text-sm text-[#B9B9B9]">
@@ -156,7 +156,7 @@ const Weekly = () => {
           </div>
 
           {/* Food Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-10 xl:gap-10 lg:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-10 xl:gap-10 lg:gap-4 md:gap-4 sm:gap-4">
             {weeklyFoodData.map((item, index) => (
               <FoodCard key={item.id} item={item} index={index} />
             ))}

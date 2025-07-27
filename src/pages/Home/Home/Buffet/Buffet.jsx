@@ -82,8 +82,8 @@ const Buffet = () => {
 
   return (
     <Container>
-      <section className="mb-36 z-50 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3">
-        <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2">
+      <section className="mb-36 z-50 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-40 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-3 sm:-ml-3">
+        <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2 md:px-2 ">
           {/* Header */}
          <Motion.div
             initial="hidden"
@@ -100,14 +100,14 @@ const Buffet = () => {
                 Delicious <span className="font-thin lowercase">(Food)</span>
               </span>
             </span>
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-3xl font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
               Buffet for Signature Food
             </h2>
           </Motion.div>
 
           {/* Food Cards */}
           <Motion.div
-            className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 3xl:mt-4 2xl:mt-2 xl:mt-0 lg:-mt-6 3xl:px-8 2xl:px-0 xl:px-1 lg:px-0 2xl:-ml-6 3xl:-ml-0 lg:-ml-2"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 3xl:mt-4 2xl:mt-2 xl:mt-0 lg:-mt-6 md:-mt-6 sm:-mt-6 3xl:px-8 2xl:px-0 xl:px-1 lg:px-0 md:px-0 sm:px-0 2xl:-ml-6 3xl:-ml-0 lg:-ml-2 md:-ml-2 sm:-ml-2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -172,14 +172,14 @@ const Buffet = () => {
                           />
                         </svg>
                       )}
-                      <span className="text-[#777777] font-semibold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[10px] ml-2 select-none whitespace-nowrap">
+                      <span className="text-[#777777] font-semibold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[10px] md:text-[10px] sm:text-[10px] ml-2 select-none whitespace-nowrap">
                         ({ratingValue})
                       </span>
                     </div>
-                    <h3 className="3xl:text-xl 2xl:text-xl xl:text-lg lg:text-[14px] font-bold text-[#2C6252] mb-4">
+                    <h3 className="3xl:text-xl 2xl:text-xl xl:text-lg lg:text-[14px] md:text-[14px] sm:text-[14px] font-bold text-[#2C6252] mb-4">
                       {title}
                     </h3>
-                    <p className="text-[#666666] 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[12px] mb-5 leading-relaxed">
+                    <p className="text-[#666666] 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[12px] md:text-[12px] sm:text-[12px] mb-5 leading-relaxed">
                       {description}
                     </p>
                     <Link to="/chefs">
@@ -211,24 +211,24 @@ const Buffet = () => {
           </Motion.div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row items-stretch overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 2xl:-ml-5 3xl:-ml-0 xl:-ml-0 lg:-ml-1">
+          <div className="flex flex-col md:flex-row items-stretch overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 md:px-2 sm:px-2 2xl:-ml-5 3xl:-ml-0 xl:-ml-0 lg:-ml-1">
             <Motion.div
-              className="flex flex-col justify-center px-6 py-10 w-full 2xl:w-1/3 3xl:w-1/3 xl:w-1/2 lg:w-1/2 z-50"
+              className="flex flex-col justify-center px-6 py-10 w-full 2xl:w-1/3 3xl:w-1/3 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-1/2 z-50"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUpVariant}
             >
-              <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-5xl xl:text-3xl lg:text-2xl font-semibold tracking-wide drop-shadow-md 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8">
+              <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-5xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl font-semibold tracking-wide drop-shadow-md 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8 md:-ml-8 sm:-ml-8">
                 Deep <br /> Blue <br /> Delights
               </h2>
             </Motion.div>
 
-            <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60">
+            <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60 md:h-60 sm:h-60">
               <Motion.img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752051794/buffet5_zp25b9.webp"
                 alt="Deep Blue Delights Image"
-                className="w-full h-full object-cover 3xl:-ml-1 2xl:ml-4 xl:ml-0 lg:ml-2"
+                className="w-full h-full object-cover 3xl:-ml-1 2xl:ml-4 xl:ml-0 lg:ml-2 md:ml-2 sm:ml-2"
                 initial={{ opacity: 0, scale: 1.1 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -237,7 +237,7 @@ const Buffet = () => {
 
               <div className="flex justify-between items-end h-full">
                 <Motion.div
-                  className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 text-white p-4 text-sm max-w-[300px] rounded-md z-20"
+                  className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 md:bottom-20 sm:bottom-20 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 md:left-10 sm:left-10 text-white p-4 text-sm max-w-[300px] rounded-md z-20"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

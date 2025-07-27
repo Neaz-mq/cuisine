@@ -290,12 +290,12 @@ const Items = () => {
     <Container>
       <section
         aria-label="Food Categories Navigation and Menu Items"
-        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 overflow-hidden'
+        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-20 sm:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-3 md:mr-16 sm:-ml-3 sm:mr-16 overflow-hidden'
       >
         {/* Category Navigation */}
         <nav
           aria-label="Food categories"
-          className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 px-8"
+          className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 md:space-x-16 sm:space-x-16 px-8"
         >
           {categoryItems.map((item) => (
             <Motion.button
@@ -326,13 +326,13 @@ const Items = () => {
         </nav>
 
         {/* Main Section */}
-        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 gap-10 mt-10">
+        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-10 mt-10">
           {/* Left Section */}
           <section aria-label={`${selected} menu items`} className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0">
             {items.map((item, index) => (
               <article
                 key={index}
-                className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 flex flex-col items-start h-96"
+                className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 md:p-10 sm:p-10 flex flex-col items-start h-96"
                 tabIndex={0}
                 aria-label={`${item.title} - ${item.description}. Price: ${item.price}, original price ${item.originalPrice}`}
               >
@@ -356,11 +356,11 @@ const Items = () => {
 
                   <div className="flex flex-col items-end">
                     <div className="flex items-end gap-x-1">
-                      <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg font-bold text-[#2C6252] leading-none">
+                      <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-lg font-bold text-[#2C6252] leading-none">
                         {item.price}
                       </div>
                       <span
-                        className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm line-through text-[#FF4C15] relative top-4 font-bold"
+                        className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-sm line-through text-[#FF4C15] relative top-4 font-bold"
                         aria-label={`Original price ${item.originalPrice}`}
                       >
                         {item.originalPrice}
@@ -398,11 +398,11 @@ const Items = () => {
           {/* Right Section - Today Special */}
           <aside
             aria-labelledby="today-special-title"
-            className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
+            className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center sm:top-24 md:top-24 lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
           >
             <Motion.h3
               id="today-special-title"
-              className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug mt-10"
+              className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug md:leading-snug sm:leading-snug mt-10"
               dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}

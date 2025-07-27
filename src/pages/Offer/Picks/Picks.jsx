@@ -34,7 +34,7 @@ const Picks = () => {
       {/* Main Section */}
       <section
         aria-labelledby="picks-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-40 overflow-hidden"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-40 md:px-2 md:-ml-5 md:-mt-2 md:mb-40 sm:px-2 sm:-ml-5 sm:-mt-2 sm:mb-40 overflow-hidden"
       >
         <Motion.div
           initial="hidden"
@@ -43,22 +43,22 @@ const Picks = () => {
           variants={staggerContainer}
         >
           {/* Top Section Grid */}
-          <div className="grid md:grid-cols-2 gap-12 3xl:mb-24 2xl:mb-24 xl:mb-24 lg:mb-16">
+          <div className="grid md:grid-cols-2 gap-12 3xl:mb-24 2xl:mb-24 xl:mb-24 lg:mb-16 md:mb-16 sm:mb-16">
             {/* Left Hero Card */}
             <Motion.article
-              className="bg-[#FFFAF8] p-6 3xl:p-16 2xl:p-16 xl:p-16 lg:p-10"
+              className="bg-[#FFFAF8] p-6 3xl:p-16 2xl:p-16 xl:p-16 lg:p-10 md:p-10 sm:p-10"
               variants={fadeUp}
               custom={1}
               aria-label="Chef's Weekly Picks promotion"
             >
               <h2
                 id="picks-heading"
-                className="text-3xl 3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-semibold text-[#2C6252] 3xl:mb-4 2xl:mb-4 xl:mb-4 lg:mb-4"
+                className="text-3xl 3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl font-semibold text-[#2C6252] 3xl:mb-4 2xl:mb-4 xl:mb-4 lg:mb-4"
               >
                 Chef's Weekly Picks <br />
                 <span className="text-[#FF4C15] font-normal">- Just for You!</span>
               </h2>
-              <p className="3xl:text-sm 2xl:text-sm xl:text-[11px] lg:text-[9px] text-[#2C6252] 3xl:mb-6 2xl:mb-6 xl:mb-6 lg:mb-6">
+              <p className="3xl:text-sm 2xl:text-sm xl:text-[11px] lg:text-[9px] md:text-[9px] sm:text-[9px] text-[#2C6252] 3xl:mb-6 2xl:mb-6 xl:mb-6 lg:mb-6 md:mb-6 sm:mb-6">
                 Management reserves the right to modify or cancel the <br />
                 offer without prior notice.
               </p>
@@ -67,7 +67,7 @@ const Picks = () => {
                   Order Now &gt;
                 </button>
               </Link>
-              <div className="flex justify-end 3xl:-mt-[6.8rem] ml-44 2xl:-mt-[3.2rem] xl:-mt-[1.3rem] lg:-mt-[1rem]">
+              <div className="flex justify-end 3xl:-mt-[6.8rem] ml-44 2xl:-mt-[3.2rem] xl:-mt-[1.3rem] lg:-mt-[1rem] md:-mt-[1rem] sm:-mt-[1rem]">
                 <Motion.img
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -98,10 +98,10 @@ const Picks = () => {
                   />
                 </div>
                 <div className="w-2/3">
-                  <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-lg font-semibold text-[#2C6252] mb-2">
+                  <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-lg md:text-lg sm:text-lg font-semibold text-[#2C6252] mb-2">
                     Enjoy unbeatable <br /> deals with us
                   </h3>
-                  <p className="3xl:text-sm 2xl:text-sm xl:text-[10px] lg:text-[9px] text-[#BCB1AD]">
+                  <p className="3xl:text-sm 2xl:text-sm xl:text-[10px] lg:text-[9px] md:text-[9px] sm:text-[9px] text-[#BCB1AD]">
                     Whether you're craving a hearty meal, a sweet treat, or a refreshing coffee—our weekly offers have.
                   </p>
                 </div>
@@ -193,10 +193,10 @@ const Picks = () => {
                     aria-label={`Product pick with ${discount} discount`}
                   >
                     <div className="p-4">
-                      <p className="font-semibold text-[#FF4C15] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[15px]">
+                      <p className="font-semibold text-[#FF4C15] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[15px] md:text-[15px] sm:text-[15px]">
                         Cheesy
                       </p>
-                      <p className="font-semibold text-[#FF4C15] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[15px]">
+                      <p className="font-semibold text-[#FF4C15] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[15px] md:text-[15px] sm:text-[15px]">
                         Crust Deluxe
                       </p>
                       <p className="mt-6 3xl:text-xs 2xl:text-xs xl:text-xs text-[#2D6252] lg:text-xs">
@@ -204,10 +204,10 @@ const Picks = () => {
                       </p>
                     </div>
                     <div className="p-4">
-                      <p className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-[13px] font-semibold text-white -mt-4">
+                      <p className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-[13px] md:text-[13px] sm:text-[13px] font-semibold text-white -mt-4">
                         Crispy Garden Glory
                       </p>
-                      <p className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-xl font-bold text-gray-900 mt-3">
+                      <p className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl font-bold text-gray-900 mt-3">
                         - $10.99
                       </p>
                     </div>
@@ -220,13 +220,13 @@ const Picks = () => {
                       draggable={false}
                     />
                     <div
-                      className="absolute right-6 3xl:top-80 2xl:top-80 xl:top-80 lg:top-72 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 lg:w-14 lg:h-14 flex flex-col items-center justify-center"
+                      className="absolute right-6 3xl:top-80 2xl:top-80 xl:top-80 lg:top-72 md:top-72 sm:top-72 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 lg:w-14 lg:h-14 md:h-14 sm:h-14 flex flex-col items-center justify-center"
                       style={{ backgroundColor: badgeColor }}
                     >
-                      <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] lg:text-[10px] font-bold leading-tight">
+                      <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] lg:text-[10px] md:text-[10px] sm:text-[10px] font-bold leading-tight">
                         {discount}
                       </span>
-                      <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] lg:text-[10px] font-medium">
+                      <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] lg:text-[10px] md:text-[10px] sm:text-[10px] font-medium">
                         off
                       </span>
                     </div>

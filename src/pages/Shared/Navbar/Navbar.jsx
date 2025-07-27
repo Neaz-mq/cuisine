@@ -15,10 +15,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky flex flex-col items-center w-20 p-4 z-20 3xl:-mt-[8rem] 2xl:-mt-[8rem] xl:-mt-[8.5rem] lg:-mt-[9.5rem] md:-mt-[4rem] sm:-mt-[4rem]">
+    <div className="sticky flex flex-col items-center w-20 p-4 z-20 3xl:-mt-[8rem] 2xl:-mt-[8rem] xl:-mt-[8.5rem] lg:-mt-[9.5rem] md:-mt-[7rem] sm:-mt-[7rem]">
       {/* Cuisine Logo */}
       <a href="/">
-        <div className="absolute left-0  top-0 w-14 md:w-20  lg:w-20 xl:w-24 2xl:w-28 3xl:w-32 bg-[#2C6252] flex flex-col items-center py-3  xl:py-4 ">
+        <div className="absolute left-0 top-0 w-8 md:w-20 lg:w-20 xl:w-24 2xl:w-28 3xl:w-32 bg-[#2C6252] flex flex-col items-center py-3 xl:py-4 ">
           <img
             src="/logo.svg"
             alt="Cuisine Logo"
@@ -29,7 +29,7 @@ const Navbar = () => {
             }}
           />
           <span
-            className="text-[14px] sm:text-[16px] md:text-[12px] lg:text-[10px] xl:text-[13px] 2xl:text-[15px] 3xl:text-lg font-bold text-white mt-4 md:ml-8  lg:ml-10 xl:ml-10 2xl:ml-[3.9rem] 3xl:ml-20"
+            className="sm:text-[13px] md:text-[12px] lg:text-[10px] xl:text-[13px] 2xl:text-[15px] 3xl:text-lg font-bold text-white mt-4 md:ml-8 lg:ml-10 xl:ml-10 2xl:ml-[3.9rem] 3xl:ml-20"
             style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
           >
             Cuisine
@@ -39,7 +39,7 @@ const Navbar = () => {
       </a>
 
       {/* Hamburger for small screens */}
-      <div className="sm:block md:block lg:hidden xl:hidden 2xl:hidden 3xl:hidden mt-28 md:ml-8 -ml-5">
+      <div className="sm:block md:block lg:hidden xl:hidden 2xl:hidden 3xl:hidden mt-28 md:ml-8 -ml-12">
         <button onClick={() => setIsOpen(!isOpen)} className="text-[#2C6252] text-2xl">
           <HiMenuAlt3 />
         </button>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 stiffness: 300,
                 damping: 30
               }}
-              className="bg-white shadow-lg rounded-md w-48 absolute left-20 top-[7.5rem] z-50 p-4 space-y-3"
+              className="bg-white shadow-lg rounded-md w-48 absolute left-8 md:left-20 top-[7.5rem] z-50 p-4 space-y-3"
             >
               {navItems.map((item, index) => (
                 <a

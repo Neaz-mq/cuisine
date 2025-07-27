@@ -343,6 +343,7 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
   };
 
   return (
+    
     <Motion.article
       className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6"
       variants={fadeUp}

@@ -6,8 +6,8 @@ import { toast } from "react-toastify";
 
 const Carts = () => {
   useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   const { cartItems, increaseQty, decreaseQty, removeItem, clearCart } = useCart();
   const [selectedShipping, setSelectedShipping] = useState("uber-eats");
@@ -34,14 +34,14 @@ const Carts = () => {
     ccv: "",
   });
 
-  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false); 
+  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false);
   const [discountCode, setDiscountCode] = useState("");
   const [errors, setErrors] = useState({});
   const [paymentErrors, setPaymentErrors] = useState({});
   const subtotal = cartItems.reduce(
-  (acc, item) => acc + item.price * item.quantity,
-  0
-);
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   const total = subtotal;
 
@@ -86,15 +86,15 @@ const Carts = () => {
     if (!formData.zip.trim()) newErrors.zip = "Zip code is required.";
     if (!formData.phoneNumber.trim()) newErrors.phoneNumber = "Phone number is required.";
     if (!selectedCountry) newErrors.selectedCountry = "Country is required.";
-    
+
     if (paymentMethod === "online") {
       if (!cardDetails.cardholderName.trim()) newPaymentErrors.cardholderName = "Cardholder name is required.";
       if (!cardDetails.cardNumber.trim()) newPaymentErrors.cardNumber = "Card number is required.";
-      if (!/^\d{16}$/.test(cardDetails.cardNumber.replace(/\s/g, ''))) newPaymentErrors.cardNumber = "Invalid card number (16 digits required)."; 
+      if (!/^\d{16}$/.test(cardDetails.cardNumber.replace(/\s/g, ''))) newPaymentErrors.cardNumber = "Invalid card number (16 digits required).";
       if (!cardDetails.expiryDate.trim()) newPaymentErrors.expiryDate = "Expiry date is required.";
-      if (!/^\d{2}\/\d{2}$/.test(cardDetails.expiryDate)) newPaymentErrors.expiryDate = "Invalid expiry date (MM/YY)."; 
+      if (!/^\d{2}\/\d{2}$/.test(cardDetails.expiryDate)) newPaymentErrors.expiryDate = "Invalid expiry date (MM/YY).";
       if (!cardDetails.ccv.trim()) newPaymentErrors.ccv = "CCV is required.";
-      if (!/^\d{3,4}$/.test(cardDetails.ccv)) newPaymentErrors.ccv = "Invalid CCV (3 or 4 digits)."; 
+      if (!/^\d{3,4}$/.test(cardDetails.ccv)) newPaymentErrors.ccv = "Invalid CCV (3 or 4 digits).";
       if (!isAgreedToTerms) newPaymentErrors.isAgreedToTerms = "You must agree to the condition.";
     }
 
@@ -421,7 +421,7 @@ const Carts = () => {
                           type="text"
                           id="cardNumber"
                           name="cardNumber"
-                          placeholder="5316 8e71 7571 5545" 
+                          placeholder="5316 8e71 7571 5545"
                           className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
                           value={cardDetails.cardNumber}
                           onChange={handleCardDetailsChange}
@@ -435,7 +435,7 @@ const Carts = () => {
                           type="text"
                           id="expiryDate"
                           name="expiryDate"
-                          placeholder="24/28" 
+                          placeholder="24/28"
                           className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
                           value={cardDetails.expiryDate}
                           onChange={handleCardDetailsChange}
@@ -449,7 +449,7 @@ const Carts = () => {
                           type="text"
                           id="ccv"
                           name="ccv"
-                          placeholder="2659" 
+                          placeholder="2659"
                           className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
                           value={cardDetails.ccv}
                           onChange={handleCardDetailsChange}
@@ -538,8 +538,8 @@ const Carts = () => {
 
             {/* Discount Code Section */}
             <div className="pt-10 border-t border-gray-200">
-              <div className="flex mb-10"> 
-                <input 
+              <div className="flex mb-10">
+                <input
                   type="text"
                   placeholder="Gift card or discount code"
                   className="flex-1 border border-gray-300 3xl:px-4 2xl:px-4 xl:px-2 lg:px-2 py-2 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] focus:outline-none focus:ring-1 focus:ring-gray-400"

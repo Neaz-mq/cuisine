@@ -106,7 +106,7 @@ const Feast = () => {
     <Container>
       <section
         aria-labelledby="feast-hero-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-3 md:-ml-6 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-6 sm:-mt-44 sm:mb-44"
       >
         {/* Hero Section */}
         <div
@@ -117,7 +117,7 @@ const Feast = () => {
           <div className="flex-1 min-w-[300px] md:mr-5 text-center md:text-left mb-8 md:mb-0">
             <h2
               id="feast-hero-heading"
-              className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl font-bold text-[#2C6252] leading-tight mb-2"
+              className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl font-bold text-[#2C6252] leading-tight mb-2"
             >
               Enjoy unbeatable deals every <br /> week at{" "}
               <span className="text-[#FF4C15]">Flavors & Feast!</span>
@@ -126,7 +126,7 @@ const Feast = () => {
               – Free Dessert with any Main Course
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem]">
+          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[17rem] sm:-mt-[17rem]">
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1752125671/offer11_hhovyb.webp"
               alt="Delicious fried chicken wings"
@@ -171,17 +171,17 @@ const Feast = () => {
                 />
               </div>
               <div className="flex flex-col flex-grow mt-6">
-                <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base font-semibold text-[#2C6252] leading-tight mb-1">
+                <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base md:text-base sm:text-base font-semibold text-[#2C6252] leading-tight mb-1">
                   {item.title.split(" ")[0]} <br />{" "}
                   {item.title.split(" ").slice(1).join(" ")}
                 </h3>
-                <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] text-[#CCCCCC] mb-4 flex-grow mt-2">
+                <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] md:text-[9px] sm:text-[9px] text-[#CCCCCC] mb-4 flex-grow mt-2">
                   {item.description}
                 </p>
                 <div className="flex justify-between items-center mt-auto">
-                  <span className="3xl:text-3xl 2xl:text-3xl xl:text-2xl lg:text-xl font-bold text-[#2C6252]">
+                  <span className="3xl:text-3xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl font-bold text-[#2C6252]">
                     ${item.price}{" "}
-                    <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-base text-[#B9B9B9] relative top-2 left-1 font-semibold">
+                    <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-base md:text-base sm:text-base text-[#B9B9B9] relative top-2 left-1 font-semibold">
                       / pcs
                     </span>
                   </span>

@@ -13,7 +13,7 @@ const Delights = () => {
     <Container>
       <section
         aria-labelledby="delights-heading"
-        className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 lg:px-12 py-12 mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-32 2xl:mb-36 xl:mb-8 lg:mb-28 lg:-ml-20"
+        className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 lg:px-12 md:px-12 sm:px-12 py-12 mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-32 2xl:mb-36 xl:mb-8 lg:mb-28 lg:-ml-20 md:mb-28 md:-ml-20 sm:mb-28 sm:-ml-20"
       >
         {/* Top Left - Shrimp */}
         <Motion.article {...fadeInUp} className="flex flex-col bg-white overflow-hidden p-6">
@@ -57,23 +57,23 @@ const Delights = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056680/menu3_yskhz3.webp"
             alt="Assorted sushi served with traditional garnish"
-            className="3xl:w-full 2xl:w-[32rem] xl:w-[29rem] 3xl:h-[700px] 2xl:h-[650px] xl:h-[640px] lg:h-[600px] object-cover"
+            className="3xl:w-full 2xl:w-[32rem] xl:w-[29rem] 3xl:h-[700px] 2xl:h-[650px] xl:h-[640px] lg:h-[600px] md:h-[600px] sm:h-[600px] object-cover"
           />
         </Motion.div>
 
         {/* Middle Banner - Chef Cooking */}
-        <Motion.div {...fadeInUp} className="relative overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[680px] xl:h-[680px] lg:h-auto 3xl:left-7 2xl:left-7 xl:left-6 lg:left-6 3xl:-top-4 2xl:-top-0">
+        <Motion.div {...fadeInUp} className="relative overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[680px] xl:h-[680px] lg:h-auto md:h-auto sm:h-auto 3xl:left-7 2xl:left-7 xl:left-6 lg:left-6 md:left-6 sm:left-6  3xl:-top-4 2xl:-top-0">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056828/menu4_kx7c9q.webp"
             alt="Chef preparing seafood dishes"
-            className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[33.1rem] xl:w-[27.5rem] lg:w-[22rem] h-auto object-cover object-center"
+            className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[33.1rem] xl:w-[27.5rem] lg:w-[22rem] md:w-[22rem] sm:w-[22rem] h-auto object-cover object-center"
           />
           <Motion.div
             initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="absolute top-0 3xl:right-12 2xl:right-12 3xl:w-[20rem] 2xl:w-[20rem] xl:w-[20rem] lg:w-[22rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"
+            className="absolute top-0 3xl:right-12 2xl:right-12 3xl:w-[20rem] 2xl:w-[20rem] xl:w-[20rem] lg:w-[22rem] md:w-[22rem] sm:w-[22rem] h-72 bg-[#FF4B16] bg-opacity-80 text-white p-8 flex flex-col justify-center"
           >
             <h3 className="text-7xl font-bold leading-none mt-4">50%</h3>
             <p className="text-2xl font-semibold leading-tight mt-2">Discount Offer</p>
@@ -84,7 +84,7 @@ const Delights = () => {
         </Motion.div>
 
         {/* Bottom Right - Deep Blue Delights */}
-        <Motion.article {...fadeInUp} className="relative overflow-hidden w-full lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4">
+        <Motion.article {...fadeInUp} className="relative overflow-hidden w-full sm:h-[485px] md:h-[485px] lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4">
           <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10">
             <p className="text-sm text-[#EFEFEF] mb-4 max-w-xs">
               Experience the perfect <br /> blend of taste and joy—every <br /> bite is a moment of <br /> delight, crafted <br /> to satisfy your cravings!
@@ -100,13 +100,13 @@ const Delights = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20">
-            <h2 className="lg:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-2 lg:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[22rem] xl:-mt-[20rem] lg:-mt-[16rem]">
+          <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20 md:-ml-20 sm:-ml-20">
+            <h2 className="sm:text-2xl md:text-2xl lg:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-2 lg:space-y-0 md:space-y-0 sm:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[22rem] xl:-mt-[20rem] lg:-mt-[16rem] md:-mt-[16rem] sm:-mt-[16rem]">
               <span className="text-[#2C6252]">Deep</span><br />
               <span className="text-[#2C6252]">Blue</span><br />
               <span className="text-[#FF4C15]">Delights</span>
             </h2>
-            <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-1 xl:ml-10 lg:ml-14 whitespace-nowrap">
+            <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-1 xl:ml-10 lg:ml-14 md:ml-14 sm:ml-14 whitespace-nowrap">
               Savor the Secrets of the Sea
             </p>
           </div>
@@ -114,7 +114,7 @@ const Delights = () => {
           <Motion.img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056997/menu5_ngludm.webp"
             alt="Grilled fish with herbs and spices"
-            className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-52 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem]"
+            className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-52 md:left-52 sm:left-52 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 md:w-48 sm:w-48 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem] md:top-[16.5rem] sm:top-[16.5rem]"
             animate={{ rotate: 360 }}
             transition={{
               repeat: Infinity,

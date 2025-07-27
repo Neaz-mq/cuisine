@@ -99,7 +99,6 @@ const Team = () => {
                 <span className="text-orange-400">🔖</span>
               </div>
             </div>
-
           </div>
         </div>
       </div>

@@ -1,54 +1,54 @@
 import { motion as Motion } from 'framer-motion';
 import Container from "../../../components/Container";
 
-const Awards = () => {
+const Awards = () => { 
   return (
     <Container>
-      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20">
+      <div className="relative overflow-hidden min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 md:-mt-0 sm:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 md:right-20 sm:right-20">
 
         {/* Foreground Image (Chef) */}
-        <div className="absolute left-1/2 lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
+        <div className="absolute left-1/2 sm:top-[33%] md:top-[33%] lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] md:translate-x-[-48%] sm:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
-            className="lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
+            className="sm:w-[820px] md:w-[820px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
           />
         </div>
 
         {/* Centered Specialty Image */}
-        <div className="relative flex justify-start lg:ml-32 2xl:ml-32 xl:ml-32 3xl:ml-0 lg:w-[600px] xl:w-[1100px] 2xl:w-[1100px] 3xl:w-full 3xl:justify-center">
+        <div className="relative flex justify-start sm:ml-32 md:ml-32 lg:ml-32 2xl:ml-32 xl:ml-32 3xl:ml-0 sm:w-[600px] md:w-[600px] lg:w-[600px] xl:w-[1100px] 2xl:w-[1100px] 3xl:w-full 3xl:justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1744863980/Specialty_c98mbf.png"
-            alt="Our food specialty display"
-            className="lg:mt-36 xl:mt-52 2xl:mt-52 3xl:-mt-1"
+            alt="Our food specialty display" 
+            className="sm:mt-36 md:mt-36 lg:mt-36 xl:mt-52 2xl:mt-52 3xl:-mt-1"
           />
         </div>
 
         {/* Floating Badge Icon */}
         <Motion.div
-          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:left-14 lg:top-[5rem] xl:top-[12rem] 2xl:top-[13rem] 3xl:top-48 z-50"
+          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:left-14 md:left-14 sm:left-14 sm:top-[5rem] md:top-[5rem] lg:top-[5rem] xl:top-[12rem] 2xl:top-[13rem] 3xl:top-48 z-50"
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1744793790/Group_253_oyljhb.png"
-            className="lg:w-32 xl:w-44 2xl:w-44 3xl:w-full rounded-full"
+            className="sm:w-32 md:w-32 lg:w-32 xl:w-44 2xl:w-44 3xl:w-full rounded-full"
             alt="Award badge"
           />
         </Motion.div>
 
         {/* Green Food */}
-        <div className="absolute left-1/2 lg:top-[14rem] xl:top-[21rem] 2xl:top-[22rem] 3xl:top-[24rem] z-50 lg:-translate-x-[210px] xl:-translate-x-[260px] 2xl:-translate-x-[300px] 3xl:-translate-x-[360px]">
+        <div className="absolute left-1/2 sm:top-[14rem] md:top-[14rem] lg:top-[14rem] xl:top-[21rem] 2xl:top-[22rem] 3xl:top-[24rem] z-50 sm:-translate-x-[210px] md:-translate-x-[210px] lg:-translate-x-[210px] xl:-translate-x-[260px] 2xl:-translate-x-[300px] 3xl:-translate-x-[360px]">
           <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Green</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Food</span>
         </div>
 
         {/* Healthy Food */}
-        <div className="absolute left-1/2 lg:top-[20rem] xl:top-[28rem] 2xl:top-[36rem] 3xl:top-[33rem] z-50 lg:-translate-x-[320px] xl:-translate-x-[400px] 2xl:-translate-x-[440px] 3xl:-translate-x-[520px]">
-          <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Healthy</span> <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px]'>Food</span>
+        <div className="absolute left-1/2 sm:top-[20rem] md:top-[20rem] lg:top-[20rem] xl:top-[28rem] 2xl:top-[36rem] 3xl:top-[33rem] z-50 sm:-translate-x-[320px] md:-translate-x-[320px] lg:-translate-x-[320px] xl:-translate-x-[400px] 2xl:-translate-x-[440px] 3xl:-translate-x-[520px]">
+          <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px] md:text-[12px] sm:text-[12px]'>Healthy</span> <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px] md:text-[12px] sm:text-[12px]'>Food</span>
         </div>
 
         {/* Decorative Blur Element */}
-        <div className="absolute left-1/2 lg:top-[28rem] xl:top-[42rem] 2xl:top-[42rem] 3xl:top-[37rem] z-50 lg:-translate-x-[330px] xl:-translate-x-[400px] 2xl:-translate-x-[400px] 3xl:-translate-x-[500px]">
+        <div className="absolute left-1/2 sm:top-[28rem] md :top-[28rem] lg:top-[28rem] xl:top-[42rem] 2xl:top-[42rem] 3xl:top-[37rem] z-50 lg:-translate-x-[330px] xl:-translate-x-[400px] 2xl:-translate-x-[400px] 3xl:-translate-x-[500px]">
           <img className='opacity-20 blur-sm' src="/Ellipse 9.svg" alt="Decorative ellipse blur" />
         </div>
 

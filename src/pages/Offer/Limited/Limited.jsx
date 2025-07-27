@@ -64,13 +64,13 @@ const Limited = () => {
 
   return (
     <Container>
-      <section className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 mt-6 overflow-hidden" aria-labelledby="limited-heading">
+      <section className="bg-white 3xl:px-16 2xl:px-1 xl:px-10 lg:px-0 md:px-0 sm:px-0 mt-6 overflow-hidden" aria-labelledby="limited-heading">
         {/* Promo Text */}
         <Motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-base text-[#AAAAAA] mb-2 mt-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-4"
+          className="text-base text-[#AAAAAA] mb-2 mt-3 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-4 md:-ml-4 sm:-ml-4"
         >
           <p>
             we dish out <br />
@@ -85,15 +85,15 @@ const Limited = () => {
 
         {/* Headings */}
         <header
-          className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem]"
+          className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem] md:-mt-[9.8rem] sm:-mt-[9.8rem]"
         >
-          <div className="mb-36 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2 text-center lg:text-left">
+          <div className="mb-36 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2 md:-ml-2 sm:-ml-2 text-center lg:text-left">
             <Motion.h2
               id="limited-heading"
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-green-800"
+              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl font-bold text-green-800"
             >
               Limited Time Offer–
             </Motion.h2>
@@ -101,7 +101,7 @@ const Limited = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl font-bold text-[#FF4C15] mt-4"
+              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl font-bold text-[#FF4C15] mt-4"
             >
               Up To 50% Off!
             </Motion.h3>
@@ -109,15 +109,15 @@ const Limited = () => {
         </header>
 
         {/* Card Grid */}
-        <div className="flex justify-center 3xl:ml-64 2xl:ml-48 xl:ml-44 lg:ml-36 3xl:-mt-8 2xl:-mt-8 xl:-mt-12 lg:-mt-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-4 2xl:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-4 lg:gap-6 w-fit">
+        <div className="flex justify-center 3xl:ml-64 2xl:ml-48 xl:ml-44 lg:ml-36 md:ml-36 sm:ml-36 3xl:-mt-8 2xl:-mt-8 xl:-mt-12 lg:-mt-12 md:-mt-12 sm:-mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-4 2xl:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-4 lg:gap-6 md:gap-6 sm:gap-6 w-fit">
             {limitedItems.map((item, index) => (
               <Motion.article
                 key={item.id}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className={`bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[220px] xl:w-[190px] lg:w-[190px] ${
+                className={`bg-white overflow-hidden 3xl:w-[250px] 2xl:w-[220px] xl:w-[190px] lg:w-[190px] md:w-[190px] sm:w-[190px] ${
                   item.id === 4 ? "3xl:block 2xl:block xl:block lg:hidden hidden" : ""
                 }`}
               >
