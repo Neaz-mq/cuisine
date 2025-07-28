@@ -13,10 +13,10 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 md:-ml-16 sm:-ml-36  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0">
+    <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 md:-ml-16 sm:-ml-36  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 ">
       <Container>
         <div className="relative bg-white">
-          <div className="flex items-start justify-between">
+          <div className="flex items-start justify-between sm:w-56 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full ">
             <Motion.div
               initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
@@ -30,9 +30,9 @@ const Banner = () => {
               />
 
               <div className="3xl:ml-4 2xl:ml-4 xl:ml-4 lg:ml-4 md:ml-16 sm:ml-16">
-                <div className='md:block sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:-ml-2 sm:-ml-2'>
+                <div className='md:block sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:-ml-2 sm:-ml-2 sm:w-36 md:w-full'>
                   <Link to="/offer" aria-label="Go to offers">
-                    <button className="bg-[#2C6252] text-white md:px-3 sm:px-2 md:py-1 sm:py-0 rounded-full flex items-center md:space-x-4 sm:space-x-1 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px] md:text-[12px] sm:text-[10px]">
+                    <button className="bg-[#2C6252] text-white md:px-3 sm:px-2 md:py-1 sm:py-0 rounded-full flex items-center md:space-x-4 sm:space-x-1 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px] md:text-[12px] sm:text-[10px] ">
                       <span>Up to 50% Off</span>
                       <div className="bg-white md:p-2 sm:p-1 rounded-full flex items-center justify-center">
                         <img src="/arrow.svg" alt="Arrow Right" className="h-3 w-3" />
@@ -44,7 +44,7 @@ const Banner = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1 }}
-                  className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl font-bold text-[#2C6252] leading-tight flex items-center 3xl:-mt-3 2xl:-mt-3 xl:-mt-3 lg:-mt-3 md:mt-3 sm:mt-3"
+                  className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl font-bold text-[#2C6252] leading-tight flex items-center 3xl:-mt-3 2xl:-mt-3 xl:-mt-3 lg:-mt-3 md:mt-3 sm:mt-3 sm:w-36 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
                 >
                   Savor the
                   <div className='md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block'>
@@ -102,7 +102,7 @@ const Banner = () => {
                 className="3xl:-mt-6 2xl:-mt-6 xl:-mt-6 lg:-mt-6 md:-mt-16 sm:-mt-16"
               >
                 <p
-                  className="mb-8 3xl:text-[20px] 2xl:text-[16px] xl:text-[12px] lg:text-[9px] md:text-[9px] sm:text-[8px] 3xl:ml-2 2xl:ml-2 xl:ml-2 lg:ml-2 md:ml-10 sm:ml-9 p-4 bg-cover bg-center 3xl:w-[650px] 2xl:w-[500px] xl:w-[480px] lg:w-[480px] md:w-[400px] sm:w-[400px] 3xl:h-[250px] 2xl:h-[220px] xl:h-[180px] lg:h-[150px] md:h-[200px] sm:h-[200px] flex flex-col justify-center"
+                  className="mb-8 3xl:text-[20px] 2xl:text-[16px] xl:text-[12px] lg:text-[9px] md:text-[9px] sm:text-[8px] 3xl:ml-2 2xl:ml-2 xl:ml-2 lg:ml-2 md:ml-10 sm:ml-9 p-4 bg-cover bg-center 3xl:w-[650px] 2xl:w-[500px] xl:w-[480px] lg:w-[480px] md:w-[400px] sm:w-[100px] 3xl:h-[250px] 2xl:h-[220px] xl:h-[180px] lg:h-[150px] md:h-[200px] sm:h-[100px] flex flex-col justify-center sm:mt-10"
                   style={{
                     backgroundImage: "url('https://res.cloudinary.com/dxohwanal/image/upload/v1742627149/Tasty_uw9ilh.png')",
                   }}
@@ -129,7 +129,7 @@ const Banner = () => {
               </Motion.div>
 
 
-              <div className="flex items-center 3xl:space-x-20 2xl:space-x-20 xl:space-x-20 lg:space-x-10 md:space-x-10 sm:space-x-6 3xl:-mt-20 2xl:-mt-20 xl:-mt-20 lg:-mt-20 md:-mt-28 sm:-mt-28 3xl:ml-5 2xl:ml-5 xl:ml-5 lg:ml-5 md:ml-14 sm:ml-14 sm:w-60 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full">
+              <div className="flex items-center 3xl:space-x-20 2xl:space-x-20 xl:space-x-20 lg:space-x-10 md:space-x-10 sm:space-x-6 3xl:-mt-20 2xl:-mt-20 xl:-mt-20 lg:-mt-20 md:-mt-28 sm:-mt-14 3xl:ml-5 2xl:ml-5 xl:ml-5 lg:ml-5 md:ml-14 sm:ml-14 sm:w-60 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full">
                 {[
                   {
                     src: 'https://res.cloudinary.com/dxohwanal/image/upload/v1752050418/banner2_wtpney.webp',
@@ -172,12 +172,12 @@ const Banner = () => {
               initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-              className="relative 3xl:-mt-36 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-32 xl:-mt-28 xl:-ml-28 lg:-mt-[5.2rem] md:-mt-[5.9rem] lg:-ml-44 md:-ml-44 object-cover z-20"
+              className="relative 3xl:-mt-28 3xl:-ml-20 2xl:-ml-32 w-full 2xl:-mt-28 xl:-mt-20 xl:-ml-28 lg:-mt-[4.5rem] md:-mt-[5.4rem] lg:-ml-44 md:-ml-44 sm:-ml-52 sm:-mr-20 3xl:-mr-0 2xl:-mr-0 xl:-mr-0 lg:-mr-0 md:-mr-0 object-cover z-20 sm:w-full sm:-mt-8 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
             >
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
                 alt="Delicious Dish"
-                className="3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[32rem] md:w-[32rem]  3xl:-ml-24 2xl:-ml-10 xl:-ml-16 lg:-ml-0 md:ml-32 3xl:h-[50rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem] md:h-[34rem] object-cover md:block sm:hidden 3xl:block 2xl:block xl:block lg:block"
+                className="3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[32rem] md:w-[32rem]  3xl:-ml-24 2xl:-ml-10 xl:-ml-16 lg:-ml-0 md:ml-32 sm:ml-24 3xl:h-[50rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem] md:h-[34rem] object-cover  sm:w-full sm:h-[13rem]"
               />
             </Motion.div>
           </div>
@@ -208,7 +208,7 @@ const Banner = () => {
         {/* <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
                 alt="Delicious Dish"
-                className=" sm:block md:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden relative bottom-[21rem] left-36 z-0"
+                className=" sm:block md:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden relative bottom-[19rem] left-24 z-0 w-44"
               /> */}
       </Container>
     </div>
