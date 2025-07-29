@@ -55,9 +55,9 @@ const Services = () => {
     isSmallScreen && !showAll ? services.slice(0, 2) : services;
 
   return (
-    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[10rem] flex justify-center sm:-ml-12 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0  ">
+    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[10rem] flex justify-center sm:-ml-[4rem]  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
       <Container>
-        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-7 overflow-hidden  ">
+        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-7   ">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[30rem] md:-top-[30rem] sm:-top-[30rem]"
@@ -87,7 +87,7 @@ const Services = () => {
               </span>
             </h2>
 
-            <h1 className="3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-xl font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 sm:mt-5 mb-6 whitespace-nowrap">
+            <h1 className="3xl:text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-lg font-semibold text-[#2C6252] 3xl:mt-10 2xl:mt-10 xl:mt-8 lg:mt-10 sm:mt-5 mb-6 ">
               What Makes Us Stand Out
             </h1>
 
@@ -101,7 +101,7 @@ const Services = () => {
           {isSmallScreen ? (
             <div
               key={showAll}
-              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-6 mt-14"
+              className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-6 mt-14 "
             >
               {visibleServices.map((service, index) => {
                 const words = service.desc.split(" ");
