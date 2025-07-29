@@ -179,7 +179,7 @@ const TopBar = memo(() => {
                                     >
                                         {formattedTime}
                                     </span>
-                                    <span className="text-[#2C6252] font-semibold text-[9px] md:text-[13px] lg:text-[13px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[16px] 3xl:-ml-[0.8rem] 2xl:-ml-[1rem] xl:-ml-[1rem] lg:-ml-[1.4rem] md:-ml-6 -ml-10">
+                                    <span className="text-[#2C6252] font-semibold text-[9px] md:text-[13px] lg:text-[13px] xl:text-[15px] 2xl:text-[15px] 3xl:text-[16px] 3xl:-ml-[0.8rem] 2xl:-ml-[1rem] xl:-ml-[1rem] lg:-ml-[1.4rem] md:-ml-6 -ml-11">
                                         {ampmRef.current}
                                     </span>
                                 </div>
