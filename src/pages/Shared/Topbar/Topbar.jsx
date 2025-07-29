@@ -189,7 +189,7 @@ const TopBar = memo(() => {
                         {/* Cart */}
                         <div className="ml-auto mb-2 sm:mb-0 relative">
                             <Link to="/carts">
-                                <div className="relative 3xl:w-9 3xl:h-9 2xl:w-9 2xl:h-9 xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-6 h-6 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-7 md:-right-1 -right-4 transition-transform sm:mt-2 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+                                <div className="relative 3xl:w-9 3xl:h-9 2xl:w-9 2xl:h-9 xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-6 h-6 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-7 md:-right-3 -right-4 transition-transform sm:mt-2 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
                                     <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]" strokeWidth={2.2} />
                                     <div className="absolute -top-1.5 -right-1.5 bg-[#FF4C15] text-white text-[10px] md:text-[11px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-md border-2 border-white">
                                         {cartCount}
