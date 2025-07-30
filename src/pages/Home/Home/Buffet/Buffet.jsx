@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 import Container from "../../../../components/Container";
 import { motion as Motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Buffet = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   const containerVariants = {
     hidden: {},
     visible: {
@@ -41,7 +55,7 @@ const Buffet = () => {
       ratingFull: 4,
       ratingHalf: true,
       ratingValue: "4.5 Rating",
-      title: "Grilled Lamb Chops",
+      title: "Grilled Lamb Chop",
       description:
         "Succulent, spice-rubbed lamb chops grilled to perfection with fresh greens.",
     },
@@ -82,17 +96,17 @@ const Buffet = () => {
 
   return (
     <Container>
-      <section className="mb-36 z-50 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-40 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-3 sm:-ml-3">
-        <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2 md:px-2 ">
+      <section className="mb-36 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-10 sm:-ml-[6rem] ">
+        <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2 md:px-2">
           {/* Header */}
-         <Motion.div
+          <Motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1752039838/Buffet_z0iumv.png')] bg-no-repeat bg-contain bg-center h-[20rem] flex flex-col items-center justify-center -mt-[22rem]"
+            className="relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1752039838/Buffet_z0iumv.png')] bg-no-repeat bg-contain bg-center h-[20rem] flex flex-col items-center justify-center -mt-[22rem] "
           >
-            <span className="bg-gradient-to-r from-[#FF6A00] via-[#FF4C15] to-[#FF6A00] text-white py-1 px-5 rounded-full flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative mt-[2rem] shadow-lg drop-shadow-md">
+            <span className="bg-[#FF4C15] text-white py-1 px-5 rounded-full flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative mt-[2rem] shadow-lg drop-shadow-md">
               <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center mr-3 animate-pulse">
                 <img src="/svg.png" className="w-4 h-4" alt="Category Icon" />
               </div>
@@ -100,20 +114,19 @@ const Buffet = () => {
                 Delicious <span className="font-thin lowercase">(Food)</span>
               </span>
             </span>
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-3xl font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-2xl font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
               Buffet for Signature Food
             </h2>
           </Motion.div>
 
           {/* Food Cards */}
           <Motion.div
-            className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 3xl:mt-4 2xl:mt-2 xl:mt-0 lg:-mt-6 md:-mt-6 sm:-mt-6 3xl:px-8 2xl:px-0 xl:px-1 lg:px-0 md:px-0 sm:px-0 2xl:-ml-6 3xl:-ml-0 lg:-ml-2 md:-ml-2 sm:-ml-2"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 3xl:mt-4 2xl:mt-2 xl:mt-0 lg:-mt-6 md:-mt-6 sm:-mt-6"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            animate="visible"
             variants={containerVariants}
           >
-            {foodItems.map(
+            {(isSmallScreen && !showAll ? foodItems.slice(0, 2) : foodItems).map(
               (
                 {
                   id,
@@ -134,7 +147,7 @@ const Buffet = () => {
                   whileHover={cardHover}
                   className="overflow-hidden relative cursor-pointer"
                 >
-                  <img src={img} alt={alt} className="w-full h-52 object-cover mb-3"/>
+                  <img src={img} alt={alt} className="w-full h-52 object-cover mb-3" />
                   <span className="absolute top-2 right-2 bg-gradient-to-r from-[#FFCA46] to-[#FFD966] text-xs px-2 py-1 text-[#F6F6F6] font-semibold flex items-center backdrop-blur-sm bg-opacity-80">
                     <img
                       src="/svg.svg"
@@ -210,6 +223,22 @@ const Buffet = () => {
             )}
           </Motion.div>
 
+          {/* Dropdown Toggle Button for Small Screens */}
+          {isSmallScreen && (
+            <div className="sm:flex md:hidden mt-10 z-10 justify-center">
+              <button
+                onClick={() => setShowAll((prev) => !prev)}
+                className="text-[#2C6252] flex flex-col items-center text-xl"
+              >
+                {showAll ? (
+                  <FaChevronUp className="animate-bounce" />
+                ) : (
+                  <FaChevronDown className="animate-bounce" />
+                )}
+              </button>
+            </div>
+          )}
+
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row items-stretch overflow-hidden 3xl:px-6 2xl:px-0 xl:px-1 lg:px-2 md:px-2 sm:px-2 2xl:-ml-5 3xl:-ml-0 xl:-ml-0 lg:-ml-1">
             <Motion.div
@@ -219,9 +248,13 @@ const Buffet = () => {
               viewport={{ once: true }}
               variants={fadeUpVariant}
             >
-              <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-5xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl font-semibold tracking-wide drop-shadow-md 3xl:-ml-4 2xl:-ml-6 xl:-ml-4 lg:-ml-8 md:-ml-8 sm:-ml-8">
+              <h2 className="text-[#2C6252] 2xl:text-3xl 3xl:text-5xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl font-semibold tracking-wide drop-shadow-md 3xl:-ml-4 2xl:ml-1 xl:ml-1 lg:-ml-4 md:-ml-4 sm:ml-1 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
                 Deep <br /> Blue <br /> Delights
               </h2>
+
+            <h2 className="text-[#2C6252] sm:-ml-4 font-semibold drop-shadow-md text-xl sm:block md:hidden">Deep Blue Delights</h2>
+
+
             </Motion.div>
 
             <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60 md:h-60 sm:h-60">

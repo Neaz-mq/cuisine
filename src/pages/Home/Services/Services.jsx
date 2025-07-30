@@ -55,9 +55,9 @@ const Services = () => {
     isSmallScreen && !showAll ? services.slice(0, 2) : services;
 
   return (
-    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[10rem] flex justify-center sm:-ml-[4rem]  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
+    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[10rem] flex justify-center sm:-ml-[4rem]  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0 z-10">
       <Container>
-        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-7   ">
+        <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-7 ">
           {/* Background image */}
           <div
             className="absolute inset-0 bg-no-repeat bg-center bg-contain pointer-events-none 3xl:-top-[40rem] 2xl:-top-[40rem] xl:-top-[40rem] lg:-top-[30rem] md:-top-[30rem] sm:-top-[30rem]"
@@ -76,7 +76,7 @@ const Services = () => {
             viewport={{ once: true }}
             className="relative z-10 text-center mt-[15rem]"
           >
-            <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2 sm:-ml-2 sm:-mr-6 md:-ml-0 md:-mr-0 lg:-ml-0 lg:-mr-0 xl:-ml-0 xl:-mr-0 2xl:-ml-0 2xl:-mr-0 3xl:-ml-0 3xl:-mr-0 3xl:block 2xl:block xl:block lg:block md:block sm:hidden">
+            <h2 className="text-gray-500 text-xs font-semibold tracking-wide mb-2 sm:-ml-2 sm:-mr-6 md:-ml-0 md:-mr-0 lg:-ml-0 lg:-mr-0 xl:-ml-0 xl:-mr-0 2xl:-ml-0 2xl:-mr-0 3xl:-ml-0 3xl:-mr-0 ">
               <span className="bg-[#FF4C15] text-white py-1 px-4 rounded-full flex items-center justify-center rotate-[5deg] w-fit mx-auto">
                 <span className="bg-white rounded-full w-5 h-5 flex items-center justify-center mr-2">
                   <img src="/svg.png" className="w-3 h-3" alt="Service Badge Icon" />
