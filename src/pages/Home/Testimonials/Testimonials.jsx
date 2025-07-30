@@ -30,7 +30,7 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <section className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-32 lg:-top-48 md:-top-48 sm:-top-48">
+      <section className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-32 lg:-top-48 md:-top-48 sm:-top-80 sm:ml-12 sm:-mr-10 3xl:ml-12 3xl:-mr-6 2xl:ml-0 2xl:-mr-0 xl:ml-0 xl:-mr-0 lg:ml-0 lg:-mr-0 md:ml-0 md:-mr-0 ">
         {/* Heading + Description */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <Motion.div
@@ -38,19 +38,19 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-3xl font-semibold text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-14 xl:mt-28 lg:mt-24 md:mt-24 sm:mt-24  3xl:ml-2 2xl:-ml-14 xl:-ml-7 lg:-ml-16 md:-ml-16 sm:-ml-16">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-xl font-semibold text-[#2C6252] 3xl:leading-snug 2xl:leading-snug xl:leading-normal 3xl:mt-52 2xl:mt-14 xl:mt-28 lg:mt-24 md:mt-8 sm:mt-24  3xl:ml-2 2xl:-ml-4 xl:-ml-7 lg:-ml-16 md:-ml-[5.2rem] sm:-ml-[9.4rem]">
               Customer <br /> Testimonial <br />
               <span className="text-[#FF4C15]">Examples</span>
             </h2>
             <div className="flex">
-              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 md:mt-3 sm:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] md:text-[10px] sm:text-[10px] 3xl:ml-3 2xl:-ml-[3.2rem] xl:-ml-[1.5rem] lg:-ml-16 md:-ml-16 sm:-ml-16">
+              <p className="text-[#CCCCCC] 3xl:mt-14 2xl:mt-8 xl:mt-6 lg:mt-3 md:mt-3 sm:mt-3 max-w-md 3xl:text-[16px] 2xl:text-[16px] xl:text-[12px] lg:text-[10px] md:text-[10px] sm:text-[10px] 3xl:ml-3 2xl:-ml-[1rem] xl:-ml-[1.5rem] lg:-ml-16 md:-ml-20 sm:-ml-[9.4rem]">
                 When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers.
               </p>
               <Motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="3xl:-mt-14 2xl:-mt-[1.7rem] xl:-mt-[2.4rem] lg:-mt-[3.5em] md:-mt-[3.5em] sm:-mt-[3.5em] ml-6"
+                className="3xl:-mt-14 2xl:-mt-[2.4rem] xl:-mt-[2.4rem] lg:-mt-[3.5em] md:-mt-[1.7em] sm:-mt-[3.5em] ml-6 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
               >
                 <img
                   src="https://res.cloudinary.com/dxohwanal/image/upload/v1747212688/asset1_rbxyxt.png"
@@ -61,7 +61,7 @@ const Testimonials = () => {
           </Motion.div>
 
           {/* Swipeable Image Section */}
-          <div className="relative w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-4 2xl:right-2 xl:right-12 lg:ml-12 md:ml-12 sm:ml-12">
+          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[180px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-1 3xl:right-6 2xl:right-10 xl:right-12 lg:ml-12 md:ml-12  sm:-ml-[9.4rem] sm:w-44">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -103,7 +103,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 3xl:gap-8 2xl:gap-8 xl:gap-6 lg:gap-3 md:gap-3 sm:gap-3 3xl:-mt-14 2xl:mt-24 xl:mt-14 lg:mt-10 md:mt-10 sm:mt-10 3xl:ml-3 3xl:mr-3 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4 md:ml-0 md:mr-4 sm:ml-0 sm:mr-4">
+        <div className="grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 3xl:gap-8 2xl:gap-8 xl:gap-6 lg:gap-3 md:gap-6 sm:gap-3 3xl:-mt-14 2xl:mt-24 xl:mt-14 lg:mt-10 md:mt-10 sm:mt-10 3xl:ml-3 3xl:mr-3 2xl:ml-0 2xl:mr-4 xl:ml-0 xl:mr-4 lg:ml-0 lg:mr-4 md:ml-0 md:mr-4 sm:-ml-[9rem] sm:mr-0">
           {[
             {
               name: "— Emily R.",
@@ -124,7 +124,7 @@ const Testimonials = () => {
           ].map((card, i) => (
             <Motion.div
               key={i}
-              className="border border-orange-200 p-12 bg-white"
+              className="border border-orange-200 3xl:p-12 2xl:p-12 xl:p-12 lg:p-12 md:p-6 sm:p-6 bg-white sm:w-44 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
