@@ -257,7 +257,7 @@ const Buffet = () => {
 
             </Motion.div>
 
-            <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60 md:h-60 sm:h-60">
+            <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60 md:h-60 sm:h-44">
               <Motion.img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752051794/buffet5_zp25b9.webp"
                 alt="Deep Blue Delights Image"
@@ -270,7 +270,7 @@ const Buffet = () => {
 
               <div className="flex justify-between items-end h-full">
                 <Motion.div
-                  className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 md:bottom-20 sm:bottom-20 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 md:left-10 sm:left-10 text-white p-4 text-sm max-w-[300px] rounded-md z-20"
+                  className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 md:bottom-20 sm:bottom-0 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 md:left-10 sm:left-10 text-white p-4 text-sm max-w-[300px] rounded-md z-20 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
