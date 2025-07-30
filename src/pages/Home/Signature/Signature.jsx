@@ -65,7 +65,7 @@ const Signature = () => {
           3xl:bg-[#2C6252] 2xl:bg-[#2C6252] xl:bg-[#2C6252] lg:bg-[#2C6252] md:bg-[#2C6252] sm:bg-white text-white py-24 relative mb-72
           3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] md:w-[32rem]
           sm:w-[10rem] sm:mx-auto
-          3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 md:-ml-2 sm:-ml-[5.3rem] 
+          3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 md:-ml-2 sm:-ml-[5.4rem] 
           3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-44 md:mt-44 sm:-mt-28
         "
       >
@@ -121,7 +121,7 @@ const Signature = () => {
               className="
                 flex overflow-hidden scroll-smooth
                 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 md:gap-10 sm:gap-4
-                3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] md:w-[calc(6rem*3+3rem*2)] sm:w-[calc(2rem*3+3rem*2)] mx-auto
+                3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] md:w-[calc(6rem*3+3rem*2)] sm:w-[calc(1.9rem*3+3rem*2)] mx-auto
               "
             >
               {foodItems.map((item, index) => {
