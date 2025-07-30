@@ -114,14 +114,14 @@ const Buffet = () => {
                 Delicious <span className="font-thin lowercase">(Food)</span>
               </span>
             </span>
-            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-2xl font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
+            <h2 className="3xl:text-5xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-lg font-semibold text-[#2C6252] relative mt-10 text-center drop-shadow-md">
               Buffet for Signature Food
             </h2>
           </Motion.div>
 
           {/* Food Cards */}
           <Motion.div
-            className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 3xl:mt-4 2xl:mt-2 xl:mt-0 lg:-mt-6 md:-mt-6 sm:-mt-6"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12 3xl:mt-4 2xl:mt-2 xl:mt-0 lg:-mt-6 md:-mt-6 sm:-mt-12"
             initial="hidden"
             animate="visible"
             variants={containerVariants}
@@ -147,7 +147,7 @@ const Buffet = () => {
                   whileHover={cardHover}
                   className="overflow-hidden relative cursor-pointer"
                 >
-                  <img src={img} alt={alt} className="w-full h-52 object-cover mb-3" />
+                  <img src={img} alt={alt} className="w-full 3xl:h-52 2xl:h-52 xl:h-52 lg:h-52 md:h-52 sm:h-44 object-cover mb-3" />
                   <span className="absolute top-2 right-2 bg-gradient-to-r from-[#FFCA46] to-[#FFD966] text-xs px-2 py-1 text-[#F6F6F6] font-semibold flex items-center backdrop-blur-sm bg-opacity-80">
                     <img
                       src="/svg.svg"
@@ -198,7 +198,7 @@ const Buffet = () => {
                     <Link to="/chefs">
                       <Motion.button
                         whileHover={buttonHover}
-                        className="bg-gradient-to-r from-[#FF4C15] to-[#FF6A00] text-white py-3 px-6 text-sm font-semibold transition-all duration-300 flex items-center justify-center w-full whitespace-nowrap"
+                        className="bg-gradient-to-r from-[#FF4C15] to-[#FF6A00] text-white 3xl:py-3 3xl:px-6 2xl:py-3 2xl:px-6 xl:py-3 xl:px-6 md:py-3 md:px-6 sm:py-2 sm:px-4 text-sm font-semibold transition-all duration-300 flex items-center justify-center w-full whitespace-nowrap"
                       >
                         Learn More
                         <svg
