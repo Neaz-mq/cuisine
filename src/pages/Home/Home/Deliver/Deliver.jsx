@@ -14,7 +14,7 @@ const textVariants = {
 const Deliver = () => {
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 md:px-2 sm:px-2 3xl:mt-32 2xl:mt-56 xl:mt-44 lg:mt-32 md:mt-0 sm:-mt-48 mb-4 sm:-ml-[4.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
+      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 md:px-2 sm:px-2 3xl:mt-32 2xl:mt-56 xl:mt-44 lg:mt-32 md:mt-0 sm:-mt-48 3xl:mb-36 2xl:mb-32 xl:mb-32 lg:mb-28 md:mb-56 sm:mb-56 sm:-ml-[4.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8 items-center">
           {/* Left Animated Text Content */}
           <Motion.div
@@ -54,7 +54,7 @@ const Deliver = () => {
                <div className="sm:hidden 3xl:block 2xl:block xl:block md:block lg:block">
                 <Motion.button
                 whileHover={{ scale: 1.05 }}
-                className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-3 lg:py-[0.4rem] md:px-2 md:py-[0.4rem] sm:px-2 sm:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] md:text-[10px]  sm:text-[10px] whitespace-nowrap mt-2"
+                className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-[0.65rem] 2xl:px-4 2xl:py-[0.45rem] xl:px-4 xl:py-[0.45rem] lg:px-3 lg:py-[0.4rem] md:px-2 md:py-[0.4rem] sm:px-2 sm:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] md:text-[10px]  sm:text-[10px] whitespace-nowrap mt-2"
               >
                 <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
                 Download Apps
@@ -72,7 +72,7 @@ const Deliver = () => {
 
           {/* Right Image Float Animation */}
           <div
-            className="flex justify-end relative 3xl:-left-4 2xl:-left-2 xl:-left-6 lg:left-2 md:left-2 sm:left-4  sm:top-48 md:top-40 3xl:top-0 2xl:top-0 xl:top-0 lg:top-0"
+            className="flex justify-end relative 3xl:-left-4 2xl:-left-2 xl:-left-6 lg:left-2 md:-left-6 sm:left-4  sm:top-48 md:top-40 3xl:top-0 2xl:top-0 xl:top-0 lg:top-0"
             style={{
               backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
               backgroundRepeat: "no-repeat",
@@ -81,7 +81,7 @@ const Deliver = () => {
             }}
           >
             <Motion.div
-              className="3xl:-ml-44 3xl:-mt-52 2xl:-ml-56 2xl:-mt-48 xl:-ml-56 xl:-mt-48 lg:-ml-60 lg:-mt-48 md:-ml-60 md:-mt-48 sm:-ml-60 sm:-mt-48"
+              className="3xl:-ml-44 3xl:-mt-52 2xl:-ml-56 2xl:-mt-48 xl:-ml-56 xl:-mt-48 lg:-ml-60 lg:-mt-48 md:-ml-60 md:-mt-56 sm:-ml-60 sm:-mt-48"
               initial={{ y: 0 }}
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}

@@ -10,20 +10,20 @@ import Container from '../../../components/Container';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C6252] text-white"> 
+    <footer className="bg-[#2C6252] text-white sm:-ml-[4rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0"> 
       {/* Top Footer Content */}
       <Container>
-        <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-20 text-center lg:text-left">
+        <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-20 text-center lg:text-left ">
           {/* Logo */}
-          <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-20 2xl:justify-start xl:ml-[7rem] lg:ml-[4rem] xl:justify-start lg:justify-start relative">
+          <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-[5.2rem] 2xl:justify-start xl:ml-[7rem] lg:ml-[5rem] md:-ml-10 xl:justify-start lg:justify-start relative">
             <a href="/">
-              <div className="bg-[#3A7563] 3xl:px-4 3xl:py-4 2xl:px-4 2xl:py-4 xl:px-4 xl:py-4 lg:px-3 lg:py-3 flex items-center space-x-2 w-fit 3xl:mt-1 2xl:mt-1 xl:mt-0 lg:mt-0 mx-auto">
+              <div className="bg-[#3A7563] 3xl:px-4 3xl:py-4 2xl:px-4 2xl:py-4 xl:px-4 xl:py-4 lg:px-3 lg:py-3 md:px-4 md:py-3 sm:px-4 sm:py-3  flex items-center sm:ml-20 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-[4.8rem]  space-x-2 w-fit 3xl:mt-1 2xl:mt-1 xl:mt-0 lg:mt-0 mx-auto">
                 <img
                   src="/logo.svg"
                   alt="Cuisine Logo"
-                  className="3xl:w-6 3xl:h-6 2xl:w-6 2xl:h-6 xl:w-4 xl:h-4 lg:w-3 lg:h-3"
+                  className="3xl:w-6 3xl:h-6 2xl:w-6 2xl:h-6 xl:w-4 xl:h-4 lg:w-3 lg:h-3 md:w-4 md:h-4 sm:w-4 sm:h-4"
                 />
-                <span className="font-bold 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[11px]">
+                <span className="font-bold 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[11px] md:text-[12px] sm:text-[12px]">
                   Cuisine
                 </span>
               </div>
@@ -31,11 +31,11 @@ const Footer = () => {
           </div>
 
           {/* Customer Services */}
-          <div>
-            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[11px] whitespace-nowrap">
+          <div className="sm:mt-10 md:mt-10 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:ml-[4.3rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0 ">
+            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[11px] md:text-[17px] sm:text-[16px] whitespace-nowrap">
               Customer Services
             </h2>
-            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] font-thin">
+            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] md:text-[12px] sm:text-[11px] font-thin">
               <li>My Account</li>
               <li>Track Your Order</li>
               <li>Return</li>
@@ -48,11 +48,11 @@ const Footer = () => {
           </div>
 
           {/* Our Information */}
-          <div>
-            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px] whitespace-nowrap">
+          <div className="sm:mt-10 md:mt-10 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:ml-[4.3rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0">
+            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px] md:text-[17px] sm:text-[16px] whitespace-nowrap">
               Our Information
             </h2>
-            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] font-thin">
+            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] md:text-[12px] sm:text-[11px] font-thin">
               <li>Privacy</li>
               <li>User Terms & Condition</li>
               <li>
@@ -64,20 +64,20 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px]">
+          <div className="sm:mt-10 md:mt-10 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:ml-[4.3rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0">
+            <h2 className="font-semibold mb-4 3xl:text-lg 2xl:text-lg xl:text-base lg:text-[12px] md:text-[17px] sm:text-[16px]">
               Contact Info
             </h2>
-            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] font-thin inline-block lg:block">
+            <ul className="space-y-2 3xl:text-sm 2xl:text-sm xl:text-xs lg:text-[9px] md:text-[12px] sm:text-[11px] font-thin inline-block lg:block">
               <li className="flex items-center gap-2 justify-center lg:justify-start">
                 <FaPhone />
                 <span className="underline">+0123-456-789</span>
               </li>
-              <li className="flex items-center gap-2 justify-center lg:justify-start">
+              <li className="flex items-center gap-2 justify-center lg:justify-start sm:ml-[1rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0">
                 <MdEmail />
                 <span className="underline">example@gmail.com</span>
               </li>
-              <li className="flex items-start gap-2 justify-center lg:justify-start text-left">
+              <li className="flex items-start gap-2 justify-center lg:justify-start text-left sm:ml-[1.3rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0">
                 <FaLocationDot />
                 <span className="underline">
                   8502 Preston Rd. Inglewood, Maine 98380
@@ -98,7 +98,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full flex justify-center">
         <Container>
-          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 text-sm text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-16">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[12px] text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-16 sm:ml-16">
             <div className="flex items-center gap-2">
               <FaRegCopyright />
               <span className="whitespace-nowrap ">

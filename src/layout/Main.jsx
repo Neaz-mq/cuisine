@@ -24,7 +24,7 @@ const Main = () => {
             </div>
 
             {/* Footer */}
-            {/* <Footer /> */}
+            <Footer />
 
             {/* ✅ ToastContainer should be here so it's active everywhere */}
             <ToastContainer position="top-center" autoClose={2000} hideProgressBar />
