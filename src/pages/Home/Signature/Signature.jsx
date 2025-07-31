@@ -82,7 +82,7 @@ const Signature = () => {
 
           {/* Carousel */}
           <div className=" 3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[8.5rem] md:ml-[6rem] sm:-ml-10 relative z-10 sm:mt-16">
-            <div ref={carouselRef} className="flex overflow-hidden scroll-smooth 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 md:gap-10 sm:gap-4 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] md:w-[calc(6rem*3+3rem*2)] sm:w-[calc(2.5rem*3+3rem*2)] mx-auto">
+            <div ref={carouselRef} className="flex overflow-hidden scroll-smooth 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 md:gap-10 sm:gap-4 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] md:w-[calc(6rem*3+3rem*2)] sm:w-[calc(2.2rem*3+3rem*2)] mx-auto">
               {foodItems.map((item, index) => {
                 const parsedPrice = parseFloat(item.price.replace('$', '')) || 0;
                 return (
