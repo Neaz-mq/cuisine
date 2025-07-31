@@ -10,7 +10,7 @@ import Container from '../../../components/Container';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2C6252] text-white sm:-ml-[4rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0"> 
+    <footer className="bg-[#2C6252] text-white sm:-ml-[4.2rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0"> 
       {/* Top Footer Content */}
       <Container>
         <div className="px-6 py-12 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 3xl:gap-10 2xl:gap-14 xl:gap-16 lg:gap-20 text-center lg:text-left ">
@@ -98,7 +98,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="bg-[#FF4C15] w-full flex justify-center">
         <Container>
-          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[12px] text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-16 sm:ml-16">
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center px-6 py-4 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px] text-white gap-4 3xl:ml-28 2xl:ml-20 xl:ml-28 lg:ml-16 sm:ml-16">
             <div className="flex items-center gap-2">
               <FaRegCopyright />
               <span className="whitespace-nowrap ">
