@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex justify-center 3xl:justify-center items-start w-full 3xl:ml-8 2xl:ml-[5.2rem] 2xl:justify-start xl:ml-[7rem] lg:ml-[5rem] md:-ml-10 xl:justify-start lg:justify-start relative">
             <a href="/">
-              <div className="bg-[#3A7563] 3xl:px-4 3xl:py-4 2xl:px-4 2xl:py-4 xl:px-4 xl:py-4 lg:px-3 lg:py-3 md:px-4 md:py-3 sm:px-4 sm:py-3  flex items-center sm:ml-20 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-[4.8rem]  space-x-2 w-fit 3xl:mt-1 2xl:mt-1 xl:mt-0 lg:mt-0 mx-auto">
+              <div className="bg-[#3A7563] 3xl:px-4 3xl:py-4 2xl:px-4 2xl:py-4 xl:px-4 xl:py-4 lg:px-3 lg:py-3 md:px-4 md:py-3 sm:px-4 sm:py-3  flex items-center sm:ml-[4.7rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-[4.8rem]  space-x-2 w-fit 3xl:mt-1 2xl:mt-1 xl:mt-0 lg:mt-0 mx-auto">
                 <img
                   src="/logo.svg"
                   alt="Cuisine Logo"

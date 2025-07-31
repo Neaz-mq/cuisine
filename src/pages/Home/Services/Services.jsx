@@ -55,7 +55,7 @@ const Services = () => {
     isSmallScreen && !showAll ? services.slice(0, 2) : services;
 
   return (
-    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[10rem] flex justify-center sm:-ml-[4rem]  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0 z-10">
+    <div className="3xl:-mt-[3rem] 2xl:-mt-[3rem] xl:-mt-[4rem] lg:-mt-[6rem] md:-mt-[10rem] sm:-mt-[10rem] flex justify-center sm:-ml-[5rem]  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0 z-10">
       <Container>
         <section className="relative w-full flex flex-col items-center justify-center mb-8 2xl:mr-5 3xl:mr-0 xl:mr-0 lg:right-3 md:right-10 sm:right-7 ">
           {/* Background image */}

@@ -96,7 +96,7 @@ const Buffet = () => {
 
   return (
     <Container>
-      <section className="mb-36 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-10 sm:-ml-[6.5rem] ">
+      <section className="mb-36 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-10 sm:-ml-[7.5rem] ">
         <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2 md:px-2">
           {/* Header */}
           <Motion.div

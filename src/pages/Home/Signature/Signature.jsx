@@ -60,31 +60,11 @@ const Signature = () => {
 
   return (
     <Container>
-      <section
-        className="
-          3xl:bg-[#2C6252] 2xl:bg-[#2C6252] xl:bg-[#2C6252] lg:bg-[#2C6252] md:bg-[#2C6252] sm:bg-white text-white py-24 relative mb-72
-          3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] md:w-[32rem]
-          sm:w-[10rem] sm:mx-auto
-          3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 md:-ml-2 sm:-ml-[5.4rem] 
-          3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-44 md:mt-44 sm:-mt-28
-        "
-      >
+      <section className="3xl:bg-[#2C6252] 2xl:bg-[#2C6252] xl:bg-[#2C6252] lg:bg-[#2C6252] md:bg-[#2C6252] sm:bg-white text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] md:w-[32rem] sm:w-[10rem] sm:mx-auto 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 md:-ml-2 sm:-ml-[6.4rem] 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-44 md:mt-44 sm:-mt-28">
         <div className="mx-auto px-14 relative sm:left-0 left-6">
           {/* Rotated label */}
-          <div
-            className="
-              absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem]
-              lg:top-[5rem] md:top-[5rem] sm:top-[5rem]
-              sm:hidden md:block lg:block xl:block 2xl:block 3xl:block
-            "
-          >
-            <div
-              className="
-                bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full
-                flex items-center gap-2 shadow-md
-                3xl:-ml-66 2xl:-ml-60 xl:-ml-56 lg:-ml-60 md:-ml-60 sm:-ml-72
-              "
-            >
+          <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem] md:top-[5rem] sm:top-[5rem] sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
+            <div className=" bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md 3xl:-ml-66 2xl:-ml-60 xl:-ml-56 lg:-ml-60 md:-ml-60 sm:-ml-72">
               <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
                 <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="Flag Icon" />
               </div>
@@ -94,39 +74,17 @@ const Signature = () => {
 
           {/* Responsive headline */}
           <div className="2xl:ml-8 sm:w-full">
-            <h2
-              className="
-                font-semibold whitespace-nowrap
-                sm:text-2xl sm:absolute sm:-top-24 sm:left-4 sm:rotate-0 sm:whitespace-normal
-                md:rotate-[-90deg] md:absolute md:top-[14rem] md:-left-16 md:text-[30px] sm:text-[18px]
-                lg:top-[14rem] lg:-left-16 lg:text-[30px]
-                xl:top-[14rem] xl:-left-24 xl:text-[36px]
-                2xl:top-[14rem] 2xl:-left-24 2xl:text-[36px]
-                3xl:top-[14.5rem] 3xl:-left-32 3xl:text-[40px] 3xl:text-white 2xl:text-white xl:text-white lg:text-white
-              md:text-white sm:text-[#2C6252]"
-            >
+            <h2 className="font-semibold whitespace-nowrap sm:text-2xl sm:absolute sm:-top-24 sm:left-4 sm:rotate-0 sm:whitespace-normal md:rotate-[-90deg] md:absolute md:top-[14rem] md:-left-16 md:text-[30px] sm:text-[18px]
+            lg:top-[14rem] lg:-left-16 lg:text-[30px] xl:top-[14rem] xl:-left-24 xl:text-[36px] 2xl:top-[14rem] 2xl:-left-24 2xl:text-[36px] 3xl:top-[14.5rem] 3xl:-left-32 3xl:text-[40px] 3xl:text-white 2xl:text-white xl:text-white lg:text-white md:text-white sm:text-[#2C6252]">
               Chinese Food Set Meals
             </h2>
           </div>
 
           {/* Carousel */}
-          <div
-            className="
-              3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[8.5rem] md:ml-[6rem]
-              sm:-ml-10 relative z-10 sm:mt-16
-            "
-          >
-            <div
-              ref={carouselRef}
-              className="
-                flex overflow-hidden scroll-smooth
-                3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 md:gap-10 sm:gap-4
-                3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] md:w-[calc(6rem*3+3rem*2)] sm:w-[calc(1.9rem*3+3rem*2)] mx-auto
-              "
-            >
+          <div className=" 3xl:ml-[11.6rem] 2xl:ml-[7.5rem] xl:ml-[7.5rem] lg:ml-[8.5rem] md:ml-[6rem] sm:-ml-10 relative z-10 sm:mt-16">
+            <div ref={carouselRef} className="flex overflow-hidden scroll-smooth 3xl:gap-12 2xl:gap-8 xl:gap-4 lg:gap-14 md:gap-10 sm:gap-4 3xl:w-[calc(20rem*3+3rem*2)] 2xl:w-[calc(17rem*3+3rem*2)] xl:w-[calc(14rem*3+3rem*2)] lg:w-[calc(11rem*3+3rem*2)] md:w-[calc(6rem*3+3rem*2)] sm:w-[calc(2.5rem*3+3rem*2)] mx-auto">
               {foodItems.map((item, index) => {
                 const parsedPrice = parseFloat(item.price.replace('$', '')) || 0;
-
                 return (
                   <Motion.div
                     key={index}
@@ -135,11 +93,8 @@ const Signature = () => {
                     whileHover={{ scale: 1.03, rotate: 0.5 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="
-                      bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] md:w-[16rem]
-                      sm:w-[15rem] flex-shrink-0 shadow-md hover:shadow-lg
-                    "
-                  >
+                    className=" bg-white text-black 3xl:w-[20rem] 2xl:w-[19rem] xl:w-[17rem] lg:w-[17rem] md:w-[16rem]
+                    sm:w-[15rem] flex-shrink-0 shadow-md hover:shadow-lg" >
                     <div className="relative">
                       <Motion.img
                         src={item.image}

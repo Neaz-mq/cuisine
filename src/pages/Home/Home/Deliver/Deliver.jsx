@@ -14,7 +14,7 @@ const textVariants = {
 const Deliver = () => {
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 md:px-2 sm:px-2 3xl:mt-32 2xl:mt-56 xl:mt-44 lg:mt-32 md:mt-0 sm:-mt-48 3xl:mb-36 2xl:mb-32 xl:mb-32 lg:mb-28 md:mb-56 sm:mb-56 sm:-ml-[4.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
+      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 md:px-2 sm:px-2 3xl:mt-32 2xl:mt-56 xl:mt-44 lg:mt-32 md:mt-0 sm:-mt-48 3xl:mb-36 2xl:mb-32 xl:mb-32 lg:mb-28 md:mb-56 sm:mb-56 sm:-ml-[5.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
         <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8 items-center">
           {/* Left Animated Text Content */}
           <Motion.div

@@ -30,7 +30,7 @@ const Testimonials = () => {
 
   return (
     <Container>
-      <section className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-32 lg:-top-48 md:-top-48 sm:-top-80 sm:ml-6 sm:-mr-6 3xl:ml-12 3xl:-mr-6 2xl:ml-0 2xl:-mr-0 xl:ml-0 xl:-mr-0 lg:ml-0 lg:-mr-0 md:ml-0 md:-mr-0 ">
+      <section className="relative bg-white px-8 3xl:px-2 2xl:px-6 xl:px-6 lg:px-2 mx-12 3xl:-top-56 2xl:-top-28 xl:-top-32 lg:-top-48 md:-top-48 sm:-top-80 sm:ml-2 sm:-mr-6 3xl:ml-12 3xl:-mr-6 2xl:ml-0 2xl:-mr-0 xl:ml-0 xl:-mr-0 lg:ml-0 lg:-mr-0 md:ml-0 md:-mr-0 ">
         {/* Heading + Description */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <Motion.div
