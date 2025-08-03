@@ -14,65 +14,63 @@ const textVariants = {
 const Deliver = () => {
   return (
     <Container>
-      <div className="relative bg-white px-8 3xl:px-3 2xl:px-2 xl:px-2 lg:px-2 md:px-2 sm:px-2 3xl:mt-32 2xl:mt-56 xl:mt-44 lg:mt-32 md:mt-0 sm:-mt-48 3xl:mb-36 2xl:mb-32 xl:mb-32 lg:mb-28 md:mb-56 sm:mb-56 sm:-ml-[5.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
-        <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-8 items-center">
+      <div className="relative bg-white px-8 mt-32 mb-36 sm:-mt-52 sm:mb-20 3xl:-mt-12 3xl:mb-44 2xl:mt-14 2xl:mb-44 xl:mt-14 xl:mb-44 lg:-mt-24 lg:mb-44 md:-mt-24 md:mb-36 sm:-ml-20 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* Left Animated Text Content */}
           <Motion.div
-            className="space-y-6 3xl:ml-8 2xl:ml-0 xl:ml-6 lg:-ml-4 md:-ml-10 sm:-ml-5 3xl:-mt-4 2xl:-mt-6 xl:-mt-10 lg:-mt-8 md:-mt-8 sm:-mt-8"
+            className="3xl:space-y-6 2xl:space-y-3 xl:space-y-4 lg:space-y-2 md:space-y-2 sm:space-y-2 3xl:ml-8 2xl:-ml-2 xl:ml-5 lg:-ml-6 md:-ml-6 sm:-ml-6 sm:text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             <Motion.h2
-              className="text-4xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-3xl sm:text-lg text-[#2C6252] flex flex-col xl:mt-4 2xl:mt-0 3xl:mt-0 sm:ml-5"
+              className="sm:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-2xl md:text-2xl text-[#2C6252] flex flex-col sm:items-center 3xl:items-start 2xl:items-start  xl:items-start lg:items-start md:items-center"
               custom={0}
               variants={textVariants}
             >
-              <span className="mb-3">We Deliver</span>
-              <span className="mb-3">Food Within</span>
-              <span className="text-[#FF4C15] mb-3">30 Min ⏰</span>
+              <span className="3xl:mb-3 2xl:mb-3 xl:mb-3 lg:mb-0 md:mb-1">We Deliver</span>
+              <span className="3xl:mb-3 2xl:mb-3 xl:mb-3 lg:mb-0 md:mb-1">Food Within</span>
+              <span className="text-[#FF4C15] 3xl:mb-3 2xl:mb-2 xl:mb-2 lg:mb-3 md:mb-4">30 Min ⏰</span>
             </Motion.h2>
 
             <Motion.p
-              className="text-[#CCCCCC] max-w-md 3xl:text-[14px] 2xl:text-[13px] xl:text-[13px] lg:text-[9px] md:text-[9px] sm:text-[9px] mt-2 2xl:pt-3 3xl:pt-0 3xl:pb-5 2xl:pb-5 xl:pb-5 lg:pb-0 sm:ml-6 3xl:ml-6 2xl:ml-5 xl:ml-5 lg:ml-5 md:ml-5"
+              className="text-[#CCCCCC] max-w-md sm:text-xs 3xl:text-base 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:mx-auto lg:mx-0 lg:text-left "
               custom={1}
               variants={textVariants}
             >
               When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers...
             </Motion.p>
 
-            <Motion.div className="flex sm:flex-col 3xl:flex-row 2xl:flex-row xl:flex-row lg:flex-row md:flex-row space-x-4 mt-20 3xl:ml-6 2xl:ml-5 xl:ml-5 lg:ml-5 md:ml-5" custom={2} variants={textVariants}>
+            <Motion.div
+              className="flex flex-wrap gap-4 mt-10 sm:pt-3 md:pt-4 3xl:pt-5 2xl:pt-6 xl:pt-5 lg:pt-7 sm:justify-center lg:justify-start md:justify-center"
+              custom={2}
+              variants={textVariants}
+            >
               <Link to="/order">
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-2 md:px-2 md:py-2 sm:px-4 sm:py-2  flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] md:text-[10px] sm:text-[8px] whitespace-nowrap mt-2 sm:ml-6 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:ml-0 "
+                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 text-sm flex items-center"
                 >
                   <img src="/order.svg" alt="Order Icon" className="w-4 h-4 mr-2" />
                   Order Now
                 </Motion.button>
               </Link>
-               <div className="sm:hidden 3xl:block 2xl:block xl:block md:block lg:block">
+
+              <div className="hidden sm:inline-block lg:inline-block">
                 <Motion.button
-                whileHover={{ scale: 1.05 }}
-                className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-[0.65rem] 2xl:px-4 2xl:py-[0.45rem] xl:px-4 xl:py-[0.45rem] lg:px-3 lg:py-[0.4rem] md:px-2 md:py-[0.4rem] sm:px-2 sm:py-0 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] md:text-[10px]  sm:text-[10px] whitespace-nowrap mt-2"
-              >
-                <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
-                Download Apps
-              </Motion.button>
-               </div>
-              {/* <Motion.button
-                whileHover={{ scale: 1.05 }}
-                className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-2 lg:py-0 md:px-2 md:py-0 sm:px-4 sm:py-2 flex items-center 3xl:text-[17px] 2xl:text-[17px] xl:text-[17px] lg:text-[10px] md:text-[10px] sm:text-[8px]  mt-2 sm:hidden 3xl:block 2xl:block xl:block md:block lg:block whitespace-nowrap  "
-              >
-                <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
-                Download Apps
-              </Motion.button> */}
+                  whileHover={{ scale: 1.05 }}
+                  className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 sm:px-1 sm:py-1 md:px-3 md:py-1 text-sm flex items-center"
+                >
+                  <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
+                  Download Apps
+                </Motion.button>
+              </div>
             </Motion.div>
           </Motion.div>
 
-          {/* Right Image Float Animation */}
+          {/* Right Image with Float Animation */}
           <div
-            className="flex justify-end relative 3xl:-left-4 2xl:-left-2 xl:-left-6 lg:left-2 md:-left-6 sm:left-4  sm:top-48 md:top-40 3xl:top-0 2xl:top-0 xl:top-0 lg:top-0"
+            className="flex justify-center lg:justify-end relative sm:-ml-10 sm:-mr-3 3xl:-mr 3xl:-ml-4 2xl:-ml-4 xl:-ml-4 md:-ml-12"
             style={{
               backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
               backgroundRepeat: "no-repeat",
@@ -81,7 +79,7 @@ const Deliver = () => {
             }}
           >
             <Motion.div
-              className="3xl:-ml-44 3xl:-mt-52 2xl:-ml-56 2xl:-mt-48 xl:-ml-56 xl:-mt-48 lg:-ml-60 lg:-mt-48 md:-ml-60 md:-mt-56 sm:-ml-60 sm:-mt-48"
+              className="max-w-sm lg:max-w-full"
               initial={{ y: 0 }}
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -89,7 +87,7 @@ const Deliver = () => {
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752053930/deliver1_a5xpyd.webp"
                 alt="Delivery Guy"
-                className="object-contain h-auto w-full 3xl:-ml-32 2xl:-ml-8 xl:-ml-4 lg:ml-4 md:ml-4 sm:ml-4"
+                className="object-contain w-full 3xl:-ml-32 3xl:-mt-16 2xl:-ml-32 2xl:-mt-16 xl:-ml-32 xl:-mt-16 lg:-ml-32 lg:-mt-16 sm:-ml-10 sm:-mt-6"
               />
             </Motion.div>
           </div>
