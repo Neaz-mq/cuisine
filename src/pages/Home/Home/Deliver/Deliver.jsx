@@ -49,7 +49,7 @@ const Deliver = () => {
               <Link to="/order">
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
-                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 text-sm flex items-center"
+                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] flex items-center"
                 >
                   <img src="/order.svg" alt="Order Icon" className="w-4 h-4 mr-2" />
                   Order Now
@@ -59,7 +59,7 @@ const Deliver = () => {
               <div className="hidden sm:inline-block lg:inline-block">
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
-                  className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 sm:px-1 sm:py-1 md:px-3 md:py-1 text-sm flex items-center"
+                  className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 sm:px-1 sm:py-1 md:px-3 md:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] flex items-center"
                 >
                   <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
                   Download Apps
