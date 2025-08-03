@@ -70,7 +70,7 @@ const Deliver = () => {
 
           {/* Right Image with Float Animation */}
           <div
-            className="flex justify-center lg:justify-end relative sm:-ml-10 sm:-mr-3 3xl:-mr 3xl:-ml-4 2xl:-ml-4 xl:-ml-4 md:-ml-12"
+            className="flex justify-center lg:justify-end relative sm:-ml-10 sm:-mr-3 3xl:-mr-0 2xl:-mr-0 xl:-mr-0 lg:-mr-0 md:-mr-0 3xl:-ml-4 2xl:-ml-4 xl:-ml-4 md:-ml-12 sm:mt-6 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0"
             style={{
               backgroundImage: `url('https://res.cloudinary.com/dxohwanal/image/upload/v1747286119/Group_532_yxgunv.png')`,
               backgroundRepeat: "no-repeat",
