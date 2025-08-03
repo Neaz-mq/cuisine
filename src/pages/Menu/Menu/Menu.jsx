@@ -12,9 +12,9 @@ const Menu = () => {
     return (
         <div>
            <Explore></Explore>
-           <Items></Items>
+           {/* <Items></Items>
            <Weekly></Weekly>
-           <Delights></Delights>
+           <Delights></Delights> */}
            
         </div>
     );
