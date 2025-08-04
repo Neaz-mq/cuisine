@@ -12,8 +12,8 @@ const Menu = () => {
     return (
         <div>
            <Explore></Explore>
-           {/* <Items></Items>
-           <Weekly></Weekly>
+           <Items></Items>
+           {/* <Weekly></Weekly>
            <Delights></Delights> */}
            
         </div>

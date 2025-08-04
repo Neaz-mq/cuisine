@@ -274,6 +274,7 @@ const categoryItems = [
 
 const Items = () => {
   const [selected, setSelected] = useState('BURGERS');
+  const [startIndex, setStartIndex] = useState(0); // State to track the starting index of displayed categories
   const { addToCart } = useCart();
 
   const selectedCategoryData = categoryItems.find(item => item.label === selected);
@@ -286,47 +287,117 @@ const Items = () => {
 
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
+  const categoriesPerView = 3; // Number of categories to show on md and sm devices
+  const totalCategories = categoryItems.length;
+
+  const handleNextCategories = () => {
+    setStartIndex((prevIndex) => (prevIndex + 1) % totalCategories);
+  };
+
+  // Logic to get the categories for the current view, handling wrap-around
+  const getVisibleCategories = () => {
+    let currentVisible = [];
+    for (let i = 0; i < categoriesPerView; i++) {
+      currentVisible.push(categoryItems[(startIndex + i) % totalCategories]);
+    }
+    return currentVisible;
+  };
+
+  const visibleCategories = getVisibleCategories();
+
   return (
     <Container>
       <section
         aria-label="Food Categories Navigation and Menu Items"
-        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-20 sm:mt-20 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-3 md:mr-16 sm:-ml-3 sm:mr-16 overflow-hidden'
+        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-10 sm:mt-8 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-3 md:mr-16 sm:-ml-[6.8rem] sm:mr-0 overflow-hidden'
       >
         {/* Category Navigation */}
         <nav
           aria-label="Food categories"
-          className="bg-[#2C6252] py-8 flex justify-center 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 md:space-x-16 sm:space-x-16 px-8"
+          className="bg-[#2C6252] py-8 flex justify-center px-4 relative"
         >
-          {categoryItems.map((item) => (
-            <Motion.button
-              key={item.label}
-              onClick={() => setSelected(item.label)}
-              className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none"
-              aria-current={selected === item.label ? 'true' : 'false'}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-              type="button"
-            >
-              <Motion.img
-                src={item.itemImage}
-                alt={`${item.label} category icon`}
-                className="w-14 h-14"
-                initial={{ rotate: 0 }}
-                whileHover={{ rotate: 10 }}
-                transition={{ type: 'spring', stiffness: 200 }}
-              />
-              <span className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'}`}>
-                {item.label}
-              </span>
-              {selected === item.label && (
-                <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true"></div>
-              )}
-            </Motion.button>
-          ))}
+          {/* Categories for large and extra-large screens (desktop) */}
+          <div className="hidden lg:flex 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 ">
+            {categoryItems.map((item) => (
+              <Motion.button
+                key={item.label}
+                onClick={() => setSelected(item.label)}
+                className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none"
+                aria-current={selected === item.label ? 'true' : 'false'}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                type="button"
+              >
+                <Motion.img
+                  src={item.itemImage}
+                  alt={`${item.label} category icon`}
+                  className="3xl:w-14 3xl:h-14 2xl:w-14 2xl:h-14 xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 sm:w-6 sm:h-6"
+                  initial={{ rotate: 0 }}
+                  whileHover={{ rotate: 10 }}
+                  transition={{ type: 'spring', stiffness: 200 }}
+                />
+                <span className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'}`}>
+                  {item.label}
+                </span>
+                {selected === item.label && (
+                  <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true"></div>
+                )}
+              </Motion.button>
+            ))}
+          </div>
+
+          {/* Categories for medium and small screens with navigation */}
+          <div className="flex lg:hidden sm:w-44 md:w-full justify-between items-center"> {/* Adjusted space-x for better fit */}
+            {visibleCategories.map((item) => (
+              <Motion.button
+                key={item.label}
+                onClick={() => setSelected(item.label)}
+                className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none flex-1"
+                aria-current={selected === item.label ? 'true' : 'false'}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+                type="button"
+              >
+                <Motion.img
+                  src={item.itemImage}
+                  alt={`${item.label} category icon`}
+                  className="md:w-10 md:h-10 sm:w-6 sm:h-6"
+                  initial={{ rotate: 0 }}
+                  whileHover={{ rotate: 10 }}
+                  transition={{ type: 'spring', stiffness: 200 }}
+                />
+                <span className={`mt-4 sm:text-[8px] md:text-[10px] font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'}`}>
+                  {item.label}
+                </span>
+                {selected === item.label && (
+                  <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true"></div>
+                )}
+              </Motion.button>
+            ))}
+            {/* Right arrow for navigation on md and sm screens */}
+            {totalCategories > categoriesPerView && ( // Only show arrow if there are more categories than visible
+              <button
+                onClick={handleNextCategories}
+                className="absolute sm:-right-2 md:right-2 bg-transparent border-none outline-none cursor-pointer p-2 rounded-full md:top-10 sm:top-8 z-10" // Added z-10 to ensure it's above other elements
+                aria-label="Next categories"
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            )}
+          </div>
         </nav>
 
         {/* Main Section */}
-        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-10 mt-10">
+        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-10 mt-10 hidden">
           {/* Left Section */}
           <section aria-label={`${selected} menu items`} className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0">
             {items.map((item, index) => (
