@@ -13,8 +13,8 @@ const Menu = () => {
         <div>
            <Explore></Explore>
            <Items></Items>
-           {/* <Weekly></Weekly>
-           <Delights></Delights> */}
+           <Weekly></Weekly>
+           {/* <Delights></Delights> */}
            
         </div>
     );
