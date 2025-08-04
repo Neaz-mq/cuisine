@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion as Motion } from 'framer-motion';
 import Container from '../../../components/Container';
 import useCart from '../../../hooks/useCart';
@@ -60,7 +60,7 @@ const categoryItems = [
           price: '$250',
           originalPrice: '$450',
           image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1752129719/menu8_u5oue6.webp',
-          hasOrderButton: false,
+          hasOrderButton: true,
         },
         {
           title: 'Spicy Chicken Wings',
@@ -68,7 +68,7 @@ const categoryItems = [
           price: '$280',
           originalPrice: '$490',
           image: 'https://res.cloudinary.com/dxohwanal/image/upload/v1752129719/menu8_u5oue6.webp',
-          hasOrderButton: true,
+          hasOrderButton: false,
         },
         {
           title: 'Grilled Chicken Salad',
@@ -273,11 +273,36 @@ const categoryItems = [
 ];
 
 const Items = () => {
+  // All state declarations must be at the top level
   const [selected, setSelected] = useState('BURGERS');
-  const [startIndex, setStartIndex] = useState(0); // State to track the starting index of displayed categories
+  const [startIndex, setStartIndex] = useState(0);
+  const [showAllItemsSm, setShowAllItemsSm] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const { addToCart } = useCart();
 
+  // All useEffect calls must be at the top level, before any conditional returns
+  useEffect(() => {
+    const checkScreenSize = () => {
+      // Set isSmallScreen to true if window width is less than the 'lg' breakpoint (1024px)
+      // This will ensure 'md' (768px and up) is still considered "small" for this component's logic.
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []); // Empty dependency array means this runs once on mount and cleans up on unmount
+
+  useEffect(() => {
+    // Reset showAllItemsSm when the selected category changes
+    setShowAllItemsSm(false);
+  }, [selected]); // This effect runs whenever 'selected' changes
+
   const selectedCategoryData = categoryItems.find(item => item.label === selected);
+
+  // Conditional return comes AFTER all Hook calls
   if (!selectedCategoryData)
     return (
       <Container>
@@ -287,14 +312,13 @@ const Items = () => {
 
   const { items, todaySpecial } = selectedCategoryData.mainContent;
 
-  const categoriesPerView = 3; // Number of categories to show on md and sm devices
+  const categoriesPerView = 3;
   const totalCategories = categoryItems.length;
 
   const handleNextCategories = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % totalCategories);
   };
 
-  // Logic to get the categories for the current view, handling wrap-around
   const getVisibleCategories = () => {
     let currentVisible = [];
     for (let i = 0; i < categoriesPerView; i++) {
@@ -305,11 +329,27 @@ const Items = () => {
 
   const visibleCategories = getVisibleCategories();
 
+  // Modify `displayedItems` logic to also apply the slice for `md` devices.
+  // Tailwind's `md` breakpoint is 768px.
+  // We need to decide if 'md' should show 2 items or all.
+  // Given your current `isSmallScreen` definition (anything < 1024px),
+  // `md` screens (768px-1023px) will fall into the `isSmallScreen` true condition.
+  const displayedItems = isSmallScreen
+    ? (showAllItemsSm ? items : items.slice(0, 2)) // This will now apply to md as well
+    : items;
+
+  // The showToggleButtonSm will also correctly appear on md devices
+  const showToggleButtonSm = items.length > 2 && isSmallScreen;
+
+  const toggleShowAllItemsSm = () => {
+    setShowAllItemsSm((prevState) => !prevState);
+  };
+
   return (
     <Container>
       <section
         aria-label="Food Categories Navigation and Menu Items"
-        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-10 sm:mt-8 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-3 md:mr-16 sm:-ml-[6.8rem] sm:mr-0 overflow-hidden'
+        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-10 sm:mt-8 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-12 md:mr-4 sm:-ml-[6.8rem] sm:mr-0 overflow-hidden'
       >
         {/* Category Navigation */}
         <nav
@@ -347,7 +387,7 @@ const Items = () => {
           </div>
 
           {/* Categories for medium and small screens with navigation */}
-          <div className="flex lg:hidden sm:w-44 md:w-full justify-between items-center"> {/* Adjusted space-x for better fit */}
+          <div className="flex lg:hidden sm:w-44 md:w-full justify-between items-center">
             {visibleCategories.map((item) => (
               <Motion.button
                 key={item.label}
@@ -375,10 +415,10 @@ const Items = () => {
               </Motion.button>
             ))}
             {/* Right arrow for navigation on md and sm screens */}
-            {totalCategories > categoriesPerView && ( // Only show arrow if there are more categories than visible
+            {totalCategories > categoriesPerView && (
               <button
                 onClick={handleNextCategories}
-                className="absolute sm:-right-2 md:right-2 bg-transparent border-none outline-none cursor-pointer p-2 rounded-full md:top-10 sm:top-8 z-10" // Added z-10 to ensure it's above other elements
+                className="absolute sm:-right-2 md:right-2 bg-transparent border-none outline-none cursor-pointer p-2 rounded-full md:top-10 sm:top-8 z-10"
                 aria-label="Next categories"
                 type="button"
               >
@@ -397,22 +437,50 @@ const Items = () => {
         </nav>
 
         {/* Main Section */}
-        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 3xl:grid-cols-3 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-10 mt-10 hidden">
-          {/* Left Section */}
-          <section aria-label={`${selected} menu items`} className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0">
-            {items.map((item, index) => (
+        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 ">
+          {/* New "Today Special" section for md and sm devices - moved here */}
+          <aside
+            aria-labelledby="today-special-title-mobile"
+            className="lg:hidden bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center md:mt-0 sm:-mt-16 col-span-full"
+          >
+            <Motion.h3
+              id="today-special-title-mobile"
+              className="md:text-5xl sm:text-2xl font-bold sm:leading-snug md:leading-normal mt-10"
+              dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: 'easeInOut' }}
+              viewport={{ once: true }}
+            />
+            <Motion.div
+              className="relative w-full"
+              animate={{ y: [0, -20, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <img
+                src={todaySpecial.mainImage}
+                alt={`${selected} today special`}
+                className="mt-8 w-full h-auto object-contain md:w-3/4  mx-auto"
+              />
+            </Motion.div>
+          </aside>
+
+          {/* Left Section - Menu Items */}
+          <section aria-label={`${selected} menu items`} className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 ">
+            {/* Display items based on isSmallScreen state and showAllItemsSm state */}
+            {displayedItems.map((item, index) => (
               <article
                 key={index}
-                className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 md:p-10 sm:p-10 flex flex-col items-start h-96"
+                className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 md:p-10 sm:p-10 flex flex-col items-start h-96 "
                 tabIndex={0}
                 aria-label={`${item.title} - ${item.description}. Price: ${item.price}, original price ${item.originalPrice}`}
               >
                 <h2
-                  className="text-lg font-semibold text-[#2C6252]"
+                  className="3xl:text-lg 2xl:text-lg xl:text-lg md:text-lg sm:text-sm font-semibold text-[#2C6252]"
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 />
-                <p className="text-gray-500 text-sm mt-4 mb-4">{item.description}</p>
-                <div className="flex items-center justify-between w-full mt-auto">
+                <p className="text-gray-500 3xl:text-sm 2xl:text-sm xl:text-sm md:text-sm sm:text-xs mt-4 mb-4">{item.description}</p>
+                <div className="flex sm:flex-col md:flex-row items-center md:justify-between w-full mt-auto">
                   <Motion.img
                     src={item.image}
                     alt={`${item.title} image`}
@@ -424,14 +492,13 @@ const Items = () => {
                         : { type: 'spring', stiffness: 100 }
                     }
                   />
-
-                  <div className="flex flex-col items-end">
-                    <div className="flex items-end gap-x-1">
-                      <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-lg font-bold text-[#2C6252] leading-none">
+                  <div className="flex flex-col sm:items-center md:items-end">
+                    <div className="flex items-end gap-x-1 sm:mt-2 md:mt-0">
+                      <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-sm font-bold text-[#2C6252] leading-none">
                         {item.price}
                       </div>
                       <span
-                        className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-sm line-through text-[#FF4C15] relative top-4 font-bold"
+                        className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-sm line-through text-[#FF4C15] md:relative md:top-4 font-bold"
                         aria-label={`Original price ${item.originalPrice}`}
                       >
                         {item.originalPrice}
@@ -439,7 +506,7 @@ const Items = () => {
                     </div>
                     {item.hasOrderButton && (
                       <Motion.button
-                        className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 relative top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap"
+                        className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 sm:mt-2 md:relative md:top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap"
                         whileTap={{ scale: 0.95 }}
                         onClick={() => {
                           const result = addToCart({
@@ -464,15 +531,41 @@ const Items = () => {
                 </div>
               </article>
             ))}
+
+            {/* "Show More/Less" button for sm AND md devices */}
+            {showToggleButtonSm && (
+              <div className="flex justify-center col-span-full">
+                <button
+                  onClick={toggleShowAllItemsSm}
+                  className="bg-white text-[#2C6252] p-3 rounded-full shadow-lg"
+                  aria-label={showAllItemsSm ? "Show less menu items" : "Show more menu items"}
+                  type="button"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    {showAllItemsSm ? (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                    ) : (
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    )}
+                  </svg>
+                </button>
+              </div>
+            )}
           </section>
 
-          {/* Right Section - Today Special */}
+          {/* Right Section - Today Special (Desktop Only) */}
           <aside
-            aria-labelledby="today-special-title"
-            className="bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center sm:top-24 md:top-24 lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
+            aria-labelledby="today-special-title-desktop"
+            className="hidden lg:flex bg-white text-[#2C6252] p-6 relative overflow-hidden flex-col justify-start items-center text-center sm:top-24 md:top-24 lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
           >
             <Motion.h3
-              id="today-special-title"
+              id="today-special-title-desktop"
               className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug md:leading-snug sm:leading-snug mt-10"
               dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
               initial={{ y: 30, opacity: 0 }}
@@ -488,7 +581,7 @@ const Items = () => {
               <img
                 src={todaySpecial.mainImage}
                 alt={`${selected} today special`}
-                className="mt-8 w-full h-auto object-contain"
+                className="mt-8 w-full h-auto object-contain md:w-3/4  mx-auto"
               />
             </Motion.div>
           </aside>
