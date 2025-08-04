@@ -349,7 +349,7 @@ const Items = () => {
     <Container>
       <section
         aria-label="Food Categories Navigation and Menu Items"
-        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-10 sm:mt-8 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-12 md:mr-4 sm:-ml-[6.8rem] sm:mr-0 overflow-hidden'
+        className='3xl:mt-32 2xl:mt-32 xl:mt-20 lg:mt-20 md:mt-10 sm:mt-8 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-12 md:mr-4 sm:-ml-[7rem] sm:mr-0 overflow-hidden'
       >
         {/* Category Navigation */}
         <nav
