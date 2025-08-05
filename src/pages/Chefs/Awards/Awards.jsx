@@ -4,14 +4,14 @@ import Container from "../../../components/Container";
 const Awards = () => { 
   return (
     <Container>
-    <div className="relative 3xl:overflow-hidden 2xl:overflow-hidden xl:overflow-hidden lg:overflow-hidden  min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 md:-mt-0 sm:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 md:right-20 sm:right-20">
+    <div className="relative 3xl:overflow-hidden 2xl:overflow-hidden xl:overflow-hidden lg:overflow-hidden  min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 md:-mt-0 sm:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 md:right-0 sm:right-14 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-[30rem] sm:w-[5rem] ">
 
         {/* Foreground Image (Chef) */}
-        <div className="absolute left-1/2 sm:top-[10%] md:top-[25%] lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] md:translate-x-[-48%] sm:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
+        <div className="absolute left-1/2 sm:top-[10%] md:top-[25%] lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] md:translate-x-[-48%] sm:translate-x-[-42%] translate-y-[-104%] flex items-center justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
-            className="sm:w-[250px] md:w-[600px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
+            className="sm:w-[250px] md:w-[550px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none "
           />
         </div>
 
@@ -26,7 +26,7 @@ const Awards = () => {
 
         {/* Floating Badge Icon */}
         <Motion.div
-          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:left-14 md:left-0 sm:left-8 sm:top-[1.8rem] md:top-[5rem] lg:top-[5rem] xl:top-[12rem] 2xl:top-[13rem] 3xl:top-48 z-50  "
+          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:left-14 md:-left-4 sm:-left-14 sm:top-[1.8rem] md:top-[5rem] lg:top-[5rem] xl:top-[12rem] 2xl:top-[13rem] 3xl:top-48 z-50  "
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -129,8 +129,8 @@ const Awards = () => {
       </div>
 
       {/* Quality | Profitability | Consistency */}
-      <div className="absolute left-1/2 3xl:top-[52rem] 2xl:top-[48rem] xl:top-[41rem] lg:top-[35rem] md:top-[34rem] 3xl:translate-x-[-45%] 2xl:translate-x-[-45%] xl:translate-x-[-45%] lg:translate-x-[-45%] md:translate-x-[-37%] z-50 w-full 3xl:max-w-[1220px] 2xl:max-w-[1110px] xl:max-w-[950px] lg:max-w-[850px] md:max-w-[800px]  sm:hidden md:hidden lg:block xl:block 2xl:block 3xl:block">
-        <div className="grid grid-cols-3 text-white font-bold text-center 3xl:text-4xl 2xl:text-4xl xl:text-4xl lg:text-3xl divide-x divide-[#CCCCCC] bg-[#406D5B] overflow-hidden 3xl:px-24 3xl:py-24 2xl:px-20 2xl:py-20 xl:px-16 xl:py-16 lg:px-12 lg:py-12 md:px-10 md:py-12 3xl:-ml-6 2xl:-ml-10 xl:-ml-10">
+      <div className="absolute left-1/2 3xl:top-[52rem] 2xl:top-[48rem] xl:top-[41rem] lg:top-[35rem] md:top-[27rem] 3xl:translate-x-[-45%] 2xl:translate-x-[-45%] xl:translate-x-[-45%] lg:translate-x-[-45%] md:translate-x-[-37%] z-50 w-full 3xl:max-w-[1220px] 2xl:max-w-[1110px] xl:max-w-[950px] lg:max-w-[800px] md:max-w-[600px]  sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ">
+        <div className="grid grid-cols-3 text-white font-bold text-center 3xl:text-4xl 2xl:text-4xl xl:text-4xl lg:text-3xl md:text-lg divide-x divide-[#CCCCCC] bg-[#406D5B] overflow-hidden 3xl:px-24 3xl:py-24 2xl:px-20 2xl:py-20 xl:px-16 xl:py-16 lg:px-12 lg:py-12 md:px-8 md:py-8 3xl:-ml-6 2xl:-ml-10 xl:-ml-10 md:-ml-20">
           <div className="py-4">Quality</div>
           <div className="py-4">Profitability</div>
           <div className="py-4">Consistency</div>
