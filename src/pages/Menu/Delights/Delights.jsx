@@ -72,8 +72,16 @@ const Delights = () => {
           />
         </Motion.div>
 
+         <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden ml-5 mt-4">
+              <span className="text-yellow-500" aria-hidden="true">★★★★★</span>
+              <span className="text-xs   text-[#CCCCCC]">(4.8 Rating)</span>
+            </div>
+             <p className="3xl:text-sm 2xl:text-sm xl:text-sm md:text-xs sm:text-xs text-[#EFEFEF] mb-4 max-w-xs sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden ml-5 mt-4" >
+              Experience the perfect <br /> blend of taste and joy—every <br /> bite is a moment of <br /> delight, crafted <br /> to satisfy your cravings!
+            </p>
+
         {/* Middle Banner - Chef Cooking */}
-        <Motion.div {...fadeInUp} className="relative overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[680px] xl:h-[680px] lg:h-auto md:h-auto sm:h-auto 3xl:left-7 2xl:left-7 xl:left-6 lg:left-6 md:left-6 sm:left-6  3xl:-top-4 2xl:-top-0">
+        <Motion.div {...fadeInUp} className="relative overflow-hidden w-full h-[350px] 3xl:h-[700px] 2xl:h-[680px] xl:h-[680px] lg:h-auto md:h-auto sm:h-auto 3xl:left-7 2xl:left-7 xl:left-6 lg:left-6 md:left-6 sm:left-6  3xl:-top-4 2xl:-top-0 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056828/menu4_kx7c9q.webp"
             alt="Chef preparing seafood dishes"
@@ -95,13 +103,13 @@ const Delights = () => {
         </Motion.div>
 
         {/* Bottom Right - Deep Blue Delights */}
-        <Motion.article {...fadeInUp} className="relative overflow-hidden w-full sm:h-[485px] md:h-[400px] lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4">
+        <Motion.article {...fadeInUp} className="relative overflow-hidden w-full sm:h-[485px] md:h-[400px] lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4  ">
           <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10  ">
           <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden ">
-              <span className="text-yellow-500 " aria-hidden="true">★★★★★</span>
-              <span className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs   text-[#CCCCCC]">(4.8 Rating)</span>
+              <span className="text-yellow-500 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block " aria-hidden="true">★★★★★</span>
+              <span className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs sm:hidden md:block lg:block xl:block 2xl:block 3xl:block   text-[#CCCCCC]">(4.8 Rating)</span>
             </div>
-            <p className="3xl:text-sm 2xl:text-sm xl:text-sm md:text-xs sm:text-xs text-[#EFEFEF] mb-4 max-w-xs">
+            <p className="3xl:text-sm 2xl:text-sm xl:text-sm md:text-xs sm:text-xs text-[#EFEFEF] mb-4 max-w-xs sm:hidden md:block lg:block xl:block 2xl:block 3xl:block" >
               Experience the perfect <br /> blend of taste and joy—every <br /> bite is a moment of <br /> delight, crafted <br /> to satisfy your cravings!
             </p>
             <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
@@ -109,7 +117,7 @@ const Delights = () => {
               <span className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs   text-[#CCCCCC]">(4.8 Rating)</span>
             </div>
             <Link to="/order" aria-label="Order Deep Blue Delights Now">
-              <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-sm sm:text-lg font-semibold w-full max-w-[150px] ">
+              <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-sm sm:text-lg font-semibold w-full max-w-[150px] sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ">
                 Order Now
               </button>
             </Link>
@@ -129,7 +137,7 @@ const Delights = () => {
           <Motion.img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056997/menu5_ngludm.webp"
             alt="Grilled fish with herbs and spices"
-            className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-48 md:left-32 sm:left-52 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 md:w-36 sm:w-48 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem] md:top-[11.5rem] sm:top-[16.5rem]"
+            className="absolute bottom-0 right-0 3xl:left-60 2xl:left-60 xl:left-60 lg:left-48 md:left-32 sm:left-20 3xl:w-3/6 2xl:w-72 xl:w-3/6 lg:w-48 md:w-36 sm:w-40 h-auto object-contain z-0 3xl:top-[22rem] 2xl:top-96 xl:top-80 lg:top-[16.5rem] md:top-[11.5rem] sm:top-[2.5rem]"
             animate={{ rotate: 360 }}
             transition={{
               repeat: Infinity,
