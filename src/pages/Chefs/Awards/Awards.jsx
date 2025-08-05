@@ -4,14 +4,14 @@ import Container from "../../../components/Container";
 const Awards = () => { 
   return (
     <Container>
-    <div className="relative overflow-x-hidden overflow-y-visible min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 md:-mt-0 sm:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 md:right-20 sm:right-0">
+    <div className="relative 3xl:overflow-hidden 2xl:overflow-hidden xl:overflow-hidden lg:overflow-hidden  min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 md:-mt-0 sm:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 md:right-20 sm:right-20">
 
         {/* Foreground Image (Chef) */}
         <div className="absolute left-1/2 sm:top-[10%] md:top-[25%] lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] md:translate-x-[-48%] sm:translate-x-[-48%] translate-y-[-104%] flex items-center justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
-            className="sm:w-[230px] md:w-[600px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
+            className="sm:w-[200px] md:w-[600px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
           />
         </div>
 
