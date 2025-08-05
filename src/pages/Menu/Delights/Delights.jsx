@@ -13,30 +13,41 @@ const Delights = () => {
     <Container>
       <section
         aria-labelledby="delights-heading"
-        className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 lg:px-12 md:px-6 sm:px-12 py-12 3xl:mt-20 2xl:mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-32 2xl:mb-36 xl:mb-8 lg:mb-28 lg:-ml-20 md:mb-28 md:-ml-20 sm:mb-28 sm:-ml-20 md:gap-6 md:-mt-6"
+        className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 lg:px-12 md:px-6 sm:px-12 py-12 3xl:mt-20 2xl:mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-32 2xl:mb-36 xl:mb-8 lg:mb-28 lg:-ml-20 md:mb-28 md:-ml-20 sm:mb-28 sm:-ml-40 md:gap-6 md:-mt-6 sm:-mt-20"
       >
         {/* Top Left - Shrimp */}
         <Motion.article {...fadeInUp} className="flex flex-col bg-white overflow-hidden p-6">
+           <h2 className="text-[#2C6252] text-lg font-semibold tracking-wide drop-shadow-md  sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden">
+                Deep  Blue <br />  Delights
+              </h2>
+
           <Motion.img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752055520/menu2_cvwcfg.webp"
             alt="Shrimp dish with fresh ingredients"
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover sm:mt-5 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           />
           <div className="flex flex-col mt-16">
+            <div className="sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden -mt-10">
+               <div className="flex items-center space-x-1">
+                <span className="text-[#FFE61C]" aria-hidden="true">★★★★★</span>
+                <span className="text-[10px] text-[#CCCCCC] whitespace-nowrap">(4.8 Rating)</span>
+              </div>
+            </div>
             <div className="flex items-center justify-between mb-2">
-              <h2 id="delights-heading" className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl  font-medium text-[#2C6252]">
+              
+              <h2 id="delights-heading" className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-xl sm:text-sm  font-medium text-[#2C6252] sm:mt-2 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
                 Fresh and High- <span className="text-[#FF4C15]">Quality Ingredients</span>
               </h2>
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-1 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
                 <span className="text-[#FFE61C]" aria-hidden="true">★★★★★</span>
                 <span className="text-xs text-[#CCCCCC]">(4.8 Rating)</span>
               </div>
             </div>
-            <div className="flex items-center justify-between mt-6">
+            <div className="flex sm:flex-col 3xl:flex-row 2xl:flex-row xl:flex-row lg:flex-row md:flex-row items-center justify-between mt-6">
               <p className="text-xs text-[#AAAAAA] 3xl:w-2/3 2xl:w-2/3 xl:w-2/3 lg:w-2/3  pr-4">
                 At Ocean’s Bounty, every dish tells a story of the sea — fresh,
                 vibrant, and full of life. We believe great seafood should taste like a
@@ -44,7 +55,7 @@ const Delights = () => {
                 feels like a wave of pure flavor.
               </p>
               <Link to="/order" aria-label="Order Fresh Seafood Now ">
-                <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 text-lg font-semibold -mt-4 whitespace-nowrap 3xl:block 2xl:block xl:block lg:block md:hidden">
+                <button className="bg-[#FF4C15] text-white px-3 py-2 hover:bg-orange-600 3xl:text-lg 2xl:text-lg xl:text-lg md:text-lg  font-semibold 3xl:-mt-4 2xl:-mt-4 xl:-mt-4 md:-mt-4 sm:mt-5 whitespace-nowrap 3xl:block 2xl:block xl:block lg:block md:hidden sm:block sm:text-sm  ">
                   Order Now
                 </button>
               </Link>
@@ -57,7 +68,7 @@ const Delights = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056680/menu3_yskhz3.webp"
             alt="Assorted sushi served with traditional garnish"
-            className="3xl:w-full 2xl:w-[32rem] xl:w-[29rem] 3xl:h-[700px] 2xl:h-[650px] xl:h-[640px] lg:h-[600px] md:h-[500px] sm:h-[600px] object-cover"
+            className="3xl:w-full 2xl:w-[32rem] xl:w-[29rem] sm:w-[29rem] 3xl:h-[700px] 2xl:h-[650px] xl:h-[640px] lg:h-[600px] md:h-[500px] sm:h-[150px] object-cover sm:ml-6"
           />
         </Motion.div>
 
@@ -66,7 +77,7 @@ const Delights = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752056828/menu4_kx7c9q.webp"
             alt="Chef preparing seafood dishes"
-            className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[33.1rem] xl:w-[27.5rem] lg:w-[22rem] md:w-[22rem] sm:w-[22rem] h-auto object-cover object-center"
+            className="absolute inset-0 3xl:w-[39.2rem] 2xl:w-[33.1rem] xl:w-[27.5rem] lg:w-[22rem] md:w-[22rem] sm:w-[42rem] h-auto object-cover object-center"
           />
           <Motion.div
             initial={{ x: 300, opacity: 0 }}
@@ -85,11 +96,15 @@ const Delights = () => {
 
         {/* Bottom Right - Deep Blue Delights */}
         <Motion.article {...fadeInUp} className="relative overflow-hidden w-full sm:h-[485px] md:h-[400px] lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4">
-          <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10">
+          <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10  ">
+          <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden ">
+              <span className="text-yellow-500 " aria-hidden="true">★★★★★</span>
+              <span className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs   text-[#CCCCCC]">(4.8 Rating)</span>
+            </div>
             <p className="3xl:text-sm 2xl:text-sm xl:text-sm md:text-xs sm:text-xs text-[#EFEFEF] mb-4 max-w-xs">
               Experience the perfect <br /> blend of taste and joy—every <br /> bite is a moment of <br /> delight, crafted <br /> to satisfy your cravings!
             </p>
-            <div className="flex items-center space-x-1 text-base text-gray-500 mb-4">
+            <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
               <span className="text-yellow-500" aria-hidden="true">★★★★★</span>
               <span className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-xs sm:text-xs   text-[#CCCCCC]">(4.8 Rating)</span>
             </div>
@@ -100,13 +115,13 @@ const Delights = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20 md:-ml-28 sm:-ml-20">
-            <h2 className="sm:text-2xl md:text-2xl lg:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-2 lg:space-y-0 md:space-y-0 sm:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[22rem] xl:-mt-[20rem] lg:-mt-[16rem] md:-mt-[16rem] sm:-mt-[16rem]">
+          <div className="flex flex-col items-center justify-center w-full lg:w-1/2 pl-4 z-10 text-left 3xl:-ml-24 2xl:-ml-32 xl:-ml-24 lg:-ml-20 md:-ml-28 sm:-ml-20 ">
+            <h2 className="sm:text-2xl md:text-2xl lg:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl font-bold 3xl:space-y-4 2xl:space-y-4 xl:space-y-2 lg:space-y-0 md:space-y-0 sm:space-y-0 3xl:-mt-[25rem] 2xl:-mt-[22rem] xl:-mt-[20rem] lg:-mt-[16rem] md:-mt-[16rem] sm:-mt-[16rem] sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
               <span className="text-[#2C6252]">Deep</span><br />
               <span className="text-[#2C6252]">Blue</span><br />
               <span className="text-[#FF4C15]">Delights</span>
             </h2>
-            <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs md:text-[10px] sm:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-1 xl:ml-10 lg:ml-14 md:ml-10 sm:ml-14 whitespace-nowrap">
+            <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-xs md:text-[10px] sm:text-xs text-[#AAAAAA] mt-4 3xl:-ml-12 2xl:-ml-1 xl:ml-10 lg:ml-14 md:ml-10 sm:ml-14 whitespace-nowrap sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
               Savor the Secrets of the Sea
             </p>
           </div>
