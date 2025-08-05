@@ -11,7 +11,7 @@ const Awards = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
-            className="sm:w-[200px] md:w-[600px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
+            className="sm:w-[250px] md:w-[600px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
           />
         </div>
 
@@ -26,7 +26,7 @@ const Awards = () => {
 
         {/* Floating Badge Icon */}
         <Motion.div
-          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:left-14 md:left-0 sm:left-8 sm:top-[1.8rem] md:top-[5rem] lg:top-[5rem] xl:top-[12rem] 2xl:top-[13rem] 3xl:top-48 z-50  sm:hidden md:hidden lg:block xl:block 2xl:block 3xl:block"
+          className="absolute 3xl:left-28 2xl:left-16 xl:left-20 lg:left-14 md:left-0 sm:left-8 sm:top-[1.8rem] md:top-[5rem] lg:top-[5rem] xl:top-[12rem] 2xl:top-[13rem] 3xl:top-48 z-50  "
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
