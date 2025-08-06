@@ -12,8 +12,8 @@ const Chefs = () => {
         <div>
            <Awards></Awards>
            <Famous></Famous>
-           {/* <Support></Support>
-           <Members></Members> */}
+           <Support></Support>
+           {/* <Members></Members> */}
         </div>
     );
 };
