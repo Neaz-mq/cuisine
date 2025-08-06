@@ -110,7 +110,7 @@ const Famous = () => {
 
         {/* Right Text Block */}
         <Motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 3xl:-mt-[10.5rem] 2xl:-mt-[10.6rem] xl:-mt-[9.6rem] lg:-mt-[7.6rem] md:mt-[1.8rem] sm:mt-[1.8rem]"
+          className="grid grid-cols-1 lg:grid-cols-2 3xl:-mt-[10.5rem] 2xl:-mt-[10.6rem] xl:-mt-[9.6rem] lg:-mt-[7.6rem] md:mt-[1.8rem] sm:mt-[1.8rem] 3xl:-ml-8 2xl:-ml-7 xl:-ml-7 lg:-ml-5 md:-ml-0 sm:-ml-0"
           initial="hidden"
           whileInView="visible"
           variants={slideRight}
@@ -124,7 +124,7 @@ const Famous = () => {
           >
             Thanks for the clarification — it sounds like you're asking for restaurant <br /> kitchen section names meant
             for content purposes (<span className="text-[#FF4C15] font-medium">like a blog, video series, or social media</span>). Here's a set of catchy and
-            themed section .
+            themed section.
           </aside>
         </Motion.div>
       </section>
