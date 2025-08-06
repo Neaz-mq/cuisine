@@ -83,7 +83,7 @@ const Awards = () => {
 
         {/* Live Kitchen */}
         <Motion.div
-          className="absolute left-1/2 sm:top-[1rem] md:top-[7rem] lg:top-[7rem] xl:top-[15rem] 2xl:top-[16rem] 3xl:top-64 text-gray-800 px-3 py-1 rounded-full 3xl:text-[26px] 2xl:text-[26px] xl:text-[26px] lg:text-[26px] md:text-[26px] sm:text-[7px] z-50  sm:translate-x-[90px] md:translate-x-[165px] lg:translate-x-[290px] xl:translate-x-[320px] 2xl:translate-x-[350px] 3xl:translate-x-[430px] "
+          className="absolute left-1/2 sm:top-[1rem] md:top-[7rem] lg:top-[7rem] xl:top-[15rem] 2xl:top-[16rem] 3xl:top-64 text-gray-800 px-3 py-1 rounded-full 3xl:text-[26px] 2xl:text-[26px] xl:text-[26px] lg:text-[26px] md:text-[26px] sm:text-[7px] z-50  sm:translate-x-[78px] md:translate-x-[165px] lg:translate-x-[290px] xl:translate-x-[320px] 2xl:translate-x-[350px] 3xl:translate-x-[430px] "
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity }}
@@ -91,14 +91,14 @@ const Awards = () => {
           <div className="relative inline-flex flex-col items-center">
             <Motion.div className="inline-flex items-center gap-1">
               <Motion.span
-                className="text-[#FF4C15] font-bold 3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-base md:text-base"
+                className="text-[#FF4C15] font-bold 3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-base md:text-base sm:text-[5px]"
                 animate={{ textShadow: ["0 0 10px #FF4C15", "0 0 0px #FF4C15", "0 0 10px #FF4C15"] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
               >
                 Live
               </Motion.span>
               <Motion.span
-                className="font-bold 3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-base md:text-base"
+                className="font-bold 3xl:text-2xl 2xl:text-2xl xl:text-xl lg:text-base md:text-base sm:text-[5px]"
                 animate={{ opacity: [1, 0.8, 1] }}
                 transition={{ repeat: Infinity, duration: 2 }}
               >
@@ -107,7 +107,7 @@ const Awards = () => {
             </Motion.div>
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1744868965/Mask_Group_3_zd2ur0.png"
-              className="mt-2 3xl:w-40 2xl:w-40 xl:w-32 lg:w-24 md:w-24 sm:w-12"
+              className="mt-2 3xl:w-40 2xl:w-40 xl:w-32 lg:w-24 md:w-24 sm:w-10"
               alt="Live kitchen photo"
               animate={{ scale: [1, 1.03, 1] }}
               transition={{ repeat: Infinity, duration: 2 }}
