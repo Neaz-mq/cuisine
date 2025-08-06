@@ -129,7 +129,7 @@ const Awards = () => {
       </div>
 
       {/* Quality | Profitability | Consistency */}
-      <div className="absolute left-1/2 3xl:top-[52rem] 2xl:top-[48rem] xl:top-[41rem] lg:top-[35rem] md:top-[27rem] 3xl:translate-x-[-45%] 2xl:translate-x-[-45%] xl:translate-x-[-45%] lg:translate-x-[-45%] md:translate-x-[-37%] z-50 w-full 3xl:max-w-[1220px] 2xl:max-w-[1110px] xl:max-w-[950px] lg:max-w-[800px] md:max-w-[580px]  sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ">
+      <div className="absolute left-1/2 3xl:top-[52rem] 2xl:top-[48rem] xl:top-[41rem] lg:top-[35rem] md:top-[27rem] 3xl:translate-x-[-45%] 2xl:translate-x-[-45%] xl:translate-x-[-45%] lg:translate-x-[-42%] md:translate-x-[-37%] z-50 w-full 3xl:max-w-[1220px] 2xl:max-w-[1110px] xl:max-w-[950px] lg:max-w-[800px] md:max-w-[580px]  sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ">
         <div className="grid grid-cols-3 text-white font-bold text-center 3xl:text-4xl 2xl:text-4xl xl:text-4xl lg:text-3xl md:text-lg divide-x divide-[#CCCCCC] bg-[#406D5B] overflow-hidden 3xl:px-24 3xl:py-24 2xl:px-20 2xl:py-20 xl:px-16 xl:py-16 lg:px-12 lg:py-12 md:px-8 md:py-8 3xl:-ml-6 2xl:-ml-10 xl:-ml-10 md:-ml-20">
           <div className="py-4">Quality</div>
           <div className="py-4">Profitability</div>
