@@ -7,11 +7,11 @@ const Awards = () => {
     <div className="relative 3xl:overflow-hidden 2xl:overflow-hidden xl:overflow-hidden lg:overflow-hidden  min-h-[1800px] 3xl:-mt-12 2xl:-mt-12 xl:-mt-20 lg:-mt-0 md:-mt-0 sm:-mt-0 3xl:right-10 2xl:right-20 xl:right-20 lg:right-20 md:right-0 sm:right-14 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-[30rem] sm:w-[5rem] ">
 
         {/* Foreground Image (Chef) */}
-        <div className="absolute left-1/2 sm:top-[10%] md:top-[25%] lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] md:translate-x-[-48%] sm:translate-x-[-42%] translate-y-[-104%] flex items-center justify-center">
+        <div className="absolute left-1/2 sm:top-[10%] md:top-[25%] lg:top-[33%] xl:top-[44%] 2xl:top-[50%] 3xl:top-[54%] z-10 3xl:translate-x-[-50%] 2xl:translate-x-[-50%] xl:translate-x-[-48%] lg:translate-x-[-48%] md:translate-x-[-48%] sm:translate-x-[-44%] translate-y-[-104%] flex items-center justify-center">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
-            className="sm:w-[250px] md:w-[550px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none "
+            className="sm:w-[245px] md:w-[550px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none "
           />
         </div>
 
@@ -38,8 +38,8 @@ const Awards = () => {
         </Motion.div>
 
         {/* Green Food */}
-        <div className="absolute left-1/2 sm:top-[14rem] md:top-[12rem] lg:top-[14rem] xl:top-[21rem] 2xl:top-[22rem] 3xl:top-[24rem] z-50 sm:-translate-x-[210px] md:-translate-x-[150px] lg:-translate-x-[210px] xl:-translate-x-[260px] 2xl:-translate-x-[300px] 3xl:-translate-x-[360px] sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ">
-          <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px] md:text-[11px]' >Green</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px] md:text-[11px]'>Food</span>
+        <div className="absolute left-1/2 sm:top-[3.5rem] md:top-[12rem] lg:top-[14rem] xl:top-[21rem] 2xl:top-[22rem] 3xl:top-[24rem] z-50 sm:-translate-x-[64px] md:-translate-x-[150px] lg:-translate-x-[210px] xl:-translate-x-[260px] 2xl:-translate-x-[300px] 3xl:-translate-x-[360px] whitespace-nowrap ">
+          <span className='text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px] md:text-[11px] sm:text-[6px]' >Green</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[12px] md:text-[11px] sm:text-[6px]'>Food</span>
         </div>
 
         {/* Healthy Food */}
@@ -74,7 +74,7 @@ const Awards = () => {
 
         {/* 5 Star Rating */}
         <Motion.div
-          className="absolute 3xl:right-[34rem] 2xl:right-[25rem] xl:right-[22rem] lg:right-[16rem] md:right-[7rem] sm:right-[4.2rem] sm:top-[3rem] md:top-[8.5rem] lg:top-[9rem] xl:top-[16rem] 2xl:top-[18rem] 3xl:top-72 bg-white rounded-full border border-gray-400 shadow-md  3xl:px-3 3xl:py-1 2xl:px-3 2xl:py-1 xl:px-3 xl:py-1 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-1 sm:py-0 text-yellow-400 3xl:text-base 2xl:text-base xl:text-base md:text-sm sm:text-[8px] z-50 md:translate-x-[5px] sm:translate-x-[30px] lg:translate-x-[30px] xl:translate-x-[100px] 2xl:translate-x-[100px] 3xl:translate-x-[100px]  sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
+          className="absolute 3xl:right-[34rem] 2xl:right-[25rem] xl:right-[22rem] lg:right-[16rem] md:right-[7rem] sm:-right-[2.5rem] sm:top-[3rem] md:top-[8.5rem] lg:top-[9rem] xl:top-[16rem] 2xl:top-[18rem] 3xl:top-72 bg-white rounded-full border border-gray-400 shadow-md  3xl:px-3 3xl:py-1 2xl:px-3 2xl:py-1 xl:px-3 xl:py-1 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-1 sm:py-0 text-yellow-400 3xl:text-base 2xl:text-base xl:text-base md:text-sm sm:text-[8px] z-50 md:translate-x-[5px] sm:translate-x-[30px] lg:translate-x-[30px] xl:translate-x-[100px] 2xl:translate-x-[100px] 3xl:translate-x-[100px] "
           animate={{ y: [0, -20, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -83,7 +83,7 @@ const Awards = () => {
 
         {/* Live Kitchen */}
         <Motion.div
-          className="absolute left-1/2 sm:top-[1.5rem] md:top-[7rem] lg:top-[7rem] xl:top-[15rem] 2xl:top-[16rem] 3xl:top-64 text-gray-800 px-3 py-1 rounded-full 3xl:text-[26px] 2xl:text-[26px] xl:text-[26px] lg:text-[26px] md:text-[26px] sm:text-[7px] z-50  sm:translate-x-[65px] md:translate-x-[165px] lg:translate-x-[290px] xl:translate-x-[320px] 2xl:translate-x-[350px] 3xl:translate-x-[430px]  sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
+          className="absolute left-1/2 sm:top-[1rem] md:top-[7rem] lg:top-[7rem] xl:top-[15rem] 2xl:top-[16rem] 3xl:top-64 text-gray-800 px-3 py-1 rounded-full 3xl:text-[26px] 2xl:text-[26px] xl:text-[26px] lg:text-[26px] md:text-[26px] sm:text-[7px] z-50  sm:translate-x-[90px] md:translate-x-[165px] lg:translate-x-[290px] xl:translate-x-[320px] 2xl:translate-x-[350px] 3xl:translate-x-[430px] "
           initial={{ opacity: 0 }}
           animate={{ opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 2, repeat: Infinity }}
@@ -123,8 +123,8 @@ const Awards = () => {
         </Motion.div>
 
         {/* Organic Food */}
-        <div className="absolute left-1/2 sm:top-[6.2rem] md:top-[12rem] lg:top-[13rem] xl:top-[27rem] 2xl:top-[24rem] 3xl:top-96 px-3 py-1 text-lg z-50 sm:translate-x-[17px] md:translate-x-[100px] lg:translate-x-[160px] xl:translate-x-[170px] 2xl:translate-x-[190px] 3xl:translate-x-[210px]  sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ">
-          <span className='font-bold text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px] sm:text-[9px]'>Organic</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px] sm:text-[9px]'>Food</span>
+        <div className="absolute left-1/2 sm:top-[3.2rem] md:top-[12rem] lg:top-[13rem] xl:top-[27rem] 2xl:top-[24rem] 3xl:top-96 px-3 py-1 text-lg z-50 sm:translate-x-[40px] md:translate-x-[100px] lg:translate-x-[160px] xl:translate-x-[170px] 2xl:translate-x-[190px] 3xl:translate-x-[210px] whitespace-nowrap">
+          <span className='font-bold text-[#a9a2a2] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px] sm:text-[6px]'>Organic</span> <span className='text-[#CCCCCC] 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-[11px] sm:text-[6px]'>Food</span>
         </div>
       </div>
 
