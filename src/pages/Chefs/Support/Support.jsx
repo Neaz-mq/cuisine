@@ -92,7 +92,7 @@ const Support = () => {
               <h2 className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-xl lg:text-xl md:text-lg sm:text-lg font-bold mb-4">
                 deals every
               </h2>
-              <p className="text-base 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[12px] opacity-90 mt-6">
+              <p className="text-base 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[12px] md:text-[12px] sm:text-[10px] opacity-90 mt-6">
                 Thanks for the clarification — it sounds like you're asking for restaurant <br />
                 kitchen section names meant for content purposes
               </p>
