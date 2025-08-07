@@ -40,7 +40,7 @@ const Members = () => {
     return (
         <Container>
             <section
-                className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 lg:px-0 md:px-0 sm:px-0 3xl:mt-36 2xl:mt-32 xl:mt-32 lg:mt-24 md:mt-20 sm:mt-14 3xl:mb-36 2xl:mb-40 xl:mb-28 lg:mb-28 sm:-ml-[15.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0 sm:w-[22rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
+                className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 lg:px-0 md:px-0 sm:px-0 3xl:mt-36 2xl:mt-32 xl:mt-32 lg:mt-24 md:mt-20 sm:mt-14 3xl:mb-36 2xl:mb-40 xl:mb-28 lg:mb-28 sm:-ml-[15.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0 sm:w-[20rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
                 aria-label="Meet Our Team"
             >
                 {/* Header Section */}
