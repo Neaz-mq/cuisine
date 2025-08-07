@@ -51,11 +51,11 @@ const Members = () => {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <h1 className="text-3xl 3xl:text-5xl 2xl:text-4xl xl:text-2xl lg:text-2xl font-bold text-[#2C6252] mb-2 leading-relaxed 3xl:mr-8 2xl:mr-16 xl:-mr-16 lg:mr-20">
+                    <h1 className="text-3xl 3xl:text-5xl 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg font-bold text-[#2C6252] mb-2 leading-relaxed 3xl:mr-8 2xl:mr-16 xl:-mr-16 lg:mr-20 md:mr-36 sm:mr-28 items-start ">
                         Our expertise all team <br className="hidden md:block" />
                         <span className="inline-flex items-center leading-relaxed">
                             members
-                            <span className="bg-[#FF4C15] text-white 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[10px] px-4 py-2 flex items-center space-x-2 ml-4">
+                            <span className="bg-[#FF4C15] text-white 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-[10px] md:text-[12px] sm:text-[10px] px-4 py-2 flex items-center space-x-2 ml-4">
                                 <svg
                                     className="w-4 h-4"
                                     fill="currentColor"
@@ -68,7 +68,7 @@ const Members = () => {
                                         clipRule="evenodd"
                                     ></path>
                                 </svg>
-                                <span>Company Details (Chef)</span>
+                                <span className="whitespace-nowrap">Company Details (Chef)</span>
                             </span>
                         </span>
                     </h1>
@@ -79,7 +79,7 @@ const Members = () => {
 
                     {/* Left Image Area */}
                     <Motion.figure
-                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%] lg:h-[99.8%] lg:w-[95%]"
+                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 md:left-4 sm:-left-32 bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%] lg:h-[99.8%] lg:w-[95%] md:w-[94%] sm:w-[140%] "
                         role="img"
                         aria-label="Featured Chef"
                     >
@@ -108,7 +108,7 @@ const Members = () => {
 
                     {/* Right - Team Cards */}
                     <Motion.div
-                        className="grid grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 3xl:ml-20 2xl:ml-0 xl:ml-10"
+                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-16 sm:-ml-12 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20"
                         initial="hidden"
                         whileInView="visible"
                         variants={{
@@ -125,7 +125,7 @@ const Members = () => {
                         {teamMembers.map((member) => (
                             <Motion.article
                                 key={member.id}
-                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] border border-gray-400"
+                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[200px] md:w-[200px] sm:h-[200px] sm:w-[200px] border border-gray-400"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -150,7 +150,7 @@ const Members = () => {
                                         <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5.3 8.3a1 1 0 011.4 0L10 11.6l3.3-3.3a1 1 0 111.4 1.4l-4 4a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4z"></path>
                                     </svg>
                                 </div>
-                                <figcaption className="absolute 3xl:-left-8 2xl:-left-4 xl:-left-4 lg:-left-3 top-28 -translate-y-1/2 -rotate-90 origin-left 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm font-semibold text-[#2C6252] whitespace-nowrap z-20">
+                                <figcaption className="absolute 3xl:-left-8 2xl:-left-4 xl:-left-4 lg:-left-3 md:-left-3 sm:-left-3 top-28 -translate-y-1/2 -rotate-90 origin-left 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm font-semibold text-[#2C6252] whitespace-nowrap z-20">
                                     - {member.name}
                                 </figcaption>
                                 <div className="relative z-10 w-full mt-auto flex flex-col items-center text-gray-700 bg-white bg-opacity-75 rounded-md px-2 py-1">
