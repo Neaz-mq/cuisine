@@ -108,7 +108,7 @@ const Members = () => {
 
                     {/* Right - Team Cards */}
                     <Motion.div
-                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-16 sm:ml-40 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
+                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-12 sm:ml-40 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
                         initial="hidden"
                         whileInView="visible"
                         variants={{
@@ -125,7 +125,7 @@ const Members = () => {
                         {teamMembers.map((member) => (
                             <Motion.article
                                 key={member.id}
-                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[200px] md:w-[200px] sm:h-[130px] sm:w-[130px] border border-gray-400"
+                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[180px] md:w-[180px] sm:h-[130px] sm:w-[130px] border border-gray-400"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }}
