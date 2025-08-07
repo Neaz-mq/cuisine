@@ -40,12 +40,12 @@ const Members = () => {
     return (
         <Container>
             <section
-                className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 lg:px-0 md:px-0 sm:px-0 3xl:mt-36 2xl:mt-32 xl:mt-32 lg:mt-24 md:mt-20 sm:mt-14 3xl:mb-36 2xl:mb-40 xl:mb-28 lg:mb-28 sm:-ml-[15.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0"
+                className="py-8 md:py-12 3xl:px-16 2xl:px-20 xl:px-44 lg:px-0 md:px-0 sm:px-0 3xl:mt-36 2xl:mt-32 xl:mt-32 lg:mt-24 md:mt-20 sm:mt-14 3xl:mb-36 2xl:mb-40 xl:mb-28 lg:mb-28 sm:-ml-[15.5rem] 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0 sm:w-[22rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
                 aria-label="Meet Our Team"
             >
                 {/* Header Section */}
                 <Motion.div
-                    className="mb-10 md:mb-16 text-left flex justify-end items-center sm:ml-[7.4rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 md:ml-0 sm:w-96 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
+                    className="mb-10 md:mb-16 text-left flex justify-end items-center sm:ml-[7.4rem] 3xl:ml-0 2xl:ml-0 xl:ml-0 md:ml-0 sm:w-64 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -75,11 +75,11 @@ const Members = () => {
                 </Motion.div>
 
                 {/* Content Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-4  items-center sm:w-[28rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full ">
+                <div className="grid grid-cols-1 lg:grid-cols-2 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-4  items-center sm:w-[15rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full ">
 
                     {/* Left Image Area */}
                     <Motion.figure
-                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 md:left-4 sm:left-[7.4rem] bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%] lg:h-[99.8%] lg:w-[95%] md:w-[94%] sm:w-[71%] "
+                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 md:left-4 sm:left-[7.4rem] bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%] lg:h-[99.8%] lg:w-[95%] md:w-[94%] sm:w-[90%] "
                         role="img"
                         aria-label="Featured Chef"
                     >
@@ -108,7 +108,7 @@ const Members = () => {
 
                     {/* Right - Team Cards */}
                     <Motion.div
-                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-16 sm:ml-48 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 "
+                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-16 sm:ml-40 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
                         initial="hidden"
                         whileInView="visible"
                         variants={{
@@ -125,7 +125,7 @@ const Members = () => {
                         {teamMembers.map((member) => (
                             <Motion.article
                                 key={member.id}
-                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[200px] md:w-[200px] sm:h-[170px] sm:w-[170px] border border-gray-400"
+                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[200px] md:w-[200px] sm:h-[130px] sm:w-[130px] border border-gray-400"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }}
