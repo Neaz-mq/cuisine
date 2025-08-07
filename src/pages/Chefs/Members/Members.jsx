@@ -108,7 +108,7 @@ const Members = () => {
 
                     {/* Right - Team Cards */}
                     <Motion.div
-                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-12 sm:ml-40 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
+                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-20 sm:ml-40 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-[30rem]  "
                         initial="hidden"
                         whileInView="visible"
                         variants={{
