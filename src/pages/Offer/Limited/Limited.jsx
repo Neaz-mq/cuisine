@@ -101,13 +101,13 @@ const Limited = () => {
 
         {/* Headings */}
         <header className="flex justify-center items-center 3xl:-mt-[10.5rem] 2xl:-mt-[10.2rem] xl:-mt-[10rem] lg:-mt-[9.8rem] md:mt-[0.8rem] sm:-mt-[0.4rem] md:ml-56 sm:ml-56 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 ">
-          <div className="3xl:mb-36 2xl:mb-36 xl:mb-36 lg:mb-36 md:mb-36 sm:mb-20 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2 md:-ml-0 sm:-ml-0 text-center 3xl:text-left 2xl:text-left xl:text-left lg:text-left">
+          <div className="3xl:mb-36 2xl:mb-36 xl:mb-36 lg:mb-36 md:mb-36 sm:mb-24 3xl:-ml-24 2xl:-ml-40 xl:-ml-6 lg:-ml-2 md:-ml-0 sm:-ml-0 text-center 3xl:text-left 2xl:text-left xl:text-left lg:text-left">
             <Motion.h2
               id="limited-heading"
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-xl font-bold text-green-800"
+              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-lg font-bold text-green-800"
             >
               Limited Time Offer–
             </Motion.h2>
@@ -115,7 +115,7 @@ const Limited = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-xl font-bold text-[#FF4C15] 3xl:mt-4 2xl:mt-4 xl:mt-4 md:mt-4"
+              className="3xl:text-7xl 2xl:text-6xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-lg font-bold text-[#FF4C15] 3xl:mt-4 2xl:mt-4 xl:mt-4 md:mt-4"
             >
               Up To 50% Off!
             </Motion.h3>
