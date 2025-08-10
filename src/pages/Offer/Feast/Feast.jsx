@@ -106,7 +106,7 @@ const Feast = () => {
     <Container>
       <section
         aria-labelledby="feast-hero-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-10 md:-ml-20 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-6 sm:-mt-44 sm:mb-44 md:w-[40rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-10 md:-ml-20 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-6 sm:-mt-44 sm:mb-44 md:w-[38rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full"
       >
         {/* Hero Section */}
         <div
@@ -126,7 +126,7 @@ const Feast = () => {
               – Free Dessert with any Main Course
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center 3xl:min-w-[300px] 2xl:min-w-[300px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[200px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[6rem] sm:-mt-[17rem]">
+          <div className="flex-1 flex justify-center items-center 3xl:min-w-[300px] 2xl:min-w-[300px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[170px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[5rem] sm:-mt-[17rem]">
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1752125671/offer11_hhovyb.webp"
               alt="Delicious fried chicken wings"
@@ -171,17 +171,17 @@ const Feast = () => {
                 />
               </div>
               <div className="flex flex-col flex-grow mt-6">
-                <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base md:text-base sm:text-base font-semibold text-[#2C6252] leading-tight mb-1">
+                <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base md:text-sm sm:text-base font-semibold text-[#2C6252] leading-tight mb-1">
                   {item.title.split(" ")[0]} <br />{" "}
                   {item.title.split(" ").slice(1).join(" ")}
                 </h3>
-                <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] md:text-[9px] sm:text-[9px] text-[#CCCCCC] mb-4 flex-grow mt-2">
+                <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] md:text-[8px] sm:text-[9px] text-[#CCCCCC] mb-4 flex-grow mt-2">
                   {item.description}
                 </p>
                 <div className="flex justify-between items-center mt-auto">
-                  <span className="3xl:text-3xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl font-bold text-[#2C6252]">
+                  <span className="3xl:text-3xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-xl font-bold text-[#2C6252]">
                     ${item.price}{" "}
-                    <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-base md:text-base sm:text-base text-[#B9B9B9] relative top-2 left-1 font-semibold">
+                    <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-base md:text-sm sm:text-base text-[#B9B9B9] relative top-2 left-1 font-semibold">
                       / pcs
                     </span>
                   </span>
