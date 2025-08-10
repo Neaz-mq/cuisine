@@ -106,7 +106,7 @@ const Feast = () => {
     <Container>
       <section
         aria-labelledby="feast-hero-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-3 md:-ml-6 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-6 sm:-mt-44 sm:mb-44"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-10 md:-ml-20 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-6 sm:-mt-44 sm:mb-44 md:w-[40rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full"
       >
         {/* Hero Section */}
         <div
@@ -126,7 +126,7 @@ const Feast = () => {
               – Free Dessert with any Main Course
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[12rem] sm:-mt-[17rem]">
+          <div className="flex-1 flex justify-center items-center 3xl:min-w-[300px] 2xl:min-w-[300px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[200px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[6rem] sm:-mt-[17rem]">
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1752125671/offer11_hhovyb.webp"
               alt="Delicious fried chicken wings"
@@ -142,7 +142,7 @@ const Feast = () => {
 
         {/* Menu Grid */}
         <Motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 "
           variants={containerVariants}
           initial="hidden"
           animate="visible"
