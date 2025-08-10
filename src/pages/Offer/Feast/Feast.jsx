@@ -1,5 +1,5 @@
 import Container from "../../../components/Container";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 import { motion as Motion } from "framer-motion";
@@ -45,6 +45,22 @@ const Feast = () => {
         "Our menu is carefully crafted by expert chefs who bring creativity",
     },
   ];
+
+  // Detect if screen width is less than your Tailwind sm breakpoint (320px)
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 768 : false
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Limit feast items on small screens
+  const displayedItems = isSmallScreen ? feastItems.slice(0, 2) : feastItems;
 
   const handleAddToCart = (item) => {
     const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
@@ -106,7 +122,7 @@ const Feast = () => {
     <Container>
       <section
         aria-labelledby="feast-hero-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-10 md:-ml-20 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-6 sm:-mt-44 sm:mb-44 md:w-[38rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-4 3xl:mb-56 2xl:px-0 2xl:ml-5 2xl:-mt-24 2xl:mb-52 xl:px-8 xl:ml-5 xl:-mt-20 xl:mb-44 lg:px-3 lg:-ml-6 lg:-mt-44 lg:mb-44 md:px-10 md:-ml-20 md:-mt-44 md:mb-44 sm:px-3 sm:-ml-32 sm:-mt-72 sm:mb-44 sm:w-[15rem] md:w-[38rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full"
       >
         {/* Hero Section */}
         <div
@@ -114,19 +130,19 @@ const Feast = () => {
           role="region"
           aria-label="Feast hero section with deals"
         >
-          <div className="flex-1 min-w-[300px] md:mr-5 text-center md:text-left mb-8 md:mb-0">
+          <div className="flex-1 3xl:min-w-[300px] 2xl:min-w-[300px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[300px] sm:min-w-[150px] md:mr-5 text-center md:text-left mb-8 md:mb-0">
             <h2
               id="feast-hero-heading"
-              className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-xl font-bold text-[#2C6252] leading-tight mb-2"
+              className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-lg font-bold text-[#2C6252] leading-tight mb-2"
             >
               Enjoy unbeatable deals every <br /> week at{" "}
               <span className="text-[#FF4C15]">Flavors & Feast!</span>
             </h2>
-            <p className="text-lg md:text-sm text-[#2C6252] 3xl:mt-3">
+            <p className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-lg md:text-sm sm:text-xs text-[#2C6252] 3xl:mt-3">
               – Free Dessert with any Main Course
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center 3xl:min-w-[300px] 2xl:min-w-[300px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[170px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[5rem] sm:-mt-[17rem]">
+          <div className="flex-1 flex justify-center items-center 3xl:min-w-[300px] 2xl:min-w-[300px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[170px] sm:min-w-[150px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[5rem] sm:-mt-[5rem]">
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1752125671/offer11_hhovyb.webp"
               alt="Delicious fried chicken wings"
@@ -142,14 +158,14 @@ const Feast = () => {
 
         {/* Menu Grid */}
         <Motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 "
+          className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 gap-8 "
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           role="list"
           aria-label="Feast menu items"
         >
-          {feastItems.map((item) => (
+          {displayedItems.map((item) => (
             <Motion.article
               key={item.id}
               className="bg-[#F8F8F8] overflow-hidden flex flex-col p-4"
@@ -171,17 +187,17 @@ const Feast = () => {
                 />
               </div>
               <div className="flex flex-col flex-grow mt-6">
-                <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base md:text-sm sm:text-base font-semibold text-[#2C6252] leading-tight mb-1">
+                <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-base md:text-sm sm:text-xs font-semibold text-[#2C6252] leading-tight mb-1">
                   {item.title.split(" ")[0]} <br />{" "}
                   {item.title.split(" ").slice(1).join(" ")}
                 </h3>
-                <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] md:text-[8px] sm:text-[9px] text-[#CCCCCC] mb-4 flex-grow mt-2">
+                <p className="3xl:text-xs 2xl:text-xs xl:text-xs lg:text-[9px] md:text-[8px] sm:text-[7px] text-[#CCCCCC] mb-4 flex-grow mt-2">
                   {item.description}
                 </p>
                 <div className="flex justify-between items-center mt-auto">
-                  <span className="3xl:text-3xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-xl font-bold text-[#2C6252]">
+                  <span className="3xl:text-3xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-sm font-bold text-[#2C6252]">
                     ${item.price}{" "}
-                    <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-base md:text-sm sm:text-base text-[#B9B9B9] relative top-2 left-1 font-semibold">
+                    <span className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-base md:text-sm sm:text-xs text-[#B9B9B9] relative top-2 left-1 font-semibold">
                       / pcs
                     </span>
                   </span>
