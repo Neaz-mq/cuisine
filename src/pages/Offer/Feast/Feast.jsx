@@ -117,7 +117,7 @@ const Feast = () => {
           <div className="flex-1 min-w-[300px] md:mr-5 text-center md:text-left mb-8 md:mb-0">
             <h2
               id="feast-hero-heading"
-              className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-xl sm:text-xl font-bold text-[#2C6252] leading-tight mb-2"
+              className="text-3xl 3xl:text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-xl font-bold text-[#2C6252] leading-tight mb-2"
             >
               Enjoy unbeatable deals every <br /> week at{" "}
               <span className="text-[#FF4C15]">Flavors & Feast!</span>
@@ -126,7 +126,7 @@ const Feast = () => {
               – Free Dessert with any Main Course
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[17rem] sm:-mt-[17rem]">
+          <div className="flex-1 flex justify-center items-center min-w-[300px] 3xl:-mt-[30rem] 2xl:-mt-[24rem] xl:-mt-[21rem] lg:-mt-[17rem] md:-mt-[12rem] sm:-mt-[17rem]">
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1752125671/offer11_hhovyb.webp"
               alt="Delicious fried chicken wings"

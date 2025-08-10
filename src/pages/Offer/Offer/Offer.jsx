@@ -9,8 +9,8 @@ const Offer = () => {
         <div>
             <Limited></Limited>
             <Week></Week>
-            {/* <Feast></Feast>
-            <Picks></Picks>
+            <Feast></Feast>
+            {/* <Picks></Picks>
             <Roast></Roast> */}
         </div>
     );
