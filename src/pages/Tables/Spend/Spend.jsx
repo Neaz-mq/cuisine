@@ -30,7 +30,7 @@ const Spend = () => {
   return (
     <Container>
       <section
-        className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 mb-28"
+        className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 md:py-4 mb-28 md:-ml-24  sm:-ml-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
         aria-labelledby="spend-heading"
       >
         {/* Left: Image Section */}
@@ -45,7 +45,7 @@ const Spend = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752120958/table1_jf0nwc.webp"
             alt="Couple enjoying quality dining time at Flavors & Feast"
-            className="w-[90%] max-w-md lg:max-w-full h-auto"
+            className="w-[90%] max-w-md lg:max-w-full h-auto 3xl:block 2xl:block xl:block lg:block md:hidden sm:hidden"
           />
         </Motion.div>
 
@@ -60,7 +60,7 @@ const Spend = () => {
           <header>
             <h2
               id="spend-heading"
-              className="text-4xl 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl font-bold text-[#2C6252] leading-relaxed mb-4"
+              className="text-4xl 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-xl font-bold text-[#2C6252] leading-relaxed mb-4"
             >
               {[...headerText1].map((char, index) => (
                 <Motion.span
@@ -86,13 +86,18 @@ const Spend = () => {
             </h2>
           </header>
 
-          <p className="text-[#D7D7D7] text-sm 3xl:text-base 2xl:text-base xl:text-sm lg:text-xs mt-4 max-w-md">
+          <p className="text-[#D7D7D7] text-xs 3xl:text-base 2xl:text-base xl:text-sm lg:text-xs md:text-xs mt-4 max-w-md md:mx-auto 3xl:mx-0 2xl:mx-0 xl:mx-0 lg:mx-0">
             Discover unforgettable moments at Flavors & Feast — where every bite brings joy. Whether it’s a romantic evening, a friends' hangout, or a cozy weekend brunch, we’ve got unbeatable food deals just for you.
           </p>
+          <img
+            src="https://res.cloudinary.com/dxohwanal/image/upload/v1752120958/table1_jf0nwc.webp"
+            alt="Couple enjoying quality dining time at Flavors & Feast"
+            className="w-[90%] max-w-md lg:max-w-full h-auto 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:block sm:block mx-auto"
+          />
 
           <Link to="/order" aria-label="Go to menu page">
             <Motion.button
-              className="mt-6 px-6 py-3 bg-[#FA4A0C] text-white font-semibold shadow-md"
+              className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-[#FA4A0C] text-white font-semibold shadow-md"
               whileHover={{
                 scale: 1.12,
                 boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",

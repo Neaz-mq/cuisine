@@ -118,7 +118,7 @@ const Reserve = () => {
   return (
     <Container>
       <Motion.section
-        className="3xl:px-16 2xl:px-5 xl:px-14 lg:px-2 mb-24 -mt-14"
+        className="3xl:px-16 2xl:px-5 xl:px-14 lg:px-2 md:px-4 md:-ml-24 mb-24 -mt-14 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 sm:-ml-28"
         initial="hidden"
         animate="visible"
         variants={fadeInUp}
@@ -131,7 +131,7 @@ const Reserve = () => {
         >
           <h2
             id="reservation-heading"
-            className="text-2xl lg:text-4xl font-bold text-[#2C6252] leading-relaxed"
+            className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-xl sm:text-xl font-bold text-[#2C6252] leading-relaxed"
           >
             Know which tables are available <br className="hidden lg:block" />
             <span className="text-[#FF4C15] font-semibold">
@@ -140,7 +140,7 @@ const Reserve = () => {
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1750157744/Mask_Group_50_s7vgxe.png"
               alt="Stylized restaurant table illustration"
-              className="inline-block w-24 h-8 ml-2 align-middle"
+              className="inline-block 3xl:w-24 3xl:h-8 2xl:w-24 2xl:h-8 xl:w-24 xl:h-8 lg:w-24 lg:h-8 md:w-24 md:h-8 sm:w-14 sm:h-6 ml-2 align-middle"
               animate={{ y: [0, -8, 0], scale: [1, 1.05, 1] }}
               transition={{ duration: 2.2, ease: "easeInOut", repeat: Infinity }}
             />
@@ -148,7 +148,7 @@ const Reserve = () => {
         </Motion.header>
 
         <Motion.div
-          className="grid grid-cols-5 gap-y-12"
+          className="grid grid-cols-5 3xl:gap-y-12 2xl:gap-y-12 xl:gap-y-12 lg:gap-y-12 md:gap-y-12 sm:gap-y-8"
           variants={tableContainer}
           initial="hidden"
           animate="visible"
@@ -173,7 +173,7 @@ const Reserve = () => {
         </Motion.div>
 
         <Motion.div
-          className="flex items-start justify-start gap-16 mt-28 flex-wrap"
+          className="flex items-start justify-start 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 md:gap-16 sm:gap-8 3xl:mt-28 2xl:mt-28 xl:mt-28 md:mt-28 sm:mt-20 flex-wrap"
           variants={fadeInUp}
           custom={2}
           role="note"
@@ -195,7 +195,7 @@ const Reserve = () => {
           role="form"
           aria-label="Reservation Booking Form"
         >
-          <h3 className="text-2xl font-semibold text-center text-[#2C6252] mb-6">
+          <h3 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl md:text-2xl sm:text-xl font-semibold text-center text-[#2C6252] mb-6">
             Book a Table
           </h3>
           <form className="flex flex-col gap-4">
