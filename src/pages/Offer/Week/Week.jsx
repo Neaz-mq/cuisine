@@ -117,7 +117,7 @@ const Week = () => {
           </div>
 
           {/* Right: Dynamic Image Layout */}
-          <div className="lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-40 3xl:left-2 xl:left-2 2xl:mt-36 xl:mt-36 lg:mt-28 md:mt-32 sm:mt-28 2xl:left-2 lg:left-12 md:left-12 sm:left-12 ">
+          <div className="3xl:w-1/2 2xl:w-1/2 xl:w-1/2  lg:w-1/2 relative min-h-[850px] flex items-center justify-center 3xl:mt-40 3xl:left-2 xl:left-2 2xl:mt-36 xl:mt-36 lg:mt-28 md:mt-32 sm:mt-28 2xl:left-2 lg:left-12 md:left-24 sm:left-12 md:w-[30rem] ">
             {images.map((url, index) => (
               <div
                 key={index}
@@ -134,7 +134,7 @@ const Week = () => {
             ))}
 
             {/* Customer Service Card */}
-            <div className="absolute bottom-4 3xl:right-6 2xl:-right-8 xl:-right-12 lg:-right-16 md:right-10 sm:-right-16 p-6 max-w-xs text-left z-40 3xl:top-[26.5%] 2xl:top-[26.5%] xl:top-[26.5%] lg:top-[19%] md:top-[19.5%] sm:top-[19%]">
+            <div className="absolute bottom-4 3xl:right-6 2xl:-right-8 xl:-right-12 lg:-right-16 md:right-4 sm:-right-16 p-6 max-w-xs text-left z-40 3xl:top-[26.5%] 2xl:top-[26.5%] xl:top-[26.5%] lg:top-[19%] md:top-[19.5%] sm:top-[19%]">
               <h3 className="3xl:text-lg 2xl:text-lg xl:text-base lg:text-[13px] md:text-[13px] sm:text-[13px] font-bold text-[#2C6252] mb-2">
                 Outstanding <br /> <span className="font-normal">Customer Service</span>
               </h3>
@@ -144,7 +144,7 @@ const Week = () => {
             </div>
 
             {/* 50% Text */}
-            <div className="absolute 3xl:right-[0rem] 2xl:-right-[4.2rem] xl:-right-[4rem] lg:-right-[3rem] md:right-[4rem] sm:-right-[3rem] 3xl:top-[14%] 2xl:top-[10%] xl:top-[9%] lg:top-[5%] md:top-[5%] sm:top-[5%] transform 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 rotate-90 text-[#FF4C15] 3xl:text-7xl 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl font-extrabold opacity-70 z-0">
+            <div className="absolute 3xl:right-[0rem] 2xl:-right-[4.2rem] xl:-right-[4rem] lg:-right-[3rem] md:right-[2rem] sm:-right-[3rem] 3xl:top-[14%] 2xl:top-[10%] xl:top-[9%] lg:top-[5%] md:top-[5%] sm:top-[5%] transform 3xl:-translate-y-1/2 2xl:-translate-y-1/2 xl:-translate-y-1/2 rotate-90 text-[#FF4C15] 3xl:text-7xl 2xl:text-7xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl font-extrabold opacity-70 z-0">
               50%
             </div>
           </div>
