@@ -368,17 +368,17 @@ const Category = () => {
           <div className="flex justify-center mt-4">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="flex items-center gap-2 px-4 py-2 text-[#FF4C15] font-semibold text-sm transition-all"
+              className="flex items-center gap-2 px-4 py-2 text-[#2C6252] font-semibold text-sm transition-all"
             >
               {showAll ? (
                 <>
-                  <MdKeyboardArrowUp size={24} />
-                  <span>Show Less</span>
+                  <MdKeyboardArrowUp size={28} />
+                
                 </>
               ) : (
                 <>
-                  <MdKeyboardArrowDown size={24} />
-                  <span>Show More</span>
+                  <MdKeyboardArrowDown size={28} />
+                  
                 </>
               )}
             </button>
