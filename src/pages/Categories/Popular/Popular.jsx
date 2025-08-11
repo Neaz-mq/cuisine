@@ -117,14 +117,14 @@ const Popular = () => {
 
   return (
     <Container>
-      <section aria-labelledby="popular-heading" className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24 3xl:mt-52 2xl:mt-20 xl:mt-44 overflow-hidden">
+      <section aria-labelledby="popular-heading" className="px-4 md:px-8 3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 -mt-12 3xl:mb-52 2xl:mb-24 xl:mb-24 lg:mb-24 3xl:mt-52 2xl:mt-20 xl:mt-44 md:mt-40 overflow-hidden">
         <Motion.div
           className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8"
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
         >
-          <h1 id="popular-heading" className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl font-bold text-[#2C6252] mb-4 md:mb-0">
+          <h1 id="popular-heading" className="text-xl 3xl:text-4xl 2xl:text-4xl xl:text-3xl lg:text-2xl font-bold text-[#2C6252] mb-4 md:mb-0">
             Our Most Popular Item
           </h1>
           <div className="flex items-center text-[#FF4C15] text-sm font-medium" aria-hidden="true">
@@ -141,7 +141,7 @@ const Popular = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-14">
           <Motion.article
-            className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] 3xl:min-h-[48rem] 2xl:min-h-[50rem] xl:min-h-[50rem] lg:min-h-[50rem] w-full"
+            className="relative overflow-hidden flex flex-col justify-end aspect-[3/4] 3xl:min-h-[48rem] 2xl:min-h-[50rem] xl:min-h-[50rem] lg:min-h-[50rem] md:min-h-[40rem] w-full"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -153,7 +153,7 @@ const Popular = () => {
               className="absolute inset-0 w-full h-full object-cover z-0"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 z-10" aria-hidden="true"></div>
-            <div className="relative z-20 text-white bg-[#FF4C15] 3xl:p-10 2xl:p-8 xl:p-8 lg:p-8 3xl:bottom-36 2xl:bottom-44 xl:bottom-52 lg:bottom-52 mx-6">
+            <div className="relative z-20 text-white bg-[#FF4C15] 3xl:p-10 2xl:p-8 xl:p-8 lg:p-8 md:p-8 3xl:bottom-36 2xl:bottom-44 xl:bottom-52 lg:bottom-52 md:bottom-40 mx-6">
               <span className="inline-block text-white text-xl font-semibold px-3 py-1 mb-3 -ml-3">
                 Only online order
               </span>
