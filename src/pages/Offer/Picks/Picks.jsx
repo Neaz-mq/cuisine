@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 import { motion as Motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -29,12 +30,28 @@ const Picks = () => {
     "https://res.cloudinary.com/dxohwanal/image/upload/v1752128742/offer22_oaxxn4.webp",
   ];
 
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  // Responsive check
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(2); // sm devices → show 2
+      } else {
+        setVisibleCount(4); // bigger devices → show all
+      }
+    };
+    updateCount();
+    window.addEventListener("resize", updateCount);
+    return () => window.removeEventListener("resize", updateCount);
+  }, []);
+
   return (
     <Container>
       {/* Main Section */}
       <section
         aria-labelledby="picks-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-40 md:px-2 md:-ml-12 md:-mt-2 md:mb-40  sm:px-2 sm:-ml-[8rem] sm:-mt-[5rem] sm:mb-40 overflow-hidden sm:w-[15rem] "
+        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-40 md:px-2 md:-ml-12 md:-mt-2 md:mb-40  sm:px-2 sm:-ml-[8rem] sm:-mt-[5rem] sm:mb-40 overflow-hidden sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
       >
         <Motion.div
           initial="hidden"
@@ -78,7 +95,6 @@ const Picks = () => {
                   draggable={false}
                 />
               </div>
-              
             </Motion.article>
 
             {/* Right Cards Section */}
@@ -179,7 +195,7 @@ const Picks = () => {
               role="list"
               aria-label="Discounted product picks"
             >
-              {[...Array(4)].map((_, i) => {
+              {Array.from({ length: visibleCount }).map((_, i) => {
                 const discount = discounts[i];
                 const isGreen = discount === "30%" || discount === "36%";
                 const badgeColor = isGreen ? "#2B6050" : "#FF4C15";
