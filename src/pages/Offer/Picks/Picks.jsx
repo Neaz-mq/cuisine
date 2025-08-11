@@ -51,7 +51,7 @@ const Picks = () => {
       {/* Main Section */}
       <section
         aria-labelledby="picks-heading"
-        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-7 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-40 md:px-2 md:-ml-12 md:-mt-2 md:mb-40  sm:px-2 sm:-ml-[8rem] sm:-mt-[5rem] sm:mb-40 overflow-hidden sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
+        className="3xl:px-12 3xl:ml-7 3xl:mt-40 3xl:mb-52 2xl:px-0 2xl:ml-6 2xl:-mt-2 2xl:mb-44 xl:px-6 xl:ml-4 xl:-mt-2 xl:mb-36 lg:px-2 lg:-ml-5 lg:-mt-2 lg:mb-40 md:px-2 md:-ml-12 md:-mt-2 md:mb-40  sm:px-2 sm:-ml-[8rem] sm:-mt-[5rem] sm:mb-40 overflow-hidden sm:w-[14rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
       >
         <Motion.div
           initial="hidden"
@@ -60,10 +60,10 @@ const Picks = () => {
           variants={staggerContainer}
         >
           {/* Top Section Grid */}
-          <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 3xl:gap-12 2xl:gap-12 xl:gap-12 lg:gap-12 md:gap-4 gap-8 3xl:mb-24 2xl:mb-24 xl:mb-24 lg:mb-16 md:mb-16 sm:mb-16">
+          <div className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 3xl:gap-12 2xl:gap-12 xl:gap-10 lg:gap-12 md:gap-4 gap-8 3xl:mb-24 2xl:mb-24 xl:mb-24 lg:mb-16 md:mb-16 sm:mb-16 ">
             {/* Left Hero Card */}
             <Motion.article
-              className="bg-[#FFFAF8] p-6 3xl:p-16 2xl:p-16 xl:p-16 lg:p-10 md:p-10 sm:p-10 "
+              className="bg-[#FFFAF8] p-6 3xl:p-16 2xl:p-16 xl:p-8 lg:p-10 md:p-10 sm:p-10 xl:ml-3 3xl:ml-0 2xl:ml-0 lg:ml-0 md:ml-0 sm:ml-0  "
               variants={fadeUp}
               custom={1}
               aria-label="Chef's Weekly Picks promotion"
@@ -100,7 +100,7 @@ const Picks = () => {
             {/* Right Cards Section */}
             <div className="space-y-8" role="list" aria-label="Promotional cards">
               <Motion.article
-                className="bg-[#F8F8F8] p-6 md:p-8 flex items-center"
+                className="bg-[#F8F8F8] p-6 md:p-8 flex items-center xl:mr-4 3xl:mr-0 2xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0"
                 variants={fadeUp}
                 custom={2}
                 role="listitem"
@@ -125,7 +125,7 @@ const Picks = () => {
               </Motion.article>
 
               <Motion.article
-                className="bg-[#2C6252] p-6 md:p-8 text-white flex items-center "
+                className="bg-[#2C6252] p-6 md:p-8 text-white flex items-center xl:mr-4 3xl:mr-0 2xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0"
                 variants={fadeUp}
                 custom={3}
                 role="listitem"
@@ -153,7 +153,7 @@ const Picks = () => {
                     transition={{ duration: 0.6 }}
                     src="https://res.cloudinary.com/dxohwanal/image/upload/v1752127873/offer18_bdlnxr.webp"
                     alt="Delicious pizza"
-                    className="w-full object-cover relative top-12 left-10"
+                    className="w-full object-cover relative top-12 left-6"
                     draggable={false}
                   />
                 </div>
