@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { motion as Motion } from "framer-motion";
 import Container from "../../../components/Container";
 import { FaMugHot } from "react-icons/fa";
@@ -6,6 +6,7 @@ import { PiPizzaBold } from "react-icons/pi";
 import { GiCutDiamond, GiMushroom } from "react-icons/gi";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const foodData = [
   {
@@ -257,17 +258,31 @@ const fadeUp = {
 const Category = () => {
   const [activeTab, setActiveTab] = useState("Coffee");
   const { addToCart, cartItems } = useContext(CartContext);
+  const [showAll, setShowAll] = useState(false);
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallDevice(window.innerWidth <= 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Set initial value
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const filteredItems = foodData.filter((item) => item.category === activeTab);
 
   return (
     <Container>
       <section
-        className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-52 mt-6 overflow-hidden"
+        className="3xl:px-14 2xl:px-4 xl:px-14 lg:px-0 md:px-0 3xl:mb-40 2xl:mb-52 xl:mb-36 lg:mb-52 mt-6 overflow-hidden md:-ml-12 sm:-ml-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
         aria-labelledby="category-heading"
       >
         <Motion.h2
           id="category-heading"
-          className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl font-semibold text-[#1D4B3F] mb-10"
+          className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-xl font-semibold text-[#1D4B3F] mb-10"
           initial="hidden"
           animate="visible"
           variants={fadeUp}
@@ -281,10 +296,11 @@ const Category = () => {
               <Motion.button
                 key={tab.name}
                 onClick={() => setActiveTab(tab.name)}
-                className={`flex items-center gap-2 px-6 py-2 border font-medium text-sm transition-all ${activeTab === tab.name
+                className={`flex items-center gap-2 px-6 py-2 border font-medium text-sm transition-all ${
+                  activeTab === tab.name
                     ? "bg-[#FF4C15] text-white"
                     : "bg-gray-100 text-gray-500"
-                  }`}
+                }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={fadeUp}
@@ -301,7 +317,8 @@ const Category = () => {
           </div>
         </nav>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        {/* This div is for larger devices where all items are shown */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {filteredItems.slice(0, 3).map((item, i) => (
             <FoodCard
               key={item.id}
@@ -312,8 +329,7 @@ const Category = () => {
             />
           ))}
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-4 mt-12">
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 3xl:gap-6 2xl:gap-6 xl:gap-6 lg:gap-4 md:gap-4 mt-12">
           {filteredItems.slice(3, 7).map((item, i) => (
             <FoodCard
               key={item.id}
@@ -324,6 +340,50 @@ const Category = () => {
             />
           ))}
         </div>
+
+        {/* This div is for small devices where the single-column layout and show/hide functionality is applied */}
+        <div className="md:hidden grid grid-cols-1 gap-6 mb-6">
+          {isSmallDevice && !showAll
+            ? filteredItems.slice(0, 2).map((item, i) => (
+                <FoodCard
+                  key={item.id}
+                  item={item}
+                  addToCart={addToCart}
+                  cartItems={cartItems}
+                  index={i}
+                />
+              ))
+            : filteredItems.map((item, i) => (
+                <FoodCard
+                  key={item.id}
+                  item={item}
+                  addToCart={addToCart}
+                  cartItems={cartItems}
+                  index={i}
+                />
+              ))}
+        </div>
+        
+        {isSmallDevice && filteredItems.length > 2 && (
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-2 px-4 py-2 text-[#FF4C15] font-semibold text-sm transition-all"
+            >
+              {showAll ? (
+                <>
+                  <MdKeyboardArrowUp size={24} />
+                  <span>Show Less</span>
+                </>
+              ) : (
+                <>
+                  <MdKeyboardArrowDown size={24} />
+                  <span>Show More</span>
+                </>
+              )}
+            </button>
+          </div>
+        )}
       </section>
     </Container>
   );
@@ -343,7 +403,6 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
   };
 
   return (
-    
     <Motion.article
       className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6"
       variants={fadeUp}
