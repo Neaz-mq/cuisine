@@ -11,8 +11,8 @@ const Categories = () => {
     return (
         <div> 
             <Category></Category>
-            <Popular></Popular>
-            <Brew></Brew>
+            {/* <Popular></Popular>
+            <Brew></Brew> */}
         </div>
     );
 };
