@@ -12,7 +12,7 @@ const Categories = () => {
         <div> 
             <Category></Category>
             <Popular></Popular>
-            {/* <Brew></Brew> */}
+            <Brew></Brew>
         </div>
     );
 };

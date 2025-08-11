@@ -6,7 +6,7 @@ const Brew = () => {
   return (
     <Container>
       <section
-        className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] 3xl:-mt-28 2xl:-mt-10 xl:mt-24"
+        className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] 3xl:-mt-28 2xl:-mt-10 xl:mt-24 md:mt-36 md:-ml-24 sm:-ml-6 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
         aria-labelledby="brew-heading"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
@@ -21,7 +21,7 @@ const Brew = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="3xl:text-[3rem] 2xl:text-[2.5rem] xl:text-[2.4rem] lg:text-[2.4rem] sm:text-6xl font-bold"
+                className="3xl:text-[3rem] 2xl:text-[2.5rem] xl:text-[2.4rem] lg:text-[2.4rem] md:text-[2.4rem] sm:text-6xl font-bold"
               >
                 <span className="text-[#2C6252] block leading-snug tracking-wide">
                   Classic
@@ -35,7 +35,7 @@ const Brew = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-                className="text-[#D7D7D7] 3xl:mt-10 2xl:mt-10 xl:mt-10 lg:mt-4 text-sm leading-relaxed absolute left-72"
+                className="text-[#D7D7D7] 3xl:mt-10 2xl:mt-10 xl:mt-10 lg:mt-4 md:mt-5 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-[12px] leading-relaxed absolute 3xl:left-72 2xl:left-72 xl:left-72 lg:left-72 md:left-20"
               >
                 Enjoy unbeatable deals every week at Flavors & Feast! Whether
                 you're craving a hearty meal, a sweet treat, or a refreshing coffee — our weekly offers have something for everyone.
@@ -46,7 +46,7 @@ const Brew = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.6 }}
-                  className="3xl:mt-40 2xl:mt-40 xl:mt-40 lg:mt-52 px-6 py-2 bg-[#FF4C15] text-white font-semibold absolute left-72"
+                  className="3xl:mt-40 2xl:mt-40 xl:mt-40 lg:mt-52 md:mt-24 px-6 py-2 bg-[#FF4C15] text-white font-semibold absolute 3xl:left-72 2xl:left-72 xl:left-72 lg:left-72 md:left-64"
                 >
                   Claim Offer
                 </Motion.button>
@@ -59,7 +59,7 @@ const Brew = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative top-28"
+            className="relative 3xl:top-28 2xl:top-28 xl:top-28 lg:top-28 md:top-36 sm:top-28"
           >
             <img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1752122855/order6_cmhxns.webp"
