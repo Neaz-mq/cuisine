@@ -171,21 +171,21 @@ const Carts = () => {
 
   return (
     <Container>
-      <div className="bg-white min-h-screen px-4 py-8 md:px-10 3xl:px-[4.2rem] xl:px-14 lg:px-0 2xl:px-4 3xl:mb-36 2xl:mb-28 xl:mb-28 lg:mb-24 lg:-ml-2 3xl:-ml-0 2xl:-ml-0 xl:-ml-0">
+      <div className="bg-white min-h-screen px-4 py-8 md:px-6 3xl:px-[4.2rem] xl:px-14 lg:px-0 2xl:px-4 3xl:mb-36 2xl:mb-28 xl:mb-28 lg:mb-24 lg:-ml-2 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 md:-ml-20 sm:-ml-36 -mt-4">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-6">
             {/* Form */}
             <div className="space-y-4">
               {/* Billing Details */}
-              <h3 className="text-3xl font-semibold text-gray-800">Billing Details</h3>
+              <h3 className="3xl:text-3xl 2xl:text-3xl xl:text-3xl lg:text-3xl md:text-2xl sm:text-lg font-semibold text-gray-800">Billing Details</h3>
 
               <div className="grid grid-cols-2 gap-4">
                 <input
                   name="firstName"
                   type="text"
                   placeholder="First name"
-                  className="border px-4 py-2 rounded text-sm"
+                  className="border px-4 py-2 rounded 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                   value={formData.firstName}
                   onChange={handleChange}
                 />
@@ -193,7 +193,7 @@ const Carts = () => {
                   name="lastName"
                   type="text"
                   placeholder="Last name"
-                  className="border px-4 py-2 rounded text-sm"
+                  className="border px-4 py-2 rounded 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                   value={formData.lastName}
                   onChange={handleChange}
                 />
@@ -224,7 +224,7 @@ const Carts = () => {
                 name="address"
                 type="text"
                 placeholder="Address line 1 and 2 example"
-                className="w-full border px-4 py-2 text-sm"
+                className="w-full border px-4 py-2 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                 value={formData.address}
                 onChange={handleChange}
               />
@@ -234,7 +234,7 @@ const Carts = () => {
                 name="apartment"
                 type="text"
                 placeholder="Apartment suite etc (optional)"
-                className="w-full border px-4 py-2 text-sm"
+                className="w-full border px-4 py-2 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                 value={formData.apartment}
                 onChange={handleChange}
               />
@@ -244,7 +244,7 @@ const Carts = () => {
                   name="city"
                   type="text"
                   placeholder="City"
-                  className="border px-4 py-2 text-sm"
+                  className="border px-4 py-2 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px]"
                   value={formData.city}
                   onChange={handleChange}
                 />
@@ -252,15 +252,15 @@ const Carts = () => {
                   name="state"
                   type="text"
                   placeholder="State"
-                  className="border px-4 py-2 text-sm"
+                  className="border px-4 py-2 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px]"
                   value={formData.state}
                   onChange={handleChange}
                 />
                 <input
                   name="zip"
                   type="text"
-                  placeholder="Zip code"
-                  className="border px-4 py-2 text-sm"
+                  placeholder="Zip"
+                  className="border px-4 py-2 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px]"
                   value={formData.zip}
                   onChange={handleChange}
                 />
@@ -273,7 +273,7 @@ const Carts = () => {
                 type="email"
                 name="email"
                 placeholder="Email address"
-                className="w-full border border-gray-300 px-4 py-2 rounded text-sm"
+                className="w-full border border-gray-300 px-4 py-2 rounded 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -283,7 +283,7 @@ const Carts = () => {
                 name="phoneNumber"
                 type="text"
                 placeholder="Phone number"
-                className="w-full border px-4 py-2 text-sm"
+                className="w-full border px-4 py-2 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                 value={formData.phoneNumber}
                 onChange={handleChange}
               />
@@ -291,25 +291,25 @@ const Carts = () => {
 
               {/* Shipping Method Selection */}
               <div className="space-y-4">
-                <h4 className="text-2xl font-semibold text-gray-800 mb-2 pt-8">Available Shipping Method</h4>
+                <h4 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg font-semibold text-gray-800 mb-2 pt-8">Available Shipping Method</h4>
 
                 <div className="space-y-4">
                   {/* Uber Eats */}
                   <label
-                    className={`flex items-center justify-between border px-4 py-3 cursor-pointer ${selectedShipping === "uber-eats" ? "border-gray-500 bg-gray-50" : "border-gray-200"
+                    className={`flex items-center justify-between border 3xl:px-4 3xl:py-3 2xl:px-4 2xl:py-3 xl:px-4 xl:py-3 lg:px-4 lg:py-3 md:px-4 md:py-3 sm:px-2 sm:py-1 cursor-pointer ${selectedShipping === "uber-eats" ? "border-gray-500 bg-gray-50" : "border-gray-200"
                       }`}
                   >
                     <div className="flex items-center gap-4">
-                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751346396/63cecf750aa7463091b17adf_5310366-uber-eats-logo-png-and-vector-logo-download-uber-eats-png-3500_3500_preview_thtrrl.png" alt="Uber Eats" className="w-12 h-12" />
+                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751346396/63cecf750aa7463091b17adf_5310366-uber-eats-logo-png-and-vector-logo-download-uber-eats-png-3500_3500_preview_thtrrl.png" alt="Uber Eats" className="3xl:w-12 3xl:h-12 2xl:w-12 2xl:h-12 xl:w-12 xl:h-12 md:w-12 md:h-12 sm:w-8 sm:h-8" />
                       <div>
                         <div className="flex items-center gap-2">
-                          <p className="font-semibold text-gray-800">Uber eats</p>
-                          <span className="bg-green-100 text-green-700 text-[10px] px-2 py-0.5 rounded-full">Suggested</span>
+                          <p className="font-semibold text-gray-800 sm:text-[11px] 3xl:text-[16px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[15px]">Uber eats</p>
+                          <span className="bg-green-100 text-green-700 text-[8px] px-2 py-0.5 rounded-full  ">Suggested</span>
                         </div>
-                        <p className="text-sm text-gray-500">Delivery time: 20m/35m</p>
+                        <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-500">Delivery time: 20m/35m</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-green-800 font-semibold text-sm">
+                    <div className="flex items-center gap-4 sm:flex-col 3xl:flex-row 2xl:flex-row xl:flex-row lg:flex-row md:flex-row text-green-800 font-semibold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs ">
                       Free
                       <input
                         type="radio"
@@ -328,13 +328,13 @@ const Carts = () => {
                       }`}
                   >
                     <div className="flex items-center gap-4">
-                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751346468/Group_973_w3ofel.png" alt="Food Panda" className="w-12 h-12" />
+                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751346468/Group_973_w3ofel.png" alt="Food Panda" className="3xl:w-12 3xl:h-12 2xl:w-12 2xl:h-12 xl:w-12 xl:h-12 md:w-12 md:h-12 sm:w-8 sm:h-8" />
                       <div>
-                        <p className="font-semibold text-gray-800">Food panda</p>
-                        <p className="text-sm text-gray-500">Delivery time: 1h/1.35h</p>
+                        <p className="font-semibold text-gray-800 sm:text-[11px] 3xl:text-[16px] 2xl:text-[16px] xl:text-[16px] lg:text-[16px] md:text-[15px]">Food panda</p>
+                        <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs  text-gray-500">Delivery time: 1h/1.35h</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-green-800 font-semibold text-sm">
+                    <div className="flex items-center gap-4 sm:flex-col 3xl:flex-row 2xl:flex-row xl:flex-row lg:flex-row md:flex-row text-green-800 font-semibold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs">
                       Free
                       <input
                         type="radio"
@@ -350,7 +350,7 @@ const Carts = () => {
               </div>
 
               <div className="space-y-4">
-                <h4 className="text-2xl font-semibold text-gray-800 mb-2 pt-8">Payment Method</h4>
+                <h4 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg font-semibold text-gray-800 mb-2 pt-8">Payment Method</h4>
                 <div className="space-y-3 bg-gray-50 p-4 rounded-md">
                   {/* Online Payment */}
                   <label className="flex items-start gap-3 cursor-pointer">
@@ -364,7 +364,7 @@ const Carts = () => {
                     />
                     <div>
                       <p className="font-semibold text-gray-800">Online Payment</p>
-                      <p className="text-sm text-gray-600">Pay securely using a card or mobile wallet.</p>
+                      <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-600">Pay securely using a card or mobile wallet.</p>
                     </div>
                   </label>
 
@@ -380,7 +380,7 @@ const Carts = () => {
                     />
                     <div>
                       <p className="font-semibold text-gray-800">Cash on Delivery</p>
-                      <p className="text-sm text-gray-600">Pay with cash upon delivery.</p>
+                      <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs  text-gray-600">Pay with cash upon delivery.</p>
                     </div>
                   </label>
                 </div>
@@ -389,13 +389,13 @@ const Carts = () => {
               {/* Online Payment Form Section - Conditionally Rendered */}
               {paymentMethod === "online" && (
                 <div className="mt-8 p-6 border border-gray-200 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-semibold text-gray-800">Credit card / debit card</h3>
-                    <div className="flex items-center gap-8">
-                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348676/pngegg_84_rh7u9t.png" alt="Mastercard" className="h-10" />
-                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348700/pngegg_85_i6czbr.png" alt="Visa" className="h-10" />
-                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348721/pngegg_86_icrxs1.png" alt="American Express" className="h-10" />
-                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348785/pngegg_92_lbmpaf.png" alt="Ria Money Transfer" className="h-10" />
+                  <div className="flex sm:flex-col 3xl:flex-row 2xl:flex-row xl:flex-row lg:flex-row md:flex-row items-center justify-between">
+                    <h3 className="3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-xl sm:text-lg font-semibold text-gray-800">Credit card / debit card</h3>
+                    <div className="flex items-center 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-8 md:gap-8 sm:gap-4 sm:mt-3 sm:-ml-1 3xl:mt-0 3xl:-ml-0 2xl:mt-0 2xl:-ml-0 xl:mt-0 xl:-ml-0 lg:mt-0 lg:-ml-0 md:mt-0 md:-ml-0 ">
+                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348676/pngegg_84_rh7u9t.png" alt="Mastercard" className="3xl:h-10 2xl:h-10 xl:h-10 lg:h-10 md:h-10 sm:h-6" />
+                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348700/pngegg_85_i6czbr.png" alt="Visa" className="3xl:h-10 2xl:h-10 xl:h-10 lg:h-10 md:h-10 sm:h-6" />
+                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348721/pngegg_86_icrxs1.png" alt="American Express" className="3xl:h-10 2xl:h-10 xl:h-10 lg:h-10 md:h-10 sm:h-6" />
+                      <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1751348785/pngegg_92_lbmpaf.png" alt="Ria Money Transfer" className="3xl:h-10 2xl:h-10 xl:h-10 lg:h-10 md:h-10 sm:h-6" />
                     </div>
                   </div>
 
@@ -407,7 +407,7 @@ const Carts = () => {
                         id="cardholderName"
                         name="cardholderName"
                         placeholder="Lynette Kunze"
-                        className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
+                        className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                         value={cardDetails.cardholderName}
                         onChange={handleCardDetailsChange}
                       />
@@ -416,13 +416,13 @@ const Carts = () => {
 
                     <div className="grid grid-cols-3 gap-4">
                       <div className="col-span-2">
-                        <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700">Card number</label>
+                        <label htmlFor="cardNumber" className="block 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs font-medium text-gray-700">Card number</label>
                         <input
                           type="text"
                           id="cardNumber"
                           name="cardNumber"
                           placeholder="5316 8e71 7571 5545"
-                          className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
+                          className="mt-1 block w-full border border-gray-300 3xl:px-4 3xl:py-2 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-4 lg:py-2 md:px-4 md:py-2 sm:px-2 sm:py-2 rounded-md 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[9px]"
                           value={cardDetails.cardNumber}
                           onChange={handleCardDetailsChange}
                           maxLength="19" // Max length for 16 digits + 3 spaces
@@ -430,13 +430,13 @@ const Carts = () => {
                         {paymentErrors.cardNumber && <p className="text-red-500 text-xs mt-1">{paymentErrors.cardNumber}</p>}
                       </div>
                       <div>
-                        <label htmlFor="expiryDate" className="block text-sm font-medium text-gray-700">Date</label>
+                        <label htmlFor="expiryDate" className="block 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs font-medium text-gray-700">Date</label>
                         <input
                           type="text"
                           id="expiryDate"
                           name="expiryDate"
                           placeholder="24/28"
-                          className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
+                          className="mt-1 block w-full border border-gray-300 3xl:px-4 3xl:py-2 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-4 lg:py-2 md:px-4 md:py-2 sm:px-2 sm:py-2 rounded-md 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[9px]"
                           value={cardDetails.expiryDate}
                           onChange={handleCardDetailsChange}
                           maxLength="5" // MM/YY
@@ -444,13 +444,13 @@ const Carts = () => {
                         {paymentErrors.expiryDate && <p className="text-red-500 text-xs mt-1">{paymentErrors.expiryDate}</p>}
                       </div>
                       <div>
-                        <label htmlFor="ccv" className="block text-sm font-medium text-gray-700">CCV <span className="text-gray-400 text-sm ml-1">?</span></label>
+                        <label htmlFor="ccv" className="block 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs font-medium text-gray-700">CCV <span className="text-gray-400 text-sm ml-1">?</span></label>
                         <input
                           type="text"
                           id="ccv"
                           name="ccv"
                           placeholder="2659"
-                          className="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md text-sm"
+                          className="mt-1 block w-full border border-gray-300 3xl:px-4 3xl:py-2 2xl:px-4 2xl:py-2 xl:px-4 xl:py-2 lg:px-4 lg:py-2 md:px-4 md:py-2 sm:px-2 sm:py-2 rounded-md 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[9px]"
                           value={cardDetails.ccv}
                           onChange={handleCardDetailsChange}
                           maxLength="4"
@@ -459,7 +459,7 @@ const Carts = () => {
                       </div>
                     </div>
 
-                    <p className="text-sm text-gray-500 flex items-center gap-2">
+                    <p className=" 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px] text-gray-500 flex items-center gap-2">
                       <span className="text-blue-500 text-lg mr-1">&#9432;</span>
                       Credit card payments may take up to 24th to be processed
                       <span className="text-gray-400 text-sm ml-1">?</span>
@@ -472,7 +472,7 @@ const Carts = () => {
                         onChange={(e) => setIsAgreedToTerms(e.target.checked)}
                         className="form-checkbox h-4 w-4 text-green-600 rounded"
                       />
-                      <span className="text-gray-700 text-sm">If you agree this condition please mark</span>
+                      <span className="text-gray-700 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px]">If you agree this condition please mark</span>
                     </label>
                     {paymentErrors.isAgreedToTerms && <p className="text-red-500 text-xs mt-1">{paymentErrors.isAgreedToTerms}</p>}
                   </div>
@@ -481,7 +481,7 @@ const Carts = () => {
 
               <button
                 onClick={handleConfirmOrder}
-                className="bg-[#2C6252] text-white w-full py-3 font-semibold text-sm mt-4"
+                className="bg-[#2C6252] text-white w-full py-3 font-semibold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs mt-4"
               >
                 Confirm your order
               </button>
@@ -515,7 +515,7 @@ const Carts = () => {
                         <span className="text-sm">{item.quantity}</span>
                         <button
                           onClick={() => increaseQty(item.title)}
-                          className="bg-gray-200 px-2 py-1 text-sm"
+                          className="bg-gray-200 px-2 py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                         >
                           +
                         </button>
@@ -526,7 +526,7 @@ const Carts = () => {
                     </div>
                     <button
                       onClick={() => removeItem(item.title)}
-                      className="ml-2 text-red-600 hover:text-red-800 font-bold text-sm"
+                      className="ml-2 text-red-600 hover:text-red-800 font-bold 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs"
                       aria-label={`Remove ${item.title} from cart`}
                     >
                       ×
@@ -542,20 +542,20 @@ const Carts = () => {
                 <input
                   type="text"
                   placeholder="Gift card or discount code"
-                  className="flex-1 border border-gray-300 3xl:px-4 2xl:px-4 xl:px-2 lg:px-2 py-2 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] focus:outline-none focus:ring-1 focus:ring-gray-400"
+                  className="flex-1 border border-gray-300 3xl:px-4 2xl:px-4 xl:px-2 lg:px-2 py-2 md:px-2 sm:px-2 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] md:text-[11px] sm:text-[8px] focus:outline-none focus:ring-1 focus:ring-gray-400"
                   value={discountCode}
                   onChange={handleDiscountCodeChange}
                 />
                 <button
                   onClick={applyDiscount}
-                  className="bg-gray-400 text-white 3xl:px-6 2xl:px-6 xl:px-2 lg:px-2 py-2 font-semibold 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] hover:bg-gray-500 transition-colors"
+                  className="bg-gray-400 text-white 3xl:px-6 2xl:px-6 xl:px-2 lg:px-2 md:px-2 sm:px-2  py-2 font-semibold 3xl:text-sm 2xl:text-sm xl:text-[12px] lg:text-[11px] md:text-[11px] sm:text-[8px] hover:bg-gray-500 transition-colors"
                 >
                   Apply
                 </button>
               </div>
             </div>
             <div className="space-y-10 bg-white p-6 ">
-              <div className="text-sm text-gray-700 space-y-5">
+              <div className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[11px] text-gray-700 space-y-5">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
                   <span>${subtotal.toFixed(2)}</span>
@@ -572,7 +572,7 @@ const Carts = () => {
 
               {/* Dotted line - Added here */}
               <div className="border-t border-dashed border-gray-300 my-4"></div>
-              <div className="flex justify-between text-md font-bold pt-2">
+              <div className="flex justify-between 3xl:text-md 2xl:text-md xl:text-md lg:text-md md:text-md sm:text-sm      font-bold pt-2">
                 <span>Total</span>
                 <span className="text-green-700">USD ${total.toFixed(2)}</span>
               </div>
