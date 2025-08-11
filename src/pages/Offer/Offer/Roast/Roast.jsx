@@ -14,7 +14,7 @@ const fadeUp = {
 const Roast = () => {
   return (
     <Container>
-      <main className="3xl:px-12 3xl:ml-7 3xl:mb-24 2xl:px-1 2xl:ml-7 2xl:mb-24 xl:px-6 xl:ml-7 xl:mb-24 lg:px-1 lg:-ml-3 lg:mb-24 md:px-1 md:-ml-10 md:mb-24 sm:px-4 sm:-ml-[8.5rem] sm:mb-24 overflow-hidden">
+      <main className="3xl:px-12 3xl:ml-7 3xl:mb-24 2xl:px-1 2xl:ml-7 2xl:mb-24 xl:px-6 xl:ml-7 xl:mb-24 lg:px-1 lg:-ml-3 lg:mb-24 md:px-1 md:-ml-10 md:mb-24 sm:px-4 sm:-ml-[9.2rem] sm:mb-24 overflow-hidden">
         {/* Header Section */}
         <Motion.section
           aria-labelledby="roast-header"
@@ -30,7 +30,7 @@ const Roast = () => {
             },
           }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 3xl:px-10 2xl:px-10 xl:px-10 lg:px-10 md:px-0 flex flex-col md:flex-row items-center md:items-start justify-between sm:-mt-8 md:-mt-8 3xl:-mt-0 2xl:-mt-0 xl:-mt-0 lg:-mt-0">
+          <div className="max-w-7xl mx-auto px-4 sm:px-0 3xl:px-10 2xl:px-10 xl:px-10 lg:px-10 md:px-0 flex flex-col md:flex-row items-center md:items-start justify-between sm:-mt-8 md:-mt-8 3xl:-mt-0 2xl:-mt-0 xl:-mt-0 lg:-mt-0">
             {/* Left Content */}
             <Motion.article
               className="md:w-1/2 z-10 text-center md:text-left mb-8 md:mb-0"
@@ -62,7 +62,7 @@ const Roast = () => {
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752128891/offer23_sy9zro.webp"
                 alt="Classic Roast Brew coffee cup"
-                className="translate-x-16 translate-y-10 3xl:translate-x-20 2xl:translate-x-20 xl:translate-x-20 lg:translate-x-20 md:translate-x-20 3xl:-mt-16 2xl:-mt-8 xl:mt-4 lg:mt-16 md:mt-16 sm:mt-4"
+                className="translate-x-10 translate-y-10 3xl:translate-x-20 2xl:translate-x-20 xl:translate-x-20 lg:translate-x-20 md:translate-x-20 3xl:-mt-16 2xl:-mt-8 xl:mt-4 lg:mt-16 md:mt-16 sm:mt-4"
                 draggable={false}
               />
             </Motion.div>
