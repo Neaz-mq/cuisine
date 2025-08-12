@@ -19,11 +19,16 @@ export default {
       },
     },
   },
-  plugins: [],
-  // 🚀 Enable just-in-time mode and minify unused styles
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.vertical-rl': { writingMode: 'vertical-rl' },
+        '.vertical-lr': { writingMode: 'vertical-lr' },
+      });
+    },
+  ],
   future: {
     hoverOnlyWhenSupported: true,
   },
-  // 🧹 Helps remove unused CSS for production
-  safelist: [], // add utility classes here if needed for dynamic usage
+  safelist: [],
 };
