@@ -104,7 +104,7 @@ const Explore = () => {
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752054404/menu1_nkbnfg.webp"
                 alt="Delicious full menu dishes display banner"
                 className="w-full max-w-[380px] sm:max-w-[500px] md:max-w-[400px] 3xl:max-w-[800px] 2xl:max-w-[800px] xl:max-w-[800px] lg:max-w-[800px] object-contain mt-4 sm:mt-5 sm:ml-10"
-                loading="lazy"
+               
               />
               <figcaption className="sr-only">
                 Image showcasing a variety of signature dishes available on our menu.
