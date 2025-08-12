@@ -61,7 +61,7 @@ const Testimonials = () => {
           </Motion.div>
 
           {/* Swipeable Image Section */}
-          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-[13rem] 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-1 3xl:right-16 2xl:right-0 xl:right-0  lg:-ml-1 md:ml-6  sm:-ml-[7.8rem]">
+          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-[13rem] 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-1 3xl:right-16 2xl:right-0 xl:right-0  lg:-ml-1 md:ml-6  sm:-ml-[2.8rem] sm:right-20">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
