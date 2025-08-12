@@ -61,7 +61,7 @@ const Testimonials = () => {
           </Motion.div>
 
           {/* Swipeable Image Section */}
-          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-1 3xl:right-16 2xl:right-0 xl:right-0  lg:-ml-1 md:ml-6  sm:-ml-[7.8rem] sm:w-44">
+          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-[13rem] 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-1 3xl:right-16 2xl:right-0 xl:right-0  lg:-ml-1 md:ml-6  sm:-ml-[7.8rem]">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -85,7 +85,7 @@ const Testimonials = () => {
             </AnimatePresence>
 
             {/* Slide Indicators */}
-            <div className="absolute bottom-8 left-12 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
               {images.map((_, index) => (
                 <Motion.button
                   key={index}
@@ -124,7 +124,7 @@ const Testimonials = () => {
           ].map((card, i) => (
             <Motion.div
               key={i}
-              className="border border-orange-200 3xl:p-12 2xl:p-12 xl:p-12 lg:p-12 md:p-6 sm:p-6 bg-white sm:w-44 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
+              className="border border-orange-200 3xl:p-12 2xl:p-12 xl:p-12 lg:p-12 md:p-6 sm:p-6 bg-white sm:w-full 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
