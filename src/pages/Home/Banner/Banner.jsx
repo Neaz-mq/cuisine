@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
@@ -13,10 +14,10 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 md:-ml-16 sm:-ml-36  3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 ">
+    <div className="flex items-center justify-center overflow-hidden z-20 3xl:-mt-10 md:-ml-16 sm:-ml-36 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0">
       <Container>
-        <div className="relative bg-white">
-          <div className="flex items-start justify-between sm:w-56 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full ">
+        <section className="relative bg-white" aria-label="Promotional Banner">
+          <div className="flex items-start justify-between sm:w-56 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full">
             <Motion.div
               initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
@@ -27,12 +28,17 @@ const Banner = () => {
                 className="absolute 3xl:left-[-20px] 3xl:right-10 3xl:-top-10 2xl:left-[-20px] 2xl:right-10 2xl:-top-10 xl:left-[-20px] xl:right-10 xl:-top-10 lg:left-[-36px] lg:right-16 lg:-top-16 md:left-[-36px] md:right-16 md:-top-16 opacity-60 blur-sm md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block"
                 src="/Ellipse 9.svg"
                 alt="Background Ellipse"
+                aria-hidden="true"
+                loading="lazy"
               />
 
               <div className="3xl:ml-4 2xl:ml-4 xl:ml-4 lg:ml-4 md:ml-16 sm:ml-16">
-                <div className='md:block sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:-ml-2 sm:-ml-2 sm:w-36 md:w-full'>
-                  <Link to="/offer" aria-label="Go to offers">
-                    <button className="bg-[#2C6252] text-white md:px-3 sm:px-2 md:py-1 sm:py-0 rounded-full flex items-center md:space-x-4 sm:space-x-1 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px] md:text-[12px] sm:text-[10px] ">
+                <div className="md:block sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:-ml-2 sm:-ml-2 sm:w-36 md:w-full">
+                  <Link to="/offer" aria-label="Go to offers page">
+                    <button
+                      className="bg-[#2C6252] text-white md:px-3 sm:px-2 md:py-1 sm:py-0 rounded-full flex items-center md:space-x-4 sm:space-x-1 border-2 border-orange-500 transition-transform duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px] md:text-[12px] sm:text-[10px]"
+                      type="button"
+                    >
                       <span>Up to 50% Off</span>
                       <div className="bg-white md:p-2 sm:p-1 rounded-full flex items-center justify-center">
                         <img src="/arrow.svg" alt="Arrow Right" className="h-3 w-3" />
@@ -40,6 +46,7 @@ const Banner = () => {
                     </button>
                   </Link>
                 </div>
+
                 <Motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -47,18 +54,19 @@ const Banner = () => {
                   className="3xl:text-6xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl font-bold text-[#2C6252] leading-tight flex items-center 3xl:-mt-3 2xl:-mt-3 xl:-mt-3 lg:-mt-3 md:mt-3 sm:mt-3 sm:w-36 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
                 >
                   Savor the
-                  <div className='md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block'>
+                  <div className="md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block">
                     <button
-                      className="bg-white text-black py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 md:px-2 sm:px-2 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black transition-all duration-300 hover:scale-105 "
+                      className="bg-white text-black py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 md:px-2 sm:px-2 rounded-full flex items-center space-x-2 ml-8 text-sm border border-black transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#FF4C15]"
                       onClick={() => setIsModalOpen(true)}
                       aria-label="Watch Live Kitchen"
+                      type="button"
                     >
                       <span className="flex items-center 3xl:text-[20px] 2xl:text-[17px] xl:text-[15px] lg:text-[14px] md:text-[14px]">
                         <span className="text-red-500 ml-2 mr-1">Live</span>
                         <span className="text-[#2C6252]">kitchen</span>
                       </span>
-                      <div className="bg-[#FF4C15] rounded-full p-2 ml-2 3xl:w-8 2xl:w-8 xl:w-8 lg:w-6 md:w-6 sm:w-6 3xl:h-8 2xl:h-8 xl:h-8 lg:h-6 md:h-6 sm:h-6  flex items-center justify-center">
-                        <img src="/Polygon 2.svg" alt="Play" className="h-2 w-5" />
+                      <div className="bg-[#FF4C15] rounded-full p-2 ml-2 3xl:w-8 2xl:w-8 xl:w-8 lg:w-6 md:w-6 sm:w-6 3xl:h-8 2xl:h-8 xl:h-8 lg:h-6 md:h-6 sm:h-6 flex items-center justify-center">
+                        <img src="/Polygon 2.svg" alt="Play icon" className="h-2 w-5" />
                       </div>
                     </button>
                   </div>
@@ -83,9 +91,12 @@ const Banner = () => {
                 <span className="text-[#FF4C15] 3xl:text-6xl 2xl:text-4xl xl:text-2xl lg:text-2xl md:text-2xl font-bold md:ml-12 sm:ml-12 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0">
                   Every Bite!
                 </span>
-                <div className='md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block'>
-                  <Link to="/offer" aria-label="Go to offers">
-                    <button className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 md:px-2 sm:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-all duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px] md:text-[12px] sm:text-[12px]">
+                <div className="md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block">
+                  <Link to="/offer" aria-label="Go to offers page">
+                    <button
+                      className="bg-[#2C6252] text-white 3xl:py-2 2xl:py-2 xl:py-2 lg:py-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-2 md:px-2 sm:px-2 rounded-full flex items-center space-x-2 border-2 border-orange-500 transition-transform duration-300 hover:scale-105 3xl:text-[20px] 2xl:text-[16px] xl:text-[13px] lg:text-[12px] md:text-[12px] sm:text-[12px]"
+                      type="button"
+                    >
                       <span>Up to 50% Off</span>
                       <div className="bg-white p-2 rounded-full flex items-center justify-center">
                         <img src="/arrow.svg" alt="Arrow Right" className="h-3 w-3" />
@@ -108,17 +119,20 @@ const Banner = () => {
                   }}
                 >
                   <span className="inline-flex">
-                    
-                      <span className="text-[#FF4C15] whitespace-nowrap md:ml-3 sm:ml-3 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:block sm:hidden 3xl:block 2xl:block xl:block lg:block ">
+                    <span className="text-[#FF4C15] whitespace-nowrap md:ml-3 sm:ml-3 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:block sm:hidden 3xl:block 2xl:block xl:block lg:block">
                       Experience the perfect blend of taste and joy—
                     </span>
-                     <span className="text-[#FF4C15] whitespace-nowrap md:ml-3 sm:ml-3 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:hidden sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden">
+                    <span className="text-[#FF4C15] whitespace-nowrap md:ml-3 sm:ml-3 3xl:ml-0 2xl:ml-0 xl:ml-0 lg:ml-0 md:hidden sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden">
                       Experience the perfect blend of taste and joy
                     </span>
-                    <span className="text-[#AAAAAA] ml-2 whitespace-nowrap md:block sm:hidden 3xl:block 2xl:block xl:block lg:block">every bite is a</span>
-                    <span className="text-[#AAAAAA] ml-2 whitespace-nowrap md:block sm:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden">every bite is a</span>
+                    <span className="text-[#AAAAAA] ml-2 whitespace-nowrap md:block sm:hidden 3xl:block 2xl:block xl:block lg:block">
+                      every bite is a
+                    </span>
+                    <span className="text-[#AAAAAA] ml-2 whitespace-nowrap md:block sm:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden">
+                      every bite is a
+                    </span>
                   </span>
-                  
+
                   <span className="text-[#AAAAAA] md:hidden sm:hidden 3xl:block 2xl:block xl:block lg:block mt-2">
                     moment of delight, crafted to satisfy your cravings!
                   </span>
@@ -127,7 +141,6 @@ const Banner = () => {
                   </span>
                 </p>
               </Motion.div>
-
 
               <div className="flex items-center 3xl:space-x-20 2xl:space-x-20 xl:space-x-20 lg:space-x-10 md:space-x-10 sm:space-x-6 3xl:-mt-20 2xl:-mt-20 xl:-mt-20 lg:-mt-20 md:-mt-28 sm:-mt-14 3xl:ml-5 2xl:ml-5 xl:ml-5 lg:ml-5 md:ml-14 sm:ml-14 sm:w-60 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full">
                 {[
@@ -155,6 +168,7 @@ const Banner = () => {
                       src={item.src}
                       alt={`Dish ${i + 1}`}
                       className={`3xl:w-auto 2xl:w-auto xl:w-auto lg:w-40 md:w-40 ${item.extraClass || ''}`}
+                      loading="lazy"
                     />
                     <div className={`absolute right-[-20px] ${item.priceTopClass}`}>
                       <img src="/flowershape.svg" alt="Price Tag" className="w-16" />
@@ -165,7 +179,6 @@ const Banner = () => {
                   </Motion.div>
                 ))}
               </div>
-
             </Motion.div>
 
             <Motion.div
@@ -177,20 +190,41 @@ const Banner = () => {
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
                 alt="Delicious Dish"
-                className="3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[32rem] md:w-[32rem]  3xl:-ml-24 2xl:-ml-10 xl:-ml-16 lg:-ml-0 md:ml-32 sm:ml-24 3xl:h-[50rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem] md:h-[34rem] object-cover  sm:w-full sm:h-[13rem]"
+                className="3xl:w-full 2xl:w-full xl:w-[44rem] lg:w-[32rem] md:w-[32rem] 3xl:-ml-24 2xl:-ml-10 xl:-ml-16 lg:-ml-0 md:ml-32 sm:ml-24 3xl:h-[50rem] 2xl:h-[44rem] xl:h-[38rem] lg:h-[30rem] md:h-[34rem] object-cover sm:w-full sm:h-[13rem]"
+                loading="lazy"
               />
             </Motion.div>
           </div>
 
           {isModalOpen && (
-            <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-              <div className="bg-white p-4 rounded-lg relative" data-aos="zoom-in" data-aos-duration="600">
+            <div
+              className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="liveKitchenModalTitle"
+              aria-describedby="liveKitchenModalDesc"
+            >
+              <div
+                className="bg-white p-4 rounded-lg relative max-w-[90vw] max-h-[80vh] overflow-auto"
+                data-aos="zoom-in"
+                data-aos-duration="600"
+              >
                 <button
-                  className="absolute top-2 right-0 text-white rounded-full p-2 bg-[#FF4C15] transition duration-300"
+                  className="absolute top-2 right-2 text-white rounded-full p-2 bg-[#FF4C15] transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-[#FF4C15]"
                   onClick={() => setIsModalOpen(false)}
                   aria-label="Close modal"
+                  type="button"
                 >
-                  X
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
                 <iframe
                   width="560"
@@ -200,19 +234,16 @@ const Banner = () => {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
-                ></iframe>
+                />
               </div>
             </div>
           )}
-        </div>
-        {/* <img
-                src="https://res.cloudinary.com/dxohwanal/image/upload/v1752045017/banner1_p7xkxk.webp"
-                alt="Delicious Dish"
-                className=" sm:block md:hidden 3xl:hidden 2xl:hidden xl:hidden lg:hidden relative bottom-[19rem] left-24 z-0 w-44"
-              /> */}
+        </section>
       </Container>
     </div>
   );
 };
+
+Banner.propTypes = {};
 
 export default Banner;
