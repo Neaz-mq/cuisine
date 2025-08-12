@@ -347,247 +347,258 @@ const Items = () => {
 
   return (
     <Container>
-      <section
-        aria-label="Food Categories Navigation and Menu Items"
-        className='3xl:mt-32 2xl:mt-28 xl:mt-20 lg:mt-6 md:mt-6 sm:mt-4 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-12 md:mr-4 sm:-ml-[7rem] sm:mr-0 overflow-hidden'
+    <section
+      aria-label="Food Categories Navigation and Menu Items"
+      className="3xl:mt-32 2xl:mt-28 xl:mt-20 lg:mt-6 md:mt-6 sm:mt-4 3xl:ml-[4rem] 3xl:mr-12 2xl:ml-4 2xl:mr-10 xl:ml-14 xl:mr-12 lg:-ml-3 lg:mr-16 md:-ml-12 md:mr-4 sm:-ml-[7rem] sm:mr-0 overflow-hidden"
+    >
+      {/* Category Navigation */}
+      <nav
+        aria-label="Food categories"
+        className="bg-[#2C6252] py-8 flex justify-center px-4 relative"
       >
-        {/* Category Navigation */}
-        <nav
-          aria-label="Food categories"
-          className="bg-[#2C6252] py-8 flex justify-center px-4 relative"
-        >
-          {/* Categories for large and extra-large screens (desktop) */}
-          <div className="hidden lg:flex 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16 ">
-            {categoryItems.map((item) => (
-              <Motion.button
-                key={item.label}
-                onClick={() => setSelected(item.label)}
-                className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none"
-                aria-current={selected === item.label ? 'true' : 'false'}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                type="button"
+        {/* Desktop categories */}
+        <div className="hidden lg:flex 3xl:space-x-24 2xl:space-x-20 xl:space-x-20 lg:space-x-16">
+          {categoryItems.map(item => (
+            <Motion.button
+              key={item.label}
+              onClick={() => setSelected(item.label)}
+              className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none"
+              aria-current={selected === item.label ? 'true' : 'false'}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              type="button"
+            >
+              <Motion.img
+                src={item.itemImage}
+                alt={`${item.label} category icon`}
+                className="3xl:w-14 3xl:h-14 2xl:w-14 2xl:h-14 xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 sm:w-6 sm:h-6"
+                initial={{ rotate: 0 }}
+                whileHover={{ rotate: 10 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+              />
+              <span
+                className={`mt-4 text-xs font-semibold ${
+                  selected === item.label ? 'text-white' : 'text-[#138261]'
+                }`}
               >
-                <Motion.img
-                  src={item.itemImage}
-                  alt={`${item.label} category icon`}
-                  className="3xl:w-14 3xl:h-14 2xl:w-14 2xl:h-14 xl:w-14 xl:h-14 lg:w-12 lg:h-12 md:w-10 md:h-10 sm:w-6 sm:h-6"
-                  initial={{ rotate: 0 }}
-                  whileHover={{ rotate: 10 }}
-                  transition={{ type: 'spring', stiffness: 200 }}
-                />
-                <span className={`mt-4 text-xs font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'}`}>
-                  {item.label}
-                </span>
-                {selected === item.label && (
-                  <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true"></div>
-                )}
-              </Motion.button>
-            ))}
-          </div>
+                {item.label}
+              </span>
+              {selected === item.label && (
+                <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true" />
+              )}
+            </Motion.button>
+          ))}
+        </div>
 
-          {/* Categories for medium and small screens with navigation */}
-          <div className="flex lg:hidden sm:w-44 md:w-full justify-between items-center">
-            {visibleCategories.map((item) => (
-              <Motion.button
-                key={item.label}
-                onClick={() => setSelected(item.label)}
-                className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none flex-1"
-                aria-current={selected === item.label ? 'true' : 'false'}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-                type="button"
+        {/* Mobile/Tablet categories with navigation */}
+        <div className="flex lg:hidden sm:w-44 md:w-full justify-between items-center relative">
+          {visibleCategories.map(item => (
+            <Motion.button
+              key={item.label}
+              onClick={() => setSelected(item.label)}
+              className="flex flex-col items-center cursor-pointer relative bg-transparent border-none outline-none flex-1"
+              aria-current={selected === item.label ? 'true' : 'false'}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              type="button"
+            >
+              <Motion.img
+                src={item.itemImage}
+                alt={`${item.label} category icon`}
+                className="md:w-10 md:h-10 sm:w-6 sm:h-6"
+                initial={{ rotate: 0 }}
+                whileHover={{ rotate: 10 }}
+                transition={{ type: 'spring', stiffness: 200 }}
+              />
+              <span
+                className={`mt-4 sm:text-[8px] md:text-[10px] font-semibold ${
+                  selected === item.label ? 'text-white' : 'text-[#138261]'
+                }`}
               >
+                {item.label}
+              </span>
+              {selected === item.label && (
+                <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true" />
+              )}
+            </Motion.button>
+          ))}
+          {totalCategories > categoriesPerView && (
+            <button
+              onClick={handleNextCategories}
+              className="absolute sm:-right-9 md:right-2 bg-transparent border-none outline-none cursor-pointer p-2 rounded-full md:top-3 sm:top-0 z-10"
+              aria-label="Next categories"
+              type="button"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          )}
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10">
+        {/* Today Special (mobile/tablet) */}
+        <aside
+          aria-labelledby="today-special-title-mobile"
+          className="lg:hidden bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center md:mt-0 sm:-mt-16 col-span-full"
+        >
+          <Motion.h3
+            id="today-special-title-mobile"
+            className="md:text-5xl sm:text-2xl font-bold sm:leading-snug md:leading-normal mt-10"
+            dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeInOut' }}
+            viewport={{ once: true }}
+          />
+          <Motion.div
+            className="relative w-full"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <img
+              src={todaySpecial.mainImage}
+              alt={`${selected} today special`}
+              className="mt-8 w-full h-auto object-contain md:w-3/4 mx-auto"
+            />
+          </Motion.div>
+        </aside>
+
+        {/* Menu Items */}
+        <section
+          aria-label={`${selected} menu items`}
+          className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0"
+        >
+          {displayedItems.map((item, index) => (
+            <article
+              key={index}
+              className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 md:p-10 sm:p-10 flex flex-col items-start h-96"
+              tabIndex={0}
+              aria-label={`${item.title} - ${item.description}. Price: ${item.price}, original price ${item.originalPrice}`}
+            >
+              <h2
+                className="3xl:text-lg 2xl:text-lg xl:text-lg md:text-lg sm:text-sm font-semibold text-[#2C6252]"
+                dangerouslySetInnerHTML={{ __html: item.title }}
+              />
+              <p className="text-gray-500 3xl:text-sm 2xl:text-sm xl:text-sm md:text-sm sm:text-xs mt-4 mb-4">
+                {item.description}
+              </p>
+              <div className="flex sm:flex-col md:flex-row items-center md:justify-between w-full mt-auto">
                 <Motion.img
-                  src={item.itemImage}
-                  alt={`${item.label} category icon`}
-                  className="md:w-10 md:h-10 sm:w-6 sm:h-6"
-                  initial={{ rotate: 0 }}
-                  whileHover={{ rotate: 10 }}
-                  transition={{ type: 'spring', stiffness: 200 }}
+                  src={item.image}
+                  alt={`${item.title} image`}
+                  className="w-40 h-auto object-contain -ml-4"
+                  animate={selected === 'PIZZA' ? { rotate: 360 } : {}}
+                  transition={
+                    selected === 'PIZZA'
+                      ? { repeat: Infinity, duration: 10, ease: 'linear' }
+                      : { type: 'spring', stiffness: 100 }
+                  }
                 />
-                <span className={`mt-4 sm:text-[8px] md:text-[10px] font-semibold ${selected === item.label ? 'text-white' : 'text-[#138261]'}`}>
-                  {item.label}
-                </span>
-                {selected === item.label && (
-                  <div className="absolute bottom-0 w-full h-1 -mb-4" aria-hidden="true"></div>
-                )}
-              </Motion.button>
-            ))}
-            {/* Right arrow for navigation on md and sm screens */}
-            {totalCategories > categoriesPerView && (
+                <div className="flex flex-col sm:items-center md:items-end">
+                  <div className="flex items-end gap-x-1 sm:mt-2 md:mt-0">
+                    <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-sm font-bold text-[#2C6252] leading-none">
+                      {item.price}
+                    </div>
+                    <span
+                      className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-sm line-through text-[#FF4C15] md:relative md:top-4 font-bold"
+                      aria-label={`Original price ${item.originalPrice}`}
+                    >
+                      {item.originalPrice}
+                    </span>
+                  </div>
+                  {item.hasOrderButton && (
+                    <Motion.button
+                      className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 sm:mt-2 md:relative md:top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap"
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => {
+                        const result = addToCart({
+                          title: item.title,
+                          description: item.description,
+                          image: item.image,
+                          price: parseFloat(item.price.replace('$', '')),
+                        });
+                        if (result.success) {
+                          toast.success(`${item.title.replace(/<[^>]+>/g, '')} added to cart!`);
+                        } else {
+                          toast.warning(`${item.title.replace(/<[^>]+>/g, '')} is already in cart!`);
+                        }
+                      }}
+                      aria-label={`Order now: ${item.title}`}
+                      type="button"
+                    >
+                      Order Now
+                    </Motion.button>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+
+          {/* Show More/Less button */}
+          {showToggleButtonSm && (
+            <div className="flex justify-center col-span-full">
               <button
-                onClick={handleNextCategories}
-                className="absolute sm:-right-2 md:right-2 bg-transparent border-none outline-none cursor-pointer p-2 rounded-full md:top-10 sm:top-8 z-10"
-                aria-label="Next categories"
+                onClick={toggleShowAllItemsSm}
+                className="bg-white text-[#2C6252] p-3 rounded-full shadow-lg"
+                aria-label={showAllItemsSm ? 'Show less menu items' : 'Show more menu items'}
                 type="button"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 text-white"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  {showAllItemsSm ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  )}
                 </svg>
               </button>
-            )}
-          </div>
-        </nav>
+            </div>
+          )}
+        </section>
 
-        {/* Main Section */}
-        <div className="bg-white py-12 px-4 3xl:px-0 2xl:px-14 xl:px-14 lg:px-14 md:px-14 sm:px-14 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 ">
-          {/* New "Today Special" section for md and sm devices - moved here */}
-          <aside
-            aria-labelledby="today-special-title-mobile"
-            className="lg:hidden bg-white text-[#2C6252] p-6 relative overflow-hidden flex flex-col justify-start items-center text-center md:mt-0 sm:-mt-16 col-span-full"
+        {/* Today Special (desktop) */}
+        <aside
+          aria-labelledby="today-special-title-desktop"
+          className="hidden lg:flex bg-white text-[#2C6252] p-6 relative overflow-hidden flex-col justify-start items-center text-center sm:top-24 md:top-24 lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
+        >
+          <Motion.h3
+            id="today-special-title-desktop"
+            className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug md:leading-snug sm:leading-snug mt-10"
+            dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: 'easeInOut' }}
+            viewport={{ once: true }}
+          />
+          <Motion.div
+            className="relative w-full"
+            animate={{ y: [0, -20, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <Motion.h3
-              id="today-special-title-mobile"
-              className="md:text-5xl sm:text-2xl font-bold sm:leading-snug md:leading-normal mt-10"
-              dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: 'easeInOut' }}
-              viewport={{ once: true }}
+            <img
+              src={todaySpecial.mainImage}
+              alt={`${selected} today special`}
+              className="mt-8 w-full h-auto object-contain md:w-3/4 mx-auto"
             />
-            <Motion.div
-              className="relative w-full"
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <img
-                src={todaySpecial.mainImage}
-                alt={`${selected} today special`}
-                className="mt-8 w-full h-auto object-contain md:w-3/4  mx-auto"
-              />
-            </Motion.div>
-          </aside>
-
-          {/* Left Section - Menu Items */}
-          <section aria-label={`${selected} menu items`} className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-12 lg:-ml-16 3xl:-ml-0 ">
-            {/* Display items based on isSmallScreen state and showAllItemsSm state */}
-            {displayedItems.map((item, index) => (
-              <article
-                key={index}
-                className="bg-[#F8F8F8] 3xl:p-12 2xl:p-12 xl:p-12 lg:p-10 md:p-10 sm:p-10 flex flex-col items-start h-96 "
-                tabIndex={0}
-                aria-label={`${item.title} - ${item.description}. Price: ${item.price}, original price ${item.originalPrice}`}
-              >
-                <h2
-                  className="3xl:text-lg 2xl:text-lg xl:text-lg md:text-lg sm:text-sm font-semibold text-[#2C6252]"
-                  dangerouslySetInnerHTML={{ __html: item.title }}
-                />
-                <p className="text-gray-500 3xl:text-sm 2xl:text-sm xl:text-sm md:text-sm sm:text-xs mt-4 mb-4">{item.description}</p>
-                <div className="flex sm:flex-col md:flex-row items-center md:justify-between w-full mt-auto">
-                  <Motion.img
-                    src={item.image}
-                    alt={`${item.title} image`}
-                    className="w-40 h-auto object-contain -ml-4"
-                    animate={selected === 'PIZZA' ? { rotate: 360 } : {}}
-                    transition={
-                      selected === 'PIZZA'
-                        ? { repeat: Infinity, duration: 10, ease: 'linear' }
-                        : { type: 'spring', stiffness: 100 }
-                    }
-                  />
-                  <div className="flex flex-col sm:items-center md:items-end">
-                    <div className="flex items-end gap-x-1 sm:mt-2 md:mt-0">
-                      <div className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-lg md:text-lg sm:text-sm font-bold text-[#2C6252] leading-none">
-                        {item.price}
-                      </div>
-                      <span
-                        className="3xl:text-base 2xl:text-base xl:text-base lg:text-sm md:text-sm sm:text-sm line-through text-[#FF4C15] md:relative md:top-4 font-bold"
-                        aria-label={`Original price ${item.originalPrice}`}
-                      >
-                        {item.originalPrice}
-                      </span>
-                    </div>
-                    {item.hasOrderButton && (
-                      <Motion.button
-                        className="bg-[#FF4C15] text-white text-sm font-bold px-2 py-2 sm:mt-2 md:relative md:top-8 3xl:left-1 2xl:left-0 xl:left-0 whitespace-nowrap"
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => {
-                          const result = addToCart({
-                            title: item.title,
-                            description: item.description,
-                            image: item.image,
-                            price: parseFloat(item.price.replace('$', '')),
-                          });
-                          if (result.success) {
-                            toast.success(`${item.title.replace(/<[^>]+>/g, '')} added to cart!`);
-                          } else {
-                            toast.warning(`${item.title.replace(/<[^>]+>/g, '')} is already in cart!`);
-                          }
-                        }}
-                        aria-label={`Order now: ${item.title}`}
-                        type="button"
-                      >
-                        Order Now
-                      </Motion.button>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
-
-            {/* "Show More/Less" button for sm AND md devices */}
-            {showToggleButtonSm && (
-              <div className="flex justify-center col-span-full">
-                <button
-                  onClick={toggleShowAllItemsSm}
-                  className="bg-white text-[#2C6252] p-3 rounded-full shadow-lg"
-                  aria-label={showAllItemsSm ? "Show less menu items" : "Show more menu items"}
-                  type="button"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    {showAllItemsSm ? (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                    ) : (
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    )}
-                  </svg>
-                </button>
-              </div>
-            )}
-          </section>
-
-          {/* Right Section - Today Special (Desktop Only) */}
-          <aside
-            aria-labelledby="today-special-title-desktop"
-            className="hidden lg:flex bg-white text-[#2C6252] p-6 relative overflow-hidden flex-col justify-start items-center text-center sm:top-24 md:top-24 lg:top-24 xl:top-36 2xl:top-20 3xl:top-10 3xl:left-0"
-          >
-            <Motion.h3
-              id="today-special-title-desktop"
-              className="3xl:text-7xl 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-4xl font-bold 3xl:leading-tight 2xl:leading-tight xl:leading-tight lg:leading-snug md:leading-snug sm:leading-snug mt-10"
-              dangerouslySetInnerHTML={{ __html: todaySpecial.text }}
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: 'easeInOut' }}
-              viewport={{ once: true }}
-            />
-            <Motion.div
-              className="relative w-full"
-              animate={{ y: [0, -20, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <img
-                src={todaySpecial.mainImage}
-                alt={`${selected} today special`}
-                className="mt-8 w-full h-auto object-contain md:w-3/4  mx-auto"
-              />
-            </Motion.div>
-          </aside>
-        </div>
-      </section>
-    </Container>
+          </Motion.div>
+        </aside>
+      </div>
+    </section>
+  </Container>
   );
 };
 
