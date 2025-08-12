@@ -61,7 +61,7 @@ const Testimonials = () => {
           </Motion.div>
 
           {/* Swipeable Image Section */}
-          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-[13rem] 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[200px] overflow-hidden 3xl:ml-1 3xl:right-16 2xl:right-0 xl:right-0  lg:-ml-1 md:ml-6  sm:-ml-[2.8rem] sm:right-20">
+          <div className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-[12rem] 3xl:h-[400px] 2xl:h-[400px] xl:h-[400px] lg:h-[200px] md:h-[200px] sm:h-[130px] overflow-hidden 3xl:ml-1 3xl:right-16 2xl:right-0 xl:right-0  lg:-ml-1 md:ml-6  sm:-ml-[2.8rem] sm:right-20">
             <AnimatePresence initial={false} custom={direction}>
               <Motion.img
                 key={currentIndex}
@@ -124,13 +124,13 @@ const Testimonials = () => {
           ].map((card, i) => (
             <Motion.div
               key={i}
-              className="border border-orange-200 3xl:p-12 2xl:p-12 xl:p-12 lg:p-12 md:p-6 sm:p-6 bg-white sm:w-full 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
+              className="border border-orange-200 3xl:p-12 2xl:p-12 xl:p-12 lg:p-12 md:p-6 sm:p-4 bg-white sm:w-full 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
             >
-              <h4 className="text-lg font-semibold text-green-900 mb-4">{card.name}</h4>
-              <p className="text-sm text-gray-700">{card.text}</p>
+              <h4 className="3xl:text-lg 2xl:text-lg xl:text-lg lg:text-lg sm:text-base font-semibold text-green-900 mb-4">{card.name}</h4>
+              <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-700">{card.text}</p>
               <div className="flex items-center mt-4 space-x-2">
                 {card.img ? (
                   <>
