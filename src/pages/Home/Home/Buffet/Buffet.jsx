@@ -96,7 +96,7 @@ const Buffet = () => {
 
   return (
     <Container>
-      <section className="mb-36 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-10 sm:-ml-[7.5rem] ">
+      <section className="mb-36 3xl:mt-64 2xl:mt-56 xl:mt-40 lg:mt-40 md:mt-40 sm:mt-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-3 md:-ml-10 sm:-ml-[7.5rem]">
         <div className="px-4 sm:px-6 3xl:px-8 2xl:px-8 xl:px-8 lg:px-2 md:px-2">
           {/* Header */}
           <Motion.div
@@ -104,10 +104,10 @@ const Buffet = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUpVariant}
-            className="relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1752039838/Buffet_z0iumv.png')] bg-no-repeat bg-contain bg-center h-[20rem] flex flex-col items-center justify-center -mt-[22rem] "
+            className="relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1752039838/Buffet_z0iumv.png')] bg-no-repeat bg-contain bg-center h-[20rem] flex flex-col items-center justify-center -mt-[22rem]"
           >
-            <span className="bg-[#FF4C15] text-white py-1 px-5 rounded-full flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative mt-[2rem] shadow-lg drop-shadow-md">
-              <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center mr-3 animate-pulse">
+            <span className="bg-[#FF4C15] text-white py-1 px-5 flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative mt-[2rem] shadow-lg drop-shadow-md">
+              <div className="bg-white w-6 h-6 flex items-center justify-center mr-3">
                 <img src="/svg.png" className="w-4 h-4" alt="Category Icon" />
               </div>
               <span className="text-xs font-semibold tracking-wider uppercase">
@@ -147,7 +147,11 @@ const Buffet = () => {
                   whileHover={cardHover}
                   className="overflow-hidden relative cursor-pointer"
                 >
-                  <img src={img} alt={alt} className="w-full 3xl:h-52 2xl:h-52 xl:h-52 lg:h-52 md:h-52 sm:h-44 object-cover mb-3" />
+                  <img
+                    src={img}
+                    alt={alt}
+                    className="w-full 3xl:h-52 2xl:h-52 xl:h-52 lg:h-52 md:h-52 sm:h-44 object-cover mb-3"
+                  />
                   <span className="absolute top-2 right-2 bg-gradient-to-r from-[#FFCA46] to-[#FFD966] text-xs px-2 py-1 text-[#F6F6F6] font-semibold flex items-center backdrop-blur-sm bg-opacity-80">
                     <img
                       src="/svg.svg"
@@ -229,12 +233,9 @@ const Buffet = () => {
               <button
                 onClick={() => setShowAll((prev) => !prev)}
                 className="text-[#2C6252] flex flex-col items-center text-xl"
+                aria-label={showAll ? "Show less items" : "Show more items"}
               >
-                {showAll ? (
-                  <FaChevronUp className="animate-bounce" />
-                ) : (
-                  <FaChevronDown className="animate-bounce" />
-                )}
+                {showAll ? <FaChevronUp /> : <FaChevronDown />}
               </button>
             </div>
           )}
@@ -252,9 +253,9 @@ const Buffet = () => {
                 Deep <br /> Blue <br /> Delights
               </h2>
 
-            <h2 className="text-[#2C6252] sm:-ml-7 font-semibold drop-shadow-md text-xl sm:block md:hidden">Deep Blue Delights</h2>
-
-
+              <h2 className="text-[#2C6252] sm:-ml-7 font-semibold drop-shadow-md text-xl sm:block md:hidden">
+                Deep Blue Delights
+              </h2>
             </Motion.div>
 
             <div className="relative w-full 3xl:h-96 2xl:h-64 xl:h-60 lg:h-60 md:h-60 sm:h-44">
@@ -270,7 +271,7 @@ const Buffet = () => {
 
               <div className="flex justify-between items-end h-full">
                 <Motion.div
-                  className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 md:bottom-20 sm:bottom-0 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 md:left-10 sm:left-10 text-white p-4 text-sm max-w-[300px] rounded-md z-20 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
+                  className="absolute 3xl:bottom-32 2xl:bottom-24 xl:bottom-20 lg:bottom-20 md:bottom-20 sm:bottom-0 3xl:left-4 2xl:left-6 xl:left-6 lg:left-10 md:left-10 sm:left-10 text-white p-4 text-sm max-w-[300px] z-20 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
