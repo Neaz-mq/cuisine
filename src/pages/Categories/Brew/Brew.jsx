@@ -6,7 +6,7 @@ const Brew = () => {
   return (
     <Container>
       <section
-        className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] 3xl:-mt-28 2xl:-mt-10 xl:mt-24 md:mt-36 sm:mt-28 md:-ml-24 sm:-ml-24 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
+        className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] md:mb-52 sm:mb-40 3xl:-mt-28 2xl:-mt-10 xl:mt-24 md:mt-36 sm:mt-28 md:-ml-24 sm:-ml-24 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
         aria-labelledby="brew-heading"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
