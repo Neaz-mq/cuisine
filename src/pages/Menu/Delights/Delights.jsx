@@ -13,7 +13,7 @@ const Delights = () => {
     <Container>
       <section
         aria-labelledby="delights-heading"
-        className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 lg:px-12 md:px-6 sm:px-12 py-12 3xl:mt-20 2xl:mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-32 2xl:mb-36 xl:mb-8 lg:mb-28 lg:-ml-20 md:mb-28 md:-ml-20 sm:mb-28 sm:-ml-40 md:gap-6 md:-mt-6 sm:-mt-20"
+        className="grid grid-cols-1 3xl:grid-cols-2 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 3xl:gap-4 2xl:gap-0 3xl:px-10 2xl:px-0 xl:px-6 lg:px-12 md:px-6 sm:px-12 py-12 3xl:mt-20 2xl:mt-20 3xl:ml-1 2xl:-ml-1 xl:ml-3 3xl:mb-32 2xl:mb-36 xl:mb-8 lg:mb-28 lg:-ml-20 md:mb-28 md:-ml-20 sm:mb-6 sm:-ml-40 md:gap-6 md:-mt-6 sm:-mt-20"
       >
         {/* Top Left - Shrimp */}
         <Motion.article {...fadeInUp} className="flex flex-col bg-white overflow-hidden p-6">
@@ -103,7 +103,7 @@ const Delights = () => {
         </Motion.div>
 
         {/* Bottom Right - Deep Blue Delights */}
-        <Motion.article {...fadeInUp} className="relative overflow-hidden w-full sm:h-[485px] md:h-[400px] lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4  ">
+        <Motion.article {...fadeInUp} className="relative overflow-hidden w-full sm:h-[220px] md:h-[400px] lg:h-[485px] xl:h-[602px] 3xl:h-[700px] 2xl:h-[700px] bg-white p-6 flex 3xl:right-4 3xl:left-0 2xl:right-0 2xl:left-4  ">
           <div className="flex flex-col justify-end w-full lg:w-1/2 pr-4 z-10  ">
           <div className="flex items-center space-x-1 text-base text-gray-500 mb-4 sm:block md:hidden lg:hidden xl:hidden 2xl:hidden 3xl:hidden ">
               <span className="text-yellow-500 sm:hidden md:block lg:block xl:block 2xl:block 3xl:block " aria-hidden="true">★★★★★</span>
