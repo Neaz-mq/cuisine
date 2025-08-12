@@ -14,7 +14,10 @@ const textVariants = {
 const Deliver = () => {
   return (
     <Container>
-      <div className="relative bg-white px-8 mt-32 mb-36 sm:-mt-52 sm:mb-20 3xl:-mt-12 3xl:mb-44 2xl:mt-14 2xl:mb-44 xl:mt-14 xl:mb-44 lg:-mt-24 lg:mb-44 md:-mt-24 md:mb-36 sm:-ml-20 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0">
+      <section
+        className="relative bg-white px-8 mt-32 mb-36 sm:-mt-52 sm:mb-20 3xl:-mt-12 3xl:mb-44 2xl:mt-14 2xl:mb-44 xl:mt-14 xl:mb-44 lg:-mt-24 lg:mb-44 md:-mt-24 md:mb-36 sm:-ml-20 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0 md:-ml-0"
+        aria-label="Delivery information section"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
           {/* Left Animated Text Content */}
           <Motion.div
@@ -24,9 +27,10 @@ const Deliver = () => {
             viewport={{ once: true }}
           >
             <Motion.h2
-              className="sm:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-2xl md:text-2xl text-[#2C6252] flex flex-col sm:items-center 3xl:items-start 2xl:items-start  xl:items-start lg:items-start md:items-center"
+              className="sm:text-2xl 3xl:text-6xl 2xl:text-5xl xl:text-4xl lg:text-2xl md:text-2xl text-[#2C6252] flex flex-col sm:items-center 3xl:items-start 2xl:items-start xl:items-start lg:items-start md:items-center"
               custom={0}
               variants={textVariants}
+              tabIndex={0}
             >
               <span className="3xl:mb-3 2xl:mb-3 xl:mb-3 lg:mb-0 md:mb-1">We Deliver</span>
               <span className="3xl:mb-3 2xl:mb-3 xl:mb-3 lg:mb-0 md:mb-1">Food Within</span>
@@ -34,9 +38,10 @@ const Deliver = () => {
             </Motion.h2>
 
             <Motion.p
-              className="text-[#CCCCCC] max-w-md sm:text-xs 3xl:text-base 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:mx-auto lg:mx-0 lg:text-left "
+              className="text-[#CCCCCC] max-w-md sm:text-xs 3xl:text-base 2xl:text-sm xl:text-sm lg:text-xs md:text-xs sm:mx-auto lg:mx-0 lg:text-left"
               custom={1}
               variants={textVariants}
+              tabIndex={0}
             >
               When I research companies online, I don’t just want to hear the company’s pitch; I want to hear from its customers...
             </Motion.p>
@@ -46,12 +51,13 @@ const Deliver = () => {
               custom={2}
               variants={textVariants}
             >
-              <Link to="/order">
+              <Link to="/order" aria-label="Order Now">
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
                   className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] flex items-center"
+                  type="button"
                 >
-                  <img src="/order.svg" alt="Order Icon" className="w-4 h-4 mr-2" />
+                  <img src="/order.svg" alt="Order Icon" className="w-4 h-4 mr-2" loading="lazy" />
                   Order Now
                 </Motion.button>
               </Link>
@@ -60,8 +66,10 @@ const Deliver = () => {
                 <Motion.button
                   whileHover={{ scale: 1.05 }}
                   className="border border-[#707070] text-[#FF4C15] hover:bg-orange-50 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 sm:px-1 sm:py-1 md:px-3 md:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] flex items-center"
+                  type="button"
+                  aria-label="Download Apps"
                 >
-                  <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" />
+                  <img src="/download.svg" alt="Download Icon" className="w-4 h-4 mr-2" loading="lazy" />
                   Download Apps
                 </Motion.button>
               </div>
@@ -77,6 +85,7 @@ const Deliver = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
             }}
+            aria-hidden="true"
           >
             <Motion.div
               className="max-w-sm lg:max-w-full"
@@ -88,11 +97,12 @@ const Deliver = () => {
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752053930/deliver1_a5xpyd.webp"
                 alt="Delivery Guy"
                 className="object-contain w-full 3xl:-ml-32 3xl:-mt-16 2xl:-ml-32 2xl:-mt-16 xl:-ml-32 xl:-mt-16 lg:-ml-32 lg:-mt-16 sm:-ml-10 sm:-mt-6"
+                loading="lazy"
               />
             </Motion.div>
           </div>
         </div>
-      </div>
+      </section>
     </Container>
   );
 };
