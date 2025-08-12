@@ -45,7 +45,7 @@ const Members = () => {
             >
                 {/* Header Section */}
                 <Motion.div
-                    className="mb-10 md:mb-16 text-left flex justify-end items-center  3xl:ml-0 2xl:ml-0 xl:ml-0 md:ml-0 sm:ml-28 sm:w-40    3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
+                    className="mb-10 md:mb-16 text-left flex justify-end items-center  3xl:ml-0 2xl:ml-0 xl:ml-0 md:ml-0 sm:ml-[9.5rem] sm:w-28    3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full "
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -79,7 +79,7 @@ const Members = () => {
 
                     {/* Left Image Area */}
                     <Motion.figure
-                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 md:left-4 sm:left-[2.7rem] bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%] lg:h-[99.8%] lg:w-[95%] md:w-[94%] sm:w-[97%] sm:h-auto "
+                        className="flex justify-end relative 3xl:left-2 2xl:-left-14 xl:-left-[7.5rem] lg:left-2 md:left-4 sm:left-[2.4rem] bg-[#3F7765] 3xl:h-[99%] 3xl:w-[75%] 2xl:h-[99.8%] 2xl:w-[80%] xl:h-[99.8%] xl:w-[94%] lg:h-[99.8%] lg:w-[95%] md:w-[94%] sm:w-[97%] sm:h-auto "
                         role="img"
                         aria-label="Featured Chef"
                     >
@@ -97,7 +97,7 @@ const Members = () => {
                             <img
                                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752059008/chef4_pgbdux.webp"
                                 alt="Portrait of happy male chef in uniform"
-                                className="object-contain h-auto 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-52 3xl:-ml-2 2xl:ml-6 xl:-ml-16 lg:ml-4 sm:ml-12 xl:mt-[5.93rem] 3xl:mt-0 2xl:mt-0 lg:mt-[5.93rem]"
+                                className="object-contain h-auto 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-52 3xl:-ml-2 2xl:ml-6 xl:-ml-16 lg:ml-4 sm:ml-6 xl:mt-[5.93rem] 3xl:mt-0 2xl:mt-0 lg:mt-[5.93rem]"
                                 onError={(e) => {
                                     e.target.onerror = null;
                                     e.target.src = "https://placehold.co/400x600/A0A0A0/FFFFFF?text=Image+Error";
@@ -108,7 +108,7 @@ const Members = () => {
 
                     {/* Right - Team Cards */}
                     <Motion.div
-                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-20 sm:ml-24 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[10rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-[30rem]  "
+                        className="grid grid-cols-1  md:grid-cols-2 3xl:gap-x-20 3xl:gap-y-20 2xl:gap-x-36 2xl:gap-y-20 xl:gap-x-40 xl:gap-y-24 lg:gap-x-5 lg:gap-y-12 md:gap-x-0 md:gap-y-24 sm:gap-x-0 sm:gap-y-16 3xl:ml-20 2xl:ml-0 xl:ml-10 lg:-ml-1 md:ml-20 sm:ml-14 md:mt-16 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 sm:mt-20 sm:w-[10rem] 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-[30rem]  "
                         initial="hidden"
                         whileInView="visible"
                         variants={{
@@ -125,7 +125,7 @@ const Members = () => {
                         {teamMembers.map((member) => (
                             <Motion.article
                                 key={member.id}
-                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[180px] md:w-[180px] sm:h-[120px] sm:w-[180px] border border-gray-400"
+                                className="relative bg-white p-4 flex flex-col justify-end items-center text-center 3xl:h-[200px] 3xl:w-[250px] 2xl:h-[200px] 2xl:w-[220px] xl:h-[200px] xl:w-[170px] lg:h-[150px] lg:w-[180px] md:h-[180px] md:w-[180px] sm:h-[120px] sm:w-[210px] border border-gray-400"
                                 initial={{ opacity: 0, y: 40 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, ease: "easeOut" }}
