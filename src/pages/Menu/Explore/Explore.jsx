@@ -9,11 +9,12 @@ const Explore = () => {
         <section
           className="relative bg-white 3xl:-top-4 sm:-top-5"
           aria-labelledby="explore-heading"
+          role="region"
         >
-          <div className="flex flex-col sm:flex-row items-start justify-between " >
+          <div className="flex flex-col sm:flex-row items-start justify-between">
             {/* Left Content */}
             <Motion.div
-              className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-1/2 sm:w-1/2  p-4 sm:p-8 z-0"
+              className="relative 3xl:w-full 2xl:w-full xl:w-full lg:w-full md:w-1/2 sm:w-1/2 p-4 sm:p-8 z-0"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -52,10 +53,12 @@ const Explore = () => {
                   transition={{ duration: 0.6, ease: "easeInOut", delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <span className="mb-2 sm:mb-3 text-lg  sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden">Explore Our full menu</span>
-
+                  <span className="mb-2 sm:mb-3 text-lg sm:block 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden">
+                    Explore Our full menu
+                  </span>
                 </Motion.h1>
               </div>
+
               <Motion.div
                 className="3xl:-mt-4 2xl:-mt-4 xl:-mt-4 lg:-mt-16 md:-mt-16 sm:hidden 3xl:block 2xl:block xl:block lg:block md:block"
                 initial={{ opacity: 0, y: 40 }}
@@ -74,17 +77,19 @@ const Explore = () => {
                     <span className="text-[#FF4C15] whitespace-nowrap">
                       Experience the perfect blend of taste and joy—
                     </span>
-                    
                   </span>
                   <span className="text-[#AAAAAA] 3xl:block 2xl:block xl:block lg:block md:block mt-2 sm:hidden">
-                  every bite is moment of delight, crafted to satisfy your cravings!
+                    every bite is moment of delight, crafted to satisfy your cravings!
                   </span>
-
                 </p>
-
               </Motion.div>
-              <p className="text-[7px] text-[#FF4C15] whitespace-nowrap 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:block"> Experience the perfect blend</p>
-              <p className="text-[5px] text-[#AAAAAA] whitespace-nowrap 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:block mt-1"> every bite is a moment of delight satisfy</p>
+
+              <p className="text-[7px] text-[#FF4C15] whitespace-nowrap 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:block">
+                Experience the perfect blend
+              </p>
+              <p className="text-[5px] text-[#AAAAAA] whitespace-nowrap 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:hidden sm:block mt-1">
+                every bite is a moment of delight satisfy
+              </p>
             </Motion.div>
 
             {/* Right Image */}
@@ -98,7 +103,8 @@ const Explore = () => {
               <img
                 src="https://res.cloudinary.com/dxohwanal/image/upload/v1752054404/menu1_nkbnfg.webp"
                 alt="Delicious full menu dishes display banner"
-                className="w-full max-w-[380px] sm:max-w-[500px] md:max-w-[400px] 3xl:max-w-[800px] 2xl:max-w-[800px] xl:max-w-[800px] lg:max-w-[800px] object-contain mt-4 sm:mt-5 sm:ml-10   "
+                className="w-full max-w-[380px] sm:max-w-[500px] md:max-w-[400px] 3xl:max-w-[800px] 2xl:max-w-[800px] xl:max-w-[800px] lg:max-w-[800px] object-contain mt-4 sm:mt-5 sm:ml-10"
+                loading="lazy"
               />
               <figcaption className="sr-only">
                 Image showcasing a variety of signature dishes available on our menu.
