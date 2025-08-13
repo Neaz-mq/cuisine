@@ -69,18 +69,30 @@ const Delights = () => {
                 seaside escape, where the salt air kisses your skin and every bite
                 feels like a wave of pure flavor.
               </p>
-              <Link to={isKitchenOpen ? "/order" : "#"} aria-label={isKitchenOpen ? "Order Fresh Seafood Now" : "Unavailable"}>
-                <button
-                  disabled={!isKitchenOpen}
-                  className={`px-3 py-2 3xl:text-lg 2xl:text-lg xl:text-lg md:text-lg font-semibold 3xl:-mt-4 2xl:-mt-4 xl:-mt-4 md:-mt-4 sm:mt-5 whitespace-nowrap 3xl:block 2xl:block xl:block lg:block md:hidden sm:block sm:text-sm ${
-                    isKitchenOpen
-                      ? "bg-[#FF4C15] text-white hover:bg-orange-600 cursor-pointer"
-                      : "bg-gray-400 text-gray-200 cursor-not-allowed"
-                  }`}
-                >
-                  {isKitchenOpen ? "Order Now" : "Unavailable"}
-                </button>
-              </Link>
+              <div className="relative inline-block group">
+  <Link
+    to={isKitchenOpen ? "/order" : "#"}
+    aria-label={isKitchenOpen ? "Order Fresh Seafood Now" : "Unavailable"}
+  >
+    <button
+      disabled={!isKitchenOpen}
+      className={`px-3 py-2 3xl:text-lg 2xl:text-lg xl:text-lg md:text-lg font-semibold 3xl:-mt-4 2xl:-mt-4 xl:-mt-4 md:-mt-4 sm:mt-5 whitespace-nowrap 3xl:block 2xl:block xl:block lg:block md:hidden sm:block sm:text-sm ${
+        isKitchenOpen
+          ? "bg-[#FF4C15] text-white hover:bg-orange-600 cursor-pointer"
+          : "bg-gray-400 text-gray-200 cursor-not-allowed"
+      }`}
+    >
+      {isKitchenOpen ? "Order Now" : "Unavailable"}
+    </button>
+  </Link>
+
+  {!isKitchenOpen && (
+    <div className="absolute -top-6 -left-16 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm whitespace-normal w-max max-w-[160px]">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
             </div>
           </div>
         </Motion.article>
@@ -157,18 +169,33 @@ const Delights = () => {
         (4.8 Rating)
       </span>
     </div>
-    <Link to={isKitchenOpen ? "/order" : "#"} aria-label={isKitchenOpen ? "Order Deep Blue Delights Now" : "Unavailable"}>
-  <button
-    disabled={!isKitchenOpen}
-    className={`px-3 py-2 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-sm sm:text-lg font-semibold w-full max-w-[150px] sm:hidden md:block lg:block xl:block 2xl:block 3xl:block ${
-      isKitchenOpen
-        ? "bg-[#FF4C15] text-white hover:bg-orange-600 cursor-pointer"
-        : "bg-gray-400 text-gray-200 cursor-not-allowed"
-    }`}
+  <div className="relative inline-block group">
+  <Link
+    to={isKitchenOpen ? "/order" : "#"}
+    aria-label={isKitchenOpen ? "Order Deep Blue Delights Now" : "Unavailable"}
   >
-    {isKitchenOpen ? "Order Now" : "Unavailable"}
-  </button>
-</Link>
+    <Motion.button
+      whileHover={isKitchenOpen ? { scale: 1.05 } : {}}
+      disabled={!isKitchenOpen}
+      className={`flex items-center justify-center relative px-3 py-2 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-sm sm:text-lg font-semibold w-full max-w-[150px] ${
+        isKitchenOpen
+          ? "bg-[#FF4C15] text-white cursor-pointer hover:bg-orange-600"
+          : "bg-gray-400 text-gray-200 cursor-not-allowed"
+      } rounded-sm`}
+      type="button"
+    >
+      {isKitchenOpen ? "Order Now" : "Unavailable"}
+    </Motion.button>
+  </Link>
+
+  {!isKitchenOpen && (
+    <div className="absolute -top-10 left-0 px-3 py-1 bg-black text-white text-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm whitespace-normal w-max max-w-[160px]">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
+
 
   </div>
 

@@ -103,34 +103,43 @@ const Spend = () => {
           />
 
           {/* Kitchen-aware Checkout Menu button */}
-          {isKitchenOpen() ? (
-            <Link to="/order" aria-label="Checkout Menu now">
-              <Motion.button
-                className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-[#FA4A0C] text-white font-semibold shadow-md"
-                whileHover={{
-                  scale: 1.12,
-                  boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
-                  transition: {
-                    duration: 0.5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                  },
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Checkout Menu
-              </Motion.button>
-            </Link>
-          ) : (
-            <Motion.button
-              className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-gray-400 text-gray-200 font-semibold shadow-md cursor-not-allowed"
-              disabled
-              aria-label="Ordering unavailable: kitchen is closed"
-            >
-              Unavailable
-            </Motion.button>
-          )}
+          <div className="relative inline-block group">
+            {isKitchenOpen() ? (
+              <Link to="/order" aria-label="Checkout Menu now">
+                <Motion.button
+                  className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-[#FA4A0C] text-white font-semibold shadow-md"
+                  whileHover={{
+                    scale: 1.12,
+                    boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
+                    transition: {
+                      duration: 0.5,
+                      repeat: Infinity,
+                      repeatType: "reverse",
+                      ease: "easeInOut",
+                    },
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Checkout Menu
+                </Motion.button>
+              </Link>
+            ) : (
+              <>
+                <Motion.button
+                  className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-gray-400 text-gray-200 font-semibold shadow-md cursor-not-allowed"
+                  disabled
+                  aria-label="Ordering unavailable: kitchen is closed"
+                >
+                  Unavailable
+                </Motion.button>
+                {/* Tooltip below the button */}
+                <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-max max-w-[160px] pointer-events-none">
+                  Kitchen will open at 10 AM
+                </div>
+              </>
+            )}
+          </div>
+
         </Motion.div>
       </section>
     </Container>

@@ -15,7 +15,7 @@ const textVariants = {
 const Deliver = () => {
   const [isKitchenOpen, setIsKitchenOpen] = useState(true);
 
-  // Check kitchen availability (10:00 - 22:00)
+  // Check kitchen availability (10:00 - 12:00)
   useEffect(() => {
     const checkKitchenStatus = () => {
       const now = new Date();
@@ -66,28 +66,42 @@ const Deliver = () => {
               custom={2}
               variants={textVariants}
             >
-             <Link to="/order" aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}>
-  <Motion.button
-    whileHover={isKitchenOpen ? { scale: 1.05 } : {}}
-    disabled={!isKitchenOpen}
-    className={`flex items-center 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] ${
-      isKitchenOpen
-        ? "bg-[#FF4C15] text-white cursor-pointer"
-        : "bg-gray-400 text-gray-200 cursor-not-allowed"
-    }`}
-    type="button"
-  >
-    {isKitchenOpen && (
-      <img
-        src="/order.svg"
-        alt="Order Icon"
-        className="w-4 h-4 mr-2"
-        loading="lazy"
-      />
-    )}
-    {isKitchenOpen ? "Order Now" : "Unavailable"}
-  </Motion.button>
-</Link>
+             
+ <div className="relative inline-block group">
+                <Link
+                  to={isKitchenOpen ? "/order" : "#"}
+                  aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}
+                >
+                  <Motion.button
+                    whileHover={isKitchenOpen ? { scale: 1.05 } : {}}
+                    disabled={!isKitchenOpen}
+                    className={`flex items-center justify-center relative 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] ${isKitchenOpen
+                        ? "bg-[#FF4C15] text-white cursor-pointer"
+                        : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                      }`}
+                    type="button"
+                  >
+                    {isKitchenOpen && (
+                      <img
+                        src="/order.svg"
+                        alt="Order Icon"
+                        className="w-4 h-4 mr-2"
+                        loading="lazy"
+                      />
+                    )}
+                    {isKitchenOpen ? "Order Now" : "Unavailable"}
+                  </Motion.button>
+                </Link>
+
+                {!isKitchenOpen && (
+                  <div className="absolute top-full left-0 w-full mt-2 px-2 py-1 bg-black text-white text-center text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    Kitchen will open at 10 AM
+                  </div>
+                )}
+              </div>
+
+
+
 
               <div className="hidden sm:inline-block lg:inline-block">
                 <Motion.button

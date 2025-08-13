@@ -146,22 +146,35 @@ const TopBar = memo(() => {
             className="w-full sm:w-auto h-auto sm:h-[10.5rem] md:h-[18rem] lg:h-[20rem] xl:h-[23rem] 2xl:h-[24rem] 3xl:h-[25rem] sm:-mt-[5.4rem] 3xl:-mt-[13rem] 2xl:-mt-[13rem] xl:-mt-[13rem] lg:-mt-[11rem] md:-mt-[11rem] sm:-ml-2 3xl:ml-16 lg:-ml-8 md:-ml-16"
           />
           <div className="flex flex-col sm:flex-row items-start sm:items-center w-full sm:-ml-9 3xl:-ml-12 2xl:-ml-14 xl:-ml-14 lg:-ml-14 md:-ml-16 md:-mt-8 sm:-mt-10 relative">
-            <span className="text-[#E4E4E4] mr-0 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] sm:text-[0.7rem] mb-2 sm:mb-0 whitespace-nowrap sm:hidden 3xl:block 2xl:block xl:block lg:block md:block">
+            <span className="text-[#E4E4E4] 3xl:mr-4 2xl:mr-4 xl:mr-4 lg:mr-4 md:mr-4 sm:mr-2 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] sm:text-[0.7rem] mb-2 sm:mb-0 whitespace-nowrap sm:hidden 3xl:block 2xl:block xl:block lg:block md:block ">
               Online place order
             </span>
-            <a href="/order" aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}>
-              <button
-                type="button"
-                disabled={!isKitchenOpen}
-                className={`${isKitchenOpen
-                    ? "bg-[#FF4C15] text-white hover:scale-105 cursor-pointer"
-                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
-                  } text-[10px] md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] px-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-3 md:px-3 py-0 3xl:py-2 2xl:py-2 xl:py-2 lg:py-2 md:py-1 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 whitespace-nowrap 3xl:ml-3 2xl:ml-3 xl:ml-3 lg:ml-3 md:ml-1 -ml-1 transition-transform`}
+            <div className="relative inline-block group">
+              <a
+                href={isKitchenOpen ? "/order" : "#"}
+                aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}
               >
-                {isKitchenOpen ? "Order Now" : "Unavailable"}
-                <ChevronRight className="3xl:ml-1 2xl:ml-1 xl:ml-1 lg:ml-1 md:ml-0 ml-0 text-white" size={16} />
-              </button>
-            </a>
+                <button
+                  type="button"
+                  disabled={!isKitchenOpen}
+                  className={`${isKitchenOpen
+                    ? "bg-[#FF4C15] text-white cursor-pointer"
+                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                    } text-[10px] md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] px-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-3 md:px-3 py-0 3xl:py-2 2xl:py-2 xl:py-2 lg:py-2 md:py-1 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 whitespace-nowrap w-full justify-center transition-transform `}
+                >
+                  {isKitchenOpen ? "Order Now" : "Unavailable"}
+                </button>
+              </a>
+
+              {!isKitchenOpen && (
+                <div className="absolute top-full left-0 mt-1 px-2 py-0 w-full bg-black text-white text-center text-xs md:text-sm 3xl:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm">
+                  Kitchen will open at 10 AM
+                </div>
+              )}
+            </div>
+
+
+
 
             <div className="mx-0 3xl:mx-2 2xl:mx-2 xl:mx-2 lg:mx-2 md:mx-1 mb-2 sm:mb-0">
               <div className="h-3 w-[1px] md:w-[2px] md:h-4 bg-gray-400 ml-2" />

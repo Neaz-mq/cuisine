@@ -186,32 +186,45 @@ const Signature = () => {
                         {item.description}
                       </p>
 
-                      <Motion.button
-                        disabled={!isKitchenOpen}
-                        onClick={() => {
-                          const formattedItem = { ...item, price: parsedPrice };
-                          const result = addToCart(formattedItem);
+                 <div className="relative inline-block group">
+  <Motion.button
+    disabled={!isKitchenOpen}
+    onClick={() => {
+      const formattedItem = { ...item, price: parsedPrice };
+      const result = addToCart(formattedItem);
 
-                          if (result?.success) {
-                            toast.success(`${item.title} added to cart successfully!`, {
-                              position: 'top-center',
-                              autoClose: 2000,
-                              hideProgressBar: true,
-                            });
-                          } else {
-                            toast.warning(`${item.title} is already in cart!`, {
-                              position: 'top-center',
-                              autoClose: 2000,
-                              hideProgressBar: true,
-                            });
-                          }
-                        }}
-                        className={`mt-4 py-2 3xl:px-4 2xl:px-4 xl:px-4 lg:px-4 md:px-4 sm:px-2 ml-2 w-1/2 whitespace-nowrap border-none
-                          ${isKitchenOpen ? 'bg-[#FF4C15] hover:bg-orange-600 text-white cursor-pointer' : 'bg-gray-400 text-gray-200 cursor-not-allowed'}`}
-                        aria-label={`Order ${item.title}`}
-                      >
-                        {isKitchenOpen ? 'Order Now' : 'Unavailable'}
-                      </Motion.button>
+      if (result?.success) {
+        toast.success(`${item.title} added to cart successfully!`, {
+          position: 'top-center',
+          autoClose: 2000,
+          hideProgressBar: true,
+        });
+      } else {
+        toast.warning(`${item.title} is already in cart!`, {
+          position: 'top-center',
+          autoClose: 2000,
+          hideProgressBar: true,
+        });
+      }
+    }}
+    className={`mt-2 py-1 px-3 md:py-2 ml-2 md:px-4 w-auto whitespace-nowrap border-none rounded-sm flex items-center justify-center
+      ${isKitchenOpen 
+        ? 'bg-[#FF4C15] hover:bg-orange-600 text-white text-sm md:text-base cursor-pointer'
+        : 'bg-gray-400 text-gray-200 text-base md:text-lg cursor-not-allowed font-semibold'}`}
+    aria-label={`Order ${item.title}`}
+  >
+    {isKitchenOpen ? 'Order Now' : 'Unavailable'}
+  </Motion.button>
+
+  {!isKitchenOpen && (
+    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-center text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
+
+
                     </div>
                   </Motion.article>
                 );
