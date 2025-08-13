@@ -106,11 +106,11 @@ const Buffet = () => {
             variants={fadeUpVariant}
             className="relative bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1752039838/Buffet_z0iumv.png')] bg-no-repeat bg-contain bg-center h-[20rem] flex flex-col items-center justify-center -mt-[22rem]"
           >
-            <span className="bg-[#FF4C15] text-white py-1 px-5 flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative mt-[2rem] shadow-lg drop-shadow-md">
-              <div className="bg-white w-6 h-6 flex items-center justify-center mr-3">
-                <img src="/svg.png" className="w-4 h-4" alt="Category Icon" />
+            <span className="bg-[#FF4C15] text-white py-1 px-5 flex items-center justify-center transform -rotate-[5deg] w-fit mx-auto relative mt-[2rem] shadow-lg drop-shadow-md rounded-full">
+              <div className="bg-white w-6 h-6 flex items-center justify-center mr-3 rounded-full">
+                <img src="/svg.png" className="w-4 h-4 rounded-full" alt="Category Icon" />
               </div>
-              <span className="text-xs font-semibold tracking-wider uppercase">
+              <span className="text-xs font-semibold tracking-wider uppercase rounded-full">
                 Delicious <span className="font-thin lowercase">(Food)</span>
               </span>
             </span>
