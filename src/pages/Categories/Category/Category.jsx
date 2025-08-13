@@ -4,6 +4,7 @@ import Container from "../../../components/Container";
 import { FaMugHot } from "react-icons/fa";
 import { PiPizzaBold } from "react-icons/pi";
 import { GiCutDiamond, GiMushroom } from "react-icons/gi";
+import { BsCartX } from "react-icons/bs";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
@@ -255,6 +256,12 @@ const fadeUp = {
   }),
 };
 
+// Kitchen hours logic
+const isKitchenOpen = () => {
+  const hour = new Date().getHours();
+  return hour >= 10 && hour < 12; // Open 10 AM to 10 PM
+};
+
 const Category = () => {
   const [activeTab, setActiveTab] = useState("Coffee");
   const { addToCart, cartItems } = useContext(CartContext);
@@ -265,10 +272,8 @@ const Category = () => {
     const handleResize = () => {
       setIsSmallDevice(window.innerWidth <= 640);
     };
-
     window.addEventListener("resize", handleResize);
-    handleResize(); // Set initial value
-
+    handleResize();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -437,13 +442,24 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
               / pcs
             </span>
           </span>
-          <button
-            className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
-            onClick={handleClick}
-            aria-label={`Add ${item.title} to cart`}
-          >
-            <img src="/Path 2764.svg" alt="Add to cart" />
-          </button>
+            {/* Kitchen-aware button */}
+          {isKitchenOpen() ? (
+            <button
+              className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+              onClick={handleClick}
+              aria-label={`Add ${item.title} to cart`}
+            >
+              <img src="/Path 2764.svg" alt="Add to cart" />
+            </button>
+          ) : (
+            <button
+              className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center"
+              disabled
+              aria-label={`Kitchen is closed, cannot add ${item.title} to cart`}
+            >
+              <BsCartX size={20} />
+            </button>
+          )}
         </div>
       </div>
     </Motion.article>

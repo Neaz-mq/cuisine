@@ -4,17 +4,14 @@ import Container from "../../../components/Container";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import { BsCartX } from "react-icons/bs";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i = 1) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.6,
-      ease: [0.42, 0, 0.58, 1],
-    },
+    transition: { delay: i * 0.1, duration: 0.6, ease: [0.42, 0, 0.58, 1] },
   }),
 };
 
@@ -34,19 +31,11 @@ const Popular = () => {
   };
 
   const [targetTime, setTargetTime] = useState(calculateTimeLeft());
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
-  // ✅ Track if screen is small (< 640px)
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
   useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -64,12 +53,8 @@ const Popular = () => {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) / (1000 * 60)
-      );
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       setTimeLeft({ days, hours, minutes, seconds });
@@ -84,61 +69,54 @@ const Popular = () => {
     {
       id: 1,
       title: "Classic Roast Brew",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 12,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     },
     {
       id: 2,
       title: "Cheesy Crust Deluxe",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 14,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     },
     {
       id: 3,
       title: "Classic Roast Special",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 16,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752121470/order1_ea6o5o.webp",
     },
     {
       id: 4,
       title: "Cheesy Crust Superior",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
       price: 18,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752122232/order4_vzsqsc.webp",
     },
   ];
 
-  // ✅ Limit to 2 items on small devices
   const displayedItems = isSmallScreen ? foodItems.slice(0, 2) : foodItems;
 
-  const handleAddToCart = (item) => {
-    const result = addToCart(item);
-    const toastOptions = {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-    };
-
-    if (result.success) {
-      toast.success(`${item.title} added to cart!`, toastOptions);
-    } else {
-      toast.warning(`${item.title} is already in the cart!`, toastOptions);
-    }
+  // ✅ Kitchen hours check
+  const isKitchenOpen = () => {
+    const hour = new Date().getHours();
+    return hour >= 10 && hour < 12; // Open 10 AM to 10 PM
   };
+
+  const handleAddToCart = (item) => {
+    if (!isKitchenOpen()) {
+      toast.error(`Kitchen is closed! Cannot add ${item.title}`, { position: "top-center", autoClose: 2000 });
+      return;
+    }
+
+    const result = addToCart(item);
+    const toastOptions = { position: "top-center", autoClose: 2000, hideProgressBar: true, closeOnClick: true, pauseOnHover: true, draggable: true };
+
+    if (result.success) toast.success(`${item.title} added to cart!`, toastOptions);
+    else toast.warning(`${item.title} is already in the cart!`, toastOptions);
+  };
+
 
   return (
     <Container>
@@ -258,13 +236,15 @@ const Popular = () => {
                         / pcs
                       </span>
                     </span>
-                    <button
-                      onClick={() => handleAddToCart(item)}
-                      className="bg-[#2C6252] text-white p-2"
-                      aria-label={`Add ${item.title} to cart`}
-                    >
-                      <img src="/Path 2764.svg" alt="Add to cart" />
-                    </button>
+                   {isKitchenOpen() ? (
+                      <button onClick={() => handleAddToCart(item)} className="bg-[#2C6252] text-white p-2">
+                        <img src="/Path 2764.svg" alt="Add to cart" />
+                      </button>
+                    ) : (
+                      <button className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center" disabled>
+                        <BsCartX size={20} />
+                      </button>
+                    )}
                   </div>
                 </div>
               </Motion.article>
