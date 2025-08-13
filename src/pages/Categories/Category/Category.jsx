@@ -259,7 +259,7 @@ const fadeUp = {
 // Kitchen hours logic
 const isKitchenOpen = () => {
   const hour = new Date().getHours();
-  return hour >= 10 && hour < 12; // Open 10 AM to 10 PM
+  return hour >= 10 && hour < 22; // Open 10 AM to 10 PM
 };
 
 const Category = () => {
@@ -443,23 +443,32 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
             </span>
           </span>
             {/* Kitchen-aware button */}
-          {isKitchenOpen() ? (
-            <button
-              className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
-              onClick={handleClick}
-              aria-label={`Add ${item.title} to cart`}
-            >
-              <img src="/Path 2764.svg" alt="Add to cart" />
-            </button>
-          ) : (
-            <button
-              className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center"
-              disabled
-              aria-label={`Kitchen is closed, cannot add ${item.title} to cart`}
-            >
-              <BsCartX size={20} />
-            </button>
-          )}
+          <div className="relative inline-block group">
+  {isKitchenOpen() ? (
+    <button
+      className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+      onClick={handleClick}
+      aria-label={`Add ${item.title} to cart`}
+    >
+      <img src="/Path 2764.svg" alt="Add to cart" />
+    </button>
+  ) : (
+    <button
+      className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center"
+      disabled
+      aria-label={`Kitchen is closed, cannot add ${item.title} to cart`}
+    >
+      <BsCartX size={20} />
+    </button>
+  )}
+
+  {!isKitchenOpen() && (
+    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full mr-2 px-2 py-1 bg-black text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
         </div>
       </div>
     </Motion.article>

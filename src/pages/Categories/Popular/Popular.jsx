@@ -101,7 +101,7 @@ const Popular = () => {
   // ✅ Kitchen hours check
   const isKitchenOpen = () => {
     const hour = new Date().getHours();
-    return hour >= 10 && hour < 12; // Open 10 AM to 10 PM
+    return hour >= 10 && hour < 22; // Open 10 AM to 10 PM
   };
 
   const handleAddToCart = (item) => {
@@ -197,11 +197,34 @@ const Popular = () => {
                   </Motion.div>
                 ))}
               </div>
-              <Link to="/menu" aria-label="View full menu">
-                <button className="bg-[#2C6252] text-white px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm md:text-sm sm:text-xs whitespace-nowrap">
-                  Order Now
-                </button>
-              </Link>
+             <div className="relative inline-block group">
+  <Link
+    to={isKitchenOpen() ? "/menu" : "#"}
+    aria-label={isKitchenOpen() ? "Order Classic Roast Brew now" : "Unavailable"}
+  >
+    <Motion.button
+      className={`px-6 py-3 font-bold 3xl:text-lg 2xl:text-lg xl:text-lg lg:text-sm md:text-sm sm:text-xs whitespace-nowrap ${
+        isKitchenOpen()
+          ? "bg-[#2C6252] text-white cursor-pointer hover:bg-[#1F4B3C]"
+          : "bg-gray-400 text-gray-200 cursor-not-allowed"
+      }`}
+      whileHover={isKitchenOpen() ? { scale: 1.05 } : {}}
+      whileTap={isKitchenOpen() ? { scale: 0.95 } : {}}
+      disabled={!isKitchenOpen()}
+    >
+      {isKitchenOpen() ? "Order Now" : "Unavailable"}
+    </Motion.button>
+  </Link>
+
+  {/* Tooltip for unavailable button */}
+  {!isKitchenOpen() && (
+    <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-3 py-1 bg-black text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
+
             </div>
           </Motion.article>
 
@@ -236,15 +259,33 @@ const Popular = () => {
                         / pcs
                       </span>
                     </span>
-                   {isKitchenOpen() ? (
-                      <button onClick={() => handleAddToCart(item)} className="bg-[#2C6252] text-white p-2">
-                        <img src="/Path 2764.svg" alt="Add to cart" />
-                      </button>
-                    ) : (
-                      <button className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center" disabled>
-                        <BsCartX size={20} />
-                      </button>
-                    )}
+                   <div className="relative inline-block group">
+  {isKitchenOpen() ? (
+    <button
+      onClick={() => handleAddToCart(item)}
+      className="bg-[#2C6252] text-white p-2"
+      aria-label={`Add ${item.title} to cart`}
+    >
+      <img src="/Path 2764.svg" alt="Add to cart" />
+    </button>
+  ) : (
+    <button
+      className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center"
+      disabled
+      aria-label={`Kitchen is closed, cannot add ${item.title} to cart`}
+    >
+      <BsCartX size={20} />
+    </button>
+  )}
+
+  {/* Tooltip for unavailable cart button */}
+  {!isKitchenOpen() && (
+    <div className="absolute top-1/2 right-full mr-2 px-3 py-1 bg-black text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap -translate-y-1/2">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
                   </div>
                 </div>
               </Motion.article>

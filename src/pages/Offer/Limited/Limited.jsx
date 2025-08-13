@@ -58,7 +58,7 @@ const Limited = () => {
   const isKitchenOpen = () => {
     const now = new Date();
     const hour = now.getHours();
-    return hour >= 10 && hour < 12;
+    return hour >= 10 && hour < 22;
   };
 
   const handleAddToCart = (item) => {

@@ -43,7 +43,7 @@ const Picks = () => {
   // Kitchen open logic (10am–10pm example)
   const isKitchenOpen = () => {
     const hour = new Date().getHours();
-    return hour >= 10 && hour < 12;
+    return hour >= 10 && hour < 22;
   };
 
   return (
@@ -80,21 +80,30 @@ const Picks = () => {
                 offer without prior notice.
               </p>
               {/* Kitchen-aware Order Now button */}
-              {isKitchenOpen() ? (
-                <Link to="/menu" aria-label="Order now from menu">
-                  <button className="bg-[#FF4C15] text-white font-semibold py-2 px-6">
-                    Order Now &gt;
-                  </button>
-                </Link>
-              ) : (
-                <button
-                  className="bg-gray-400 text-gray-200 font-semibold py-2 px-6 cursor-not-allowed"
-                  aria-label="Ordering unavailable: kitchen is closed"
-                  disabled
-                >
-                  Unavailable
-                </button>
-              )}
+             <div className="relative inline-block group">
+  {isKitchenOpen() ? (
+    <Link to="/menu" aria-label="Order now from menu">
+      <button className="bg-[#FF4C15] text-white font-semibold py-2 px-6">
+        Order Now &gt;
+      </button>
+    </Link>
+  ) : (
+    <button
+      className="bg-gray-400 text-gray-200 font-semibold py-2 px-6 cursor-not-allowed"
+      aria-label="Ordering unavailable: kitchen is closed"
+      disabled
+    >
+      Unavailable
+    </button>
+  )}
+
+  {!isKitchenOpen() && (
+    <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
 
               <div className="flex justify-end 3xl:-mt-[6.8rem] ml-44 2xl:-mt-[3.2rem] xl:-mt-[1.3rem] lg:-mt-[1rem] md:mt-[6rem] sm:-mt-[1rem]">
                 <Motion.img

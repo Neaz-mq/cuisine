@@ -135,7 +135,7 @@ const Weekly = () => {
     const checkKitchenStatus = () => {
       const now = new Date();
       const hours = now.getHours();
-      setIsKitchenOpen(hours >= 10 && hours < 12);
+      setIsKitchenOpen(hours >= 10 && hours < 22);
     };
     checkKitchenStatus();
     const interval = setInterval(checkKitchenStatus, 60000);

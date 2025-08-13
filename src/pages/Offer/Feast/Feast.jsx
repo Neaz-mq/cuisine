@@ -54,7 +54,7 @@ const Feast = () => {
   // Kitchen open logic (10am–10pm example)
   const isKitchenOpen = () => {
     const hour = new Date().getHours();
-    return hour >= 10 && hour < 12;
+    return hour >= 10 && hour < 22;
   };
 
   const handleAddToCart = (item) => {

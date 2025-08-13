@@ -112,7 +112,7 @@ const TopBar = memo(() => {
     const interval = setInterval(() => {
       const now = new Date();
       setTime(now);
-      setIsKitchenOpen(now.getHours() >= 10 && now.getHours() < 12);
+      setIsKitchenOpen(now.getHours() >= 10 && now.getHours() < 22);
     }, 1000);
 
     return () => clearInterval(interval);

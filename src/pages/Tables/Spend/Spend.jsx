@@ -27,7 +27,7 @@ const letter = {
 // Kitchen open logic
 const isKitchenOpen = () => {
   const hour = new Date().getHours();
-  return hour >= 10 && hour < 12; // Open from 10 AM to 10 PM
+  return hour >= 10 && hour < 22; // Open from 10 AM to 10 PM
 };
 
 const Spend = () => {

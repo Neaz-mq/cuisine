@@ -16,7 +16,7 @@ const Delights = () => {
     const checkTime = () => {
       const now = new Date();
       const hour = now.getHours();
-      setIsKitchenOpen(hour >= 10 && hour < 12); // Kitchen open 10AM-12PM
+      setIsKitchenOpen(hour >= 10 && hour < 22); // Kitchen open 10AM-12PM
     };
 
     checkTime(); // initial check

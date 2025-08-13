@@ -15,12 +15,12 @@ const textVariants = {
 const Deliver = () => {
   const [isKitchenOpen, setIsKitchenOpen] = useState(true);
 
-  // Check kitchen availability (10:00 - 12:00)
+  // Check kitchen availability (10:00 - 22:00)
   useEffect(() => {
     const checkKitchenStatus = () => {
       const now = new Date();
       const hours = now.getHours();
-      setIsKitchenOpen(hours >= 10 && hours < 12);
+      setIsKitchenOpen(hours >= 10 && hours < 22);
     };
     checkKitchenStatus();
     const interval = setInterval(checkKitchenStatus, 60000); // update every minute
