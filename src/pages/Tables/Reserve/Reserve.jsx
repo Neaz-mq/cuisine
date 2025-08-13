@@ -30,18 +30,12 @@ const fadeInUp = {
 
 const tableContainer = {
   hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.3 },
-  },
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
 };
 
 const tableItem = {
   hidden: { opacity: 0, scale: 0.85 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] },
-  },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } },
 };
 
 const inputField = {
@@ -62,10 +56,7 @@ const Reserve = () => {
   const [reservationDate, setReservationDate] = useState(null);
 
   const availableTables = tables.filter((table) => !table.booked);
-  const tableOptions = availableTables.map((table) => ({
-    value: table.label,
-    label: table.label,
-  }));
+  const tableOptions = availableTables.map((table) => ({ value: table.label, label: table.label }));
 
   const handleBookTable = () => {
     if (!name || !phone || !selectedTable || !guestCount || !reservationDate) {
@@ -88,9 +79,7 @@ const Reserve = () => {
       hour12: true,
     }).format(reservationDate);
 
-    toast.success(
-      `Table ${selectedTable.label} has been booked on ${formattedDate} !`
-    );
+    toast.success(`Table ${selectedTable.label} has been booked on ${formattedDate}!`);
     setName("");
     setPhone("");
     setGuestCount("");
@@ -101,13 +90,8 @@ const Reserve = () => {
   const handleDateChange = (date) => {
     if (date) {
       const newDate = new Date(date);
-      if (
-        newDate.getHours() === 0 &&
-        newDate.getMinutes() === 0 &&
-        newDate.getSeconds() === 0
-      ) {
+      if (newDate.getHours() === 0 && newDate.getMinutes() === 0 && newDate.getSeconds() === 0) {
         newDate.setHours(11);
-        newDate.setMinutes(0);
       }
       setReservationDate(newDate);
     } else {
@@ -124,19 +108,14 @@ const Reserve = () => {
         variants={fadeInUp}
         aria-labelledby="reservation-heading"
       >
-        <Motion.header
-          className="text-center lg:text-left mb-10 mt-20"
-          variants={fadeInUp}
-          custom={1}
-        >
+        {/* Header */}
+        <Motion.header className="text-center lg:text-left mb-10 mt-20" variants={fadeInUp} custom={1}>
           <h2
             id="reservation-heading"
             className="text-2xl 3xl:text-4xl 2xl:text-4xl xl:text-4xl lg:text-4xl md:text-xl sm:text-xl font-bold text-[#2C6252] leading-relaxed"
           >
             Know which tables are available <br className="hidden lg:block" />
-            <span className="text-[#FF4C15] font-semibold">
-              or reserved at a glance
-            </span>
+            <span className="text-[#FF4C15] font-semibold">or reserved at a glance</span>
             <Motion.img
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1750157744/Mask_Group_50_s7vgxe.png"
               alt="Stylized restaurant table illustration"
@@ -147,6 +126,7 @@ const Reserve = () => {
           </h2>
         </Motion.header>
 
+        {/* Table Grid */}
         <Motion.div
           className="grid grid-cols-5 3xl:gap-y-12 2xl:gap-y-12 xl:gap-y-12 lg:gap-y-12 md:gap-y-12 sm:gap-y-8"
           variants={tableContainer}
@@ -157,23 +137,22 @@ const Reserve = () => {
           {tables.map((table, index) => (
             <Motion.div
               key={index}
-              className={`cursor-pointer 3xl:w-44 3xl:h-44 2xl:w-44 2xl:h-44 xl:w-40 xl:h-40 lg:w-28 lg:h-28 flex items-center justify-center text-white font-bold 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl ${
+              className={`cursor-pointer flex items-center justify-center font-bold text-white 3xl:text-6xl 2xl:text-6xl xl:text-5xl lg:text-4xl ${
                 table.booked ? "bg-[#FF4C15]" : "bg-[#2C6252]"
-              }`}
+              } 3xl:w-44 3xl:h-44 2xl:w-44 2xl:h-44 xl:w-40 xl:h-40 lg:w-28 lg:h-28`}
               variants={tableItem}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              aria-label={`Table ${table.label} is ${
-                table.booked ? "booked" : "available"
-              }`}
+              aria-label={`Table ${table.label} is ${table.booked ? "booked" : "available"}`}
             >
               {table.label}
             </Motion.div>
           ))}
         </Motion.div>
 
+        {/* Legend */}
         <Motion.div
-          className="flex items-start justify-start 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 md:gap-16 sm:gap-8 3xl:mt-28 2xl:mt-28 xl:mt-28 md:mt-28 sm:mt-20 flex-wrap"
+          className="flex flex-wrap items-center justify-start gap-8 3xl:mt-28 2xl:mt-28 xl:mt-28 md:mt-28 sm:mt-20"
           variants={fadeInUp}
           custom={2}
           role="note"
@@ -188,6 +167,7 @@ const Reserve = () => {
           </div>
         </Motion.div>
 
+        {/* Booking Form */}
         <Motion.div
           className="mt-20 p-6 bg-white max-w-xl mx-auto border"
           variants={fadeInUp}
@@ -199,7 +179,6 @@ const Reserve = () => {
             Book a Table
           </h3>
           <form className="flex flex-col gap-4">
-            <label className="sr-only" htmlFor="name">Your Name</label>
             <Motion.input
               id="name"
               type="text"
@@ -212,7 +191,6 @@ const Reserve = () => {
               initial="hidden"
               animate="visible"
             />
-            <label className="sr-only" htmlFor="phone">Phone Number</label>
             <Motion.input
               id="phone"
               type="tel"
@@ -225,7 +203,6 @@ const Reserve = () => {
               initial="hidden"
               animate="visible"
             />
-            <label className="sr-only" htmlFor="guests">Number of Guests</label>
             <Motion.input
               id="guests"
               type="number"
@@ -239,7 +216,8 @@ const Reserve = () => {
               initial="hidden"
               animate="visible"
             />
-            <label className="sr-only" htmlFor="date-time">Reservation Date</label>
+
+            {/* Date & Time Picker */}
             <Motion.div variants={inputField} custom={4} initial="hidden" animate="visible">
               <DatePicker
                 selected={reservationDate}
@@ -252,10 +230,30 @@ const Reserve = () => {
                 className="w-full border p-3 focus:outline-none focus:ring-1 focus:ring-[#2C6252] text-sm cursor-pointer"
                 wrapperClassName="w-full"
                 minDate={new Date()}
+                filterTime={(time) => {
+                  const totalMinutes = time.getHours() * 60 + time.getMinutes();
+                  return totalMinutes >= 10 * 60 && totalMinutes <= 22 * 60; // 10:00 - 22:00
+                }}
+                dayClassName={(date) => {
+                  const today = new Date();
+                  const isSelected =
+                    reservationDate &&
+                    date.getDate() === reservationDate.getDate() &&
+                    date.getMonth() === reservationDate.getMonth() &&
+                    date.getFullYear() === reservationDate.getFullYear();
+                  if (isSelected) return "bg-blue-500 text-white rounded-full";
+                  if (
+                    date.getDate() === today.getDate() &&
+                    date.getMonth() === today.getMonth() &&
+                    date.getFullYear() === today.getFullYear()
+                  )
+                    return "border border-[#2C6252] rounded-full";
+                  return undefined;
+                }}
                 id="date-time"
               />
             </Motion.div>
-            <label className="sr-only" htmlFor="table-select">Select a Table</label>
+
             <Motion.div variants={inputField} custom={5} initial="hidden" animate="visible">
               <Select
                 inputId="table-select"
@@ -269,7 +267,6 @@ const Reserve = () => {
                     ...base,
                     borderColor: "#d1d5db",
                     minHeight: "44px",
-                    borderRadius: "0.375rem",
                     fontSize: "0.95rem",
                     boxShadow: "none",
                     "&:hover": { borderColor: "#2C6252" },
@@ -277,6 +274,7 @@ const Reserve = () => {
                 }}
               />
             </Motion.div>
+
             <Motion.button
               type="button"
               onClick={handleBookTable}

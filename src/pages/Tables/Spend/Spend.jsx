@@ -2,32 +2,29 @@ import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 import { motion as Motion } from "framer-motion";
 
-// Text animation variants
+// Motion variants
 const textContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.06,
-      delayChildren: 0.8,
-    },
+    transition: { staggerChildren: 0.06, delayChildren: 0.8 },
   },
 };
 
 const letter = {
   hidden: { opacity: 0, y: 30, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { type: "spring", stiffness: 350, damping: 18 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1, 
+    transition: { type: "spring", stiffness: 350, damping: 18 } 
   },
 };
 
 // Kitchen open logic
 const isKitchenOpen = () => {
   const hour = new Date().getHours();
-  return hour >= 10 && hour < 22; // Open from 10 AM to 10 PM
+  return hour >= 10 && hour < 22;
 };
 
 const Spend = () => {
@@ -37,7 +34,7 @@ const Spend = () => {
   return (
     <Container>
       <section
-        className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 md:py-4 mb-28 md:-ml-24  sm:-ml-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
+        className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 3xl:gap-16 2xl:gap-16 xl:gap-16 lg:gap-16 3xl:py-16 2xl:py-16 xl:py-16 lg:py-4 md:py-4 mb-28 md:-ml-24 sm:-ml-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
         aria-labelledby="spend-heading"
       >
         {/* Left: Image Section */}
@@ -52,7 +49,7 @@ const Spend = () => {
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752120958/table1_jf0nwc.webp"
             alt="Couple enjoying quality dining time at Flavors & Feast"
-            className="w-[90%] max-w-md lg:max-w-full h-auto 3xl:block 2xl:block xl:block lg:block md:hidden sm:hidden"
+            className="w-[90%] max-w-md lg:max-w-full h-auto hidden md:block 3xl:block 2xl:block xl:block lg:block"
           />
         </Motion.div>
 
@@ -96,27 +93,24 @@ const Spend = () => {
           <p className="text-[#D7D7D7] text-xs 3xl:text-base 2xl:text-base xl:text-sm lg:text-xs md:text-xs mt-4 max-w-md md:mx-auto 3xl:mx-0 2xl:mx-0 xl:mx-0 lg:mx-0">
             Discover unforgettable moments at Flavors & Feast — where every bite brings joy. Whether it’s a romantic evening, a friends' hangout, or a cozy weekend brunch, we’ve got unbeatable food deals just for you.
           </p>
+
+          {/* Mobile Image */}
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752120958/table1_jf0nwc.webp"
             alt="Couple enjoying quality dining time at Flavors & Feast"
-            className="w-[90%] max-w-md lg:max-w-full h-auto 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:block sm:block mx-auto"
+            className="w-[90%] max-w-md h-auto block md:hidden mx-auto mt-4"
           />
 
-          {/* Kitchen-aware Checkout Menu button */}
-          <div className="relative inline-block group">
+          {/* Kitchen-aware Checkout Button */}
+          <div className="relative inline-block group mt-6">
             {isKitchenOpen() ? (
               <Link to="/order" aria-label="Checkout Menu now">
                 <Motion.button
-                  className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-[#FA4A0C] text-white font-semibold shadow-md"
+                  className="px-6 py-3 bg-[#FA4A0C] text-white font-semibold shadow-md"
                   whileHover={{
                     scale: 1.12,
                     boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
-                    transition: {
-                      duration: 0.5,
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                      ease: "easeInOut",
-                    },
+                    transition: { duration: 0.5, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -126,20 +120,18 @@ const Spend = () => {
             ) : (
               <>
                 <Motion.button
-                  className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-gray-400 text-gray-200 font-semibold shadow-md cursor-not-allowed"
+                  className="px-6 py-3 bg-gray-400 text-gray-200 font-semibold shadow-md cursor-not-allowed"
                   disabled
                   aria-label="Ordering unavailable: kitchen is closed"
                 >
                   Unavailable
                 </Motion.button>
-                {/* Tooltip below the button */}
                 <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-max max-w-[160px] pointer-events-none">
                   Kitchen will open at 10 AM
                 </div>
               </>
             )}
           </div>
-
         </Motion.div>
       </section>
     </Container>
