@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Container from '../../../components/Container';
 import { toast } from 'react-toastify';
@@ -47,6 +47,20 @@ const foodItems = [
 const Signature = () => {
   const carouselRef = useRef(null);
   const { addToCart } = useCart();
+  const [isKitchenOpen, setIsKitchenOpen] = useState(true);
+
+  // Example: Kitchen is open from 10:00 to 22:00
+  useEffect(() => {
+    const checkKitchenStatus = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      setIsKitchenOpen(hours >= 10 && hours < 12);
+    };
+
+    checkKitchenStatus();
+    const interval = setInterval(checkKitchenStatus, 60000); // check every minute
+    return () => clearInterval(interval);
+  }, []);
 
   const scroll = (direction) => {
     const carousel = carouselRef.current;
@@ -69,29 +83,20 @@ const Signature = () => {
       >
         <div className="mx-auto px-14 relative sm:left-0 left-6">
           {/* Rotated label */}
-          <div
-            className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem] md:top-[5rem] sm:top-[5rem]
-            sm:hidden md:block lg:block xl:block 2xl:block 3xl:block"
-          >
+          <div className="absolute rotate-[-80deg] 3xl:top-[7rem] 2xl:top-[8rem] xl:top-[6rem] lg:top-[5rem] md:top-[5rem] sm:top-[5rem] sm:hidden md:block lg:block xl:block 2xl:block 3xl:block">
             <div
               className="bg-[#FF4C15] text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-2 shadow-md
               3xl:-ml-66 2xl:-ml-60 xl:-ml-56 lg:-ml-60 md:-ml-60 sm:-ml-72"
               aria-hidden="true"
             >
               <div className="bg-white rounded-full w-6 h-6 flex items-center justify-center">
-                <img
-                  src="/Group 811.svg"
-                  className="w-3.5 h-3.5"
-                  alt="Flag Icon"
-                  aria-hidden="true"
-                  loading="lazy"
-                />
+                <img src="/Group 811.svg" className="w-3.5 h-3.5" alt="Flag Icon" aria-hidden="true" loading="lazy" />
               </div>
               Foreign customer for (food menu)
             </div>
           </div>
 
-          {/* Responsive headline */}
+          {/* Headline */}
           <h2
             className="font-semibold whitespace-nowrap sm:text-2xl sm:absolute sm:-top-24 sm:left-4 sm:rotate-0 sm:whitespace-normal
             md:rotate-[-90deg] md:absolute md:top-[14rem] md:-left-16 md:text-[30px] sm:text-[18px]
@@ -143,13 +148,7 @@ const Signature = () => {
                           className="absolute top-2 right-2 bg-[#FFCA46] text-xs px-2 py-1 text-[#F6F6F6] font-medium flex items-center"
                           aria-label="Food Available"
                         >
-                          <img
-                            src="/svg.svg"
-                            className="w-3 h-3 mr-1"
-                            alt="Available Icon"
-                            aria-hidden="true"
-                            loading="lazy"
-                          />
+                          <img src="/svg.svg" className="w-3 h-3 mr-1" alt="Available Icon" aria-hidden="true" loading="lazy" />
                           Food Available
                         </span>
                       )}
@@ -188,36 +187,30 @@ const Signature = () => {
                       </p>
 
                       <Motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        disabled={!isKitchenOpen}
                         onClick={() => {
                           const formattedItem = { ...item, price: parsedPrice };
                           const result = addToCart(formattedItem);
 
-                          if (result.success) {
+                          if (result?.success) {
                             toast.success(`${item.title} added to cart successfully!`, {
                               position: 'top-center',
                               autoClose: 2000,
                               hideProgressBar: true,
-                              closeOnClick: true,
-                              pauseOnHover: true,
-                              draggable: true,
                             });
                           } else {
                             toast.warning(`${item.title} is already in cart!`, {
                               position: 'top-center',
                               autoClose: 2000,
                               hideProgressBar: true,
-                              closeOnClick: true,
-                              pauseOnHover: true,
-                              draggable: true,
                             });
                           }
                         }}
-                        className="bg-[#FF4C15] hover:bg-orange-600 text-white mt-4 py-2 3xl:px-4 2xl:px-4 xl:px-4 lg:px-4 md:px-4 sm:px-2 cursor-pointer border-none ml-2 w-1/2 whitespace-nowrap"
+                        className={`mt-4 py-2 3xl:px-4 2xl:px-4 xl:px-4 lg:px-4 md:px-4 sm:px-2 ml-2 w-1/2 whitespace-nowrap border-none
+                          ${isKitchenOpen ? 'bg-[#FF4C15] hover:bg-orange-600 text-white cursor-pointer' : 'bg-gray-400 text-gray-200 cursor-not-allowed'}`}
                         aria-label={`Order ${item.title}`}
                       >
-                        Order Now
+                        {isKitchenOpen ? 'Order Now' : 'Unavailable'}
                       </Motion.button>
                     </div>
                   </Motion.article>
@@ -226,10 +219,7 @@ const Signature = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <nav
-              className="absolute -bottom-14 left-0 w-full flex justify-start z-20 sm:ml-0"
-              aria-label="Carousel navigation"
-            >
+            <nav className="absolute -bottom-14 left-0 w-full flex justify-start z-20 sm:ml-0" aria-label="Carousel navigation">
               <div className="flex gap-2">
                 <button
                   onClick={() => scroll('left')}

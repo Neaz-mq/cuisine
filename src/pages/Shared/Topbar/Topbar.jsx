@@ -112,7 +112,7 @@ const TopBar = memo(() => {
     const interval = setInterval(() => {
       const now = new Date();
       setTime(now);
-      setIsKitchenOpen(now.getHours() >= 10 && now.getHours() < 20);
+      setIsKitchenOpen(now.getHours() >= 10 && now.getHours() < 12);
     }, 1000);
 
     return () => clearInterval(interval);
@@ -149,15 +149,20 @@ const TopBar = memo(() => {
             <span className="text-[#E4E4E4] mr-0 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] sm:text-[0.7rem] mb-2 sm:mb-0 whitespace-nowrap sm:hidden 3xl:block 2xl:block xl:block lg:block md:block">
               Online place order
             </span>
-            <a href="/order" aria-label="Order Now">
+            <a href="/order" aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}>
               <button
                 type="button"
-                className="bg-[#FF4C15] text-white text-[10px] md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] px-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-3 md:px-3 py-0 3xl:py-2 2xl:py-2 xl:py-2 lg:py-2 md:py-1 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 hover:scale-105 transition-transform whitespace-nowrap 3xl:ml-3 2xl:ml-3 xl:ml-3 lg:ml-3 md:ml-1 -ml-1"
+                disabled={!isKitchenOpen}
+                className={`${isKitchenOpen
+                    ? "bg-[#FF4C15] text-white hover:scale-105 cursor-pointer"
+                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                  } text-[10px] md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] px-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-3 md:px-3 py-0 3xl:py-2 2xl:py-2 xl:py-2 lg:py-2 md:py-1 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 whitespace-nowrap 3xl:ml-3 2xl:ml-3 xl:ml-3 lg:ml-3 md:ml-1 -ml-1 transition-transform`}
               >
-                Order Now
+                {isKitchenOpen ? "Order Now" : "Unavailable"}
                 <ChevronRight className="3xl:ml-1 2xl:ml-1 xl:ml-1 lg:ml-1 md:ml-0 ml-0 text-white" size={16} />
               </button>
             </a>
+
             <div className="mx-0 3xl:mx-2 2xl:mx-2 xl:mx-2 lg:mx-2 md:mx-1 mb-2 sm:mb-0">
               <div className="h-3 w-[1px] md:w-[2px] md:h-4 bg-gray-400 ml-2" />
             </div>
@@ -176,9 +181,8 @@ const TopBar = memo(() => {
                   className="h-3 w-3 md:h-5 md:w-5"
                 />
                 <span
-                  className={`3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] md:text-[0.8rem] text-[0.6rem] font-semibold whitespace-nowrap ${
-                    isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
-                  }`}
+                  className={`3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] md:text-[0.8rem] text-[0.6rem] font-semibold whitespace-nowrap ${isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
+                    }`}
                 >
                   {isKitchenOpen ? 'Kitchen available' : 'Kitchen unavailable'}
                 </span>

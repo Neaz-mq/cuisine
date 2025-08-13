@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Container from "../../../components/Container";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
+import { BsCartX } from "react-icons/bs"
 
 // Separate data from component for cleaner code
 const weeklyFoodData = [
@@ -38,7 +39,7 @@ const weeklyFoodData = [
 ];
 
 // Reusable food card component
-const FoodCard = memo(({ item, index, onAddToCart }) => (
+const FoodCard = memo(({ item, index, onAddToCart, isKitchenOpen }) => (
   <Motion.article
     className="bg-[#F8F8F8] overflow-hidden flex flex-col p-6"
     initial={{ opacity: 0, y: 30 }}
@@ -71,14 +72,23 @@ const FoodCard = memo(({ item, index, onAddToCart }) => (
           ${item.price}
           <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
         </span>
-        <button
-          className="bg-[#2C6252] text-white p-2"
-          onClick={() => onAddToCart(item)}
-          aria-label={`Add ${item.title} to cart`}
-          type="button"
-        >
-          <img src="/Path 2764.svg" alt="Add to cart icon" />
-        </button>
+       <button
+  disabled={!isKitchenOpen}
+  className={`p-2 flex items-center justify-center  ${
+    isKitchenOpen
+      ? "bg-[#2C6252] text-white hover:bg-[#1F4B3C] cursor-pointer"
+      : "bg-gray-400 text-gray-200 cursor-not-allowed"
+  }`}
+  onClick={() => isKitchenOpen && onAddToCart(item)}
+  aria-label={isKitchenOpen ? `Add ${item.title} to cart` : `${item.title} unavailable`}
+  type="button"
+>
+  {isKitchenOpen ? (
+    <img src="/Path 2764.svg" alt="Add to cart icon" />
+  ) : (
+    <BsCartX size={24} className="animate-pulse text-[#FF4C15]" />
+  )}
+</button>
       </div>
     </div>
   </Motion.article>
@@ -89,12 +99,14 @@ FoodCard.propTypes = {
   item: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
   onAddToCart: PropTypes.func.isRequired,
+  isKitchenOpen: PropTypes.bool.isRequired,
 };
 
 const Weekly = () => {
   const { addToCart, cartItems } = useContext(CartContext);
   const [showMore, setShowMore] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [isKitchenOpen, setIsKitchenOpen] = useState(true);
 
   // Check screen size
   useEffect(() => {
@@ -104,23 +116,27 @@ const Weekly = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Check kitchen availability (10:00 - 22:00)
+  useEffect(() => {
+    const checkKitchenStatus = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      setIsKitchenOpen(hours >= 10 && hours < 12);
+    };
+    checkKitchenStatus();
+    const interval = setInterval(checkKitchenStatus, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   // Cart handler
   const handleAddToCart = useCallback(
     (item) => {
       const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
       if (isAlreadyInCart) {
-        toast.warning(`${item.title} is already in cart!`, {
-          position: "top-center",
-          autoClose: 2000,
-          hideProgressBar: true,
-        });
+        toast.warning(`${item.title} is already in cart!`, { position: "top-center", autoClose: 2000, hideProgressBar: true });
       } else {
         addToCart({ ...item, hasOrderButton: true });
-        toast.success(`${item.title} added to cart!`, {
-          position: "top-center",
-          autoClose: 2000,
-          hideProgressBar: true,
-        });
+        toast.success(`${item.title} added to cart!`, { position: "top-center", autoClose: 2000, hideProgressBar: true });
       }
     },
     [addToCart, cartItems]
@@ -160,7 +176,13 @@ const Weekly = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 3xl:gap-10">
             {visibleItems.map((item, index) => (
-              <FoodCard key={item.id} item={item} index={index} onAddToCart={handleAddToCart} />
+              <FoodCard
+                key={item.id}
+                item={item}
+                index={index}
+                onAddToCart={handleAddToCart}
+                isKitchenOpen={isKitchenOpen}
+              />
             ))}
           </div>
 

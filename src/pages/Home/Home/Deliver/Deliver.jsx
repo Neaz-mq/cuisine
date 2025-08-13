@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Container from "../../../../components/Container";
 import { motion as Motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const textVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -12,6 +13,20 @@ const textVariants = {
 };
 
 const Deliver = () => {
+  const [isKitchenOpen, setIsKitchenOpen] = useState(true);
+
+  // Check kitchen availability (10:00 - 22:00)
+  useEffect(() => {
+    const checkKitchenStatus = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      setIsKitchenOpen(hours >= 10 && hours < 12);
+    };
+    checkKitchenStatus();
+    const interval = setInterval(checkKitchenStatus, 60000); // update every minute
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Container>
       <section
@@ -51,16 +66,28 @@ const Deliver = () => {
               custom={2}
               variants={textVariants}
             >
-              <Link to="/order" aria-label="Order Now">
-                <Motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#FF4C15] text-white 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] flex items-center"
-                  type="button"
-                >
-                  <img src="/order.svg" alt="Order Icon" className="w-4 h-4 mr-2" loading="lazy" />
-                  Order Now
-                </Motion.button>
-              </Link>
+             <Link to="/order" aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}>
+  <Motion.button
+    whileHover={isKitchenOpen ? { scale: 1.05 } : {}}
+    disabled={!isKitchenOpen}
+    className={`flex items-center 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] ${
+      isKitchenOpen
+        ? "bg-[#FF4C15] text-white cursor-pointer"
+        : "bg-gray-400 text-gray-200 cursor-not-allowed"
+    }`}
+    type="button"
+  >
+    {isKitchenOpen && (
+      <img
+        src="/order.svg"
+        alt="Order Icon"
+        className="w-4 h-4 mr-2"
+        loading="lazy"
+      />
+    )}
+    {isKitchenOpen ? "Order Now" : "Unavailable"}
+  </Motion.button>
+</Link>
 
               <div className="hidden sm:inline-block lg:inline-block">
                 <Motion.button
