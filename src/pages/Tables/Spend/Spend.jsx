@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "../../../components/Container";
 import { motion as Motion } from "framer-motion";
 
+// Text animation variants
 const textContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -23,6 +24,12 @@ const letter = {
   },
 };
 
+// Kitchen open logic
+const isKitchenOpen = () => {
+  const hour = new Date().getHours();
+  return hour >= 10 && hour < 12; // Open from 10 AM to 10 PM
+};
+
 const Spend = () => {
   const headerText1 = "If you spend ";
   const headerText2 = "special time";
@@ -35,7 +42,7 @@ const Spend = () => {
       >
         {/* Left: Image Section */}
         <Motion.div
-          className="w-full flex justify-center 3xl:-ml-14 2xl:-ml-20 xl:-ml-10 lg:-ml-20 2xl:mt-8 3xl:mt-0 xl:mt-4 lg:mt-8"
+          className="w-full flex justify-center 3xl:-ml-14 2xl:-ml-20 xl:-ml-10 lg:-ml-20 2xl:mt-8 3xl:mt-0"
           initial={{ opacity: 0, rotateY: 45, scale: 0.85 }}
           whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
           transition={{ duration: 1.8, ease: [0.43, 0.13, 0.23, 0.96] }}
@@ -95,24 +102,35 @@ const Spend = () => {
             className="w-[90%] max-w-md lg:max-w-full h-auto 3xl:hidden 2xl:hidden xl:hidden lg:hidden md:block sm:block mx-auto"
           />
 
-          <Link to="/order" aria-label="Go to menu page">
+          {/* Kitchen-aware Checkout Menu button */}
+          {isKitchenOpen() ? (
+            <Link to="/order" aria-label="Checkout Menu now">
+              <Motion.button
+                className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-[#FA4A0C] text-white font-semibold shadow-md"
+                whileHover={{
+                  scale: 1.12,
+                  boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
+                  transition: {
+                    duration: 0.5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut",
+                  },
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Checkout Menu
+              </Motion.button>
+            </Link>
+          ) : (
             <Motion.button
-              className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-[#FA4A0C] text-white font-semibold shadow-md"
-              whileHover={{
-                scale: 1.12,
-                boxShadow: "0 0 15px rgb(250 74 12 / 0.8)",
-                transition: {
-                  duration: 0.5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                },
-              }}
-              whileTap={{ scale: 0.95 }}
+              className="mt-6 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-6 xl:py-3 md:px-6 md:py-3 sm:px-4 sm:py-1 bg-gray-400 text-gray-200 font-semibold shadow-md cursor-not-allowed"
+              disabled
+              aria-label="Ordering unavailable: kitchen is closed"
             >
-              Checkout Menu
+              Unavailable
             </Motion.button>
-          </Link>
+          )}
         </Motion.div>
       </section>
     </Container>

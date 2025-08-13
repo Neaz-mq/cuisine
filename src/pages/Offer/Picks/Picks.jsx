@@ -15,9 +15,7 @@ const fadeUp = {
 const staggerContainer = {
   hidden: {},
   visible: {
-    transition: {
-      staggerChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.2 },
   },
 };
 
@@ -35,16 +33,18 @@ const Picks = () => {
   // Responsive check
   useEffect(() => {
     const updateCount = () => {
-      if (window.innerWidth < 640) {
-        setVisibleCount(2); // sm devices → show 2
-      } else {
-        setVisibleCount(4); // bigger devices → show all
-      }
+      setVisibleCount(window.innerWidth < 640 ? 2 : 4);
     };
     updateCount();
     window.addEventListener("resize", updateCount);
     return () => window.removeEventListener("resize", updateCount);
   }, []);
+
+  // Kitchen open logic (10am–10pm example)
+  const isKitchenOpen = () => {
+    const hour = new Date().getHours();
+    return hour >= 10 && hour < 12;
+  };
 
   return (
     <Container>
@@ -79,11 +79,23 @@ const Picks = () => {
                 Management reserves the right to modify or cancel the <br />
                 offer without prior notice.
               </p>
-              <Link to="/menu" aria-label="Order now from menu">
-                <button className="bg-[#FF4C15] text-white font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-6 sm:py-2 sm:px-2">
-                  Order Now &gt;
+              {/* Kitchen-aware Order Now button */}
+              {isKitchenOpen() ? (
+                <Link to="/menu" aria-label="Order now from menu">
+                  <button className="bg-[#FF4C15] text-white font-semibold py-2 px-6">
+                    Order Now &gt;
+                  </button>
+                </Link>
+              ) : (
+                <button
+                  className="bg-gray-400 text-gray-200 font-semibold py-2 px-6 cursor-not-allowed"
+                  aria-label="Ordering unavailable: kitchen is closed"
+                  disabled
+                >
+                  Unavailable
                 </button>
-              </Link>
+              )}
+
               <div className="flex justify-end 3xl:-mt-[6.8rem] ml-44 2xl:-mt-[3.2rem] xl:-mt-[1.3rem] lg:-mt-[1rem] md:mt-[6rem] sm:-mt-[1rem]">
                 <Motion.img
                   initial={{ scale: 0.8, opacity: 0 }}
@@ -231,9 +243,8 @@ const Picks = () => {
                     <img
                       src={images[i]}
                       alt={`Food item ${i + 1}`}
-                      className={`w-full object-cover mt-6 ${
-                        i === 2 ? " 3xl:mt-20 2xl:mt-20 xl:mt-16 lg:mt-16 md:mt-20 sm:mt-10" : ""
-                      }`}
+                      className={`w-full object-cover mt-6 ${i === 2 ? " 3xl:mt-20 2xl:mt-20 xl:mt-16 lg:mt-16 md:mt-20 sm:mt-10" : ""
+                        }`}
                       draggable={false}
                     />
                     <div

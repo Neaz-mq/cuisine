@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Container from "../../../../components/Container";
 import { motion as Motion } from "framer-motion";
 
+// Fade-up animation variants
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({
@@ -9,6 +10,12 @@ const fadeUp = {
     y: 0,
     transition: { delay: i * 0.3, duration: 0.7, ease: "easeOut" },
   }),
+};
+
+// Example kitchen open function
+const isKitchenOpen = () => {
+  const hour = new Date().getHours();
+  return hour >= 10 && hour < 12; // Open from 10 AM to 10 PM
 };
 
 const Roast = () => {
@@ -46,11 +53,27 @@ const Roast = () => {
               <p className="text-xs mb-8 max-w-md mx-auto md:mx-0 mt-6">
                 Management reserves the right to modify or cancel the offer without prior notice.
               </p>
-              <Link to="/menu" aria-label="Order Classic Roast Brew now">
-                <button className="bg-[#FF4C15] text-white font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2">
-                  Order Now &gt;
-                </button>
-              </Link>
+
+              {/* Kitchen-aware Order Now button */}
+              {isKitchenOpen() ? (
+                <Link to="/menu" aria-label="Order Classic Roast Brew now">
+                  <Motion.button
+                    className="bg-[#FF4C15] text-white font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Order Now &gt;
+                  </Motion.button>
+                </Link>
+              ) : (
+                <Motion.button
+                  className="bg-gray-400 text-gray-200 font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2 cursor-not-allowed"
+                  aria-label="Ordering unavailable: kitchen is closed"
+                  disabled
+                >
+                  Unavailable
+                </Motion.button>
+              )}
             </Motion.article>
 
             {/* Right Image */}
@@ -106,12 +129,10 @@ const Roast = () => {
           }}
           aria-label="Features and benefits of our service"
         >
-          {[
-            { icon: "🚚", title: "Speedy Delivery" },
+          {[{ icon: "🚚", title: "Speedy Delivery" },
             { icon: "📞", title: "24/7 Customer Support" },
             { icon: "🛒", title: "One-Stop Shop" },
-            { icon: "❤️", title: "Crafted with Care" },
-          ].map((feature, i) => (
+            { icon: "❤️", title: "Crafted with Care" }].map((feature, i) => (
             <Motion.article
               key={i}
               className="flex flex-col items-center p-4"
