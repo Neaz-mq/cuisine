@@ -3,6 +3,7 @@ import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 import { motion as Motion } from "framer-motion";
+import { BsCartX } from "react-icons/bs";
 
 const Feast = () => {
   const { addToCart, cartItems } = useContext(CartContext);
@@ -12,68 +13,66 @@ const Feast = () => {
       id: 1,
       title: "Crispy Chicken Wings",
       price: 12,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752126479/offer12_wn37pv.webp",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752126479/offer12_wn37pv.webp",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
     },
     {
       id: 2,
       title: "Santa's Stuff Mushrooms",
       price: 14,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752126715/offer13_jefv2j.webp",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752126715/offer13_jefv2j.webp",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
     },
     {
       id: 3,
       title: "Classic Roast Brew",
       price: 16,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752127012/offer14_viddzm.webp",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752127012/offer14_viddzm.webp",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
     },
     {
       id: 4,
       title: "Cheesy Crust Deluxe",
       price: 18,
-      image:
-        "https://res.cloudinary.com/dxohwanal/image/upload/v1752127252/offer15_fc5m1h.webp",
-      description:
-        "Our menu is carefully crafted by expert chefs who bring creativity",
+      image: "https://res.cloudinary.com/dxohwanal/image/upload/v1752127252/offer15_fc5m1h.webp",
+      description: "Our menu is carefully crafted by expert chefs who bring creativity",
     },
   ];
 
-  // Detect if screen width is less than your Tailwind sm breakpoint (320px)
   const [isSmallScreen, setIsSmallScreen] = useState(
     typeof window !== "undefined" ? window.innerWidth < 768 : false
   );
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Limit feast items on small screens
   const displayedItems = isSmallScreen ? feastItems.slice(0, 2) : feastItems;
 
+  // Kitchen open logic (10am–10pm example)
+  const isKitchenOpen = () => {
+    const hour = new Date().getHours();
+    return hour >= 10 && hour < 12;
+  };
+
   const handleAddToCart = (item) => {
+    if (!isKitchenOpen()) return;
+
     const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
 
+    const toastOptions = {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    };
+
     if (isAlreadyInCart) {
-      toast.warning(`${item.title} is already in cart!`, {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
+      toast.warning(`${item.title} is already in cart!`, toastOptions);
     } else {
       addToCart({
         id: item.id,
@@ -82,14 +81,7 @@ const Feast = () => {
         image: item.image,
         description: item.description,
       });
-      toast.success(`${item.title} added to cart!`, {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
+      toast.success(`${item.title} added to cart!`, toastOptions);
     }
   };
 
@@ -99,11 +91,7 @@ const Feast = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        staggerChildren: 0.15,
-        duration: 0.6,
-        ease: "easeOut",
-      },
+      transition: { staggerChildren: 0.15, duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -201,15 +189,25 @@ const Feast = () => {
                       / pcs
                     </span>
                   </span>
+
+                   {/* Cart Button with Kitchen Hours */}
                   <Motion.button
                     onClick={() => handleAddToCart(item)}
-                    className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+                    className={`flex items-center justify-center p-2  ${
+                      isKitchenOpen()
+                        ? "bg-[#2C6252] text-white cursor-pointer"
+                        : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                    }`}
                     variants={buttonVariants}
-                    whileHover="hover"
+                  
                     whileTap="tap"
-                    aria-label={`Add ${item.title} to cart`}
+                    aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
                   >
-                    <img src="/Path 2764.svg" alt="Add to cart" />
+                    {isKitchenOpen() ? (
+                      <img src="/Path 2764.svg" alt="Add to cart" />
+                    ) : (
+                     <BsCartX size={24} className="animate-pulse " />
+                    )}
                   </Motion.button>
                 </div>
               </div>

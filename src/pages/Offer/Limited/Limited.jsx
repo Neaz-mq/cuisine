@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../../context/CartContext";
 import { toast } from "react-toastify";
 import { motion as Motion } from "framer-motion";
+import { BsCartX } from "react-icons/bs";
 
 const Limited = () => {
   const { addToCart, cartItems } = useContext(CartContext);
@@ -45,9 +46,7 @@ const Limited = () => {
 
   // Detect if screen is small (Tailwind sm: <768px)
   useEffect(() => {
-    const checkScreen = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
+    const checkScreen = () => setIsSmallScreen(window.innerWidth < 768);
     checkScreen();
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
@@ -55,9 +54,17 @@ const Limited = () => {
 
   const visibleItems = isSmallScreen ? limitedItems.slice(0, 2) : limitedItems;
 
-  const handleAddToCart = (item) => {
-    const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
+  // Kitchen open logic (example: 10am–10pm)
+  const isKitchenOpen = () => {
+    const now = new Date();
+    const hour = now.getHours();
+    return hour >= 10 && hour < 12;
+  };
 
+  const handleAddToCart = (item) => {
+    if (!isKitchenOpen()) return;
+
+    const isAlreadyInCart = cartItems.some((cartItem) => cartItem.id === item.id);
     const toastOptions = {
       position: "top-center",
       autoClose: 2000,
@@ -165,16 +172,26 @@ const Limited = () => {
                       ${item.price}
                     </span>
                   </div>
+
+                  {/* Cart Button with Kitchen Hours */}
                   <button
                     onClick={() => handleAddToCart(item)}
-                    className="bg-[#FF4C15] 3xl:w-7 3xl:h-7 2xl:w-7 2xl:h-7 xl:w-7 xl:h-7 lg:w-7 lg:h-7 md:w-5 md:h-5 sm:w-5 sm:h-5 flex items-center justify-center text-white rounded-sm text-xs"
-                    aria-label={`Add ${item.title} to cart`}
+                    className={`flex items-center justify-center rounded-sm text-xs 3xl:w-7 3xl:h-7 2xl:w-7 2xl:h-7 xl:w-7 xl:h-7 lg:w-7 lg:h-7 md:w-5 md:h-5 sm:w-5 sm:h-5 ${
+                      isKitchenOpen()
+                        ? "bg-[#FF4C15] text-white cursor-pointer"
+                        : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                    }`}
+                    aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
                   >
-                    <img
-                      src="/Path 2764.svg"
-                      alt="Add item to cart"
-                      className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2"
-                    />
+                    {isKitchenOpen() ? (
+                      <img
+                        src="/Path 2764.svg"
+                        alt="Add item to cart"
+                        className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2"
+                      />
+                    ) : (
+                      <BsCartX className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2" />
+                    )}
                   </button>
                 </div>
               </Motion.article>

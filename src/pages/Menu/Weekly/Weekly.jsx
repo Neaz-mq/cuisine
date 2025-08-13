@@ -86,7 +86,7 @@ const FoodCard = memo(({ item, index, onAddToCart, isKitchenOpen }) => (
   {isKitchenOpen ? (
     <img src="/Path 2764.svg" alt="Add to cart icon" />
   ) : (
-    <BsCartX size={24} className="animate-pulse text-[#FF4C15]" />
+    <BsCartX size={24} className="animate-pulse " />
   )}
 </button>
       </div>
