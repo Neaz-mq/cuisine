@@ -1,6 +1,7 @@
 import { motion as Motion } from "framer-motion";
 import Container from "../../../components/Container";
 
+// Animation Variants
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 0) => ({
@@ -15,7 +16,7 @@ const fadeUp = {
 };
 
 const slideRight = {
-  hidden: { opacity: 0, x: 40 }, // was 80, reduced to prevent overflow
+  hidden: { opacity: 0, x: 40 },
   visible: {
     opacity: 1,
     x: 0,
@@ -58,7 +59,7 @@ const Famous = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 3xl:gap-8 2xl:gap-8 xl:gap-8 lg:gap-6 md:gap-6 sm:gap-6 items-start">
           {/* Left Image */}
           <Motion.figure
-            className="relative"
+            className="relative overflow-hidden"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -87,7 +88,28 @@ const Famous = () => {
             className="grid grid-cols-2 3xl:gap-14 2xl:gap-10 xl:gap-6 lg:gap-6 md:gap-6 sm:gap-6 ml-8 mt-8"
             aria-label="Service Highlights"
           >
-            {Array.from({ length: 4 }).map((_, index) => (
+            {[
+              {
+                title: "Outstanding Customer Service",
+                description:
+                  "Our staff is dedicated to providing warm and attentive service, ensuring your satisfaction every visit.",
+              },
+              {
+                title: "Authentic Recipes",
+                description:
+                  "We bring you the most authentic flavors crafted with care by our world-class chefs.",
+              },
+              {
+                title: "Fresh Ingredients",
+                description:
+                  "Every dish is prepared using the freshest ingredients sourced locally and sustainably.",
+              },
+              {
+                title: "Cozy Ambiance",
+                description:
+                  "Experience a warm, inviting atmosphere perfect for family gatherings or casual meals.",
+              },
+            ].map((item, index) => (
               <Motion.article
                 key={index}
                 custom={index}
@@ -95,13 +117,14 @@ const Famous = () => {
                 whileInView="visible"
                 variants={fadeUp}
                 viewport={{ once: true }}
+                className="p-2"
               >
                 <h3 className="text-[#2C6252] font-bold 3xl:text-base 2xl:text-base xl:text-sm lg:text-[12px] md:text-[10px] sm:text-[8px] leading-snug">
-                  Outstanding <br />
-                  <span className="text-[#2C6252]">Customer Service</span>
+                  {item.title.split(" ")[0]} <br />
+                  <span className="text-[#2C6252]">{item.title.split(" ").slice(1).join(" ")}</span>
                 </h3>
                 <p className="text-[#CCCCCC] 3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[8px] 3xl:mt-5 2xl:mt-3 xl:mt-3 lg:mt-3 md:mt-2 leading-relaxed">
-                  Our staff is dedicated to providing <br /> warm and attentive service, <br /> making sure that
+                  {item.description}
                 </p>
               </Motion.article>
             ))}
@@ -119,12 +142,11 @@ const Famous = () => {
         >
           <div></div>
           <aside
-            className="bg-[#F8F8F8] 3xl:text-sm 2xl:text-[12px] xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[8px] text-[#2C6252] 3xl:px-[3.3rem] 3xl:py-[2.8rem] 2xl:px-[3.3rem] 2xl:py-[2.9rem] xl:px-[2.4rem] xl:py-[2.8rem] lg:px-[3rem] lg:py-[2.2rem] px-6 py-6 w-full leading-relaxed"
+            className="bg-[#F8F8F8] 3xl:text-sm 2xl:text-[12px] xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[8px] text-[#2C6252] 3xl:px-[3.3rem] 3xl:py-[2.8rem] 2xl:px-[3.3rem] 2xl:py-[2.9rem] xl:px-[2.4rem] xl:py-[2.8rem] lg:px-[3rem] lg:py-[2.2rem] px-6 py-6 w-full leading-relaxed "
             role="complementary"
           >
             Thanks for the clarification — it sounds like you're asking for restaurant <br /> kitchen section names meant
-            for content purposes (<span className="text-[#FF4C15] font-medium">like a blog, video series, or social media</span>). Here's a set of catchy and
-            themed section.
+            for content purposes (<span className="text-[#FF4C15] font-medium">like a blog, video series, or social media</span>). Here's a set of catchy and themed section.
           </aside>
         </Motion.div>
       </section>
