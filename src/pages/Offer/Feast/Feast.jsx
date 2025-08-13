@@ -102,7 +102,7 @@ const Feast = () => {
   };
 
   const buttonVariants = {
-    hover: { scale: 1.1, backgroundColor: "#FF4C15", transition: { duration: 0.3 } },
+    hover: { scale: 1.1,  transition: { duration: 0.3 } },
     tap: { scale: 0.95 },
   };
 
@@ -191,24 +191,33 @@ const Feast = () => {
                   </span>
 
                    {/* Cart Button with Kitchen Hours */}
-                  <Motion.button
-                    onClick={() => handleAddToCart(item)}
-                    className={`flex items-center justify-center p-2  ${
-                      isKitchenOpen()
-                        ? "bg-[#2C6252] text-white cursor-pointer"
-                        : "bg-gray-400 text-gray-200 cursor-not-allowed"
-                    }`}
-                    variants={buttonVariants}
-                  
-                    whileTap="tap"
-                    aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
-                  >
-                    {isKitchenOpen() ? (
-                      <img src="/Path 2764.svg" alt="Add to cart" />
-                    ) : (
-                     <BsCartX size={24} className="animate-pulse " />
-                    )}
-                  </Motion.button>
+                  <div className="relative inline-block group">
+  <Motion.button
+    onClick={() => isKitchenOpen() && handleAddToCart(item)}
+    className={`flex items-center justify-center p-2 ${
+      isKitchenOpen()
+        ? "bg-[#2C6252] text-white cursor-pointer"
+        : "bg-gray-400 text-gray-200 cursor-not-allowed"
+    }`}
+    variants={buttonVariants}
+    whileTap={isKitchenOpen() ? "tap" : {}}
+    aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
+    disabled={!isKitchenOpen()}
+  >
+    {isKitchenOpen() ? (
+      <img src="/Path 2764.svg" alt="Add to cart" />
+    ) : (
+      <BsCartX size={24} className="animate-pulse" />
+    )}
+  </Motion.button>
+
+  {!isKitchenOpen() && (
+    <div className="absolute -top-8 -left-32 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
+      Kitchen will open at 10 AM
+    </div>
+  )}
+</div>
+
                 </div>
               </div>
             </Motion.article>
