@@ -6,7 +6,7 @@ const Brew = () => {
   return (
     <Container>
       <section
-        className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] md:mb-52 sm:mb-40 3xl:-mt-28 2xl:-mt-10 xl:mt-24 md:mt-36 sm:mt-28 md:-ml-24 sm:-ml-24 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
+        className="3xl:px-16 2xl:px-6 xl:px-16 lg:px-2 3xl:mb-72 2xl:mb-72 xl:mb-[24rem] lg:mb-[22rem] md:mb-52 sm:mb-40 3xl:-mt-28 2xl:-mt-10 xl:mt-24 md:mt-36 sm:mt-28 md:-ml-24 sm:-ml-28 3xl:-ml-0 2xl:-ml-0 xl:-ml-0 lg:-ml-0"
         aria-labelledby="brew-heading"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative">
@@ -31,7 +31,7 @@ const Brew = () => {
                 </span>
               </Motion.h2>
 
-              <Motion.p
+              <p
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
@@ -39,7 +39,7 @@ const Brew = () => {
               >
                 Enjoy unbeatable deals every week at Flavors & Feast! Whether
                 you're craving a hearty meal, a sweet treat, or a refreshing coffee — our weekly offers have something for everyone.
-              </Motion.p>
+              </p>
 
               <Link to="/carts" aria-label="Claim weekly offer for Roast Brew">
                 <Motion.button

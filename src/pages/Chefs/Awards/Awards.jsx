@@ -12,7 +12,7 @@ const Awards = () => {
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1752057824/chef1_aauap9.webp"
             alt="Award-winning chef with culinary excellence"
             className="sm:w-[245px] md:w-[550px] lg:w-[820px] 2xl:w-[1100px] xl:w-[950px] 3xl:w-[1250px] max-w-none"
-            loading="lazy"
+            
           />
         </div>
 
