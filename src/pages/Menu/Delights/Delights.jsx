@@ -177,7 +177,7 @@ const Delights = () => {
     <Motion.button
       whileHover={isKitchenOpen ? { scale: 1.05 } : {}}
       disabled={!isKitchenOpen}
-      className={`flex items-center justify-center relative px-3 py-2 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-sm sm:text-lg font-semibold w-full max-w-[150px] ${
+      className={`flex items-center justify-center relative px-3 py-2 3xl:text-xl 2xl:text-xl xl:text-xl lg:text-xl md:text-sm sm:text-lg font-semibold w-full max-w-[150px] sm:hidden 3xl:block 2xl:block xl:block lg:block md:block ${
         isKitchenOpen
           ? "bg-[#FF4C15] text-white cursor-pointer hover:bg-orange-600"
           : "bg-gray-400 text-gray-200 cursor-not-allowed"
