@@ -85,7 +85,7 @@ const Famous = () => {
 
           {/* Right Grid Services */}
           <section
-            className="grid grid-cols-1 sm:grid-cols-2 3xl:gap-14 2xl:gap-10 xl:gap-2 lg:gap-2 md:gap-6 sm:gap-6 sm:ml-0 ml-0 mt-8"
+            className="grid grid-cols-1 sm:grid-cols-2 3xl:gap-14 2xl:gap-10 xl:gap-0 lg:gap-2 md:gap-6 sm:gap-6 sm:ml-0 ml-0 mt-8"
             aria-label="Service Highlights"
           >
             {[
