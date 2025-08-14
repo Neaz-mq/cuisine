@@ -173,36 +173,33 @@ const Limited = () => {
                   </div>
 
                   {/* Cart Button with Kitchen Hours */}
-                 <div className="relative inline-block group">
-  <button
-    onClick={() => isKitchenOpen() && handleAddToCart(item)}
-    className={`flex items-center justify-center rounded-sm text-xs 3xl:w-7 3xl:h-7 2xl:w-7 2xl:h-7 xl:w-7 xl:h-7 lg:w-7 lg:h-7 md:w-5 md:h-5 sm:w-5 sm:h-5 ${
-      isKitchenOpen()
-        ? "bg-[#FF4C15] text-white cursor-pointer"
-        : "bg-gray-400 text-gray-200 cursor-not-allowed"
-    }`}
-    aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
-    disabled={!isKitchenOpen()}
-  >
-    {isKitchenOpen() ? (
-      <img
-        src="/Path 2764.svg"
-        alt="Add item to cart"
-        className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2"
-      />
-    ) : (
-      <BsCartX className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2" />
-    )}
-  </button>
+                  <div className="relative inline-block group">
+                    <button
+                      onClick={() => isKitchenOpen() && handleAddToCart(item)}
+                      className={`flex items-center justify-center rounded-sm text-xs 3xl:w-7 3xl:h-7 2xl:w-7 2xl:h-7 xl:w-7 xl:h-7 lg:w-7 lg:h-7 md:w-5 md:h-5 sm:w-5 sm:h-5 ${isKitchenOpen()
+                          ? "bg-[#FF4C15] text-white cursor-pointer"
+                          : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                        }`}
+                      aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
+                      disabled={!isKitchenOpen()}
+                    >
+                      {isKitchenOpen() ? (
+                        <img
+                          src="/Path 2764.svg"
+                          alt="Add item to cart"
+                          className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2"
+                        />
+                      ) : (
+                        <BsCartX className="3xl:w-3 3xl:h-3 2xl:w-3 2xl:h-3 xl:w-3 xl:h-3 lg:w-3 lg:h-3 md:w-2 md:h-2 sm:w-2 sm:h-2" />
+                      )}
+                    </button>
 
-  {!isKitchenOpen() && (
-    <div className="absolute -top-8 -left-32 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
-
-
+                    {!isKitchenOpen() && (
+                      <div className="absolute -top-8 -left-32 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
+                        Kitchen will open at 10 AM
+                      </div>
+                    )}
+                  </div>
                 </div>
               </Motion.article>
             ))}

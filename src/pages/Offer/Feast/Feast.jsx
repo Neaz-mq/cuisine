@@ -102,7 +102,7 @@ const Feast = () => {
   };
 
   const buttonVariants = {
-    hover: { scale: 1.1,  transition: { duration: 0.3 } },
+    hover: { scale: 1.1, transition: { duration: 0.3 } },
     tap: { scale: 0.95 },
   };
 
@@ -146,7 +146,7 @@ const Feast = () => {
 
         {/* Menu Grid */}
         <Motion.div
-          className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 gap-8 "
+          className="grid grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -190,33 +190,32 @@ const Feast = () => {
                     </span>
                   </span>
 
-                   {/* Cart Button with Kitchen Hours */}
+                  {/* Cart Button with Kitchen Hours */}
                   <div className="relative inline-block group">
-  <Motion.button
-    onClick={() => isKitchenOpen() && handleAddToCart(item)}
-    className={`flex items-center justify-center p-2 ${
-      isKitchenOpen()
-        ? "bg-[#2C6252] text-white cursor-pointer"
-        : "bg-gray-400 text-gray-200 cursor-not-allowed"
-    }`}
-    variants={buttonVariants}
-    whileTap={isKitchenOpen() ? "tap" : {}}
-    aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
-    disabled={!isKitchenOpen()}
-  >
-    {isKitchenOpen() ? (
-      <img src="/Path 2764.svg" alt="Add to cart" />
-    ) : (
-      <BsCartX size={24} className="animate-pulse" />
-    )}
-  </Motion.button>
+                    <Motion.button
+                      onClick={() => isKitchenOpen() && handleAddToCart(item)}
+                      className={`flex items-center justify-center p-2 ${isKitchenOpen()
+                          ? "bg-[#2C6252] text-white cursor-pointer"
+                          : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                        }`}
+                      variants={buttonVariants}
+                      whileTap={isKitchenOpen() ? "tap" : {}}
+                      aria-label={isKitchenOpen() ? `Add ${item.title} to cart` : "Cart unavailable"}
+                      disabled={!isKitchenOpen()}
+                    >
+                      {isKitchenOpen() ? (
+                        <img src="/Path 2764.svg" alt="Add to cart" />
+                      ) : (
+                        <BsCartX size={24} className="animate-pulse" />
+                      )}
+                    </Motion.button>
 
-  {!isKitchenOpen() && (
-    <div className="absolute -top-8 -left-32 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
+                    {!isKitchenOpen() && (
+                      <div className="absolute -top-8 -left-32 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
+                        Kitchen will open at 10 AM
+                      </div>
+                    )}
+                  </div>
 
                 </div>
               </div>

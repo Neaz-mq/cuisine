@@ -55,33 +55,33 @@ const Roast = () => {
               </p>
 
               {/* Kitchen-aware Order Now button */}
-             <div className="relative inline-block group">
-  {isKitchenOpen() ? (
-    <Link to="/menu" aria-label="Order Classic Roast Brew now">
-      <Motion.button
-        className="bg-[#FF4C15] text-white font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        Order Now &gt;
-      </Motion.button>
-    </Link>
-  ) : (
-    <Motion.button
-      className="bg-gray-400 text-gray-200 font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2 cursor-not-allowed"
-      aria-label="Ordering unavailable: kitchen is closed"
-      disabled
-    >
-      Unavailable
-    </Motion.button>
-  )}
+              <div className="relative inline-block group">
+                {isKitchenOpen() ? (
+                  <Link to="/menu" aria-label="Order Classic Roast Brew now">
+                    <Motion.button
+                      className="bg-[#FF4C15] text-white font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Order Now &gt;
+                    </Motion.button>
+                  </Link>
+                ) : (
+                  <Motion.button
+                    className="bg-gray-400 text-gray-200 font-semibold 3xl:py-2 3xl:px-6 2xl:py-2 2xl:px-6 xl:py-2 xl:px-6 lg:py-2 lg:px-6 md:py-2 md:px-4 sm:py-1 sm:px-2 cursor-not-allowed"
+                    aria-label="Ordering unavailable: kitchen is closed"
+                    disabled
+                  >
+                    Unavailable
+                  </Motion.button>
+                )}
 
-  {!isKitchenOpen() && (
-    <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
+                {!isKitchenOpen() && (
+                  <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
+                    Kitchen will open at 10 AM
+                  </div>
+                )}
+              </div>
 
             </Motion.article>
 
@@ -110,7 +110,7 @@ const Roast = () => {
           viewport={{ once: true }}
           aria-labelledby="unbeatable-deals"
         >
-          <div className="bg-white p-12 text-center md:text-left max-w-xl shadow-lg mx-auto relative 3xl:left-64 2xl:left-36 xl:left-24 lg:left-10 md:-left-4 sm:-left-28 ">
+          <div className="bg-white p-12 text-center md:text-left max-w-xl shadow-lg mx-auto relative 3xl:left-64 2xl:left-36 xl:left-24 lg:left-10 md:-left-4 sm:-left-28">
             <h2
               id="unbeatable-deals"
               className="3xl:text-3xl 2xl:text-2xl xl:text-2xl lg:text-xl md:text-lg sm:text-sm font-bold text-[#2C6252] mb-4 leading-normal"
@@ -139,9 +139,9 @@ const Roast = () => {
           aria-label="Features and benefits of our service"
         >
           {[{ icon: "🚚", title: "Speedy Delivery" },
-            { icon: "📞", title: "24/7 Customer Support" },
-            { icon: "🛒", title: "One-Stop Shop" },
-            { icon: "❤️", title: "Crafted with Care" }].map((feature, i) => (
+          { icon: "📞", title: "24/7 Customer Support" },
+          { icon: "🛒", title: "One-Stop Shop" },
+          { icon: "❤️", title: "Crafted with Care" }].map((feature, i) => (
             <Motion.article
               key={i}
               className="flex flex-col items-center p-4"

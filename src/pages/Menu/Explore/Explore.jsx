@@ -5,7 +5,7 @@ const Explore = () => {
   return (
     <Container>
       {/* Responsive wrapper to fix overflow on small screens */}
-      <div className="overflow-hidden sm:px-4 sm:-ml-[9.7rem] 3xl:-ml-0 2xl:-ml-[4rem] xl:-ml-[2.5rem] lg:-ml-[5rem] md:-ml-[7.2rem] ">
+      <div className="overflow-hidden sm:px-4 sm:-ml-[9.7rem] 3xl:-ml-0 2xl:-ml-[4rem] xl:-ml-[2.5rem] lg:-ml-[5rem] md:-ml-[7.2rem]">
         <section
           className="relative bg-white 3xl:-top-4 sm:-top-5"
           aria-labelledby="explore-heading"

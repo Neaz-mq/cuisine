@@ -66,8 +66,8 @@ const Deliver = () => {
               custom={2}
               variants={textVariants}
             >
-             
- <div className="relative inline-block group">
+
+              <div className="relative inline-block group">
                 <Link
                   to={isKitchenOpen ? "/order" : "#"}
                   aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}
@@ -76,8 +76,8 @@ const Deliver = () => {
                     whileHover={isKitchenOpen ? { scale: 1.05 } : {}}
                     disabled={!isKitchenOpen}
                     className={`flex items-center justify-center relative 3xl:px-6 3xl:py-3 2xl:px-6 2xl:py-3 xl:px-4 xl:py-2 lg:px-3 lg:py-1 md:px-3 md:py-1 sm:px-2 sm:py-1 3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-[10px] ${isKitchenOpen
-                        ? "bg-[#FF4C15] text-white cursor-pointer"
-                        : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                      ? "bg-[#FF4C15] text-white cursor-pointer"
+                      : "bg-gray-400 text-gray-200 cursor-not-allowed"
                       }`}
                     type="button"
                   >
@@ -99,9 +99,6 @@ const Deliver = () => {
                   </div>
                 )}
               </div>
-
-
-
 
               <div className="hidden sm:inline-block lg:inline-block">
                 <Motion.button

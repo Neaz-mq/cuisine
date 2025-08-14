@@ -665,6 +665,7 @@ const Carts = () => {
               </div>
             </div>
           </div>
+          
           {/* Shipping Method Section and Payment Method Section (For md and sm screens) */}
           <div className="block lg:hidden">
             {shippingMethodSection}

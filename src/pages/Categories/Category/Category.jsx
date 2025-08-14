@@ -301,11 +301,10 @@ const Category = () => {
               <Motion.button
                 key={tab.name}
                 onClick={() => setActiveTab(tab.name)}
-                className={`flex items-center gap-2 px-6 py-2 border font-medium text-sm transition-all ${
-                  activeTab === tab.name
+                className={`flex items-center gap-2 px-6 py-2 border font-medium text-sm transition-all ${activeTab === tab.name
                     ? "bg-[#FF4C15] text-white"
                     : "bg-gray-100 text-gray-500"
-                }`}
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 variants={fadeUp}
@@ -350,25 +349,25 @@ const Category = () => {
         <div className="md:hidden grid grid-cols-1 gap-6 mb-6">
           {isSmallDevice && !showAll
             ? filteredItems.slice(0, 2).map((item, i) => (
-                <FoodCard
-                  key={item.id}
-                  item={item}
-                  addToCart={addToCart}
-                  cartItems={cartItems}
-                  index={i}
-                />
-              ))
+              <FoodCard
+                key={item.id}
+                item={item}
+                addToCart={addToCart}
+                cartItems={cartItems}
+                index={i}
+              />
+            ))
             : filteredItems.map((item, i) => (
-                <FoodCard
-                  key={item.id}
-                  item={item}
-                  addToCart={addToCart}
-                  cartItems={cartItems}
-                  index={i}
-                />
-              ))}
+              <FoodCard
+                key={item.id}
+                item={item}
+                addToCart={addToCart}
+                cartItems={cartItems}
+                index={i}
+              />
+            ))}
         </div>
-        
+
         {isSmallDevice && filteredItems.length > 2 && (
           <div className="flex justify-center mt-4">
             <button
@@ -378,12 +377,10 @@ const Category = () => {
               {showAll ? (
                 <>
                   <MdKeyboardArrowUp size={28} />
-                
                 </>
               ) : (
                 <>
                   <MdKeyboardArrowDown size={28} />
-                  
                 </>
               )}
             </button>
@@ -442,33 +439,32 @@ const FoodCard = ({ item, addToCart, cartItems, index }) => {
               / pcs
             </span>
           </span>
-            {/* Kitchen-aware button */}
+          {/* Kitchen-aware button */}
           <div className="relative inline-block group">
-  {isKitchenOpen() ? (
-    <button
-      className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
-      onClick={handleClick}
-      aria-label={`Add ${item.title} to cart`}
-    >
-      <img src="/Path 2764.svg" alt="Add to cart" />
-    </button>
-  ) : (
-    <button
-      className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center"
-      disabled
-      aria-label={`Kitchen is closed, cannot add ${item.title} to cart`}
-    >
-      <BsCartX size={20} />
-    </button>
-  )}
+            {isKitchenOpen() ? (
+              <button
+                className="bg-[#2C6252] text-white p-2 focus:outline-none focus:ring-2 focus:ring-[#2C6252] focus:ring-opacity-50"
+                onClick={handleClick}
+                aria-label={`Add ${item.title} to cart`}
+              >
+                <img src="/Path 2764.svg" alt="Add to cart" />
+              </button>
+            ) : (
+              <button
+                className="bg-gray-400 text-white p-2 cursor-not-allowed flex items-center justify-center"
+                disabled
+                aria-label={`Kitchen is closed, cannot add ${item.title} to cart`}
+              >
+                <BsCartX size={20} />
+              </button>
+            )}
 
-  {!isKitchenOpen() && (
-    <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full mr-2 px-2 py-1 bg-black text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
-
+            {!isKitchenOpen() && (
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full mr-2 px-2 py-1 bg-black text-white text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+                Kitchen will open at 10 AM
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </Motion.article>

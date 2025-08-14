@@ -280,8 +280,6 @@ const Items = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const { addToCart } = useCart();
 
-
-
   // Add kitchen open state
   const [isKitchenOpen, setIsKitchenOpen] = useState(true);
 
@@ -481,32 +479,28 @@ const Items = () => {
                       </span>
                     </div>
                     {item.hasOrderButton && (
-                    <div className="relative inline-block group w-max md:top-8 sm:mt-2">
-  <Motion.button
-    disabled={!isKitchenOpen}
-    className={`text-white text-xs sm:text-sm font-bold px-3 py-2 whitespace-nowrap rounded-sm w-full
-      ${isKitchenOpen
-        ? 'bg-[#FF4C15] cursor-pointer hover:bg-orange-600'
-        : 'bg-gray-400 cursor-not-allowed text-gray-200 text-sm sm:text-base'}`}
-    whileTap={isKitchenOpen ? { scale: 0.95 } : {}}
-    onClick={() => handleOrderNow(item)}
-    aria-label={isKitchenOpen ? `Order now: ${item.title}` : `${item.title} unavailable`}
-    type="button"
-  >
-    {isKitchenOpen ? 'Order Now' : 'Unavailable'}
-  </Motion.button>
+                      <div className="relative inline-block group w-max md:top-8 sm:mt-2">
+                        <Motion.button
+                          disabled={!isKitchenOpen}
+                          className={`text-white text-xs sm:text-sm font-bold px-3 py-2 whitespace-nowrap rounded-sm w-full
+                      ${isKitchenOpen
+                              ? 'bg-[#FF4C15] cursor-pointer hover:bg-orange-600'
+                              : 'bg-gray-400 cursor-not-allowed text-gray-200 text-sm sm:text-base'}`}
+                          whileTap={isKitchenOpen ? { scale: 0.95 } : {}}
+                          onClick={() => handleOrderNow(item)}
+                          aria-label={isKitchenOpen ? `Order now: ${item.title}` : `${item.title} unavailable`}
+                          type="button"
+                        >
+                          {isKitchenOpen ? 'Order Now' : 'Unavailable'}
+                        </Motion.button>
 
-  {!isKitchenOpen && (
-    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-center text-[10px] sm:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm whitespace-nowrap">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
-
-
-
+                        {!isKitchenOpen && (
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-center text-[10px] sm:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm whitespace-nowrap">
+                            Kitchen will open at 10 AM
+                          </div>
+                        )}
+                      </div>
                     )}
-
                   </div>
                 </div>
               </article>

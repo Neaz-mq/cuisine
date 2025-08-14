@@ -85,7 +85,7 @@ const Famous = () => {
 
           {/* Right Grid Services */}
           <section
-            className="grid grid-cols-2 3xl:gap-14 2xl:gap-10 xl:gap-6 lg:gap-6 md:gap-6 sm:gap-6 ml-8 mt-8"
+            className="grid grid-cols-1 sm:grid-cols-2 3xl:gap-14 2xl:gap-10 xl:gap-2 lg:gap-2 md:gap-6 sm:gap-6 sm:ml-0 ml-0 mt-8"
             aria-label="Service Highlights"
           >
             {[
@@ -119,16 +119,17 @@ const Famous = () => {
                 viewport={{ once: true }}
                 className="p-2"
               >
-                <h3 className="text-[#2C6252] font-bold 3xl:text-base 2xl:text-base xl:text-sm lg:text-[12px] md:text-[10px] sm:text-[8px] leading-snug">
+                <h3 className="text-[#2C6252] font-bold 3xl:text-base 2xl:text-base xl:text-sm lg:text-[12px] md:text-[10px] sm:text-[10px] leading-snug">
                   {item.title.split(" ")[0]} <br />
                   <span className="text-[#2C6252]">{item.title.split(" ").slice(1).join(" ")}</span>
                 </h3>
-                <p className="text-[#CCCCCC] 3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[8px] 3xl:mt-5 2xl:mt-3 xl:mt-3 lg:mt-3 md:mt-2 leading-relaxed">
+                <p className="text-[#CCCCCC] 3xl:text-xs 2xl:text-xs xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[9px] 3xl:mt-5 2xl:mt-3 xl:mt-3 lg:mt-3 md:mt-2 leading-relaxed">
                   {item.description}
                 </p>
               </Motion.article>
             ))}
           </section>
+
         </div>
 
         {/* Right Text Block */}
@@ -140,9 +141,8 @@ const Famous = () => {
           viewport={{ once: true }}
           aria-label="Content Summary Section"
         >
-          <div></div>
           <aside
-            className="bg-[#F8F8F8] 3xl:text-sm 2xl:text-[12px] xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[8px] text-[#2C6252] 3xl:px-[3.3rem] 3xl:py-[2.8rem] 2xl:px-[3.3rem] 2xl:py-[2.9rem] xl:px-[2.4rem] xl:py-[2.8rem] lg:px-[3rem] lg:py-[2.2rem] px-6 py-6 w-full leading-relaxed "
+            className="bg-[#F8F8F8] 3xl:text-sm 2xl:text-[12px] xl:text-[10px] lg:text-[8px] md:text-[8px] sm:text-[8px] text-[#2C6252] 3xl:px-[3.3rem] 3xl:py-[2.8rem] 2xl:px-[3.3rem] 2xl:py-[2.9rem] xl:px-[2.4rem] xl:py-[2.8rem] lg:px-[3rem] lg:py-[2.2rem] px-6 py-6 w-full leading-relaxed lg:col-start-2"
             role="complementary"
           >
             Thanks for the clarification — it sounds like you're asking for restaurant <br /> kitchen section names meant

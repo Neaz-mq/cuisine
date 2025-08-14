@@ -80,30 +80,29 @@ const Picks = () => {
                 offer without prior notice.
               </p>
               {/* Kitchen-aware Order Now button */}
-             <div className="relative inline-block group">
-  {isKitchenOpen() ? (
-    <Link to="/menu" aria-label="Order now from menu">
-      <button className="bg-[#FF4C15] text-white font-semibold py-2 px-6">
-        Order Now &gt;
-      </button>
-    </Link>
-  ) : (
-    <button
-      className="bg-gray-400 text-gray-200 font-semibold py-2 px-6 cursor-not-allowed"
-      aria-label="Ordering unavailable: kitchen is closed"
-      disabled
-    >
-      Unavailable
-    </button>
-  )}
+              <div className="relative inline-block group">
+                {isKitchenOpen() ? (
+                  <Link to="/menu" aria-label="Order now from menu">
+                    <button className="bg-[#FF4C15] text-white font-semibold py-2 px-6">
+                      Order Now &gt;
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    className="bg-gray-400 text-gray-200 font-semibold py-2 px-6 cursor-not-allowed"
+                    aria-label="Ordering unavailable: kitchen is closed"
+                    disabled
+                  >
+                    Unavailable
+                  </button>
+                )}
 
-  {!isKitchenOpen() && (
-    <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
-
+                {!isKitchenOpen() && (
+                  <div className="absolute top-full left-0 mt-2 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-normal w-max max-w-[160px]">
+                    Kitchen will open at 10 AM
+                  </div>
+                )}
+              </div>
 
               <div className="flex justify-end 3xl:-mt-[6.8rem] ml-44 2xl:-mt-[3.2rem] xl:-mt-[1.3rem] lg:-mt-[1rem] md:mt-[6rem] sm:-mt-[1rem]">
                 <Motion.img
@@ -257,7 +256,7 @@ const Picks = () => {
                       draggable={false}
                     />
                     <div
-                      className="absolute right-6 3xl:top-80 2xl:top-80 xl:top-80 lg:top-72 md:top-72 sm:top-64 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 lg:w-14 lg:h-14 md:w-14 md:h-14 sm:w-14  sm:h-14 flex flex-col items-center justify-center"
+                      className="absolute right-6 3xl:top-80 2xl:top-80 xl:top-80 lg:top-72 md:top-72 sm:top-64 text-white rounded-full 3xl:w-20 3xl:h-20 2xl:w-16 2xl:h-16 xl:w-16 xl:h-16 lg:w-14 lg:h-14 md:w-14 md:h-14 sm:w-14 sm:h-14 flex flex-col items-center justify-center"
                       style={{ backgroundColor: badgeColor }}
                     >
                       <span className="3xl:text-lg 2xl:text-lg xl:text-[12px] lg:text-[10px] md:text-[10px] sm:text-[10px] font-bold leading-tight">

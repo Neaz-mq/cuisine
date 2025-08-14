@@ -74,12 +74,7 @@ const Signature = () => {
 
   return (
     <Container>
-      <section
-        className="3xl:bg-[#2C6252] 2xl:bg-[#2C6252] xl:bg-[#2C6252] lg:bg-[#2C6252] md:bg-[#2C6252] sm:bg-white text-white py-24 relative mb-72
-          3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] md:w-[32rem] sm:w-[10rem]
-          sm:mx-auto 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 md:-ml-2 sm:-ml-[6.4rem] 
-          3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-44 md:mt-44 sm:-mt-28"
-        aria-label="Chinese Food Set Meals Section"
+      <section className="3xl:bg-[#2C6252] 2xl:bg-[#2C6252] xl:bg-[#2C6252] lg:bg-[#2C6252] md:bg-[#2C6252 sm:bg-white text-white py-24 relative mb-72 3xl:w-[75rem] 2xl:w-[62rem] xl:w-[54rem] lg:w-[42rem] md:w-[32rem] sm:w-[10rem] sm:mx-auto 3xl:ml-[4.3rem] 2xl:ml-4 xl:ml-12 lg:-ml-2 md:-ml-2 sm:-ml-[6.4rem] 3xl:mt-60 2xl:mt-52 xl:mt-48 lg:mt-44 md:mt-44 sm:-mt-28" aria-label="Chinese Food Set Meals Section"
       >
         <div className="mx-auto px-14 relative sm:left-0 left-6">
           {/* Rotated label */}
@@ -97,12 +92,8 @@ const Signature = () => {
           </div>
 
           {/* Headline */}
-          <h2
-            className="font-semibold whitespace-nowrap sm:text-2xl sm:absolute sm:-top-24 sm:left-4 sm:rotate-0 sm:whitespace-normal
-            md:rotate-[-90deg] md:absolute md:top-[14rem] md:-left-16 md:text-[30px] sm:text-[18px]
-            lg:top-[14rem] lg:-left-16 lg:text-[30px] xl:top-[14rem] xl:-left-24 xl:text-[36px]
-            2xl:top-[14rem] 2xl:-left-24 2xl:text-[36px] 3xl:top-[14.5rem] 3xl:-left-32 3xl:text-[40px]
-            3xl:text-white 2xl:text-white xl:text-white lg:text-white md:text-white sm:text-[#2C6252]"
+          <h2 className="font-semibold whitespace-nowrap sm:text-2xl sm:absolute sm:-top-24 sm:left-4 sm:rotate-0 sm:whitespace-normal md:rotate-[-90deg] md:absolute md:top-[14rem] md:-left-16 md:text-[30px] sm:text-[18px]
+            lg:top-[14rem] lg:-left-16 lg:text-[30px] xl:top-[14rem] xl:-left-24 xl:text-[36px] 2xl:top-[14rem] 2xl:-left-24 2xl:text-[36px] 3xl:top-[14.5rem] 3xl:-left-32 3xl:text-[40px] 3xl:text-white 2xl:text-white xl:text-white lg:text-white md:text-white sm:text-[#2C6252]"
           >
             Chinese Food Set Meals
           </h2>
@@ -186,45 +177,42 @@ const Signature = () => {
                         {item.description}
                       </p>
 
-                 <div className="relative inline-block group">
-  <Motion.button
-    disabled={!isKitchenOpen}
-    onClick={() => {
-      const formattedItem = { ...item, price: parsedPrice };
-      const result = addToCart(formattedItem);
+                      <div className="relative inline-block group">
+                        <Motion.button
+                          disabled={!isKitchenOpen}
+                          onClick={() => {
+                            const formattedItem = { ...item, price: parsedPrice };
+                            const result = addToCart(formattedItem);
 
-      if (result?.success) {
-        toast.success(`${item.title} added to cart successfully!`, {
-          position: 'top-center',
-          autoClose: 2000,
-          hideProgressBar: true,
-        });
-      } else {
-        toast.warning(`${item.title} is already in cart!`, {
-          position: 'top-center',
-          autoClose: 2000,
-          hideProgressBar: true,
-        });
-      }
-    }}
-    className={`mt-2 py-1 px-3 md:py-2 ml-2 md:px-4 w-auto whitespace-nowrap border-none rounded-sm flex items-center justify-center
-      ${isKitchenOpen 
-        ? 'bg-[#FF4C15] hover:bg-orange-600 text-white text-sm md:text-base cursor-pointer'
-        : 'bg-gray-400 text-gray-200 text-base md:text-lg cursor-not-allowed font-semibold'}`}
-    aria-label={`Order ${item.title}`}
-  >
-    {isKitchenOpen ? 'Order Now' : 'Unavailable'}
-  </Motion.button>
+                            if (result?.success) {
+                              toast.success(`${item.title} added to cart successfully!`, {
+                                position: 'top-center',
+                                autoClose: 2000,
+                                hideProgressBar: true,
+                              });
+                            } else {
+                              toast.warning(`${item.title} is already in cart!`, {
+                                position: 'top-center',
+                                autoClose: 2000,
+                                hideProgressBar: true,
+                              });
+                            }
+                          }}
+                          className={`mt-2 py-1 px-3 md:py-2 ml-2 md:px-4 w-auto whitespace-nowrap border-none rounded-sm flex items-center justify-center
+                     ${isKitchenOpen
+                              ? 'bg-[#FF4C15] hover:bg-orange-600 text-white text-sm md:text-base cursor-pointer'
+                              : 'bg-gray-400 text-gray-200 text-base md:text-lg cursor-not-allowed font-semibold'}`}
+                          aria-label={`Order ${item.title}`}
+                        >
+                          {isKitchenOpen ? 'Order Now' : 'Unavailable'}
+                        </Motion.button>
 
-  {!isKitchenOpen && (
-    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-center text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
-
-
-
+                        {!isKitchenOpen && (
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-black text-white text-center text-[10px] md:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm">
+                            Kitchen will open at 10 AM
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </Motion.article>
                 );

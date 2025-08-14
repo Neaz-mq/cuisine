@@ -72,37 +72,30 @@ const FoodCard = memo(({ item, index, onAddToCart, isKitchenOpen }) => (
           ${item.price}
           <span className="text-lg text-[#B9B9B9] relative top-2 left-1 font-semibold">/ pcs</span>
         </span>
-  <div className="relative inline-block group">
-  <button
-    disabled={!isKitchenOpen}
-    className={`p-2 flex items-center justify-center rounded-sm w-10 h-10
+        <div className="relative inline-block group">
+          <button
+            disabled={!isKitchenOpen}
+            className={`p-2 flex items-center justify-center rounded-sm w-10 h-10
       ${isKitchenOpen
-        ? "bg-[#2C6252] text-white hover:bg-[#1F4B3C] cursor-pointer"
-        : "bg-gray-400 text-gray-200 cursor-not-allowed"}`}
-    onClick={() => isKitchenOpen && onAddToCart(item)}
-    aria-label={isKitchenOpen ? `Add ${item.title} to cart` : `${item.title} unavailable`}
-    type="button"
-  >
-    {isKitchenOpen ? (
-      <img src="/Path 2764.svg" alt="Add to cart icon" className="w-5 h-5" />
-    ) : (
-      <BsCartX size={20} className="animate-pulse" />
-    )}
-  </button>
+                ? "bg-[#2C6252] text-white hover:bg-[#1F4B3C] cursor-pointer"
+                : "bg-gray-400 text-gray-200 cursor-not-allowed"}`}
+            onClick={() => isKitchenOpen && onAddToCart(item)}
+            aria-label={isKitchenOpen ? `Add ${item.title} to cart` : `${item.title} unavailable`}
+            type="button"
+          >
+            {isKitchenOpen ? (
+              <img src="/Path 2764.svg" alt="Add to cart icon" className="w-5 h-5" />
+            ) : (
+              <BsCartX size={20} className="animate-pulse" />
+            )}
+          </button>
 
-  {!isKitchenOpen && (
-    <div className="absolute -top-6 -left-28 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm whitespace-normal w-max max-w-[160px]">
-      Kitchen will open at 10 AM
-    </div>
-  )}
-</div>
-
-
-
-
-
-
-
+          {!isKitchenOpen && (
+            <div className="absolute -top-6 -left-28 px-3 py-1 bg-black text-white text-center text-[10px] sm:text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm whitespace-normal w-max max-w-[160px]">
+              Kitchen will open at 10 AM
+            </div>
+          )}
+        </div>
       </div>
     </div>
   </Motion.article>
