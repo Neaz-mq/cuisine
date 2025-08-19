@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useMemo, memo } from 'react';
-import { ChevronRight, ShoppingCart } from 'lucide-react';
+import { useEffect, useState, useMemo, memo } from 'react';
+import { ShoppingCart } from 'lucide-react';
 import Container from '../../../components/Container';
 import { Link } from 'react-router-dom';
 import useCart from '../../../hooks/useCart';
@@ -107,7 +107,6 @@ const TopBar = memo(() => {
   const [isKitchenOpen, setIsKitchenOpen] = useState(true);
   const { cartCount } = useCart();
 
-  // Update time and kitchen status every second
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -149,22 +148,26 @@ const TopBar = memo(() => {
             <span className="text-[#E4E4E4] 3xl:mr-4 2xl:mr-4 xl:mr-4 lg:mr-4 md:mr-4 sm:mr-2 text-base sm:text-sm md:text-sm 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] sm:text-[0.7rem] mb-2 sm:mb-0 whitespace-nowrap sm:hidden 3xl:block 2xl:block xl:block lg:block md:block ">
               Online place order
             </span>
+
+            {/* Order Now / Unavailable */}
             <div className="relative inline-block group">
-              <a
-                href={isKitchenOpen ? "/order" : "#"}
+              <Link
+                to={isKitchenOpen ? "/order" : "#"}
                 aria-label={isKitchenOpen ? "Order Now" : "Unavailable"}
+                onClick={(e) => {
+                  if (!isKitchenOpen) e.preventDefault();
+                }}
               >
-                <button
-                  type="button"
-                  disabled={!isKitchenOpen}
-                  className={`${isKitchenOpen
-                    ? "bg-[#FF4C15] text-white cursor-pointer"
-                    : "bg-gray-400 text-gray-200 cursor-not-allowed"
-                    } text-[10px] md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] px-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-3 md:px-3 py-0 3xl:py-2 2xl:py-2 xl:py-2 lg:py-2 md:py-1 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 whitespace-nowrap w-full justify-center transition-transform `}
+                <div
+                  className={`${
+                    isKitchenOpen
+                      ? "bg-[#FF4C15] text-white cursor-pointer"
+                      : "bg-gray-400 text-gray-200 cursor-not-allowed"
+                  } text-[10px] md:text-base 3xl:text-[20px] 2xl:text-[18px] xl:text-[17px] lg:text-[14px] md:text-[0.8rem] px-1 3xl:px-3 2xl:px-3 xl:px-3 lg:px-3 md:px-3 py-0 3xl:py-2 2xl:py-2 xl:py-2 lg:py-2 md:py-1 rounded-sm flex items-center font-semibold mb-2 sm:mb-0 whitespace-nowrap w-full justify-center transition-transform`}
                 >
                   {isKitchenOpen ? "Order Now" : "Unavailable"}
-                </button>
-              </a>
+                </div>
+              </Link>
 
               {!isKitchenOpen && (
                 <div className="absolute top-full left-0 mt-1 px-2 py-0 w-full bg-black text-white text-center text-xs md:text-sm 3xl:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-sm">
@@ -173,9 +176,7 @@ const TopBar = memo(() => {
               )}
             </div>
 
-
-
-
+            {/* Divider */}
             <div className="mx-0 3xl:mx-2 2xl:mx-2 xl:mx-2 lg:mx-2 md:mx-1 mb-2 sm:mb-0">
               <div className="h-3 w-[1px] md:w-[2px] md:h-4 bg-gray-400 ml-2" />
             </div>
@@ -194,8 +195,9 @@ const TopBar = memo(() => {
                   className="h-3 w-3 md:h-5 md:w-5"
                 />
                 <span
-                  className={`3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] md:text-[0.8rem] text-[0.6rem] font-semibold whitespace-nowrap ${isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
-                    }`}
+                  className={`3xl:text-[16px] 2xl:text-[15px] xl:text-[15px] lg:text-[13px] md:text-[0.8rem] text-[0.6rem] font-semibold whitespace-nowrap ${
+                    isKitchenOpen ? 'text-[#2C6252]' : 'text-[#FF4C15]'
+                  }`}
                 >
                   {isKitchenOpen ? 'Kitchen available' : 'Kitchen unavailable'}
                 </span>
@@ -220,7 +222,7 @@ const TopBar = memo(() => {
             {/* Cart */}
             <div className="ml-auto mb-2 sm:mb-0 relative">
               <Link to="/carts" aria-label="View shopping cart">
-                <div className="relative 3xl:w-9 3xl:h-9 2xl:w-9 2xl:h-9 xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-6 h-6 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 3xl:right-24 2xl:right-10 xl:-right-4 lg:-right-7 md:-right-3 -right-4 transition-transform sm:mt-2 3xl:mt-0 2xl:mt-0 xl:mt-0 lg:mt-0 md:mt-0">
+                <div className="relative 3xl:w-9 3xl:h-9 2xl:w-9 2xl:h-9 xl:w-9 xl:h-9 lg:w-9 lg:h-9 md:w-9 md:h-9 w-6 h-6 rounded-full bg-white border border-[#FF4C15] flex items-center justify-center shadow-[0_1px_4px_rgba(0,0,0,0.1)] hover:scale-105 transition-transform sm:mt-2">
                   <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 text-[#FF4C15]" strokeWidth={2.2} />
                   <div className="absolute -top-1.5 -right-1.5 bg-[#FF4C15] text-white text-[10px] md:text-[11px] font-bold rounded-full h-4 w-4 flex items-center justify-center shadow-md border-2 border-white">
                     {cartCount}
@@ -228,6 +230,7 @@ const TopBar = memo(() => {
                 </div>
               </Link>
             </div>
+
           </div>
         </div>
       </Container>

@@ -253,49 +253,58 @@ const Carts = () => {
 
   const paymentMethodSection = (
     <>
-      <div className="space-y-4">
-        <h4 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg font-semibold text-gray-800 mb-2 pt-8">
-          Payment Method
-        </h4>
-        <div className="space-y-3 bg-gray-50 p-4 rounded-md">
-          {/* Online Payment */}
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="radio"
-              name="payment"
-              value="online"
-              checked={paymentMethod === "online"}
-              onChange={() => setPaymentMethod("online")}
-              className="mt-1"
-            />
-            <div>
-              <p className="font-semibold text-gray-800">Online Payment</p>
-              <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-600">
-                Pay securely using a card or mobile wallet.
-              </p>
-            </div>
-          </label>
+       <div className="space-y-4">
+      <h4 className="3xl:text-2xl 2xl:text-2xl xl:text-2xl lg:text-2xl md:text-2xl sm:text-lg font-semibold text-gray-800 mb-2 pt-8">
+        Payment Method
+      </h4>
+      <div className="space-y-3 bg-gray-50 p-4 rounded-md">
+        {/* Online Payment */}
+        <label className="flex items-start gap-3 cursor-pointer">
+          <input
+            type="radio"
+            name="payment"
+            value="online"
+            checked={paymentMethod === "online"}
+            onChange={() => setPaymentMethod("online")}
+            className="hidden"
+          />
+          <span
+            className={`w-5 h-5 mt-1 inline-block rounded-full border-2 border-gray-400 flex-shrink-0 ${
+              paymentMethod === "online" ? "bg-[#2C6252] " : "bg-white"
+            }`}
+          ></span>
+          <div>
+            <p className="font-semibold text-gray-800">Online Payment</p>
+            <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-600">
+              Pay securely using a card or mobile wallet.
+            </p>
+          </div>
+        </label>
 
-          {/* Cash on Delivery */}
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="radio"
-              name="payment"
-              value="cod"
-              checked={paymentMethod === "cod"}
-              onChange={() => setPaymentMethod("cod")}
-              className="mt-1"
-            />
-            <div>
-              <p className="font-semibold text-gray-800">Cash on Delivery</p>
-              <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-600">
-                Pay with cash upon delivery.
-              </p>
-            </div>
-          </label>
-        </div>
+        {/* Cash on Delivery */}
+        <label className="flex items-start gap-3 cursor-pointer">
+          <input
+            type="radio"
+            name="payment"
+            value="cod"
+            checked={paymentMethod === "cod"}
+            onChange={() => setPaymentMethod("cod")}
+            className="hidden"
+          />
+          <span
+            className={`w-5 h-5 mt-1 inline-block rounded-full border-2 border-gray-400 flex-shrink-0 ${
+              paymentMethod === "cod" ? "bg-[#2C6252]" : "bg-white"
+            }`}
+          ></span>
+          <div>
+            <p className="font-semibold text-gray-800">Cash on Delivery</p>
+            <p className="3xl:text-sm 2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-xs text-gray-600">
+              Pay with cash upon delivery.
+            </p>
+          </div>
+        </label>
       </div>
-
+    </div>
       {/* Online Payment Form Section - Conditionally Rendered */}
       {paymentMethod === "online" && (
         <div className="mt-8 p-6 border border-gray-200 space-y-4">
